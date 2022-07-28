@@ -1,0 +1,85 @@
+---
+title: "Renal Bone Disease"
+output: html_document
+---
+
+## Parathyroidectomy in CKD
+
+RIE Protocol
+
+### Pre Operative Care
+* Alfacalcidol 2mcg bd should be given for 3 days prior to surgery.
+* Cinacalcet should be stopped one week before parathyroidectomy.
+* Patients at risk of hungry bone syndrome should be identified.
+
+### Hungry Bone Syndrome
+Diagnosis hinges on a profound and persistently low calcium level of less than 2.1 mmol/L
+for more than four days postoperatively along with hypophosphatemia and normal PTH
+levels. Such patients require prolonged, high dose calcium to maintain serum calcium levels.
+Often there is also associated hypomagnesemia and hypocalciuria. Risk factors include
+
+* Alkaline phosphatase > 2 times upper limit of normal
+* PTH levels> 100 pmol/L
+* Radiologic evidence of bone disease
+* Higher BMI
+* Higher BUN
+
+### Post Operative Care
+* Patients should be admitted to ward 215 post operatively and prescribed Alfacalcidol 2mcg bd & Calvive (formally Sandocal1000) 2 tablets tds - Do not take at mealtimes.
+* Hold phosphate binders.
+* Serum corrected calcium should be measured every 6 hours for the first 24 hours post surgery, and then less frequently if stable.
+* Aim for normal serum calcium values (2.2-2.6 mmol/L). Increase calcium supplementation by 50% if calcium falling and half the dose if calcium starts to rise.
+* Pay attention to the trend. If the corrected calcium is falling rapidly i.e. >10% over 6 hrs the
+development of significant hypocalcaemia is likely and requires more frequent monitoring.
+* If calcium <1.8 or if symptomatic, give IV calcium 
+* Monitor serum phosphate and magnesium 12 hourly for first 24hrs, then daily.
+* Do not treat hypophosphataemia unless serum phosphate falls below 0.35 mmol/l.
+* Consider higher calcium dialysate (A232, A231 containing calcium 1.5 mmol) or PD fluid.
+
+### Post Discharge
+RRT patients: Monitor serum calcium on each HD session or 3 times a week (for PD
+patients) for the first two weeks and weekly checks as required thereafter until stability is
+reached.
+
+The dosing of alfacalcidol and calcium supplements post operatively is challenging and both
+hypo- and hypercalcaemia are common. Trends in concentration are more important than
+absolute values. Consider the following:
+
+* Check adherence and adjust calcium supplement by +- 50%.
+* Alfacalcidol dose to increase up to a maximum of 5 micrograms bd but note it takes 3
+days to observe effect of increase in dose. Alfacalcidol product specification
+recommends increasing dose in increments of 0.25 – 0.5 micrograms but if taking 2
+micrograms or more change dose by 1 microgram.
+* Check magnesium levels and replace if recurrent /resistant hypocalcaemia
+
+### IV Calcium Infusion
+Use calcium gluconate over calcium chloride. Care must be taken to ensure intravenous
+calcium is not extravasated. If central line is available this is likely to be most suitable
+access. If venous access is not secure, then a central line may be considered.
+
+**Infusion**
+
+* 100ml of 10% calcium gluconate (900mg of elemental calcium) +150 ml of 5% Dextrose
+(total volume 250 ml). Final concentration is 3.6mg/ml.
+* Start infusion at 0.3ml/kg/hour (1mg/kg/hour. 70kg patient = 21ml/hr)
+* Check corrected serum calcium 6 hourly.
+* Titrate calcium infusion dose between 0-0.6ml/kg/hour to prevent serum calcium
+falling below 1.9mmol/L or rising above 2.4 mmol/L.
+* Severe symptoms include paraesthesia, muscle cramps, carpo-pedal spasm, laryngeal
+stridor, convulsions, prolonged QT interval, arrhythmias, and hypotension. This will require
+bolus IV calcium and subsequent infusion.
+
+### Emergency Calcium Bolus
+Emergency situations - Give 10ml of 10% calcium gluconate (2.2mmol calcium) no faster
+than 2ml/min (i.e., Over at least 5mins, ECG monitoring recommended); this can be given
+peripherally.
+
+### Calcium Content of Common Supplements
+
+Calcium supplements Calcium Content
+
+* Adcal (chewable ) 15 mmol / tablet
+* Calcichew(chewable) 12.6 mmol / tablet
+* Calvive/ Sandocal 1000 (soluble) 25 mmol / tablet
+* Calcichew forte(chewable ) 25 mmol / tablet
+(1 mmol = To 40mg Of Elemental Calcium)

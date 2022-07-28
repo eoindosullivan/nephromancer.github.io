@@ -1,0 +1,32 @@
+---
+title: " "
+output: 
+  html_document:
+    includes:
+    after_body: footer.html
+    toc: FALSE
+    fig_caption: yes
+    fontawesome: yes
+---
+
+
+<center>![](images/picasso kidney.png){width=25%}</center>
+
+<br>
+<br>
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class = "blue">
+<center> **Notes for the busy Nephrologist** </center>
+
+</div>
+<br>
+
+
+&nbsp;
+<hr />
+<p style="text-align: center;">By <a href="https:eoindosullivan.com">Eoin O'Sullivan</a></p>
+<p style="text-align: center;"><span style="color: #808080;"><em>eoindosullivan@gmail.com</em></span></p>
+
+&nbsp;

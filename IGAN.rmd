@@ -1,0 +1,56 @@
+---
+title: "IGAN"
+output: html_document
+---
+### IGAN
+
+* Hyponatraemia is all about ADH typically
+* Isothenuria normal in aging and in AKI/CKD.
+  + Urine diulation is active and difficult 
+  + Normal adult can generate dilute urine - 50mOSM/Kg
+  + "Normal" diet is 10mOSM/kg/day, so 70kg male = (10*70)=700/50(daily limit)=14litres
+  + Elderly limit ~150 mOSM/kg. Diet intake can be low (tea and toast) e.g. (3*50)/150=1Litre/day. free water over this limit dilutes urine.
+  
+* **Hypotonic** hyponatraemia requires treatment (probably), so confirm a pOSM if possible.
+* k+ is oncotic too ( and can buffer NA) - 20mmol/KCL = 40ml 3% NaCL - may overcorrect if not aware!
+
+### next heading ### 
+
+
+[lin kexample](https://cjasn.asnjournals.org/content/13/11/1627)
+>
+
+# Guidelines & Protocols
+
+[European Renal-Endocrine hyponatreamia guideline](https://eje.bioscientifica.com/view/journals/eje/170/3/G1.xml)
+
+# Key Papers
+
+<br>
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class = "blue">
+[TESTING](https://pubmed.ncbi.nlm.nih.gov/34731857/)
+<br>
+Steroids in IgAN
+
+* Patients with IGAN 1g proteinuria, 12 week run in ACEi/ARB randomised to methylpred ( high,low) /placebo. N=503, 5 countries, mean age 38.
+* Excluded: Secondary IGAN, MCD, >50% crescents, infection, cancer
+* Outcome: 40% decreased in eGFR/ESKD/death
+* Methylpred  high (HR 0.58), low (HR 0.27) significantly reduced primary outcome, many serious AE but  in low dose ~ placebo
+*Low dose Regime: (0.4 mg/kg/day, maximum 32 mg/day) for 2 months, followed by weaning by 4 mg/day/month over 6-9 months, or matching placebo. PJP prophylaxis for 12 weeks.
+* **Conclusion:** Probably useful but potentially a high price to pay – save for rapid decliner ?
+
+</div>
+<br>
+
+
+# Educational
+
+links here
+
+# Patient materials
+
+links here
+
