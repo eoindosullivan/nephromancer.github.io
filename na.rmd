@@ -37,15 +37,15 @@ Divide by hours (typically 4). HDU and monitor every 4-6
 </div>
 <br>
 
-### Osmotic demyelination
+# Osmotic demyelination
 
 Risks: Female, hypokalaemia, chronicity, alcoholism, cirrhosis, malnourishment.
 
-### Pseudohyponatreamia
+# Pseudohyponatreamia
 
 Triglycerides, cholesterol, or protein
 
-### Hyperglycaemia correction of Na
+# Hyperglycaemia correction of Na
 
 This translates into adding 2.4 mmol/l to the
 measured serum sodium concentration for every
@@ -53,7 +53,7 @@ measured serum sodium concentration for every
 concentration above a standard serum glucose concentration of 5.5 mmol/l (100 mg/dl).
 (Ive seen this as 1.6mmol/L also)
 
-### Free water clearance
+# Free water clearance
 
 Useful conceptually (in chronic state), not very quantitativly, and inconvienient outside ITU
 
@@ -84,7 +84,7 @@ Free Water Clearance negative
 * Urine is more concentrated than plasma
 * Increased Antidiuretic Hormone (ADH)
 
-### SIADH criteria
+# SIADH criteria
 
 SIADH is pretty rare. Be suss.
 
@@ -108,7 +108,7 @@ salt and water intake
   + Fractional uric acid excretion >12%
   + Correction of hyponatraemia through fluid restriction
 
-### Desmopressin aka DDAVP
+# Desmopressin aka DDAVP
 
 **In DI:** 
 If intravenous saline solution is administered and desmopressin is withheld at the same time, rapid changes in serum sodium levels may result, which puts the patient at risk for demyelinating lesions. 
@@ -191,7 +191,7 @@ Give 2-4 mcg ddavp SC and monitor uOSM & vol every 30 mins for 2 hours. if Uosm 
 * Urine osm = pOSM (~300) - osmotic diuresis? NB Urea is actually an effective osm in urine ( cant make it past tubular epithelium) in contrast to in the body!
 * Urine osm <pOSM - DI
 
-### Cerebral Salt wasting
+# Cerebral Salt wasting
 
 ![](images/siadhvscerebralsaltwasting.png)
 

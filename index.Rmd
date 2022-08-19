@@ -10,7 +10,7 @@ output:
 ---
 
 
-<center>![](images/picasso kidney.png){width=25%}</center>
+<center>![](images/nepromancer.png){width=50%}</center>
 
 <br>
 <br>

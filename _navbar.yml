@@ -23,8 +23,8 @@ left:
         href: ./ANCA.html
       - text: "IGAN"
         href: ./IGAN.html
-      - text: "MG"
-        href: ./aboutme.html
+      - text: "MPGN & C3G"
+        href: ./MPGN_C3G.html
       - text: "Ca2+"
         href: ./aboutme.html
       - text: "PO4"
@@ -82,6 +82,8 @@ left:
          href: ./path.html
        - text: "PEX"
          href: ./project2.html
+       - text: "Lymphoproliferative"
+         href: ./Lymphoproliferative.html
   - text: "EDU"
     menu:
        - text: "Project part 1"

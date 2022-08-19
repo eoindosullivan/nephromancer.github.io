@@ -17,7 +17,7 @@ output: html_document
 ### next heading ### 
 
 
-[lin kexample](https://cjasn.asnjournals.org/content/13/11/1627)
+[link example](https://cjasn.asnjournals.org/content/13/11/1627)
 >
 
 # Guidelines & Protocols

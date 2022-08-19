@@ -2,7 +2,87 @@
 title: "Haemodialysis"
 output: html_document
 ---
-## Iron
+
+# Vaccinations
+
+**HEP B – 1/3 don’t respond. At 1 year, only about \~64% have adequate Ab protection**
+
+-   **HBVAXPRO** 40 micrograms at 0, 1 and 6 months by IM injection. Not in buttocks – go deltoid – better response.
+-   **Fendrix** -20micrograms at 0,1,2 and 6 months
+-   **Engerix** B -40 micrograms at 0,1,2 and 6 months
+
+Check anti-Hbs antibodies 1-2 months after course.
+
+-   **Responder**: \>100mIU/ml .
+-   **Partial response**: 10-100mIU/ml. Give booster (once) and recheck in 1-2 months.
+-   **Non response**: \<10mIU/ml. Repeat entire course once only. If still \<10mIU/ml, then patient is a ‘non responder’ and move on. If level 10-100mIU/ml then treat as partial response.
+    -   If non response, check for ABsag and either proceed as acute infection if + or “vulnerable”
+    -   HBIG postexposure prophylaxis for any known or likely parenteral exposure to HBsAg positive blood is available.
+-   Once established, annual check with a booster if \<100mIu/ml.
+
+**Notes:**
+
+-   Better immune response and high rates of conversion if given before ESKD
+-   If started on normal dose pre HD but transitioning to HD during vaccine course, increase to the double dose (40mg) once on HD
+-   Ab tires \>10 are still protective
+
+
+**Other Vaccines**
+
+-   Annual inactivated influenza
+-   Pneumococcal: Regime varies depending on history and PCV13/PPSV23: See table 2 and table 3 of the appendix of CDC document [here](https://www.cdc.gov/dialysis/pdfs/vaccinating_dialysis_patients_and_patients_dec2012.pdf) 
+-   [Green book](https://www.gov.uk/government/collections/immunisation-against-infectious-disease-the-green-book#the-green-book)
+-   COVID probably
+
+# Dry weight
+
+-   BP should be normal throughout, high post HD BP ?wet
+-   Can take \~3 months to get to a first dry weight – persistence is key
+-   Early tapering of BP meds can help hit dry weight (evidence?)
+-   Hypotension/cramps = refill capacity. Does not necessarily mean at dry weight
+-   BP normalisation can lag weeks after ECF volume normalisation (?evidence)
+
+# Adequacy
+
+**URR:** ((Pre urea-post urea)\*100)/Pre-urea
+
+-   Underestimates due to ignoring urea clearance during UF and intra HD urea generation
+-   Target 70%. Mostly a Fn of Qb and Time
+
+**Single Pool Kt/V**
+
+-   Accounts of size by using TBW in formula
+
+-   Urea Clearance(K)\*Time(T)/Vd of Urea (55% TBW in men, 50% in women)
+
+-   Target 1.4, min 1.2
+
+**Equilibrated Kt/V**
+
+-   Optimal
+
+-   Wait 30 mins for equilibration before second sample
+
+
+<br>
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class = "blue">
+[HEMO](<https://www.nejm.org/doi/full/10.1056/nejmoa021583>)
+
+-   1846 patients 3\*week HD
+
+-   Primary outcome: death
+
+-   Secondary outcome: hospitalization for cardiac causes or death from any cause, first hospitalization for infection or death from any cause, first 15 percent decrease in the serum albumin level or death from any cause, and all hospitalizations not related to vascular access
+
+-   Results: No difference between high dose (Kt/v 1.7, URR 75) vs low (Kt/V 1.16, URR 66). No difference between high flux and low flux.
+</div>
+<br>
+
+
+# Iron
 
 * Screen annually in CKD G3, biannually in CKD G4
 * Investigate  - EPO def is dx of exclusion. "possible"" in eGFR <60, "probable" in <30
@@ -24,7 +104,7 @@ output: html_document
 * If not in centre, high dose low frequency is good
 
 
-### Iron Therapy 
+#### Iron Therapy 
 
 * In HD proactive high-dose IV iron sucrose (venofer) 400 mg every month (or equivalent) should be given unless ferritin > 700 μg/L or TSAT>40% ( PIVITOL)
 * Avoid in infection, probably
@@ -36,28 +116,30 @@ output: html_document
 
 In Edinburgh use iron as ferric derisomaltose (Diafer) ~100mg weekly/monthly etc during HD. This is low dose :(
 
-[PIVOTAL](https://www.nejm.org/doi/full/10.1056/nejmoa1810742)
+
 <br>
 <style>
 div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 </style>
 <div class = "blue">
-* High dose IV iron vs low dose
-* High dose non inferior for compositive CV | death endpoint
-* Less CV composite events in high dose hazard ratio, 0.80; 95% CI, 0.64 to 1.00
-* Less Blood transfusions
-* Same infections
+[PIVOTAL](https://www.nejm.org/doi/full/10.1056/nejmoa1810742)
+
+-   High dose IV iron vs low dose
+-   High dose non inferior for compositive CV | death endpoint
+-   Less CV composite events in high dose hazard ratio, 0.80; 95% CI, 0.64 to 1.00
+-   Less Blood transfusions
+-   Same infections
 </div>
 <br>
 
-### ESA
+# ESA
 
 * Caution htn - 175/95 as arbitrary cut offs
 * Neorecoromon is 150 units/kg body weight/week. This is usually administered as 3 divided doses (but can be given as a single weekly dose), given intravenously during haemodialysis. 70kg man gets 3500 units each session (10,500/3)
 * Adjust in 25-50% increments
 
 
-### Resistance to ESA therapy
+#### Resistance to ESA therapy
 
 Failure to reach the target
 Hb level despite SC epoetin dose >300 IU/kg/week (450 IU/kg/week IV epoetin), or darbepoetin dose >1.5
@@ -66,14 +148,14 @@ microgram/kg/week. ( 70kg man = 7000 units/session)
 Hyporesponsive patients who are iron replete should be screened clinically and by
 investigations for other common causes of anaemia.
 
-### Pure Red Cell Aplasia
+#### Pure Red Cell Aplasia
 
 Considered whenever a patient receiving
 long term ESA therapy (more than 8 weeks) develops all the following (2A):
 
 * sudden decrease in Hb concentration at the rate of 5 to 10g/L per week OR requirement of
 transfusions at the rate of approximately 1 to 2 per week
-*  normal platelet and white cell counts,
+* normal platelet and white cell counts,
 * absolute reticulocyte count less than 10,000/µl
 
 ESA therapy should be stopped in patients who develop ESA induced PRCA.
@@ -81,6 +163,28 @@ ESA therapy should be stopped in patients who develop ESA induced PRCA.
 Patients who remain transfusion dependent after withdrawing ESA therapy should be
 treated with immunosuppressant medications guided by the level of anti EPO antibodies
 
+# HD Prescription tips
+
+-   Lower temps = greater tolerability and possibly CV/Neuro outcomes
+-   Qb 300-500, Qd 500-800
+-   Initiation: 2hr Qb200 Qd500 ,3hr Qb250 Qd500 ,4hrs Qb300 Qd800.
+-   Never use a 0 K+ bath (if its even an option) – too much K flux
+-   Post Tx: avoid hypotension (assoc. with increase risk of acute rejection)
+-   Acidaemic: Check ionised Calcium – the incoming bicarb load will drop the iCa - \>seizures etc
+
+# Severe Uraemia
+
+-   Pericarditis is a clinical diagnosis
+-   **Rx:*** Daily HD, no anticoagulation
+-   Check for pericardial effusion 
+-   Chest pain – improves leaning forward, friction rub, distant heart sounds. Fever/sob. BP low. Tachycardic.
+-   **ECG:** Diffuse ST & T wave elevation – not typically coronary territory. electrical alternans = pericardiocentesis. Trop leak.
+-   **JVP:** Kussmaul's sign is a paradoxical rise in jugular venous pressure (JVP) on inspiration
+-   **Pulsus paradoxus: aka exaggerated respiratory variation**
+-   Inflate 30mmHg above pulse. Note first intermittent Korotkoff sounds. (higher systemic BP occurring during expiration). Slowly deflate cuff until highest BP with continuous beat. The delta is the pulsus paradoxus. \>10mmHg suggest tamponade.
+ -   **CXR:** Increased cardiac silhouette
+-   **ECHO:** Effusion in 50% of uraemic pericarditis. Repeat echo to ensure resolution 3-5 days.
+-   **D.Dx:** Infectious/inflammation(SLE/vasculitis), neoplastic, meds(hydralazine)
 
 
 <br>
