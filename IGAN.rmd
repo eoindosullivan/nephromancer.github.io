@@ -1,56 +1,246 @@
 ---
-title: "IGAN"
+title: ""
 output: html_document
 ---
-### IGAN
+# IgAN
 
-* Hyponatraemia is all about ADH typically
-* Isothenuria normal in aging and in AKI/CKD.
-  + Urine diulation is active and difficult 
-  + Normal adult can generate dilute urine - 50mOSM/Kg
-  + "Normal" diet is 10mOSM/kg/day, so 70kg male = (10*70)=700/50(daily limit)=14litres
-  + Elderly limit ~150 mOSM/kg. Diet intake can be low (tea and toast) e.g. (3*50)/150=1Litre/day. free water over this limit dilutes urine.
-  
-* **Hypotonic** hyponatraemia requires treatment (probably), so confirm a pOSM if possible.
-* k+ is oncotic too ( and can buffer NA) - 20mmol/KCL = 40ml 3% NaCL - may overcorrect if not aware!
+-   Most common type of glomerulonephritis
+-   1.5 of 100,000 individuals per year
+-   2:1 M:F in North America, 1:1 in Asia
+-   1-3% of all cases of end stage kidney disease
+-   The prevalence is highest in Asian countries - 30% of all kidney biopsies (and 45% of glomerulonephritis cases) cultural biopsy practice a factor?
+-   5% of biopsies in the United States and Europe.
+-   Classic presentation: microscopic hematuria, asympomatic, picked up on screening
+-   Atypical & Non-Specific presentations can be tricky: abdominal pain, hypertension, and proteinuria.
+-   HSP spectrum
+-   Large variability in outcomes:
+    -   10-year risk of ESKD \~ 30-40% worldwide
+    -   10 year risk of ESKD \~ 10% if normal eGFR at presentation
+    -   Risk prediction important, see below
 
-### next heading ### 
+# Pathology
+
+-   Abnormal glycosylation of IgA
+-   Abnormal IgA is galactose-deficient and consequently recognized by anti-glycan IgG or IgA1 antibodies
+-   These immune complexes deposit in mesangium causing injury
+
+# Risk Stratification
+
+**Established risk factors**
+
+-   Male sex
+-   Proteinuria \>1 g/d
+-   Hypertension
+-   Reduced GFR
+-   Hyperuricemia
+
+[Back of the Envelope method](https://www.nejm.org/doi/full/10.1056/NEJMra1206793)
+
+Consider:
+
+-   Proteinuria \> 1 g per day
+-   HTN (\>140/90 mm Hg)
+-   “severe” histologic lesions on the basis of glomerular, vascular, tubular, and interstitial features.
+
+20-year survival without RRT = 96% if no risk factors 36% with 3.
+
+**Histological methods**
+
+## MEST-C
+
+[MEST-C scoring - The Oxford Study]( <https://pubmed.ncbi.nlm.nih.gov/27612994/>)
+
+-   **M**esangial hypercellularity; diffuse, involving greater than 50% of glomeruli
+-   **E**ndocapillary hypercellularity: any, even if limited to a single loop of a single glomerulus
+-   **S**egmental sclerosis: any
+-   **T**ubular atrophy and interstitial fibrosis: 25-50% cortex, \>50% of cortex
+
+Mesangial hypercellularity, endocapillary hypercellularity, and crescent formation are histopathologic indicators of activity, while segmental sclerosis and tubular atrophy indicate chronicity. E is worst.
+
+[Crescents added in 2019](https://pubmed.ncbi.nlm.nih.gov/27612994/)
+
+-   C0 (no crescents)
+-   C1 (crescents \< 25% gloms), identifying patients at increased risk of poor outcome without immunosuppression
+-   C2 (crescents \>25% gloms), identifying patients at even greater risk of progression, even with immunosuppression
+-   Fibrous (\<10% cells and ≥90% matrix) crescents don’t count (fibrocellular are ok)
+
+If you are C2, HRs for a (composite outcome of either ESRD or ≥50% reduction in eGFR; increased rate of eGFR decline) was of 3.26 (95% CI, 1.47 to 7.34; P=0.004) in untreated and and 2.43 (95% CI, 1.17 to 5.06) if treated with Immunosuppression. Not particularly different!
+
+M, S crescents enhance ability to predict outcomes only in patients who had not received immunosupression. [Nice NephJC](<http://www.nephjc.com/news/2016/10/16/do-crescents-matter-for-iga-nephropathy>)
+
+## VALIGA
+
+[VALIGA](<https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4184028/>)
+
+*European validation of Oxford study*
+
+-   1147 patients \| 13 European countries \| median follow-up of 4.7 years
+-   86% ACEi/ARB, 42% steroids/IS
+
+MST = predict loss of renal function
+
+If eGFR \<30, MT = predict loss of renal function
+
+If Proteinuria \<0.5/day, ME = predict rise in proteinuria to 1-2g/day
+
+As with Oxford, MST enhance ability to predict outcomes only in patients who had not received immunosupression
+
+## Prediction models
+
+[International IgA Nephropathy Network Prediction models](<https://pubmed.ncbi.nlm.nih.gov/30980653/>)
+
+Parameters:
+
+-   Age
+-   Ethnicity
+-   Blood pressure
+-   GFR
+-   Proteinuria
+-   Use of renin-angiotensin system blockade
+-   Use of immunosuppression
+-   Pathologic variables (MEST-score)
+
+**Generalizability** 
+
+-   Adult patients, no pediatric patients.
+
+-   White, Chinese and Japanese patients only
+
+-   Biopsy-proven IgA nephropathy only so the full models cannot be applied in patients who have not undergone biopsy.
+
+- Needs to be applied at the time of bx only
+
+- Not appropriate for Rx decisions
+
+[Calculator here](https://qxmd.com/calculate/calculator_499/international-igan-prediction-tool-at-biopsy-adults)
+
+**GWAS**
+
+[IgA GWAS](<https://journals.plos.org/plosgenetics/article?id=10.1371%2Fjournal.pgen.1002765>)
+
+Risk genes increase as you move West to East but ultimately only explain \~7% of overall risk.
+
+Interesting implications for variable of “Race” in data and what it really is capturing – at times, these risk genes, but also captures range of diverse and ill-defined cultural/socioeconomic patterns.
+
+Not entirely clear what relationship “race” has to IGAN, possibly worse outcomes in “Chinese” populations but unclear if that applies to Chinese Nationals of those with Chinese heritage in other countries. No evidence of differential treatment effects.
+
+# Treatment
+
+-   If proteinuria, optimise long term ACE-i/ARB to max tolerated
+
+-   Threshold for starting per KDIGO \>1g/d
+
+-   BP \<130/80
+
+## STOP-IgAN
+
+[STOP-IgAN](<https://www.nejm.org/doi/full/10.1056/NEJMoa1415463>)
+
+*Heavy Immunosuppression for moderate IgA disease*
+
+**Inclusion:**
+
+Bx confirmed IGAN, aged 18-70, proteinuria \>0.75g/d & HTN, eGFR\<90
+
+**Excluded:**
+
+Secondary IGAN, rapid progression/crescents, previous immunosuppression
+
+**Endpoint:**
+
+-   Decrease in eGFR of 15 or remission (Pro/24hrs \<0.2, eGFR decline \<5)
+
+6 months run in to optimise \| **N**= (337) -\>177 randomised over 3 years
+
+**The immunosuppression**
+
+-   eGFR \>59 received 1g of IV methylprednisolone daily for 3 days at the start of months 1, 3 and 5; and oral prednisolone at a dose of 0.5 mg/kg every other day
+-   eGFR 30-59 received cyclophosphamide 1.5 mg/kg/day for 3 months, followed by azathioprine at a dose of 1.5 mg/kg per day during months 4-36, plus oral prednisolone 40 mg/day, tapered to 10 mg/day, over the first 3 months of the study, 10 mg/day during months 4-6 and 7.5 mg per day during months 7-36.
+
+**Results**
+
+Immunosuppression led to
+
+-   More remission (14 vs 4) OR 4.82 (1.43-16.30)
+-   No change in eGFR decline of at least 15 (22 vs 21) OR 0.89 (0.41-1.90)
+
+**Conclusion**
+
+-   Probably not super useful in these patients (? Takes longer to demonstrate eGFR improvement?)
+-   Doesn’t apply to heavy proteinuria \<35g or rapid progression/crescents who probably need immunosuppression
+-   34% of patients had \<0.75g proteinuria per day at six  
+    months, with supportive care alone. Get them on ACEi
+
+## TESTING 
+
+[TESTING](https://jamanetwork.com/journals/jama/article-abstract/2792252)
+
+*Steroids in IgAN: the one that was reimagined half way through due to safety concerns*
+
+**Inclusion:**
+
+Patients with IGAN \>= 1g proteinuria/day, 12 week run in ACEi/ARB
+
+**Excluded:**
+
+Secondary IGAN, MCD, \>50% crescents, infection, cancer
+
+**Endpoint:**
+
+40% decreased in eGFR/ESKD/death \| ESKD \| Death
+
+**The immunosuppression regime:**
+
+**High dose:** 0.6-0.8 mg/kg/d, maximum 48 mg/d, weaning by 8 mg/d/mo; n = 136
+
+**Low dose Regime:** (0.4 mg/kg/day, maximum 32 mg/day) for 2 months, followed by weaning by 4 mg/day/month over 6-9 months, or matching placebo.
+
+& PJP prophylaxis for 12 weeks (cotrim)
+
+**Results**
+
+-   N=503, 5 countries \| mean age 38 \| mean eGFR, 61.5 \| mean proteinuria, 2.46 g/d \| 98% completed trial
+-   Chinese heritage well represented \~ 75% (initial funding & recruitment in China/oz)
+-   60:40 M:F
+-   Methylpred full-dose HR, 0.58 (95% CI, 0.41-0.81); reduced-dose HR, 0.27 (95% CI, 0.11-0.65)
+-   SAE were higher in pred obviously, but almost entirely in the high dose infections
+-   Proteinuria rebound after initial dip but eGFR maintains benefit - legacy effect?
+
+**Conclusion:**
+
+Probably low dose is reasonable in high risk of progression, single regime, I wouldn’t repeat if later “flare” or retreat unless they were exceptionally tolerant of initial regime and rebiopsy showed activity and minimal sclerosis
+
+**Notes:**
+
+E1, E0 both responded to treatment, despite previous suggestions from MEST 2009
+
+Effect was not exclusive to Chinese (questions around Stop IgA suggested their European centres were the reason for lack of efficacy – this appears not to be the case)
+
+By the end of trial, initial drop in proteinuria has returned to baseline
+
+-   In international cohorts there is a benefit in inducing remission with diminishing returns on duration ending around 3-4 years – i.e. There appears to be a legacy benefit to long term outcomes based on initial proteinuria reduction in international cohorts
+-   In clinic, a rising proteinuria probably indicates sclerosis / conversion to DAPA-CKD like phenotype / could be a flare but who knows what to do with that. Prob not immunosuppress anyway
+
+## NEFIGAN
+
+[NEFIGAN](<https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(17)30550-0/fulltext>)
+
+*Oral, enteric coated Budesonide in IgA*
+
+Oral option, USA has enteric coated on patent (100k/9 months in US!)
+
+Has less side effects due to first pass metabolism
+
+Evidence that proteinuria reduction in phase 2, but ongoing phase 3 trials to correlate with longer term eGFR changes.
+
+## SGLT2i in IgA
+
+-   TESTING are patients in their 30s, heavy proteinuria (2.5g), eGFR in 60s.
+-   STOP IgA, Proteinuria 1.5g/day (pre-MEST) – more scarred and less active bx (a lot of S1 on subsequent reanalysis of bx)
+-   In contrast [DAPA-CKD subgroup with IgA](<https://www.nejm.org/doi/full/10.1056/NEJMoa2024816>) – 10 years older, 20mls less eGFR, proteinuria \<1g/day (i.e.? burning out/scarred? very small subgroup, only 26 events in subgroup) – Placebo risk of primary outcome \~18% @ 2 years. To get this level of risk given low proteinuria – must have lots of T2 lesions and scarring.
+-   Probably most appropriate to use a SGLT2i to somebody who *isn’t* a candidate for immunosuppression, want to augment conservative therapy
+-   Immunosuppressive options in early phase \| Flozins for burning out disease
+-   Potential downsides: Steroids & SGLT2i -? infection risk, might mask proteinuria and confuse treatment decisions.
 
 
-[link example](https://cjasn.asnjournals.org/content/13/11/1627)
->
-
-# Guidelines & Protocols
-
-[European Renal-Endocrine hyponatreamia guideline](https://eje.bioscientifica.com/view/journals/eje/170/3/G1.xml)
-
-# Key Papers
-
-<br>
-<style>
-div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
-</style>
-<div class = "blue">
-[TESTING](https://pubmed.ncbi.nlm.nih.gov/34731857/)
-<br>
-Steroids in IgAN
-
-* Patients with IGAN 1g proteinuria, 12 week run in ACEi/ARB randomised to methylpred ( high,low) /placebo. N=503, 5 countries, mean age 38.
-* Excluded: Secondary IGAN, MCD, >50% crescents, infection, cancer
-* Outcome: 40% decreased in eGFR/ESKD/death
-* Methylpred  high (HR 0.58), low (HR 0.27) significantly reduced primary outcome, many serious AE but  in low dose ~ placebo
-*Low dose Regime: (0.4 mg/kg/day, maximum 32 mg/day) for 2 months, followed by weaning by 4 mg/day/month over 6-9 months, or matching placebo. PJP prophylaxis for 12 weeks.
-* **Conclusion:** Probably useful but potentially a high price to pay – save for rapid decliner ?
-
-</div>
-<br>
-
-
-# Educational
-
-links here
-
-# Patient materials
-
-links here
 
