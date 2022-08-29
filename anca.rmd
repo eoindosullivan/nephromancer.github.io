@@ -2,65 +2,24 @@
 title: " "
 output: html_document
 ---
-### ANCA Vasculitis
 
-* Hyponatraemia is all about ADH typically
-* Isothenuria normal in aging and in AKI/CKD.
-  + Urine diulation is active and difficult 
-  + Normal adult can generate dilute urine - 50mOSM/Kg
-  + "Normal" diet is 10mOSM/kg/day, so 70kg male = (10*70)=700/50(daily limit)=14litres
-  + Elderly limit ~150 mOSM/kg. Diet intake can be low (tea and toast) e.g. (3*50)/150=1Litre/day. free water over this limit dilutes urine.
-  
-* **Hypotonic** hyponatraemia requires treatment (probably), so confirm a pOSM if possible.
-* k+ is oncotic too ( and can buffer NA) - 20mmol/KCL = 40ml 3% NaCL - may overcorrect if not aware!
-
-* Urine Na: >30 mmol/l urinary Na = dry (NB low [Na] diet, diuretics, CKD - poor reabsorbtion (and impaired free water clearance too))
-* Urine Osm: <100 mmmol/L = appropriately dilute. 100 - serum osm = grey area.
-  + Remember that a **measured osm** also measures ineffective osmolues such as Urea or Ethanol - may be artefactually high and mask true hypoosmolar state
-* Non-hypotonic (hyperglycaemia, mannitol, hypertonic radiocontrast,pseudohyponatreamia) - conservative Rx
+# TIPS
 
 ### Post remission rising in ANCA
 
 Per Stegeman on the ASN forums:
 
-In general a significant rise in ANCA titer, either PR3 or MPO, over a period of 3-6 months is associated with a risk of relapse of around 60% in the 6-12 months following the ANCA rise. The other 40% will not have a relapse of disease over a period of 1-2  years. What a significant rise in ANCA is, is totally dependent on the test used (indirect immune fluorescent tests usually at least a fourfold rise (2 titer steps); ELISA based methods 75-100% increase and 2-3 times the upper limit of normal (so changes in the very low positive range usually mean not much) and should be analyzed for the test you are using to quantify ANCA levels. In our experience a continuous slow rise in ANCA (so less than a significant rise in 3-6 months or over a longer period) does not have much prognostic value above the baseline risk of ~10-20% annual risk of relapse associated with persistent positive PR3-ANCA in the first 5 years after diagnosis and initial treatment (for MPO-ANCA the risk seems lower probably more around 5-10%)
+-   In general a significant rise in ANCA titer, either PR3 or MPO, over a period of 3-6 months is associated with a risk of relapse of around 60% in the 6-12 months following the ANCA rise. 
+-   The other 40% will not have a relapse of disease over a period of 1-2  years. 
+-   What a significant rise in ANCA is, is totally dependent on the test used (indirect immune fluorescent tests usually at least a fourfold rise (2 titer steps); ELISA based methods 75-100% increase and 2-3 times the upper limit of normal (so changes in the very low positive range usually mean not much) and should be analyzed for the test you are using to quantify ANCA levels. 
+-   In our experience a continuous slow rise in ANCA (so less than a significant rise in 3-6 months or over a longer period) does not have much prognostic value above the baseline risk of ~10-20% annual risk of relapse associated with persistent positive PR3-ANCA in the first 5 years after diagnosis and initial treatment (for MPO-ANCA the risk seems lower probably more around 5-10%)
 
 So I would advise not to treat an isoloated (significant!) rise in ANCA titer unless you want to minimize the risk of relapse to the absolute minimum (because you fear the consequences of the relapse for the patient, which seems not be the case for this particular patient (given the bothersome but not lifethreatening manifestations of her disease and the fact that most relapses copy the initial presentation and it is unusual (unfortunately not impossible) to have more extensive/severe disease manifestations during relapse as compared to the previous presentations).
 
-------------------------------
-Coen Stegeman MD, PhD
-Prof. dr.
+Prof Coen Stegeman MD, PhD
 University Medical Center Groningen
 Groningen
-31503612621
 
 
-[link example](https://cjasn.asnjournals.org/content/13/11/1627)
->
 
-# Guidelines & Protocols
-
-[European Renal-Endocrine hyponatreamia guideline](https://eje.bioscientifica.com/view/journals/eje/170/3/G1.xml)
-
-# Key Papers
-
-<br>
-<style>
-div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
-</style>
-<div class = "blue">
-[Nature Reviews Nephrology: DI - palceholder](https://www.nature.com/articles/s41572-019-0103-2).
-<br>
-
-</div>
-<br>
-
-
-# Educational
-
-links here
-
-# Patient materials
-
-links here
 

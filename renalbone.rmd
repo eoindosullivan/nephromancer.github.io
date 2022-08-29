@@ -3,16 +3,16 @@ title: "Renal Bone Disease"
 output: html_document
 ---
 
-## Parathyroidectomy in CKD
+# Parathyroidectomy in CKD
 
 RIE Protocol
 
-### Pre Operative Care
+## Pre Operative Care
 * Alfacalcidol 2mcg bd should be given for 3 days prior to surgery.
 * Cinacalcet should be stopped one week before parathyroidectomy.
 * Patients at risk of hungry bone syndrome should be identified.
 
-### Hungry Bone Syndrome
+## Hungry Bone Syndrome
 Diagnosis hinges on a profound and persistently low calcium level of less than 2.1 mmol/L
 for more than four days postoperatively along with hypophosphatemia and normal PTH
 levels. Such patients require prolonged, high dose calcium to maintain serum calcium levels.
@@ -24,7 +24,7 @@ Often there is also associated hypomagnesemia and hypocalciuria. Risk factors in
 * Higher BMI
 * Higher BUN
 
-### Post Operative Care
+## Post Operative Care
 * Patients should be admitted to ward 215 post operatively and prescribed Alfacalcidol 2mcg bd & Calvive (formally Sandocal1000) 2 tablets tds - Do not take at mealtimes.
 * Hold phosphate binders.
 * Serum corrected calcium should be measured every 6 hours for the first 24 hours post surgery, and then less frequently if stable.
@@ -36,7 +36,7 @@ development of significant hypocalcaemia is likely and requires more frequent mo
 * Do not treat hypophosphataemia unless serum phosphate falls below 0.35 mmol/l.
 * Consider higher calcium dialysate (A232, A231 containing calcium 1.5 mmol) or PD fluid.
 
-### Post Discharge
+## Post Discharge
 RRT patients: Monitor serum calcium on each HD session or 3 times a week (for PD
 patients) for the first two weeks and weekly checks as required thereafter until stability is
 reached.
@@ -52,7 +52,7 @@ recommends increasing dose in increments of 0.25 – 0.5 micrograms but if takin
 micrograms or more change dose by 1 microgram.
 * Check magnesium levels and replace if recurrent /resistant hypocalcaemia
 
-### IV Calcium Infusion
+# IV Calcium Infusion
 Use calcium gluconate over calcium chloride. Care must be taken to ensure intravenous
 calcium is not extravasated. If central line is available this is likely to be most suitable
 access. If venous access is not secure, then a central line may be considered.
@@ -74,7 +74,7 @@ Emergency situations - Give 10ml of 10% calcium gluconate (2.2mmol calcium) no f
 than 2ml/min (i.e., Over at least 5mins, ECG monitoring recommended); this can be given
 peripherally.
 
-### Calcium Content of Common Supplements
+##  Common Supplements
 
 Calcium supplements Calcium Content
 

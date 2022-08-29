@@ -63,7 +63,7 @@ Check anti-Hbs antibodies 1-2 months after course.
 
 -   Wait 30 mins for equilibration before second sample
 
-
+## HEMO study
 <br>
 <style>
 div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
@@ -116,6 +116,7 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 
 In Edinburgh use iron as ferric derisomaltose (Diafer) ~100mg weekly/monthly etc during HD. This is low dose :(
 
+## PIVOTAL
 
 <br>
 <style>
@@ -193,25 +194,5 @@ treated with immunosuppressant medications guided by the level of anti EPO antib
 
 [KDIGO](https://kdigo.org/guidelines/)
 
-# Key Papers
 
-
-
-[PIVOTAL](https://www.nejm.org/doi/full/10.1056/nejmoa1810742)
-<br>
-<style>
-div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
-</style>
-<div class = "blue">
-- notes here
-</div>
-<br>
-
-# Educational
-
-links here
-
-# Patient materials
-
-links here
 

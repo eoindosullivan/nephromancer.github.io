@@ -8,13 +8,13 @@ left:
       - text: "Na"
         href: ./na.html
       - text: "K"
-        href: ./k.html
+        href: ./project1.html
       - text: "MG"
-        href: ./mg.html
+        href: ./project1.html
       - text: "Ca2+"
-        href: ./ca.html
+        href: ./project1.html
       - text: "PO4"
-        href: ./po4.html
+        href: ./project1.html
   - text: "GN"
     menu:
       - text: "MCD"
@@ -26,41 +26,39 @@ left:
       - text: "MPGN & C3G"
         href: ./MPGN_C3G.html
       - text: "Ca2+"
-        href: ./aboutme.html
+        href: ./project1.html
       - text: "PO4"
-        href: ./aboutme.html
+        href: ./project1.html
   - text: "CKD"
     menu:
-      - text: "H+ & HCO3"
-        href: ./aboutme.html
-      - text: "Na"
-        href: ./aboutme.html
-      - text: "K"
-        href: ./aboutme.html
-      - text: "MG"
-        href: ./aboutme.html
-      - text: "Ca2+"
-        href: ./aboutme.html
+      - text: "Classic Cocktail"
+        href: ./project1.html
+      - text: "Conservative care"
+        href: ./project1.html
+      - text: "Anaemia"
+        href: ./project1.html
+      - text: "Pruritis"
+        href: ./project1.html
       - text: "Renal-Bone"
         href: ./renalbone.html
   - text: "TX"
     menu:
        - text: "Cheat sheet"
          href: ./project1.html
-       - text: "Project part 2"
-         href: ./project2.html
+       - text: "Misc Notes"
+         href: ./txnotes.html
   - text: "RRT"
     menu:
       - text: "HD"
         href: ./HD.html
       - text: "Home HD"
-        href: ./aboutme.html
+        href: ./project1.html
       - text: "HD Access"
-        href: ./aboutme.html
+        href: ./project1.html
       - text: "PD"
-        href: ./aboutme.html
+        href: ./project1.html
       - text: "CVVH"
-        href: ./aboutme.html
+        href: ./project1.html
         
   - text: "DRUGS"
     menu:
@@ -68,22 +66,19 @@ left:
         href: ./abx.html
       - text: "HDU"
         href: ./aboutme.html
-      - text: "K"
-        href: ./aboutme.html
-      - text: "MG"
-        href: ./aboutme.html
-      - text: "Ca2+"
-        href: ./aboutme.html
-      - text: "PO4"
-        href: ./aboutme.html
+      - text: "Flozins"
+        href: ./project1.html
+
   - text: "MISC"
     menu:
        - text: "PATH"
          href: ./path.html
        - text: "PEX"
-         href: ./project2.html
+         href: ./project1.html
        - text: "Lymphoproliferative"
          href: ./Lymphoproliferative.html
+       - text: "SARS-Cov-2"
+         href: ./project1.html
   - text: "EDU"
     menu:
        - text: "Project part 1"

@@ -24,7 +24,7 @@ Very important to clarify is this is an Ig related disease (more treatable) vs C
 
 # Histology
 
-<https://www.seminarsinnephrology.org/article/S0270-9295%2811%2900066-0/fulltext>
+[Good Review](https://www.seminarsinnephrology.org/article/S0270-9295%2811%2900066-0/fulltext>)
 
 **Light microscopy**
 
@@ -40,11 +40,15 @@ Very important to clarify is this is an Ig related disease (more treatable) vs C
 
 -   Mesangial deposits, capillary wall deposits (sub endothelial), cellular interposition and new basement membrane formation – ie. double contours
 
+![example 1](images/MPGN_EM_1.png)
+
 Small White arrows – sub endothelial deposits. Basement membrane is trying to “trap” the deposits as a reaction, just like an abscess being formed and walled off. Incoming cell inflammatory cells (monocytes) get “interposed”
 
-More classic appearance here, note entire cell on the left is entrapped, and debris on the right. (images from the Glomcon episode of Sanjeev Sethi, MD, PhD Professor Department of Laboratory Medicine and Pathology Mayo Clinic Rochester, USA https://www.youtube.com/watch?v=G6tvykyaF3w)
+![example 2](images/MPGN_EM_2.png)
 
-MPGN presentation depends on timing along the natural history
+More classic appearance here, note entire cell on the left is entrapped, and debris on the right. (images from the Glomcon episode of Sanjeev Sethi, MD, PhD Professor Department of Laboratory Medicine and Pathology Mayo Clinic Rochester, USA [Glomcon](https://www.youtube.com/watch?v=G6tvykyaF3w)
+
+![MPGN presentation depends on timing along the natural historydapted from Lionaki et al](images/MPGN_spectrum.png)
 
 # Classification
 
@@ -73,27 +77,27 @@ MPGN “traditional classification” - based on EM, disregarded IF.Not very use
 
 # MPGN Outcomes
 
-<https://www.nejm.org/doi/full/10.1056/nejmra1108178> best review
+[Best Review](https://www.nejm.org/doi/full/10.1056/nejmra1108178)
 
 # C3G
 
-All ages, no sex predilection
+-   All ages, no sex predilection
 
-Nephritic -\> nephrotic presentation
+-   Nephritic -\> nephrotic presentation
 
-Typically, present with HTN, proteinuria and haematuria
+-   Typically, present with HTN, proteinuria and haematuria
 
-Bright C3, minimal or no Ig
+-   Bright C3, minimal or no Ig
 
-2 flavours C3GN, DDD (EM)
+-   2 flavours C3GN, DDD (EM)
 
-Usually shows MPGN but other patterns possible e.g. “post infectious”
+-   Usually shows MPGN but other patterns possible e.g. “post infectious”
 
-if coexisting IG, more likely to have an autoantibody rather than infection
+-   if coexisting IG, more likely to have an autoantibody rather than infection
 
-C3GN When associated with infection
+-   C3GN When associated with infection
 
-Some of these have very distant infections which might be associated with complement mutations or residual auto antibodies
+-   Some of these have very distant infections which might be associated with complement mutations or residual auto antibodies
 
 # G3G Treatment
 

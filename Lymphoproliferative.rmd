@@ -6,7 +6,7 @@ output: html_document
 
 All of them can affect kidneys: Hodgkins/non- hodgkins, post immunosuppressive (EBV etc) CLL, Waldenstroms etc
 
-Almost all patterns of injury can occur. The unique factor is that a **monocloncal protein may light up on the IF.** Hence the benefit of doing Kappa and Lamda and CD3,CD20 when suspicious.
+Almost all patterns of injury can occur. The unique factor is that a **monoclonal protein may light up on the IF.** Hence the benefit of doing Kappa and Lamda and CD3,CD20 when suspicious.
 
 ### Renal involvement
 
