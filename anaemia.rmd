@@ -1,0 +1,201 @@
+---
+title: " "
+output: html_document
+---
+
+# Anaemia
+
+# Iron
+
+* Screen annually in CKD G3, biannually in CKD G4
+* Investigate  - EPO def is dx of exclusion. "possible"" in eGFR <60, "probable" in <30
+
+#### Iron studies
+
+  + % HRC if able to process within 6 hours 
+  + Reticulocyte Hb count (CHr)
+  + TSATS and ferritin ( if above not available or thalassaemia)
+  + Ferritin & CRP
+  + PTH & TFT ( can contribute to iron def)
+  + Consider - b12/folate/haemolysis/plasma&urine electrophroesis, hb electrophoresis, LTC & Marrow
+  + Scopes etc
+  
+#### Iron repletion
+
+* %HRC <6% / CHr >29 pg / ferritin and TSAT (>100 microgram/L and >20%). 
+* Oral iron usually ok for CKD, ~PD. IV for HD.
+* If not in centre, high dose low frequency is good
+
+#### Oral iron is viable in mild CKD
+
+-   Interestingly alternate day dosing is higher in absorbtion to daily dosing per [Lancet haematology](https://www.thelancet.com/journals/lanhae/article/PIIS2352-3026(17)30182-5/fulltext)
+-   measuring the isotopic label abundance in erythrocytes 14 days after administration, and serum hepcidin.
+-   iron deficient women who were not anaemia
+-   shock, horror, no CKD included
+-   hard to generalise this observation to our patients but it is intriguing imo
+
+#### Iron Therapy 
+
+* In HD proactive high-dose IV iron sucrose (venofer) 400 mg every month (or equivalent) should be given unless ferritin > 700 μg/L or TSAT>40% ( PIVITOL)
+* Avoid in infection, probably
+* Monitor quarterly
+* Hb Targets: 100-120
+* Caution in malignancy
+* ferrinject (Ferrous carboxymaltose) has reports of hypophos fairly consistantly in trials
+
+* **Limits** Feritin =< 800. Review iron therapy when hits 500. 
+
+In Edinburgh use iron as ferric derisomaltose (Diafer) ~100mg weekly/monthly etc during HD. This is low dose :(
+
+## PIVOTAL
+
+<br>
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class = "blue">
+[PIVOTAL](https://www.nejm.org/doi/full/10.1056/nejmoa1810742)
+
+-   High dose IV iron vs low dose
+-   High dose non inferior for compositive CV | death endpoint
+-   Less CV composite events in high dose hazard ratio, 0.80; 95% CI, 0.64 to 1.00
+-   Less Blood transfusions
+-   Same infections
+</div>
+<br>
+
+# ESA
+
+* Caution htn - 175/95 as arbitrary cut offs
+* Neorecoromon is 150 units/kg body weight/week. This is usually administered as 3 divided doses (but can be given as a single weekly dose), given intravenously during haemodialysis. 70kg man gets 3500 units each session (10,500/3)
+* Adjust in 25-50% increments
+
+## HB Targets
+
+## NORMAL HEAMATOCRIT TRIAL
+
+<br>
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class = "blue">
+[NHT](https://pubmed.ncbi.nlm.nih.gov/9718377/)
+
+-   Intervention: EPO-a :: target Hb 13-15, vs rescue Hb 9-11 on HD with CVD
+-   Endpoint: Death & non-fatal MI
+-   Results: N=1265 | risk ratio for the normal-hematocrit group as compared with the low-hematocrit group, 1.3; 95 percent confidence interval, 0.9 to 1.9
+-   Stopped early due to safety concerns
+-   mortality rates decreased with increasing hematocrit values in both groups. 
+-   The patients in the normal-hematocrit group had a decline in the adequacy of dialysis and received intravenous iron dextran more often than those in the low-hematocrit group.
+</div>
+<br>
+
+
+## CHOIR
+
+<br>
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class = "blue">
+[CHOIR](https://pubmed.ncbi.nlm.nih.gov/17108343/)
+
+-   Intervention: EPO-a :: target Hb 13.5 vs 11.3 in CKD eGFR >15
+-   Endpoint: CV events including death, MI, hospitalizations for CHF, and stroke
+-   Results: N=1432 | Composite of death, MI, hospitalization for CHF, or stroke
+17.5% vs. 13.5% (HR 1.34; 95% CI 1.03-1.74; P=0.03) | More SAE 54.8% vs. 48.5% (P=0.02), CHF 
+11.2% vs. 7.4% (P=0.02) although less MI 1.5 vs. 2.8% (P=0.09)
+
+-   Even though the study population was randomized, the high Hgb group had more comorbid conditions, including a greater percentage of HTN, history of CABG, and severe CHF.
+-   The high-Hgb group was not able to reach the target Hgb level despite higher doses of erythropoietin.
+-   The trial was open-label, not double-blinded.
+</div>
+<br>
+
+## TREAT
+
+<br>
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class = "blue">
+[TREAT](https://pubmed.ncbi.nlm.nih.gov/19880844/)
+
+-   Intervention: Darbo :: target Hb >10 vs rescue ESA if <9 in CKD eGFR >20, DM2,Hb<11, TSATS >15%
+-   Endpoint: death or CV events and death or ESRD, stroke
+-   Results: N=4038 | Death or CV: 31.4% vs. 29.7% (HR 1.05; 95% CI, 0.94 to 1.17; P=0.41), Death or ESRD 32.4% vs. 30.5% (HR 1.06; 95% CI, 0.95 to 1.19; P=0.29)
+-   5% vs. 2.5% (HR 1.92; 95% CI 1.38-2.68; P<0.001; NNH 40)
+-   Less fatigue though!!
+
+-   Did not target different hemoglobin levels for different sexes
+-   Incomplete details pertaining to stroke
+-   Unclear effect of iron administration in placebo group
+
+</div>
+<br>
+
+## CREATE
+
+<br>
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class = "blue">
+[CREATE](https://pubmed.ncbi.nlm.nih.gov/17108342/)
+
+-   Intervention: EPO-beta :: target Hb >13-15, vs rescue Hb 10.5-11.5 in CKD eGFR 15-30
+-   Endpoint: composite of eight cardiovascular events; secondary end points included left ventricular mass index, quality-of-life scores, and the progression of chronic kidney disease.
+-   Results: N=603 | OVer 3 years (58 events in group 1 vs. 47 events in group 2; hazard ratio, 0.78; 95% confidence interval, 0.53 to 1.14; P=0.20).
+-   Dialysis was required in more patients in group 1 than in group 2 (127 vs. 111, P=0.03)
+-   But slightly confusingly mean eGFR was the same ~24
+-   General health and physical function improved significantly (P=0.003 and P<0.001, respectively, in group 1, as compared with group 2).
+-    SAE similar but more HTN in higher hb
+
+</div>
+<br>
+
+
+#### Resistance to ESA therapy
+
+Failure to reach the target
+Hb level despite SC epoetin dose >300 IU/kg/week (450 IU/kg/week IV epoetin), or darbepoetin dose >1.5
+microgram/kg/week. ( 70kg man = 7000 units/session)
+
+Hyporesponsive patients who are iron replete should be screened clinically and by
+investigations for other common causes of anaemia.
+
+#### Pure Red Cell Aplasia
+
+Considered whenever a patient receiving
+long term ESA therapy (more than 8 weeks) develops all the following (2A):
+
+* sudden decrease in Hb concentration at the rate of 5 to 10g/L per week OR requirement of
+transfusions at the rate of approximately 1 to 2 per week
+* normal platelet and white cell counts,
+* absolute reticulocyte count less than 10,000/µl
+
+ESA therapy should be stopped in patients who develop ESA induced PRCA.
+
+Patients who remain transfusion dependent after withdrawing ESA therapy should be
+treated with immunosuppressant medications guided by the level of anti EPO antibodies
+
+It was probably the rubber bungs on the old school [EPREX syringes](https://pubmed.ncbi.nlm.nih.gov/15824129/) which were generating the antibodies, their removal from the market has essentially fixed the issue
+
+# HIF inhibitors
+
+Roxadustat is suss
+
+A Roxadustat paper is being [retracted](https://retractionwatch.com/2021/05/11/clinical-trial-paper-that-made-anemia-drug-look-safer-than-it-is-will-be-retracted/)
+
+- compared roxadustat CV outcomes to EPO-alpha in non HD CKD - which its not really indicated for due to increased CV endpoints
+-   post-hoc changes to the stratification factors
+-   Failed to sort out the issues on review so [all gone](https://www.kireports.org/article/S2468-0249(20)31851-9/fulltext)
+
+HIMALAYAS
+
+Risks
+-   Tumour progression
+-   PAH
+-   Increased cysts in ADPKD
+
+

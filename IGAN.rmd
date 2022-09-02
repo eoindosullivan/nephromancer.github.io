@@ -48,6 +48,8 @@ Consider:
 
 ## MEST-C
 
+*Useful for research but less useful for clinical decisions*
+
 [MEST-C scoring - The Oxford Study]( <https://pubmed.ncbi.nlm.nih.gov/27612994/>)
 
 -   **M**esangial hypercellularity; diffuse, involving greater than 50% of glomeruli
@@ -242,5 +244,46 @@ Evidence that proteinuria reduction in phase 2, but ongoing phase 3 trials to co
 -   Immunosuppressive options in early phase \| Flozins for burning out disease
 -   Potential downsides: Steroids & SGLT2i -? infection risk, might mask proteinuria and confuse treatment decisions.
 
+# IgA Vasculitis
+
+*The artist formally known as HSP*
+
+-   Skin – 95%
+    -   a petechial or purpuric rash in dependent areas (typically the buttocks and lower legs)
+    -   bullae
+    -   oedema
+    -   necrosis
+    -   In infants, the rash may be limited to the arms or face
+    -   BX: leukocytoclastic vasculitis with IgA deposition in the vessels.
+-   Gastrointestinal tract - 70%
+-   Joints – 70-90%
+-   Large joints in legs, appearing late in about 6% ( \>a week post dx) – usually no chronic sequelae
+-   Kidneys 40-50%, possibly more as microhematuria present in the majority of patients.
+    -   Identical histology to IgAN
+    -   25% microscopic haematirua
+    -   Mild proteinuria 15%
+    -   CKD develops in 1-2%
+    -   Monitor Cr and BP for 6 months post dx
+    -   CKD can develop late, notably during pregnancy
+-   Orchitis (in 14% of male patients)
+-   central nervous system involvement rare
+
+### Diagnosis
+
+-   Diagnosis of IgA vasculitis is clinical, but in cases in which there is diagnostic uncertainty, it can be confirmed by biopsy of an affected organ. 
+
+-   International consensus guidelines require the presence of palpable purpura in addition to abdominal pain, arthritis or arthralgia, renal involvement, or compatible histopathologic evidence. 
+
+-   Elevated IgA levels are neither necessary nor sufficient for diagnosis
+-   Type III immune complex diseases such as IgA vasculitis are complement-mediated, plasma complement levels are usually normal.
+
+### Management
+
+-   IgA vasculitis is primarily managed with supportive care and monitoring for complications. IgA vasculitis is generally self-limited, with complete resolution of symptoms and no long-term sequelae in the vast majority of cases. 
+
+-   Glucocorticoids are indicated for severe symptoms, especially those involving the gastrointestinal or musculoskeletal systems. 
+
+-   A systematic review including mostly retrospective studies and three randomized, placebo-controlled trials showed that glucocorticoids increased the odds of resolution of abdominal pain within 24 hours and suggested renal benefits. 
+-   However, the largest randomized trial involving patients with IgA vasculitis showed no evidence that glucocorticoids prevented the development of nephropathy.
 
 

@@ -1,0 +1,20 @@
+---
+title: " "
+output: html_document
+---
+
+# Pregnancy
+
+# Drugs
+
+Cant use much. No ACEi/ARB, no immunosuppresion. 
+
+## PENUT
+
+[PENUT trial](Hingorani S, et al CJASN 2022; 17:1129-1138)
+
+*Renal outcomes in prem babies \<28 weeks*
+
+N= 832 \| 53% one abnormal renal parameter \|18%had an eGFR \<90, 36% had albuminuria, 22% HTN.
+
+Gestational age (odds ratio, 0.94; 95% confidence interval, 0.89 to 0.99), birth weight *z*-score (odds ratio, 0.92; 95% confidence interval, 0.85 to 0.98), and prenatal steroids (odds ratio, 1.23; 95% confidence interval, 1.08 to 1.39) were associated with an eGFR \<90 ml/min per 1.73 m2

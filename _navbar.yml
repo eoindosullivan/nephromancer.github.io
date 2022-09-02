@@ -36,7 +36,7 @@ left:
       - text: "Conservative care"
         href: ./project1.html
       - text: "Anaemia"
-        href: ./project1.html
+        href: ./anaemia.html
       - text: "Pruritis"
         href: ./project1.html
       - text: "Renal-Bone"
@@ -71,14 +71,20 @@ left:
 
   - text: "MISC"
     menu:
+       - text: "HTN"
+         href: ./htn.html
        - text: "PATH"
          href: ./path.html
+       - text: "Pregnancy"
+         href: ./preg.html
        - text: "PEX"
          href: ./project1.html
        - text: "Lymphoproliferative"
          href: ./Lymphoproliferative.html
        - text: "SARS-Cov-2"
-         href: ./project1.html
+         href: ./covid19.html
+       - text: "Biopsy"
+         href: ./biopsy.html
   - text: "EDU"
     menu:
        - text: "Project part 1"

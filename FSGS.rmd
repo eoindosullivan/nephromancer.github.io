@@ -1,0 +1,34 @@
+---
+title: " "
+output: html_document
+---
+
+# FSGS
+
+## Steroid subtlties
+This discussion would not be complete without a  critique of how we (arbitrarily) define resistance to steroid therapy in apparently  Primary FSGS  in Adults.  The group in Nijmegen, Netherlands  have added some important information to this quandary .  Prolonged steroid therapy (well beyond the time used by KDIGO  to define 'steroid resistance " can be beneficial long term especially if   there is an early decline in Proteinuria of > 20% from baseline  ( see Rood UM, et al KI Reports 2022; 7: 87-92).  Also , in those who experience a partial or complete remission with steroids early in the course, maintenance of the remission can be crucial for long term benefits. ( see  Jauhal A, et al NDT, August 10,2022). 
+
+
+## Kitchen sink
+
+## Resistant FSGS
+
+Per Glassock on the ASN forums
+
+-   no one really knows what is the optimum approach to such patients. Desparate but unproven measures are commonly undertaken- such as the "kitchen sink" regimens of multi-target therapy or PLEX/lipid Apheresis.  dramatic effects can be seen (anecdotes) but impossible  to predict.
+
+-   ESKD and dialysis dependency are common no matter what is done, in most  cases.
+
+-   the risk of recurrent disease in the allograft is very high, if a  genetic disease is excluded
+
+-   the role of repeat biopsy is completely unknown, although it might be used to declare futility or to enhance the likelihood of CNI toxicity in selected patients.
+
+-   progressive elevations of serum creatinine suggest a poor outcome , except when CNI  is strongly suspected .  Regimens including CNI are potentially hazardous in such patients .
+
+-   referral to a Center of Excellence for consideration of enrollment in an  ongoing interventional trial should be strongly encouraged.
+
+
+
+
+
+

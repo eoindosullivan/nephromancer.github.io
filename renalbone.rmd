@@ -2,6 +2,32 @@
 title: "Renal Bone Disease"
 output: html_document
 ---
+# Cinacalcet
+
+## EVOLVE Trial
+
+*The one that was a bit of a disaster*
+
+[Effect of Cincalcet on CV outcomes in HD](https://www.nejm.org/doi/full/10.1056/nejmoa1205624)
+
+- Patients: HD & secondary hyperparathyroidism (sHPT; intact parathyroid hormone [iPTH] ≥300 pg/ml) 
+- Outcome: time until death, myocardial infarction, hospitalization for unstable angina, heart failure, or a peripheral vascular event.
+- Results: n= 3883 | HR in Cincalcet vs placebo  0.93; 95% confidence interval, 0.85 to 1.02; P=0.11
+- Treatment effects of cinacalcet on fracture rates were similar to effects on CV events in unadjusted ITT analysis
+
+- Not a total wash: Its effective in preventing severe unremitting HPT but thats a bit soft
+
+[Lessons](https://cjasn.asnjournals.org/content/11/3/539)
+
+-   very broad outcomes chosen which mechanistically might not make as much sense ( all cause death, major CV disease)
+-   Post hoc evaluation of the treatment effects on CV events using multivariable-adjusted ITT analysis showed relative hazards of 0.88 (95% confidence interval [95% CI], 0.76 to 1.01) for time to first atherosclerotic event, 0.79 (95% CI, 0.66 to 0.96) for heart failure, and 0.79 (95% CI, 0.64 to 0.98) for sudden death; the latter two events are considered outcomes of nonatherosclerotic disease 
+-   Heart failure is a sloppy outcome to record - the event adjudication committee only confirmed HF in about 50% of the HF dx made by local investigators
+-   parathyroidectomy as an endpoint was used but the referral pathways were not concrete and varied geographically so surrogate of calcium severeity and iPTH levels was used - became a bit murky
+-   age difference in groups despite randomisation
+-   lower event rate than expected
+-   Placebo discontinued for adverse events in 11.8% of patients compared with 15.8% of patients in the cinacalcet group.
+-   statistical challenges due to the non adherence and cointerventions
+
 
 # Parathyroidectomy in CKD
 
