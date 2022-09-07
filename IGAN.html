@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>IGAN.knit</title>
+
+<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+
+
+
+
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+.tocify-subheader {
+  display: inline;
+}
+.tocify-subheader .tocify-item {
+  font-size: 0.95em;
+}
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Nephromancer</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    U&amp;E
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./acidbase.html">H+ &amp; HCO3</a>
+    </li>
+    <li>
+      <a href="./na.html">Na</a>
+    </li>
+    <li>
+      <a href="./project1.html">K</a>
+    </li>
+    <li>
+      <a href="./project1.html">MG</a>
+    </li>
+    <li>
+      <a href="./project1.html">Ca2+</a>
+    </li>
+    <li>
+      <a href="./project1.html">PO4</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    GN
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./MCD.html">MCD</a>
+    </li>
+    <li>
+      <a href="./ANCA.html">ANCA</a>
+    </li>
+    <li>
+      <a href="./IGAN.html">IGAN</a>
+    </li>
+    <li>
+      <a href="./MPGN_C3G.html">MPGN &amp; C3G</a>
+    </li>
+    <li>
+      <a href="./project1.html">Ca2+</a>
+    </li>
+    <li>
+      <a href="./project1.html">PO4</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    CKD
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./project1.html">Classic Cocktail</a>
+    </li>
+    <li>
+      <a href="./project1.html">Conservative care</a>
+    </li>
+    <li>
+      <a href="./anaemia.html">Anaemia</a>
+    </li>
+    <li>
+      <a href="./project1.html">Pruritis</a>
+    </li>
+    <li>
+      <a href="./renalbone.html">Renal-Bone</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    TX
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./project1.html">Cheat sheet</a>
+    </li>
+    <li>
+      <a href="./txnotes.html">Misc Notes</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    RRT
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./HD.html">HD</a>
+    </li>
+    <li>
+      <a href="./project1.html">Home HD</a>
+    </li>
+    <li>
+      <a href="./project1.html">HD Access</a>
+    </li>
+    <li>
+      <a href="./project1.html">PD</a>
+    </li>
+    <li>
+      <a href="./project1.html">CVVH</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    DRUGS
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./abx.html">Abx</a>
+    </li>
+    <li>
+      <a href="./aboutme.html">HDU</a>
+    </li>
+    <li>
+      <a href="./project1.html">Flozins</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    MISC
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./htn.html">HTN</a>
+    </li>
+    <li>
+      <a href="./path.html">PATH</a>
+    </li>
+    <li>
+      <a href="./preg.html">Pregnancy</a>
+    </li>
+    <li>
+      <a href="./project1.html">PEX</a>
+    </li>
+    <li>
+      <a href="./Lymphoproliferative.html">Lymphoproliferative</a>
+    </li>
+    <li>
+      <a href="./covid19.html">SARS-Cov-2</a>
+    </li>
+    <li>
+      <a href="./biopsy.html">Biopsy</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    EDU
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./project1.html">Project part 1</a>
+    </li>
+    <li>
+      <a href="./project2.html">Project part 2</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https:eoindosullivan.com">
+    <span class="fas fa-home"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+
+</div>
+
+
+<div id="igan" class="section level1">
+<h1>IgAN</h1>
+<ul>
+<li>Most common type of glomerulonephritis</li>
+<li>1.5 of 100,000 individuals per year</li>
+<li>2:1 M:F in North America, 1:1 in Asia</li>
+<li>1-3% of all cases of end stage kidney disease</li>
+<li>The prevalence is highest in Asian countries - 30% of all kidney
+biopsies (and 45% of glomerulonephritis cases) cultural biopsy practice
+a factor?</li>
+<li>5% of biopsies in the United States and Europe.</li>
+<li>Classic presentation: microscopic hematuria, asympomatic, picked up
+on screening</li>
+<li>Atypical &amp; Non-Specific presentations can be tricky: abdominal
+pain, hypertension, and proteinuria.</li>
+<li>HSP spectrum</li>
+<li>Large variability in outcomes:
+<ul>
+<li>10-year risk of ESKD ~ 30-40% worldwide</li>
+<li>10 year risk of ESKD ~ 10% if normal eGFR at presentation</li>
+<li>Risk prediction important, see below</li>
+</ul></li>
+</ul>
+</div>
+<div id="pathology" class="section level1">
+<h1>Pathology</h1>
+<ul>
+<li>Abnormal glycosylation of IgA</li>
+<li>Abnormal IgA is galactose-deficient and consequently recognized by
+anti-glycan IgG or IgA1 antibodies</li>
+<li>These immune complexes deposit in mesangium causing injury</li>
+</ul>
+</div>
+<div id="risk-stratification" class="section level1">
+<h1>Risk Stratification</h1>
+<p><strong>Established risk factors</strong></p>
+<ul>
+<li>Male sex</li>
+<li>Proteinuria &gt;1 g/d</li>
+<li>Hypertension</li>
+<li>Reduced GFR</li>
+<li>Hyperuricemia</li>
+</ul>
+<p><a href="https://www.nejm.org/doi/full/10.1056/NEJMra1206793">Back of
+the Envelope method</a></p>
+<p>Consider:</p>
+<ul>
+<li>Proteinuria &gt; 1 g per day</li>
+<li>HTN (&gt;140/90 mm Hg)</li>
+<li>“severe” histologic lesions on the basis of glomerular, vascular,
+tubular, and interstitial features.</li>
+</ul>
+<p>20-year survival without RRT = 96% if no risk factors 36% with 3.</p>
+<p><strong>Histological methods</strong></p>
+<div id="mest-c" class="section level2">
+<h2>MEST-C</h2>
+<p><em>Useful for research but less useful for clinical
+decisions</em></p>
+<p><a href="https://pubmed.ncbi.nlm.nih.gov/27612994/">MEST-C scoring -
+The Oxford Study</a></p>
+<ul>
+<li><strong>M</strong>esangial hypercellularity; diffuse, involving
+greater than 50% of glomeruli</li>
+<li><strong>E</strong>ndocapillary hypercellularity: any, even if
+limited to a single loop of a single glomerulus</li>
+<li><strong>S</strong>egmental sclerosis: any</li>
+<li><strong>T</strong>ubular atrophy and interstitial fibrosis: 25-50%
+cortex, &gt;50% of cortex</li>
+</ul>
+<p>Mesangial hypercellularity, endocapillary hypercellularity, and
+crescent formation are histopathologic indicators of activity, while
+segmental sclerosis and tubular atrophy indicate chronicity. E is
+worst.</p>
+<p><a href="https://pubmed.ncbi.nlm.nih.gov/27612994/">Crescents added
+in 2019</a></p>
+<ul>
+<li>C0 (no crescents)</li>
+<li>C1 (crescents &lt; 25% gloms), identifying patients at increased
+risk of poor outcome without immunosuppression</li>
+<li>C2 (crescents &gt;25% gloms), identifying patients at even greater
+risk of progression, even with immunosuppression</li>
+<li>Fibrous (&lt;10% cells and ≥90% matrix) crescents don’t count
+(fibrocellular are ok)</li>
+</ul>
+<p>If you are C2, HRs for a (composite outcome of either ESRD or ≥50%
+reduction in eGFR; increased rate of eGFR decline) was of 3.26 (95% CI,
+1.47 to 7.34; P=0.004) in untreated and and 2.43 (95% CI, 1.17 to 5.06)
+if treated with Immunosuppression. Not particularly different!</p>
+<p>M, S crescents enhance ability to predict outcomes only in patients
+who had not received immunosupression. <a
+href="http://www.nephjc.com/news/2016/10/16/do-crescents-matter-for-iga-nephropathy">Nice
+NephJC</a></p>
+</div>
+<div id="valiga" class="section level2">
+<h2>VALIGA</h2>
+<p><a
+href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4184028/">VALIGA</a></p>
+<p><em>European validation of Oxford study</em></p>
+<ul>
+<li>1147 patients | 13 European countries | median follow-up of 4.7
+years</li>
+<li>86% ACEi/ARB, 42% steroids/IS</li>
+</ul>
+<p>MST = predict loss of renal function</p>
+<p>If eGFR &lt;30, MT = predict loss of renal function</p>
+<p>If Proteinuria &lt;0.5/day, ME = predict rise in proteinuria to
+1-2g/day</p>
+<p>As with Oxford, MST enhance ability to predict outcomes only in
+patients who had not received immunosupression</p>
+</div>
+<div id="prediction-models" class="section level2">
+<h2>Prediction models</h2>
+<p><a href="https://pubmed.ncbi.nlm.nih.gov/30980653/">International IgA
+Nephropathy Network Prediction models</a></p>
+<p>Parameters:</p>
+<ul>
+<li>Age</li>
+<li>Ethnicity</li>
+<li>Blood pressure</li>
+<li>GFR</li>
+<li>Proteinuria</li>
+<li>Use of renin-angiotensin system blockade</li>
+<li>Use of immunosuppression</li>
+<li>Pathologic variables (MEST-score)</li>
+</ul>
+<p><strong>Generalizability</strong></p>
+<ul>
+<li><p>Adult patients, no pediatric patients.</p></li>
+<li><p>White, Chinese and Japanese patients only</p></li>
+<li><p>Biopsy-proven IgA nephropathy only so the full models cannot be
+applied in patients who have not undergone biopsy.</p></li>
+<li><p>Needs to be applied at the time of bx only</p></li>
+<li><p>Not appropriate for Rx decisions</p></li>
+</ul>
+<p><a
+href="https://qxmd.com/calculate/calculator_499/international-igan-prediction-tool-at-biopsy-adults">Calculator
+here</a></p>
+<p><strong>GWAS</strong></p>
+<p><a
+href="https://journals.plos.org/plosgenetics/article?id=10.1371%2Fjournal.pgen.1002765">IgA
+GWAS</a></p>
+<p>Risk genes increase as you move West to East but ultimately only
+explain ~7% of overall risk.</p>
+<p>Interesting implications for variable of “Race” in data and what it
+really is capturing – at times, these risk genes, but also captures
+range of diverse and ill-defined cultural/socioeconomic patterns.</p>
+<p>Not entirely clear what relationship “race” has to IGAN, possibly
+worse outcomes in “Chinese” populations but unclear if that applies to
+Chinese Nationals of those with Chinese heritage in other countries. No
+evidence of differential treatment effects.</p>
+</div>
+</div>
+<div id="treatment" class="section level1">
+<h1>Treatment</h1>
+<ul>
+<li><p>If proteinuria, optimise long term ACE-i/ARB to max
+tolerated</p></li>
+<li><p>Threshold for starting per KDIGO &gt;1g/d</p></li>
+<li><p>BP &lt;130/80</p></li>
+</ul>
+<div id="stop-igan" class="section level2">
+<h2>STOP-IgAN</h2>
+<p><a
+href="https://www.nejm.org/doi/full/10.1056/NEJMoa1415463">STOP-IgAN</a></p>
+<p><em>Heavy Immunosuppression for moderate IgA disease</em></p>
+<p><strong>Inclusion:</strong></p>
+<p>Bx confirmed IGAN, aged 18-70, proteinuria &gt;0.75g/d &amp; HTN,
+eGFR&lt;90</p>
+<p><strong>Excluded:</strong></p>
+<p>Secondary IGAN, rapid progression/crescents, previous
+immunosuppression</p>
+<p><strong>Endpoint:</strong></p>
+<ul>
+<li>Decrease in eGFR of 15 or remission (Pro/24hrs &lt;0.2, eGFR decline
+&lt;5)</li>
+</ul>
+<p>6 months run in to optimise | <strong>N</strong>= (337) -&gt;177
+randomised over 3 years</p>
+<p><strong>The immunosuppression</strong></p>
+<ul>
+<li>eGFR &gt;59 received 1g of IV methylprednisolone daily for 3 days at
+the start of months 1, 3 and 5; and oral prednisolone at a dose of 0.5
+mg/kg every other day</li>
+<li>eGFR 30-59 received cyclophosphamide 1.5 mg/kg/day for 3 months,
+followed by azathioprine at a dose of 1.5 mg/kg per day during months
+4-36, plus oral prednisolone 40 mg/day, tapered to 10 mg/day, over the
+first 3 months of the study, 10 mg/day during months 4-6 and 7.5 mg per
+day during months 7-36.</li>
+</ul>
+<p><strong>Results</strong></p>
+<p>Immunosuppression led to</p>
+<ul>
+<li>More remission (14 vs 4) OR 4.82 (1.43-16.30)</li>
+<li>No change in eGFR decline of at least 15 (22 vs 21) OR 0.89
+(0.41-1.90)</li>
+</ul>
+<p><strong>Conclusion</strong></p>
+<ul>
+<li>Probably not super useful in these patients (? Takes longer to
+demonstrate eGFR improvement?)</li>
+<li>Doesn’t apply to heavy proteinuria &lt;35g or rapid
+progression/crescents who probably need immunosuppression</li>
+<li>34% of patients had &lt;0.75g proteinuria per day at six<br />
+months, with supportive care alone. Get them on ACEi</li>
+</ul>
+</div>
+<div id="testing" class="section level2">
+<h2>TESTING</h2>
+<p><a
+href="https://jamanetwork.com/journals/jama/article-abstract/2792252">TESTING</a></p>
+<p><em>Steroids in IgAN: the one that was reimagined half way through
+due to safety concerns</em></p>
+<p><strong>Inclusion:</strong></p>
+<p>Patients with IGAN &gt;= 1g proteinuria/day, 12 week run in
+ACEi/ARB</p>
+<p><strong>Excluded:</strong></p>
+<p>Secondary IGAN, MCD, &gt;50% crescents, infection, cancer</p>
+<p><strong>Endpoint:</strong></p>
+<p>40% decreased in eGFR/ESKD/death | ESKD | Death</p>
+<p><strong>The immunosuppression regime:</strong></p>
+<p><strong>High dose:</strong> 0.6-0.8 mg/kg/d, maximum 48 mg/d, weaning
+by 8 mg/d/mo; n = 136</p>
+<p><strong>Low dose Regime:</strong> (0.4 mg/kg/day, maximum 32 mg/day)
+for 2 months, followed by weaning by 4 mg/day/month over 6-9 months, or
+matching placebo.</p>
+<p>&amp; PJP prophylaxis for 12 weeks (cotrim)</p>
+<p><strong>Results</strong></p>
+<ul>
+<li>N=503, 5 countries | mean age 38 | mean eGFR, 61.5 | mean
+proteinuria, 2.46 g/d | 98% completed trial</li>
+<li>Chinese heritage well represented ~ 75% (initial funding &amp;
+recruitment in China/oz)</li>
+<li>60:40 M:F</li>
+<li>Methylpred full-dose HR, 0.58 (95% CI, 0.41-0.81); reduced-dose HR,
+0.27 (95% CI, 0.11-0.65)</li>
+<li>SAE were higher in pred obviously, but almost entirely in the high
+dose infections</li>
+<li>Proteinuria rebound after initial dip but eGFR maintains benefit -
+legacy effect?</li>
+</ul>
+<p><strong>Conclusion:</strong></p>
+<p>Probably low dose is reasonable in high risk of progression, single
+regime, I wouldn’t repeat if later “flare” or retreat unless they were
+exceptionally tolerant of initial regime and rebiopsy showed activity
+and minimal sclerosis</p>
+<p><strong>Notes:</strong></p>
+<p>E1, E0 both responded to treatment, despite previous suggestions from
+MEST 2009</p>
+<p>Effect was not exclusive to Chinese (questions around Stop IgA
+suggested their European centres were the reason for lack of efficacy –
+this appears not to be the case)</p>
+<p>By the end of trial, initial drop in proteinuria has returned to
+baseline</p>
+<ul>
+<li>In international cohorts there is a benefit in inducing remission
+with diminishing returns on duration ending around 3-4 years –
+i.e. There appears to be a legacy benefit to long term outcomes based on
+initial proteinuria reduction in international cohorts</li>
+<li>In clinic, a rising proteinuria probably indicates sclerosis /
+conversion to DAPA-CKD like phenotype / could be a flare but who knows
+what to do with that. Prob not immunosuppress anyway</li>
+</ul>
+</div>
+<div id="nefigan" class="section level2">
+<h2>NEFIGAN</h2>
+<p><a
+href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(17)30550-0/fulltext">NEFIGAN</a></p>
+<p><em>Oral, enteric coated Budesonide in IgA</em></p>
+<p>Oral option, USA has enteric coated on patent (100k/9 months in
+US!)</p>
+<p>Has less side effects due to first pass metabolism</p>
+<p>Evidence that proteinuria reduction in phase 2, but ongoing phase 3
+trials to correlate with longer term eGFR changes.</p>
+</div>
+<div id="sglt2i-in-iga" class="section level2">
+<h2>SGLT2i in IgA</h2>
+<ul>
+<li>TESTING are patients in their 30s, heavy proteinuria (2.5g), eGFR in
+60s.</li>
+<li>STOP IgA, Proteinuria 1.5g/day (pre-MEST) – more scarred and less
+active bx (a lot of S1 on subsequent reanalysis of bx)</li>
+<li>In contrast <a
+href="https://www.nejm.org/doi/full/10.1056/NEJMoa2024816">DAPA-CKD
+subgroup with IgA</a> – 10 years older, 20mls less eGFR, proteinuria
+&lt;1g/day (i.e.? burning out/scarred? very small subgroup, only 26
+events in subgroup) – Placebo risk of primary outcome ~18% @ 2 years. To
+get this level of risk given low proteinuria – must have lots of T2
+lesions and scarring.</li>
+<li>Probably most appropriate to use a SGLT2i to somebody who
+<em>isn’t</em> a candidate for immunosuppression, want to augment
+conservative therapy</li>
+<li>Immunosuppressive options in early phase | Flozins for burning out
+disease</li>
+<li>Potential downsides: Steroids &amp; SGLT2i -? infection risk, might
+mask proteinuria and confuse treatment decisions.</li>
+</ul>
+</div>
+</div>
+<div id="iga-vasculitis" class="section level1">
+<h1>IgA Vasculitis</h1>
+<p><em>The artist formally known as HSP</em></p>
+<ul>
+<li>Skin – 95%
+<ul>
+<li>a petechial or purpuric rash in dependent areas (typically the
+buttocks and lower legs)</li>
+<li>bullae</li>
+<li>oedema</li>
+<li>necrosis</li>
+<li>In infants, the rash may be limited to the arms or face</li>
+<li>BX: leukocytoclastic vasculitis with IgA deposition in the
+vessels.</li>
+</ul></li>
+<li>Gastrointestinal tract - 70%</li>
+<li>Joints – 70-90%</li>
+<li>Large joints in legs, appearing late in about 6% ( &gt;a week post
+dx) – usually no chronic sequelae</li>
+<li>Kidneys 40-50%, possibly more as microhematuria present in the
+majority of patients.
+<ul>
+<li>Identical histology to IgAN</li>
+<li>25% microscopic haematirua</li>
+<li>Mild proteinuria 15%</li>
+<li>CKD develops in 1-2%</li>
+<li>Monitor Cr and BP for 6 months post dx</li>
+<li>CKD can develop late, notably during pregnancy</li>
+</ul></li>
+<li>Orchitis (in 14% of male patients)</li>
+<li>central nervous system involvement rare</li>
+</ul>
+<div id="diagnosis" class="section level3">
+<h3>Diagnosis</h3>
+<ul>
+<li><p>Diagnosis of IgA vasculitis is clinical, but in cases in which
+there is diagnostic uncertainty, it can be confirmed by biopsy of an
+affected organ.</p></li>
+<li><p>International consensus guidelines require the presence of
+palpable purpura in addition to abdominal pain, arthritis or arthralgia,
+renal involvement, or compatible histopathologic evidence.</p></li>
+<li><p>Elevated IgA levels are neither necessary nor sufficient for
+diagnosis</p></li>
+<li><p>Type III immune complex diseases such as IgA vasculitis are
+complement-mediated, plasma complement levels are usually
+normal.</p></li>
+</ul>
+</div>
+<div id="management" class="section level3">
+<h3>Management</h3>
+<ul>
+<li><p>IgA vasculitis is primarily managed with supportive care and
+monitoring for complications. IgA vasculitis is generally self-limited,
+with complete resolution of symptoms and no long-term sequelae in the
+vast majority of cases.</p></li>
+<li><p>Glucocorticoids are indicated for severe symptoms, especially
+those involving the gastrointestinal or musculoskeletal
+systems.</p></li>
+<li><p>A systematic review including mostly retrospective studies and
+three randomized, placebo-controlled trials showed that glucocorticoids
+increased the odds of resolution of abdominal pain within 24 hours and
+suggested renal benefits.</p></li>
+<li><p>However, the largest randomized trial involving patients with IgA
+vasculitis showed no evidence that glucocorticoids prevented the
+development of nephropathy.</p></li>
+</ul>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = false;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
