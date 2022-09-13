@@ -8,11 +8,12 @@ output: html_document
 -   Up to 60% of SLE patients have lupus nephritis
 -   the female-to-male ratio is highest at reproductive age, ranging between 8:1 and 15:1
 -   Black and Hispanic SLE patients develop LN earlier and have worse outcomes than white patients with SLE, including death and ESRD 
+
 -   SLICC criteria for diagnosis of SLE = 10 point and positive ANA
+
 -   Proliferative lupus nephritis = 10 points! Membranous = 8 so one other thing will get you there
 
 Extra Renal Manifestation
-
 -   Malar Rash
 -   Alopecia
 -   Arthralgia
@@ -28,9 +29,8 @@ Extra Renal Manifestation
 # Lupus Nephritis
 
 -   Haematuria and proteinuria, AKI/Flare - > CKD
--   Proteinuria is often low and doesnt always represent disease activity (KGIDO 21)
--   Most patients with SLE who develop LN do so within 5 years of an SLE diagnosis and, in many cases, LN is the presenting manifestation resulting in the diagnosis of SLE
--   Within 10 years of an initial SLE diagnosis, 5–20% of patients with LN develop end-stage kidney disease
+-Most patients with SLE who develop LN do so within 5 years of an SLE diagnosis and, in many cases, LN is the presenting manifestation resulting in the diagnosis of SLE
+-Within 10 years of an initial SLE diagnosis, 5–20% of patients with LN develop end-stage kidney disease
 -   Be Suss: Young women with an ANA or proliferative GN
 -   Almost always have full house staining (although not 100%)
 -   Remember that LN classification are not diagnostic guidelines i.e. you can fulfil criteria but not actually LN
@@ -55,22 +55,14 @@ Extra Renal Manifestation
 -   **Anti-RNP** = assoc with lupus cerebritis
 -   **Anti phopholipid ab**  = anti cardiolipin, lupus anti coagulant or b2 glycoportein 1 = TMA associations
 
-#### Anti phospholipid syndrome
+#### APL syndrome
 
 -   repeated VTE / miscarriages & **Strongly** + tests - weak + is a common false + (infection)
-  -   Present in about 30% of SLE patients
   -   aka hughes syndrome and lupus anticoagulant
   -   misnomer 1: lupus anticoagulant + doesnt mean you have lupus - about 50% of APL patients have SLE
   -   misnomer 2: anticoagulant effect is an in vitro phenomon, in vivo youre pro thrombotic
-  -   injury to the kidney microvasculature, also known as APS nephropathy
-  -   Renal artery/vein thrombosis, VTE, stenosis
-  
-Catastrophic APS
 
--    Rapid onset thrombosis, multiple organs, high mortality
--   High dose steroids, total anticoagulation, PEX +- eculizumab -> ITU
-
-## Pathopysiology
+### Pathopysiology
 
 -   Auto-Immune deposits in kidney, unclear aeitiology - theories include:
 -   Apoptotic cells release DNA/nucelosomes -> antibodies form and create complexes -> inflammatory cytokines
@@ -128,11 +120,11 @@ Proposed modified NIH lupus nephritis activity and chronicity scoring system
 
 ![Path findings for lupus nephritis](images/lupus_path_sensitivity.jpg)
 
-In the recent ISN revision the group decided that the term ‘endocapillary proliferation’ is a misnomer that should be abandoned and replaced by the term “endocapillary hypercellularity,” because most of the hypercellularity in glomerular capillaries in lupus nephritis is caused by influx of inflammatory cells rather than by actual cell proliferation in situ.
+In the recent ISN revision te group decided that the term ‘’endocapillary proliferation’’ is a misnomer that should be abandoned and replaced by the term “endocapillary hypercellularity,” because most of the hypercellularity in glomerular capillaries in lupus nephritis is caused by influx of inflammatory cells rather than by actual cell proliferation
 
-Future revisions to the classification may remove class VI and suggest an approach to classify tubular and vascular lesions
+Future revisions to the classification may remove class VI and suggest approach to classify tubular and vascular lesions
 
-Unclear value in even distinguishing between class III and IV. Tricky business. 
+Unclear value in even distinguising between class III and IV. Tricky business. 
 
 ## I - Minimal Mesangial LN
 
@@ -265,10 +257,6 @@ Unclear value in even distinguishing between class III and IV. Tricky business.
 -   lupus podocytopathy (defined as nephrotic syndrome in SLE that on kidney biopsy shows diffuse foot process effacement and no subendothelial or subepithelial immune deposits) 1.3% . Can lie along the MCD/FSGS spectrum
 -   hydoxycholoroquine induced - rare - proteinuria and CKD, Biopsy reveals cytoplasmic inclusions within the podocytes, like Fabrys.
 
-### TMA
-
-Approach as standard TMA emergency and requires rapid Dx: urgent ADAMTS13, APL abx, complement studies, decide if TTP - PLASMIC score ( PEX/ITU right now). KDIGO 21 has a flow chart
-
 # Treatment
 
 #### Notes
@@ -284,8 +272,6 @@ Approach as standard TMA emergency and requires rapid Dx: urgent ADAMTS13, APL a
 ### Based on ISN classification
 
 -   Class 2 generally do not need specific therapy for their kidney disease but may need immunosuppressive treatment for extrarenal SLE manifestations. 
-
-  -   If nephrotic, class 1 & 2 over 90% of patients given glucocorticoid monotherapy achieved remission within a median time of 4 week, high risk of flares so CNI/MPAA/AZA (KDIGO 21)
 
 -   Patients with mainly chronic injury (any class) or end stage damage (class 6) also do not need immunosuppression for LN, but may benefit from antiproteinuric, renoprotective measures. 
 
@@ -304,30 +290,18 @@ Approach as standard TMA emergency and requires rapid Dx: urgent ADAMTS13, APL a
 
 ## Antimalarials
 
-A good idea for most lupus patients ( 1c KDIGO 21)
+A good idea for most lupus patients
 
--   6mg/kg hydroxychloroquine ( ~400mg/day)
--   during the maintenance phase, this should be lowered to 4 to 5 mg/kg/d.
--   Reduce dose by 25% if eGFR <30
-
+-   6mg/kg hydroxychloroquine
 -   Gladel et al - OR 0.38 for developing LN in SLE if on anti malarial.
 -   Relesser et al - OR 0.58 for developing LN in SLE if on anti malarial, Developing ERSD 0.23, complete response 1.61
--   Less thrombosis in APLS. 
--   Better Lipid profile, bone mass
--   Eye toxicity – annual dilated eye examination for retinal disease, and especially after 5 years
--   SE: skin rash, increase in skin pigmentation, muscle weakness, and visual change or loss of vision
--   Note can mimic fabrys - multilamellar zebra bodies in podocytes
--   Rarely can cause cardiomyopathy after several years
--   measurement of G6PD : levels is preferred in men, especially those of African,Asian, or Middle Eastern origin, before starting hydroxychloroquine (KDIGO 21)
+-   Eye toxicity – annual dilated eye examination
 
-## Additional care
-
-![](images/lupus_supportive_care.png)
 ## Induction
 
 Severe proliferative
 
-**Methylpred:** 0.5-1g/kg for 1-3 days, then oral pred 1mg/kg/day (ideal body weight) max 80mg taper over weeks to a maintanence dose
+**Methylpred:** 0.5-1g/kg for 1-3 days, then oral pred 1mg/kg/day (ideal body weight) max 80mg taper over weeks
 
 Plus **CYC or MMF**
 
@@ -348,24 +322,6 @@ Criticism:
 -   mostly white northern European patients (however trials from SE asia and abatacept trial had all patients on Eurolupus trial and no different was observed suggesting this ethnicity isn’t a concern)
 -   MMF ( Dooley NEJM 2011) – suggests that MMF induction may be inferior to CYC induction – slightly higher treatment failure ( but non statistically significant)
 
-### KDIGO 21 Practice points
-
--   An MPAA-based regimen is the preferred initial therapy of proliferative LN for patients at high risk of infertility, patients who have a moderate to high prior cyclophosphamide exposure, and patients of
-Asian, Hispanic, or African ancestry 
-
--   triple immunosuppressive regimen that includes a CNI (tacrolimus or cyclosporine) with reduced-dose MPAA and glucocorticoids is reserved for patients who cannot tolerate standard-dose MPAA or are unfit for or will not use cyclophosphamide-based regimens
-
--   In patients with baseline eGFR of
-at least 45 ml/min per 1.73 m2
-, voclosporin can be added to
-MPAA and glucocorticoids as initial therapy for 1 year
-
-- There is an emerging role for Blymphocyte targeting biologics in the treatment of LN.
-Belimumab can be added to standard therapy in the
-treatment of active LN. Rituximab may be considered
-for patients with persistent disease activity or repeated
-flares
-
 ## Maintenance
 
 Pred taper down to 5-10mg /day
@@ -373,16 +329,6 @@ Pred taper down to 5-10mg /day
 -   **MMF 1-2g/day (first choice)**
 -   AZA 1-2.5mg/kg/d (pregnancy / intolerant of MMF)
 -   CSA 2.5mg/kg/d/TAC (trough 4-6) if MMF/AZA not tolerated
-
--   discontinuation of glucocorticoids can be
-considered after patients have maintained a complete
-clinical renal response for ‡12 months
-
--    total duration of initial
-immunosuppression plus combination maintenance
-immunosuppression for proliferative LN should not
-be <36 months.
-
 
 ALMS maintenance trial NEJM 2011
 
@@ -463,18 +409,8 @@ Anti CD20 therapy also affect T cells, Drops T regs,
 
 # Pregnancy
 
--   SLE often develops or Flares during pregnanacy or first 8 weeks post partum. 
+SLE often develops or Flares during pregnanacy or first 8 weeks post partum. 
 Can mimic preeclampsia/HELLP
--   Hydroxychloroquine use in pregnancy has been associated with a decrease in lupus activity and a satisfactory safety profile in both the mother and the fetus ( KDIGO 21)
-
--   Patients with active LN should be counseled to avoid pregnancy while the disease is active or
-when treatment with potentially teratogenic drugs is ongoing, and for ~6 months after LN becomes inactive
-
--   hydroxychloroquine should be continued during pregnancy, and low-dose aspirin should be started before 16 weeks of gestation
-
--   Only glucocorticoids, hydroxychloroquine, azathioprine, and CNIs are considered safe
-immunosuppressive treatments during pregnancy 
-
 
 # Idiopathic full house GN
 

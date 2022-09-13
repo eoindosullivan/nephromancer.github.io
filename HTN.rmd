@@ -9,6 +9,21 @@ output: html_document
 
 ## Renal-Aldo interpretation
 
+![](images/HTN_inherited_docpro89.png)
+
+Created by Anthony Provenzano (@docpro89)[Renal fellow network](https://www.renalfellow.org/2018/11/19/raas-is-your-friend-pocket-guide-to-heritable-blood-pressure/)
 
 
+## Monogenic HTN 
+
+![](images/HTN_inherited_docpro89.png)
+
+
+Created by Dr James Luther (@DrJMLuther) published via [Renal fellow network](https://www.renalfellow.org/2018/11/19/raas-is-your-friend-pocket-guide-to-heritable-blood-pressure/)
+
+
+## notes
+
+ secondary hyperaldosteronism in a young female one must be suspicious of an eating disorder.
+ 
 

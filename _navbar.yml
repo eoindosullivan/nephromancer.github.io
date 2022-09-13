@@ -1,6 +1,12 @@
 name: "Nephromancer"
 title: "Nephromancer"
 left:
+  - text: "GEN"
+    menu:
+      - text: "HTN"
+        href: ./HTN.html
+      - text: "CCF"
+        href: ./CCF.html
   - text: "U&E"
     menu:
       - text: "H+ & HCO3"
@@ -8,13 +14,12 @@ left:
       - text: "Na"
         href: ./na.html
       - text: "K"
-        href: ./project1.html
+        href: ./k.html
       - text: "MG"
-        href: ./project1.html
-      - text: "Ca2+"
-        href: ./project1.html
-      - text: "PO4"
-        href: ./project1.html
+        href: ./mg.html
+      - text: "Ca2+ & PO4"
+        href: ./renalbone.html
+
   - text: "GN"
     menu:
       - text: "MCD"
@@ -25,13 +30,17 @@ left:
         href: ./IGAN.html
       - text: "MPGN & C3G"
         href: ./MPGN_C3G.html
-      - text: "Ca2+"
-        href: ./project1.html
-      - text: "PO4"
-        href: ./project1.html
+      - text: "LUPUS"
+        href: ./LUPUS.html
+      - text: "FSGS"
+        href: ./FSGS.html
+      - text: "TMA"
+        href: ./TMA.html
+      - text: "GBM"
+        href: ./GBM.html
   - text: "CKD"
     menu:
-      - text: "Classic Cocktail"
+      - text: "Checklist"
         href: ./project1.html
       - text: "Conservative care"
         href: ./project1.html
@@ -39,7 +48,7 @@ left:
         href: ./anaemia.html
       - text: "Pruritis"
         href: ./project1.html
-      - text: "Renal-Bone"
+      - text: "CKD-MBD"
         href: ./renalbone.html
   - text: "TX"
     menu:
@@ -68,11 +77,13 @@ left:
         href: ./aboutme.html
       - text: "Flozins"
         href: ./project1.html
+      - text: "RITUX & CYC"
+        href: ./rituxcyc.html
 
   - text: "MISC"
     menu:
-       - text: "HTN"
-         href: ./htn.html
+       - text: "Biopsy"
+         href: ./biopsy.html
        - text: "PATH"
          href: ./path.html
        - text: "Pregnancy"
@@ -83,8 +94,8 @@ left:
          href: ./Lymphoproliferative.html
        - text: "SARS-Cov-2"
          href: ./covid19.html
-       - text: "Biopsy"
-         href: ./biopsy.html
+       - text: "Tumour Lysis Syndrome"
+         href: ./Tumour_Lysis.html
   - text: "EDU"
     menu:
        - text: "Project part 1"

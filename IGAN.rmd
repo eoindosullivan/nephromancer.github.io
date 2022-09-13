@@ -17,6 +17,9 @@ output: html_document
     -   10-year risk of ESKD \~ 30-40% worldwide
     -   10 year risk of ESKD \~ 10% if normal eGFR at presentation
     -   Risk prediction important, see below
+    
+### Secondary IgA
+-     IBD, Coelic, cirhossis, chronic infection (HIV), some malignancies
 
 # Pathology
 
@@ -285,5 +288,9 @@ Evidence that proteinuria reduction in phase 2, but ongoing phase 3 trials to co
 
 -   A systematic review including mostly retrospective studies and three randomized, placebo-controlled trials showed that glucocorticoids increased the odds of resolution of abdominal pain within 24 hours and suggested renal benefits. 
 -   However, the largest randomized trial involving patients with IgA vasculitis showed no evidence that glucocorticoids prevented the development of nephropathy.
+
+# MISC
+- 19% recurrance in Tx at 10 years
+- 23$ at 15 years
 
 

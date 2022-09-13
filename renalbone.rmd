@@ -1,10 +1,136 @@
 ---
-title: "Renal Bone Disease"
+title: ""
 output: html_document
 ---
-# Cinacalcet
 
-## EVOLVE Trial
+# CKD-MBD & Calcium & Phosphate.
+
+# Calcium
+
+## Physiology - Calcium
+
+-   Freely filtered then about 98% is reabsorbed by the kidney tubules
+    -   **Paracellular**: PT 65%, TAL 25%
+    -   In TAL, tight junctions express claudin 16/19, which facilitates paracellular calcium reabsorption, and claudin 14, which suppresses it. 
+    -   **PTH** inhibits the expression of claudin 14 ( i.e. it inhibits the brakes - thus increases calcium reaborbtion)
+    -   **Transcellular**: DCT/CNT 8%
+    -   Active transport
+    -   **PTH** binds basolaterally, stimulates protein kinase A,C -> increased TRVP5 channels on apical surface -> more calcium leaves the urine and reenteres blood
+
+-   Mostly reabsorbed in proximal tubule alongside sodium and water
+    -   Which is why you tell calcium stone patients to cut out Salt
+    -   In a high salt diet, there is no PT reabsorbtion of the calcium as there is no need to reabsorb the Na
+    -   Thus urinary calcium rises -> calcium stones!
+    
+-   ~1-2% (~100-200mg of calcium) is excreted in the urine per day.
+
+## PTH
+
+-   If investigating high PTH, sestamibi to check glands for activity.
+-   primary hyperPTH commonest cause , 50 per 100,000 patient years
+
+-   Urine calcium is high due to hyperPTH the filtered load will be too high to reabsorb so will overpower PTH's reaborbative action and result in hypercaliuria
+
+
+## HyperCalcaemia
+
+1.    Check iPTH 
+
+**HIGH or inappropriately normal PTH**
+
+-   24 hour urinary calcium  or urine calcium creatinine ratio high = **Primary hyperPTH**
+-   If less than these values, possibly **familial hypocaliuric hypercalcaemia**
+    -   family history, asymptomatic
+    -   benign condition / inactivating mutation in the calcium-sensing receptor /increased tubular reabsorption of calcium and consequent low urinary calcium excretion.
+    -   PTH can be normal or *slightly* elevated
+    -   Diagnosis of hypocalciuric Hypercalcaemia - 24 h urine calcium/creatinine clearance ratio < 0.01.
+    
+**LOW PTH**
+
+Myeloma screen, cancer hunt, Vit D, PTHrp
+
+-   High PTHrp - humoural hypercalcaemia of malignancy
+-   High 25(OH)D - Too much vit D
+-   High 1,25(OH)D - lymphoma, granulomatous (sarcoid, TB)
+-   Normal PTHrp,VITD - Myeloma, Mets, thyrotropin, Vit A
+
+#### Urinary calcium tests
+
+**24 hour urinary collection**
+
+-   HCL bottle
+-   Spectrophotometry or atomic absorption spectrophotometry
+-   2.5-7.5 mmol/24 h
+
+**Fasting spot urinary calcium:Creatinine ratio**
+
+-   Males: 0.04-0.45 mol/mol creatinine
+-   Females: 0.10-0.58 mol/mol creatinine
+
+# Drugs 
+
+## Bisphosphonates
+
+[Nice overview from Touissant et al CJASN](https://cjasn.asnjournals.org/content/4/1/221#sec-2)
+
+Bisphosphonates
+
+-   Non–nitrogen-containing bisphosphonates are clodronate and etidronate
+-   Nitrogen-containing bisphosphonates are alendronate, ibandronate, pamidronate, risedronate, and zoledronate are more potent
+-   low % intestinal absorption, \<1-5% - lower if not taken as directed
+-   When incorporated into bone can hang around in the skeleton for up to 10 years
+-   **Renally metabolised**
+-   As released from bone can be recycled and taken up again, or renally cleared
+
+**Mechanism**
+
+-   Inhibits FFP synthase - \> less FPP and GGGPP -\> no protein prenylation-\>Kills osteoclasts
+
+**SE**
+
+-   High doses can lead to crystal coating and an associated with osteomalacia
+-   Off target effects (via FFP) -osteoblastic cells, monocytes ( where IPP accumulated – bacterial antigen also -\> TNF-a and IGN-y release! – hence flu like symptoms with first bisphosphonate doses). Anergy prevents subsequent symptoms on next exposures.
+-   Can bind to gastric cells - \> cell death -\> is this the mechanism of esophagitis/ulceration
+
+**Renal toxicity**
+
+-   High dose pamidronate can cause collapsing FSGS
+-   Focal glomerular sclerosis (case series of patients with MM)
+-   Pamidronate-induced nephrotic syndrome with renal impairment has also been reported
+-   ATN
+
+**Bisphosphonates in CKD**
+
+**TLDR**
+
+-   avoid in low bone turnover, adynamic bone disease, or osteomalacia are present or suspected, as they have potential to do harm.
+-   Maybe some use in early CKD as osteoporotic prevention
+
+A [pooled metanalysis of 9 trials, n=8996]( https://pubmed.ncbi.nlm.nih.gov/16294264/) suggests that in CKD 1-3 ( severe disease excluded from all trials) that when secondary causes of low BMD are excluded and blood levels of calcium, phosphate, PTH, ALP, and vitamin D are normal (laboratory features of CKD-MBD), bisphosphonate use in CKD 1 to 3 is safe and results in fracture reduction
+
+CKD 4-5 not been shown to prevent fractures in people with normal BMD or with low baseline markers of bone formation, the subset of patients with severe CKD who might receive therapy would be those with low BMD but high bone resorption.
+
+By reducing calcium, bisphosphonates may stimulate glandular release of PTH and induce parathyroid hyperplasia.
+
+-   Pamidronate probably has best (thin) evidence - in multiple myeloma patients - 10 patients on dialysis
+-   Several case series have described pamidronate use in CKD to be safe at doses of 60 to 90 mg administered every 1 to 2 mo
+-   Ibandronate 6 HD patients with MM
+-   35-50% removed by HD – varies by drug
+
+In chronic use -**1/2 the dose** or reduce the frequency of administration of bisphosphonates in CKD. Limit treatment to 2 years.
+
+Unclear role in patients with steroids – stick to calcium, vitD
+
+Cochrane review post renal transplantation: no individual intervention was associated with a reduction in fracture risk compared with placebo
+
+May result in less atherogensis and vascular calcification but human data is very limited
+
+Case report level effect in calciphylaxis and other calcific diseases
+
+
+## Cinacalcet
+
+### EVOLVE Trial
 
 *The one that was a bit of a disaster*
 
@@ -109,3 +235,19 @@ Calcium supplements Calcium Content
 * Calvive/ Sandocal 1000 (soluble) 25 mmol / tablet
 * Calcichew forte(chewable ) 25 mmol / tablet
 (1 mmol = To 40mg Of Elemental Calcium)
+
+# Phosphate
+
+
+# CKD-MBD
+
+-   High-turnover hyperparathyroid bone disease (osteitis fibrosa), often with abnormal mineralization (mixed uraemic osteodystrophy)
+-   Adynamic bone disease – usually inappropriately low PTH (historically aluminium deposition)
+-   Association of both conditions with vascular calcification and calciphylaxis
+-   Many CKD patients have lower bone mass and osteoporotic BMD ( 2.5 SD below young Caucasian female)
+-   Osteoporosis & metabolic acidosis, low vit D, low activation of vit D, renal osteodystrophy.
+-   BMD – harder to read in CKD – calcified soft tissues,
+-   Higher rates of \#
+-   Quantitative double tetracycline-labelled bone histomorphometry is gold standard alongside a bone biopsy.
+-   Biopsy is pretty pointless imo unless incredible need to give a bisphosphonate
+

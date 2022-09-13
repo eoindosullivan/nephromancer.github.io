@@ -1,0 +1,67 @@
+---
+title: " "
+output: html_document
+---
+
+# HypoKalaemia
+
+Easy
+
+# HypoKalaemia
+
+## HypoK & Alkalosis 
+
+## Hyperaldo and pseudohyperaldosteronism.
+
+Aldosterone controls K & H secretion and NA reabsorbtion via the ENAC channel on the cortical collecting duct epithelial cells
+
+Therefore , hyper/pseudo hyper looks like *the opposite of taking Spironolactone*
+
+i.e. HypoK & Alkalosis **& HTN**
+
+Obvious overlap here with the monogenic causes of [HTN](www.nephromancer.com/htn) - info on both pages
+
+## Adrenal hyperfunction / primary hyperaldosteronism
+
+-   including adrenal adenoma, adrenal hyperplasia, and adrenal carcinoma.
+
+
+## Syndrome of apparent mineralocorticoid excess
+
+
+
+## Liddles
+
+Autosomal dominant Gain of function of ENAC
+
+
+
+## Licorice ingestion = Syndrome of Apparent Mineralocorticoid Excess
+
+[six tea bags of ‘Twinings Comforting’ liquorice tea dail](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5298563/)
+
+European licorice is worse than american stuff, more GZA
+
+-   Remember, Aldosterone controls K & H secretion and NA reabsorbtion via the ENAC channel on the cortical collecting duct epithelial cells
+-   Cortisol can also activate this but is converted to inactive cortisone by enzyme 11-beta-hydroxysteroid dehydrogenase type 2. phew
+-   Unless licorice inactivates the enzyme first!
+-   The compound in licorice that is responsible for this enzyme inhibitory activity is glycyrrhetinic acid, which also has some mild mineralocorticoid activity. 
+-   This is the same as syndrome of apparant mineralocorticoid excess = mutations in the 11-beta-hydroxysteroid dehydrogenase enzyme that prevent proper conversion of cortisol into cortisone.
+-   The European Union’s scientific committee on food recommends a daily upper limit of 100 mg for glycyrrhizin6 which is present in approximately 50g liquorice (assuming a content of 0.2% glycyrrhizin)
+-   11β-HSD2 can remain suppressed for 2 weeks or so after withdrawal of licorice, but the RAS axis can remain suppressed for months , perhaps 4
+-  inhibition of 11β-HSD2 decreases the urinary ratio of cortisone metabolites to cortisol metabolites which is a diagnostic clue for this mechanism of secondary hypertension
+
+## Renal artery stenosis and renin secreting tumors. 
+
+-   elevated production and secretion of renin leading to hyperaldosteronism.
+
+
+## Renin:Aldosterone ratio
+
+Liddle’s — low renin, low aldo (appropriate suppression in face of gained function)
+Licorice and SAME — low renin, low aldo ( body is responding appropriatly and shutting down in face of feedback)
+Renal artery stenosis and renin-secreting tumors — high renin, high aldo ( kidneys think blood flow is low)
+Adrenal hyperfunction — low renin, high aldo (appropriately suppressed renin)
+
+
+## Cushings and ectopic ACTH

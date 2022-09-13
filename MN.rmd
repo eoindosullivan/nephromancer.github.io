@@ -16,7 +16,7 @@ output: html_document
 
 ## MISC
 
-Idiopathic membranous can antigen switch (e.g. IgG1 early and igG4 later in disease)
+Idiopathic membranous can antigen switch (e.g. IgG1 early and IgG4 later in disease)
 
 ## NELL 1
 

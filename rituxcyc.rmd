@@ -1,0 +1,15 @@
+---
+title: " "
+output: html_document
+---
+
+
+# Cyclophosphamide
+
+IV has lower bladder toxicity vs oral
+
+Immediate (e.g., gastrointestinal, susceptibility to infection)
+
+The risk of future hematologic malignancy is related to total lifetime exposure (\>36 g), as is myelofibrosis (\>80 g).
+
+Total lifetime exposure plus age constitutes a significant risk factor for premature ovarian failure (\>7.5–15 g/m2 for young to older pediatric patients, respectively; 300 mg/kg for adults).

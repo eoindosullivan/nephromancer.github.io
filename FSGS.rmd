@@ -15,6 +15,20 @@ This discussion would not be complete without a  critique of how we (arbitrarily
 
 Per Glassock on the ASN forums
 
+## misc - compile and order later
+https://jasn.asnjournals.org/content/29/3/759
+
+1) primary vs secondary cause
+
+2) nephrotic syndrome vs nephrotic range proteinuria
+
+While not 100% in most cases, nephrotic syndrome and FSGS usually is going to have a primary cause( sparing some genetic causes and viruses). In addition, what is also helpful from a pathology standpoint is not the LM, but the EM-- 
+
+3) Is there diffuse or partial foot process effacement?- Usually the former responds to treatment better with steroids or other immunosuppression and later is more likely a secondary cause. It may also aid in looking for a secondary cause.
+
+Classically, your "permeability or immune mediated" FSGS should respond to treatment and would fit under nephrotic syndrome, diffuse foot process effacement and classically your primary FSGS.  Secondary FSGS from various causes like low nephron mass, obesity, viral , meds- all classically would have nephrotic range proteinuria and sporadic foot process effacement on EM.
+
+
 -   no one really knows what is the optimum approach to such patients. Desparate but unproven measures are commonly undertaken- such as the "kitchen sink" regimens of multi-target therapy or PLEX/lipid Apheresis.  dramatic effects can be seen (anecdotes) but impossible  to predict.
 
 -   ESKD and dialysis dependency are common no matter what is done, in most  cases.
