@@ -5,13 +5,9 @@ output: html_document
 
 # HypoKalaemia
 
-Easy
-
-# HypoKalaemia
-
 ## HypoK & Alkalosis 
 
-## Hyperaldo and pseudohyperaldosteronism.
+### Hyperaldo and pseudohyperaldosteronism.
 
 Aldosterone controls K & H secretion and NA reabsorbtion via the ENAC channel on the cortical collecting duct epithelial cells
 
@@ -21,22 +17,22 @@ i.e. HypoK & Alkalosis **& HTN**
 
 Obvious overlap here with the monogenic causes of [HTN](www.nephromancer.com/htn) - info on both pages
 
-## Adrenal hyperfunction / primary hyperaldosteronism
+### Adrenal hyperfunction / primary hyperaldosteronism
 
 -   including adrenal adenoma, adrenal hyperplasia, and adrenal carcinoma.
 
 
-## Syndrome of apparent mineralocorticoid excess
+### Syndrome of apparent mineralocorticoid excess
 
 
 
-## Liddles
+### Liddles
 
 Autosomal dominant Gain of function of ENAC
 
 
 
-## Licorice ingestion = Syndrome of Apparent Mineralocorticoid Excess
+### Licorice ingestion = Syndrome of Apparent Mineralocorticoid Excess
 
 [six tea bags of ‘Twinings Comforting’ liquorice tea dail](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5298563/)
 

@@ -87,7 +87,7 @@ MPGN “traditional classification” - based on EM, disregarded IF.Not very use
 
 -   Typically, present with HTN, proteinuria and haematuria
 
--   Bright C3, minimal or no Ig
+-   Bright C3, minimal or no Ig - typically 2 orders of magnitude higher than the background Ig staining
 
 -   2 flavours C3GN, DDD (EM)
 

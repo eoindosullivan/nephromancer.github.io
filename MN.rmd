@@ -2,6 +2,7 @@
 title: " "
 output: html_document
 ---
+dont need spikes on bx, subepithelial deposits on the EM will do
 
 ## Membranous like glomerulopathy with masked IgG Kappa deposits
 

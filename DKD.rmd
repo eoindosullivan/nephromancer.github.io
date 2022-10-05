@@ -1,0 +1,18 @@
+---
+title: " "
+output: html_document
+---
+# Idiopathic nodular sclerosis
+-   Looks like DKD but without the Diabetes
+-   older
+-   hypertensive
+-   smokers
+
+# DKD
+
+The hyperfiltration injury that occurs is because the excess glucose filtration is intially reabsorbed and carries Na and Cl alongside it - this results in less Cl delivery to the macula densa and release of renin/dopamine to increase that nephrons filtration - this is in excess of whats needed however, the MD is overreacting and the excess filtration leads to hyperfiltration injury
+
+Tend to get both afferent and efferent arterial hyalinosis - in contrast to HTN which tends to be only afferent  (as the cap bed protects the efferent from increased transmitted pressures)
+
+
+  

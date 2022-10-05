@@ -1,6 +1,6 @@
 ---
 title: ""
-metadata title="..."
+metadata title: "..."
 output: 
   html_document:
     includes:

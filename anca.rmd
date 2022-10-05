@@ -3,6 +3,8 @@ title: " "
 output: html_document
 ---
 
+ANCA & GBM tends to be necrotising crescents on a background of a normal glom - if there is underyling abnormal/path in the glom, consider non-ANCA disease
+
 # TIPS
 
 ### Post remission rising in ANCA

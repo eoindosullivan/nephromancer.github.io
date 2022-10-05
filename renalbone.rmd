@@ -18,11 +18,20 @@ output: html_document
     -   **PTH** binds basolaterally, stimulates protein kinase A,C -> increased TRVP5 channels on apical surface -> more calcium leaves the urine and reenteres blood
 
 -   Mostly reabsorbed in proximal tubule alongside sodium and water
+    -   This is part of the "bonus sodium" you get from NKCC due to K+ recycling. The K+ that gets pumped back into the tubule via ROMK (see below) leads to a relative +charge in the tubule, thus providing a charge to help drive the paracellular reabsorbtion ofNa/Ca/Mg via the rather leaky paracellular junctions in the PT.
+    -   In a high salt diet, there is too much tubular Na so less PT reabsorbtion of the calcium as there is less drive to reabsorb the Na
     -   Which is why you tell calcium stone patients to cut out Salt
-    -   In a high salt diet, there is no PT reabsorbtion of the calcium as there is no need to reabsorb the Na
+
+
     -   Thus urinary calcium rises -> calcium stones!
     
 -   ~1-2% (~100-200mg of calcium) is excreted in the urine per day.
+
+## Physiological pearls
+
+-   Hypercalcaemia induces volume contraction in two ways:
+    -   nephrogenic DI: Decreased aquaporin expression in Collecting duct, possibly via [increased autophagy](https://pubmed.ncbi.nlm.nih.gov/28139295/)
+    -   increased basolateral calcium switches off the ROMK channel in PT, thus shutting down K+ recycling. K+ is the rate limiting step here in NKCC activity (because N and 2Cl get pumped out basolaterally  there is alot less K to begin with in the tubule). This means that NKCC grinds to a halt without the recycled K, and the tubule Na/Cl/H20 increases and is removed, just like a loop diuretic leading to volume depletion.
 
 ## PTH
 

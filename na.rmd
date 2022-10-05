@@ -199,6 +199,17 @@ May have high urinary Cl-
 
 <br>
 
+### Nephrogenic DI
+
+Paradoxical role for HCTZ
+
+-   blockade of the Na-Cl cotransporter in the distal tubule leads to a decrease in GFR via Na/water secretion- > increased Na and water reabsorbotion in PT -> less delivery to CD where the concentratign issue is due to AQP issues
+-   [May increase AQP channels and ENAC](https://pubmed.ncbi.nlm.nih.gov/15504936/)
+-   In Lithium induced DI , same paper showed reversal of downregulated AQP2 and increased DI
+
+NSAIDs may help by reducing reducing the diuretic effect of renal prostaglandins
+
+
 # Guidelines & Protocols
 
 [European Renal-Endocrine hyponatreamia guideline](https://eje.bioscientifica.com/view/journals/eje/170/3/G1.xml)
@@ -227,11 +238,13 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 </div>
 <br>
 
-# Educational
+# Sodium Restriction
 
-links here
+Evidence for restriction, especially in people with a reasonable intake is pretty weak - K+ is likely more important
 
-# Patient materials
+### Sodium-HF
 
-links here
+*low salt dietary intervention in self reportedly low intake population with limited baseline info*
+
+TLDR: poorly executed study, stopped due to futility. Probably no role for intensive dietary intervention in pateints with reasonable sodium intake.
 

@@ -1,5 +1,6 @@
 name: "Nephromancer"
 title: "Nephromancer"
+
 left:
   - text: "GEN"
     menu:
@@ -7,6 +8,8 @@ left:
         href: ./HTN.html
       - text: "CCF"
         href: ./CCF.html
+      - text: "DKD"
+        href: ./DKD.html
   - text: "U&E"
     menu:
       - text: "H+ & HCO3"
@@ -19,7 +22,6 @@ left:
         href: ./mg.html
       - text: "Ca2+ & PO4"
         href: ./renalbone.html
-
   - text: "GN"
     menu:
       - text: "MCD"
@@ -38,6 +40,10 @@ left:
         href: ./TMA.html
       - text: "GBM"
         href: ./GBM.html
+      - text: "MN"
+        href: ./MN.html
+      - text: "Amyloid"
+        href: ./Amyloid.html
   - text: "CKD"
     menu:
       - text: "Checklist"
@@ -68,7 +74,6 @@ left:
         href: ./project1.html
       - text: "CVVH"
         href: ./project1.html
-        
   - text: "DRUGS"
     menu:
       - text: "Abx"
@@ -79,7 +84,8 @@ left:
         href: ./project1.html
       - text: "RITUX & CYC"
         href: ./rituxcyc.html
-
+      - text: "Chemo"
+        href: ./Chemotherapy.html
   - text: "MISC"
     menu:
        - text: "Biopsy"

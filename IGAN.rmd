@@ -2,6 +2,7 @@
 title: ""
 output: html_document
 ---
+
 # IgAN
 
 -   Most common type of glomerulonephritis
@@ -16,7 +17,7 @@ output: html_document
 -   Large variability in outcomes:
     -   10-year risk of ESKD \~ 30-40% worldwide
     -   10 year risk of ESKD \~ 10% if normal eGFR at presentation
-    -   Risk prediction important, see below
+    -   Risk prediction important, see below.
     
 ### Secondary IgA
 -     IBD, Coelic, cirhossis, chronic infection (HIV), some malignancies
