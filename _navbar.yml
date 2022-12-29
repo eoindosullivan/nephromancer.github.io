@@ -1,7 +1,11 @@
-name: "Nephromancer"
-title: "Nephromancer"
+name: "Renal Medicine"
+title: "Renal Medicine"
 
 left:
+  - text: "Research"
+    menu:
+      - text: "Trials"
+        href: ./trials.html
   - text: "GEN"
     menu:
       - text: "HTN"

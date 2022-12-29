@@ -11,9 +11,9 @@
 
 
 
-<title>rituxcyc.knit</title>
+<title>Trials.knit</title>
 
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.18/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
@@ -50,6 +50,7 @@
 
 
 
+
 <link rel="stylesheet" href="styles.css" type="text/css" />
 
 
@@ -74,6 +75,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -131,11 +135,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -164,8 +172,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -173,16 +181,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -305,17 +306,29 @@ div.tocify {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">Nephromancer</a>
+      <a class="navbar-brand" href="index.html">Renal Medicine</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Research
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./trials.html">Trials</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     GEN
      
     <span class="caret"></span>
@@ -333,7 +346,7 @@ div.tocify {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     U&amp;E
      
     <span class="caret"></span>
@@ -357,7 +370,7 @@ div.tocify {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     GN
      
     <span class="caret"></span>
@@ -396,7 +409,7 @@ div.tocify {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     CKD
      
     <span class="caret"></span>
@@ -420,7 +433,7 @@ div.tocify {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     TX
      
     <span class="caret"></span>
@@ -435,7 +448,7 @@ div.tocify {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     RRT
      
     <span class="caret"></span>
@@ -459,7 +472,7 @@ div.tocify {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     DRUGS
      
     <span class="caret"></span>
@@ -483,7 +496,7 @@ div.tocify {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     MISC
      
     <span class="caret"></span>
@@ -513,7 +526,7 @@ div.tocify {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     EDU
      
     <span class="caret"></span>
@@ -548,15 +561,237 @@ div.tocify {
 </div>
 
 
-<div id="cyclophosphamide" class="section level1">
-<h1>Cyclophosphamide</h1>
-<p>IV has lower bladder toxicity vs oral</p>
-<p>Immediate (e.g., gastrointestinal, susceptibility to infection)</p>
-<p>The risk of future hematologic malignancy is related to total
-lifetime exposure (&gt;36 g), as is myelofibrosis (&gt;80 g).</p>
-<p>Total lifetime exposure plus age constitutes a significant risk
-factor for premature ovarian failure (&gt;7.5–15 g/m2 for young to older
-pediatric patients, respectively; 300 mg/kg for adults).</p>
+<div id="active-trials-dec-2023" class="section level1">
+<h1>Active Trials Dec 2023</h1>
+<p><img src="images/RBWH_clinical_trial_ongoing.png" /></p>
+<div id="contact-research-nurses-for-screening-enrolement"
+class="section level4">
+<h4>Contact research nurses for screening &amp; enrolement</h4>
+<p><br></p>
+</div>
+</div>
+<div id="adpkd" class="section level1">
+<h1>ADPKD</h1>
+<p><br></p>
+<div id="impede" class="section level2">
+<h2>IMPEDE</h2>
+<p>Metformin vs Placebo for patients with ADPKD</p>
+<p><strong>Inclusion Criteria</strong></p>
+<ul>
+<li>eGFR &gt;45</li>
+<li>Can be on tolvaptan</li>
+</ul>
+<p><br></p>
+</div>
+<div id="falcon" class="section level2">
+<h2>FALCON</h2>
+<p>Bardoxylone vs Placebo for patients with ADPKD</p>
+<p><strong>Inclusion Criteria</strong></p>
+<ul>
+<li>eGFR 30-90 ( 18-55yo)</li>
+<li>eGFR 30-45 ( 56-70yo)</li>
+<li>On tolvaptan for 4 months</li>
+</ul>
+<p><br></p>
+</div>
+</div>
+<div id="hd" class="section level1">
+<h1>HD</h1>
+<p><br></p>
+<div id="phosphate" class="section level2">
+<h2>PHOSPHATE</h2>
+<p><br> Phosphate targets of &lt;= 1.5 vs 2-2.5 in patients on HD</p>
+<p><strong>Inclusion Criteria</strong></p>
+<ul>
+<li>on HD &gt;= 3/12</li>
+<li>&gt;45 yo</li>
+<li>&gt;18 if DM</li>
+<li>on a phosphate binder</li>
+</ul>
+<p><br></p>
+</div>
+<div id="acheive" class="section level2">
+<h2>ACHEIVE</h2>
+<p>Spiro vs Placebo in patients on HD</p>
+<p><strong>Inclusion Criteria</strong></p>
+<ul>
+<li>on HD or PD &gt;= 3/12</li>
+<li>&gt;45 yo</li>
+<li>&gt;18 if DM</li>
+<li>Exluded if K+ &gt;5.8</li>
+</ul>
+<p><br></p>
+</div>
+</div>
+<div id="ckd" class="section level1">
+<h1>CKD</h1>
+<p><br></p>
+<div id="affinity" class="section level2">
+<h2>AFFINITY</h2>
+<p>A Phase 2, Open-Label, Basket Study of Atrasentan in Patients with
+Proteinuric Glomerular Diseases</p>
+<p>The Phase 2 AFFINITY study will assess the efficacy and safety of
+atrasentan in patients with proteinuric glomerular diseases at risk of
+progressive kidney function loss.</p>
+<p>Cohort 3 – Alports Syndrome</p>
+<p><strong>Inclusion Criteria</strong></p>
+<ul>
+<li>Diagnosis by genetic testing</li>
+<li>UPCR &gt; 0.5 g/g</li>
+<li>eGFR ≥ 30mL/min/1.73m2</li>
+<li>Receiving RAS inhibitor stable for 12 weeks pre screening</li>
+</ul>
+<p><br></p>
+</div>
+</div>
+<div id="gn---lupus" class="section level1">
+<h1>GN - LUPUS</h1>
+<p><br></p>
+<div id="alxn-1210" class="section level2">
+<h2>ALXN 1210</h2>
+<p><strong>A Phase 2, Double-Blind, Randomized, Placebo-Controlled Study
+to Evaluate the Efficacy and Safety of Ravulizumab in Adult Participants
+With Proliferative Lupus Nephritis (LN) or Immunoglobulin A Nephropathy
+completed (IgAN)</strong></p>
+<ul>
+<li><strong>Ravulizumab</strong> is a humanized monoclonal antibody
+which inhibits complement component 5</li>
+<li>Similar to eculizumab but much longer acting</li>
+<li>PBS approved for PNH</li>
+<li>There is substantial interest in the role of complement pathway in
+lupus nephritis</li>
+</ul>
+<p><strong>Inclusion Criteria</strong></p>
+<ul>
+<li>Age between 18 and 75</li>
+<li>Body weight &gt;40kg</li>
+<li>Must be vaccinated or agree to be vaccinated against Meningococcal
+infection, Haemophilus influenza type b and Steptococcus pneumoniae
+prior to randomization.</li>
+<li>Participants on SGLT-2 inhibitors must be on a stable dose 12 weeks
+prior to screening</li>
+<li>Kidney biopsy diagnosed class III or class IV LN within 6mths of
+screening or during screening</li>
+<li>Clinical diagnosis of SLE</li>
+<li>Proteinuria with UPCR ≥ 1g/g</li>
+</ul>
+<p><br></p>
+</div>
+</div>
+<div id="gn---fsgs" class="section level1">
+<h1>GN - FSGS</h1>
+<p><br></p>
+<div id="affinity-1" class="section level2">
+<h2>AFFINITY</h2>
+<p>A Phase 2, Open-Label, Basket Study of Atrasentan in Patients with
+Proteinuric Glomerular Diseases</p>
+<p>The Phase 2 AFFINITY study will assess the efficacy and safety of
+atrasentan in patients with proteinuric glomerular diseases at risk of
+progressive kidney function loss.</p>
+<p>Cohort 2 – FSGS</p>
+<p><strong>Inclusion Criteria</strong></p>
+<ul>
+<li>Biopsy confirmed FSGS</li>
+<li>UPCR&gt;1.5g/g</li>
+<li>eGFR ≥ 30mL/min/1.73m2</li>
+<li>Receiving RAS inhibitor stable for 12 weeks pre screening</li>
+<li>If receiving systemic corticosteriods or calcineurin inhibitors,
+dose must be stable for 12 weeks pre screening</li>
+<li>BMI &lt; 40 Kg/m2</li>
+</ul>
+<p><br></p>
+</div>
+<div id="bi-1434" class="section level2">
+<h2>BI 1434</h2>
+<p>A multicentre, randomized, double-blind, parallel group, placebo
+controlled study to assess safety, tolerability, pharmacokinetics and
+pharmacodynamics of BI 764198 administered orally once daily for 12
+weeks in patients with focal segmental glomerulosclerosis.</p>
+<p>BI 764198 is a potent inhibitor of human TRPC6</p>
+<p><strong>Inclusion Criteria</strong></p>
+<ul>
+<li>18 – 75 and able to sign Informed Consent</li>
+<li>Biopsy Proven FSGS or documented TRPC6 mutation</li>
+<li>UPCR ≥ 1000mg/g</li>
+<li>Completion of initial corticosteroid therapy (if applicable).</li>
+<li>Patients treated with corticosteroids must be on a stable dose for
+at least 4 weeks prior to</li>
+<li>screening visit with no plan to change the dose until end of trial
+treatment.</li>
+<li>Pt’s treated with ACE inhibitors, ARBs, finerenone, aldosterone
+inhibitors, or SGLT2 inhibitors should be on a stable dose for &gt;4
+weeks before screening visit with no plan to change the dose until the
+end of trial treatment.</li>
+</ul>
+<p><br></p>
+</div>
+</div>
+<div id="gn---igan" class="section level1">
+<h1>GN - IGAN</h1>
+<p><br></p>
+<div id="align" class="section level2">
+<h2>ALIGN</h2>
+<p>A Phase 3, Randomized, Double-blind, Placebo-controlled Study of
+Atrasentan in Patients with IgA Nephropathy at Risk of Progressive Loss
+of Renal Function</p>
+<ul>
+<li>Atrasentan is a potent endothelin receptor antagonist</li>
+<li>Demonstrated to reduce composite renal outcome (doubling of
+creatinine or ESRF) in diabetic nephropathy (SONAR study 2019)</li>
+<li>Major side effects are fluid retention/heart failure</li>
+</ul>
+<p><strong>Inclusion Criteria</strong></p>
+<ul>
+<li>18 and able sign Informed Consent</li>
+<li>Biopsy Proven Primary IgAN</li>
+<li>3. Receiving stable dose of RAS Inhibitor for 12 weeks</li>
+<li>Total Urine Protein ≥1 g/day</li>
+<li>eGFR ≥ 30</li>
+</ul>
+<p><br></p>
+</div>
+</div>
+<div id="gn---nephrotic-syn" class="section level1">
+<h1>GN - NEPHROTIC SYN</h1>
+<p><br></p>
+<div id="apaxans" class="section level2">
+<h2>APAXANS</h2>
+<p>This study will evaluate primarily the pharmacokinetics and safety
+and efficacy of apixaban as a preventative for venous thromboembolism in
+patients with nephrotic syndrome as compared to warfarin</p>
+<p><strong>Inclusion Criteria</strong></p>
+<ul>
+<li>All adult patients with nephrotic syndrome with serum albumin
+&lt;25g/L (<em>for prevention of nephrotic syndrome related thrombotic
+disease</em>)</li>
+<li>Minimum age: 18 years /Maximum age: No Limit/Gender: both male and
+female</li>
+</ul>
+<p><strong>Exclusion Criteria</strong></p>
+<ul>
+<li>eGFR of less than 25mL/min /Patients requiring any form of
+dialysis</li>
+<li>Abnormal liver dysfunction {defined as chronic Liver Disease
+(Child-Pugh score of B or C cirrhosis) or biochemical evidence of
+significant hepatic derangement (bilirubin 2-3 times the upper limit of
+normal, in association with aspartate transaminase (AST) or alkaline
+phosphatase (ALP) levels 3 times the upper limit normal).}</li>
+<li>Known hereditary or acquired bleeding disorders</li>
+<li>Antiphospholipid syndrome</li>
+<li>Haemoglobin (Hb) &lt;90g/L/ Platelets &lt;100,000/ul</li>
+</ul>
+<p><br></p>
+</div>
+</div>
+<div id="gn---anca" class="section level1">
+<h1>GN - ANCA</h1>
+<p><br></p>
+<div id="anca-relapse" class="section level2">
+<h2>ANCA Relapse</h2>
+<p><strong>Inclusion Criteria</strong></p>
+<p>Existing and new patients with confirmed ANCA + ve vasculitis
+attending follow-up for ongoing monitoring <br></p>
+</div>
 </div>
 
 
