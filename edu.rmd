@@ -1,0 +1,186 @@
+# **Advanced Trainee Resource Guide 2023**
+
+The following is an overview of some of the educational resources available to support your training. Self-Directed learning is an essential part of your training needed to supplement training and clinical practice (in addition to usual Journal clubs, CME, M&M etc). Lifelong learning is a key pillar of high quality modern medical practice, so finding the resources, forming the habits and following a workflow that suits your learning style and life best is important as it will support your practice throughout your career. This page will be updated during the year as a webpage which can be found [here](http://www.renalmedicine.net/educational).
+
+# Textbooks
+
+It is always nice to go back to basics and read an actual, good old fashioned book. Below are some suggestions:
+
+-   **Clinical Physiology of Acid-Base and Electrolyte Disorders and Pathophysiology of Renal Disease** – Burton Rose \| Also created uptodate, a huge figure in Nephrology & education
+-   **Fluid, electrolyte, and acid base physiology – a problem-based approach** – Halperin \| Amazing insight, convinced me of the primacy of PH in homeostasis. Tragically, you need to convert units from US units to SI sometimes, but its worth it.
+-   **Comprehensive Clinical Nephrology** – Johnson, Feehally, Floege \| The classic
+-   **Handbook of Dialysis** – Daugirdas
+-   **Kidney Transplant eBook** – Riella (ebook – via itunes or similar)
+-   **Handbook of Kidney transplantation** – Danovitch \| The whole “handbook” series is great
+-   **Nephrology and hypertension Board Review** – Pham \| American centric but good
+-   **Nephrology Secrets** – Lerma, Tolf \| High yield pearls, good for exam revision
+
+# Memberships
+
+Stay connected with your community of practice and spot emerging learning opportunities
+
+-   ANZSN – must get supervisor (who is a current ANZSN member) to sign
+    -   Perks: Access to nephrology journal, weekly emails which include committee opportunities, reminders about conferences and courses, online links to resources
+    -   Option to join the “Hub: with access to online lectures from old courses
+-   ASN – its free for “fellows in training” ie advanced trainees
+    -   Perks: Access to JASN, CJASN, ASN in the loop emails, the ASN forums
+    -   **NephSAP, KSAP** are excellent resources for exam revision
+-   ISN – can access free membership for one year through ANZSN
+    -   Perks: Access to Kidney International, **ISN academy** – including podcasts and resources. Opportunities for involvement in committees etc (speak to Dr Marina Wainstein, who is the deputy chair)
+    -   Young nephrologists committee: for those \<45years of age – fellowship programs, sister renal programs, mentorship, clinical research programs etc
+-   TSANZ – I don’t believe you need to join as an AT
+    -   Perks: old presentations from TSANZ meetings
+
+# Conferences
+
+Learn things, network, drink bad coffee and have awkward conversations.
+
+If you still need your category 2 project – go to both Australian conferences for the update courses.
+
+-   TSANZ – Usually first half of year (\~June) and ANZSN – second half (2022)
+-   International conferences - usual dates
+    -   ASN (October/November)
+    -   EDTA (May)
+    -   WCN (February)
+    -   UKKW (June)
+-   Unravelling the kidneys basic and advanced courses – join ANZSN
+-   PD academy –get in early to register interest (limited numbers, and only get to go to once)
+-   HD academy
+-   Kidney supportive care symposium – St George, RBWH
+-   Harvard or ASN board review courses – likely able to access these online
+-   Oxford advanced nephrology - beautiful city, nice excuse to visit. Bit Intense, usually Feb.
+
+# Journals
+
+There are only so many minutes in the day, so you need to choose the papers you wish to read according to importance and your own interest. Other papers you might skim, yet others you wont even finish reading the title. Don’t even attempt to read everything, rather skim the table of contents (set up an email alert via the journal, or PubMed search alert if specific topics are of interest) and pick your targets wisely, especially early in training.   
+The following rough hierarchy is my subjective opinion but may be a useful guide to the journals to keep an eye on if you’re a bit overwhelmed. Focus on the top journals first.
+
+**General Medical Journals \| Often practice changing, review each issue.**
+
+-   NEJM
+-   Lancet
+-   BMJ
+-   JAMA
+
+**Renal: Core journals \| Sometimes practice changing, paradigm shifting or high quality & highly impactful**
+
+-   JASN
+-   KI
+-   NDT
+-   Transplantation & American Journal of Transplantation
+
+**Renal: Additional journals**
+
+-   Nature Reviews Nephrology
+-   CJASN
+-   KI reports
+-   Clinical Kidney Journal
+-   AJKD
+-   Kidney 360
+-   Seminars in Nephrology & Dialysis
+-   Nephrology (carlton)
+-   Frontiers in Nephrology
+
+# Websites
+
+[Renal Fellow Network](http://renalfellow.blogspot.com/) \| The OG Renal educational website, still great.
+
+[Precious bodily Fluids](https://pbfluids.com/) \| Joel Topf’s blog. Good reads.
+
+[Nephron power](http://www.nephronpower.com/) \| Renal blogging, high quality
+
+[ASN forums](https://community.asn-online.org/home) \| Great discussions, often tricky cases
+
+[History of Nephrology](http://historyofnephrology.blogspot.co.uk/) \| Neil turner in Edinburgh, great blog
+
+[The Bottom Line](https://www.thebottomline.org.uk/) \| Critical care papers summarised in about 1 minute reads.
+
+[Life in the Fast lane](https://litfl.com/) \| Its EM focused, but often useful.
+
+# Podcasts
+
+Im a huge fan of podcasts for being an amazing mix of efficiency and quality, improve your nephrology while you commute!
+
+## Intra-Renal
+
+[Freely filtered](http://www.nephjc.com/freelyfiltered/) \| NephJC podcast, essential listening
+
+[Channel your enthusiasm](http://www.rosebook.club/episodes/) \| A chapter by chapter reading of Burton Rose’s Renal physiology textbook
+
+[JASN](https://journals.lww.com/jasn/pages/default.aspx) \| Alongside KI, the top Kidney Journal, worth keeps an eye on podcast if you cant get through an issue
+
+## Extra-Renal
+
+[Curbsiders](https://audioboom.com/channel/thecurbsidersinternalmedicinepodcast) \| Probably best Gen Med podcast – renal episodes often excellent
+
+[Bedside Rounds](http://bedside-rounds.org/) \| Medical History and culture
+
+[Curious Clinicians](https://curiousclinicians.com/) \| Short episodes, curiosities and discussions about medical practice
+
+[IMReasoning](http://imreasoning.com/) \| Case discussions
+
+[NEJM](https://www.nejm.org/multimedia/audio-summary?date=past5Years) \| Great Journal, reasonable podcast
+
+[Medical Journal of Australia](https://www.podomatic.com/podcasts/themja) \| Australian issues mate
+
+[Febrile](https://febrilepodcast.com/) \| Infectious diseases
+
+[Clinical Conversations](https://podcasts.rcpe.ac.uk/) \| General medical conversations with a Scottish accent
+
+[BMJ Best Practice](https://soundcloud.com/bmjpodcasts/sets/bmj-best-practice-clinical) \| Gen Med, range of topics
+
+[JAMA Editors summaries](https://jamanetwork.com/journals/jama/pages/jama-editors-summary) \| Usually reasonably good, once got an editor fired for being uncomfortably *oblivious* to the nature of systemic racism during an interview.
+
+Lots of scientific podcasts are worth checking out depending on your interests- Nature, NEJM AI rounds etc
+
+# Twitter
+
+If Elon doesn’t run this company into the ground, often an effective way to access small digestible chunks of renal wisdom. It can become a bit of a time sink and suffers from the classic trap of social media – it looks like everyone is always a breathtakingly successful 30 year old Professor, publishing in Nature every week and dreadfully clever after they post a tweet they have spent an hour researching and polishing. It can also become a bit of an echo chamber of academic nephrologists humble bragging and publishing their/institutional/journal/personal brand without adding any value. With that caveat out of the way, there are far too many good accounts to list, and your interests and mileage may vary, as will accounts activity as people’s lives change. If you are going to engage, remember that its a real person on the other side of a tweet so be kind. Your also representing yourself, and  sending a message about your institution and department even if you dont mean to, so dont let the side down please.
+
+To get started, maybe check out (in no particular order and recalled at random).
+
+    -   @askrenal
+    -   @renalfellownetwork
+    -   @nephjc
+    -   @glomcon
+    -   @rheault_m
+    -   @renalgal
+    -   @kidneyboy
+    -   @VeleznephHepato
+    -   @nephrologista
+    -   @womeninnephro
+    -   @nephro_sparks
+    -   @hswapnil
+    -   @nephrodby
+    -   @sophia_kidney
+    -   \#askrenal
+    -   \#NephTwitter
+    -   Stalk your favourite researchers and expand from there according to taste.
+
+**Other Online resources**
+
+-   Check our [NephMadness](https://ajkdblog.org/2022/03/01/welcome-to-nephmadness-2022/) each year, a great overview of what’s hot in Nephrology
+-   [Kidney school](https://kidneyschool.com.au/) \| Approximately once a month, 1hr evening talk (Tuesdays)
+-   Kidney Hub – Should get a free trial membership to start. Has old lectures from ANZSN/TSANZ, unravelling the kidneys etc
+-   [St George Renal Website](Sthttps://stgrenal.org.au/for-health-professionals/our-services/renal-supportive-care/) \| Excellent kidney supportive care resources
+-   ISPD peritonitis guidelines
+-   KDIGO guidelines
+-   KHA-CARI guidelines
+-   Additional resources: available on the S drive (see advanced training teaching)
+-   Ill update clinical tips and notes, active trials, guidelines and protocols over time on [www.renalmedicine.net](http://www.renalmedicine.net) (if blocked by browser, usually works as nephromancer.com)
+
+**Financial stuff**
+
+-   ANZSN offers grants for advanced trainees and junior consultants to attend a local conference, an international conference and a “special meeting”. You must give 3 months’ notice. Apply via ANZSN website.
+-   ISN provides cash awards, travel grants, scholarships and mentorship for young nephrologists.
+
+**Other tips**
+
+-   [Active clinical trials at Metro North](https://www.renalmedicine.net/trials) \| Help recruit and change Nephrology!
+-   Make sure you register with the college and don’t miss deadlines for submission of supervisor reports. Check early if your supervisor will be away.
+-   Be aware of the CV scoring system and work towards maximising your points.
+-   Prepare for the interview:
+    -   Prepare for the different styles of questions – ask your favourite SMO for interview prep/mock interviews.
+    -   Medical interviews – A comprehensive guide to CT, ST and Registrar interview skills – Picard, Wood and yuen.
+
+Kirsten Hepburn & Eoin O’Sullivan.

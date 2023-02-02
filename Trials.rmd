@@ -220,3 +220,12 @@ This study will evaluate primarily the pharmacokinetics and safety and efficacy 
 
 Existing and new patients with confirmed ANCA + ve vasculitis attending follow-up for ongoing monitoring
 <br>
+
+# Registries
+
+**Three registries are ongoing.**
+
+-   QRBR – Inclusion criteria: patients undergoing renal biopsy
+-   aHUS Registry- Inclusion criteria- Patients diagnosed to have aHUS (received/receiving Eculizumab)
+-   AUSLUPUS Registry- Inclusion criteria – Patients diagnosed to have SLE/Lupus Nephritis
+

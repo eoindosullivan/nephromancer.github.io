@@ -111,7 +111,9 @@ On its own page [here](www.nephromancer.com/anaemia)
 
 <br>
 
-# Guidelines & Protocols
+# Guidelines & Protocols & Papers
+
+[Venous catheters - great overview](https://www.sciencedirect.com/science/article/pii/S2468024921014509)
 
 [KDIGO](https://kdigo.org/guidelines/)
 

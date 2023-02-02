@@ -108,10 +108,8 @@ left:
          href: ./Tumour_Lysis.html
   - text: "EDU"
     menu:
-       - text: "Project part 1"
-         href: ./project1.html
-       - text: "Project part 2"
-         href: ./project2.html
+       - text: "Educational Resources"
+         href: ./edu.html
 right:
   - icon: fas fa-home
     href: https:eoindosullivan.com

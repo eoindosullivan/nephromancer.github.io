@@ -4,7 +4,9 @@ output: html_document
 ---
 ## Renal biopsy 101
 
-These are notes from the Glomcon series, guiding through basics of reading a renal biopsy (https://www.youtube.com/watch?v=E39aDH5gc-A). Ill expand over time with new sources.
+These are notes from the Glomcon series, guiding through basics of [reading a renal biopsy](https://www.youtube.com/watch?v=E39aDH5gc-A). Ill expand over time with new sources.
+<br>
+Nice intro to renal path if youre new can be found [here](https://webpath.med.utah.edu/RENAHTML/RENALIDX.html) 
 
 ## The biopsy
 
