@@ -7,7 +7,7 @@ output: html_document
 
 ![](images/RBWH_clinical_trial_ongoing.png)
 
-#### Contact research nurses for screening & enrolement
+#### Contact research nurses for screening & enrolment
 
 
 <br>
@@ -35,7 +35,7 @@ Bardoxylone vs Placebo for patients with ADPKD
 
 - eGFR 30-90 ( 18-55yo)
 - eGFR 30-45 ( 56-70yo)
-- On tolvaptan for 4 months
+- May not be on tolvaptan
 
 
 <br>
@@ -113,7 +113,7 @@ Cohort 3 – Alports Syndrome
 
 -   Age between 18 and 75
 -   Body weight \>40kg
--   Must be vaccinated or agree to be vaccinated against Meningococcal infection, Haemophilus influenza type b and Steptococcus pneumoniae prior to randomization.
+-   Must be vaccinated or agree to be vaccinated against Meningococcal infection, Haemophilus influenza type b and Streptococcus pneumoniae prior to randomization.
 -   Participants on SGLT-2 inhibitors must be on a stable dose 12 weeks prior to screening
 -   Kidney biopsy diagnosed class III or class IV LN within 6mths of screening or during screening
 -   Clinical diagnosis of SLE
