@@ -2,9 +2,6 @@
 title: " "
 output: html_document
 ---
-# Active Trials Dec 2023
-
-
 ![](images/RBWH_clinical_trial_ongoing.png)
 
 #### Contact research nurses for screening & enrolment
