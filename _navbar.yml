@@ -106,10 +106,12 @@ left:
          href: ./covid19.html
        - text: "Tumour Lysis Syndrome"
          href: ./Tumour_Lysis.html
-  - text: "EDU"
+  - text: "Resources"
     menu:
        - text: "Educational Resources"
          href: ./edu.html
+       - text: "Patient Resources"
+         href: ./patient_resources.html
 right:
   - icon: fas fa-home
     href: https:eoindosullivan.com

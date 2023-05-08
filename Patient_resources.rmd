@@ -1,0 +1,27 @@
+---
+title: " "
+output: html_document
+---
+
+# Dietetics
+
+The European Renal association has a nice cookbook as a well as printable patient leaflets (K+, phosphate etc) and further patient orientated nutritional information
+
+[ERA cookbook](https://www.era-online.org/cookbook/)
+
+[ERA patient leaflets](https://www.era-online.org/cookbook/materials)
+
+
+
+# Blood pressure
+
+American Heart association has simple tips, blood pressure journals and single picture guide to help patients record accurate readings at home for clinic
+
+[Blood pressure image](https://www.cdc.gov/bloodpressure/measure.htm#:~:text=Put%20both%20feet%20flat%20on,bare%20skin%2C%20not%20over%20clothing)
+
+[further tips for patients](https://www.heart.org/en/news/2020/05/22/how-to-accurately-measure-blood-pressure-at-home0)
+
+https://www.validatebp.org/ has a list of suitable devices (American but still useful)
+
+
+
