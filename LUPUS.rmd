@@ -465,6 +465,7 @@ Anti CD20 therapy also affect T cells, Drops T regs,
 
 -   SLE often develops or Flares during pregnanacy or first 8 weeks post partum. 
 Can mimic preeclampsia/HELLP
+
 -   Hydroxychloroquine use in pregnancy has been associated with a decrease in lupus activity and a satisfactory safety profile in both the mother and the fetus ( KDIGO 21)
 
 -   Patients with active LN should be counseled to avoid pregnancy while the disease is active or
@@ -474,6 +475,19 @@ when treatment with potentially teratogenic drugs is ongoing, and for ~6 months 
 
 -   Only glucocorticoids, hydroxychloroquine, azathioprine, and CNIs are considered safe
 immunosuppressive treatments during pregnancy 
+
+-   Wean the MMF, ACEi and onto above agents
+-   2 years post flare is highest risk of recurrnce so if can get two years out this is optimal
+-   May be role for pre preg biopsy
+-   check autoantibodies ( Ro, La, APLS)
+
+
+[Nice summary here](https://pubs.glomcon.org/approach-to-pregnancy-in-lupus-nephritis/)
+
+![key image 1](images/LNpreg1.jpg)
+
+![key iamge 2](images/LNpreg2.jpg)
+
 
 
 # Idiopathic full house GN
@@ -526,3 +540,4 @@ Follow up closely
 10 years of follow-up, the probability of doubling serum creatinine was about 56% for patients whose second biopsy had persistent activity (an activity index >2), compared with 20% for patients who had an activity index ≤2 (P<0.001). Similarly, 10-year renal survival was >90% if the chronicity index of the repeat biopsy was <3, but 55% if the chronicity index was >6 (P=0.10).
 
 
+# Pregnancy

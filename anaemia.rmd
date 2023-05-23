@@ -66,11 +66,34 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 
 # ESA
 
-* Caution htn - 175/95 as arbitrary cut offs
-* Neorecoromon is 150 units/kg body weight/week. This is usually administered as 3 divided doses (but can be given as a single weekly dose), given intravenously during haemodialysis. 70kg man gets 3500 units each session (10,500/3)
-* Adjust in 25-50% increments
+Eprex (erythropoietin alpha) 50 U/kg three times /week
+-   70kg person: 3500units each HD session IV.
+
+Neorecoromon ( EPO beta) is same dose.
 
 ## HB Targets
+
+Tips
+
+-   90-115 probably reasonable, aim 110 mean.
+-   Safe speed limit: 10 to 20 g/L per month.
+-   Decrease in preference to withholding.
+-   Adjust in 25-50% increments
+-   Wait 2-4 weeks for dose change to have effect.
+-   Consider trend, rather than absolute values to avoid constant changes
+-   Red Flag: 300 IU/kg/week - treatment failure, assess for bleeding/deficiency
+    -   This is 7000 u/HD in a 70kg person. Review early at 5000 units/session.
+-   Caution HTN - 175/95 as arbitrary cut off. review.
+
+
+
+| Guideline                                                                                                      | Year | Target                  | Iron                        |
+|----------------------------------------------------------------------------------------------------------------|------|-------------------------|-----------------------------|
+| [KDOQI](https://www.ajkd.org/article/S0272-6386(13)00978-5/fulltext#secd6439371e118)                           | 2012 | 90 - 115 g/L            | Tsats \<30, Ferr \<500 ug/L |
+| [KDIGO](https://kdigo.org/wp-content/uploads/2016/10/KDIGO-2012-Anemia-Guideline-English.pdf)                  | 2012 | 10 - 11.5 g/L           | Tsats \<30, Ferr \<500 ug/L |
+| [CARI](https://www.cariguidelines.org/guidelines/dialysis/biochemical-and-haematological-targets/haemoglobin/) | 2010 | 100 - 120 g/L           |                             |
+| [Renal Assoc.](https://bmcnephrol.biomedcentral.com/articles/10.1186/s12882-017-0688-1#Sec41)                  | 2017 | 100 - 120 g/L (aim 110) | Tsats \<20. Ferrin 200-500  |
+| [European BP](https://pubmed.ncbi.nlm.nih.gov/20591813/)                                                       | 2010 | 110 - 120 g/L           |                             |
 
 ## NORMAL HEAMATOCRIT TRIAL
 
