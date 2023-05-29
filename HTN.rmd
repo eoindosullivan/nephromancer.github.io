@@ -67,9 +67,17 @@ Lercandipine is similar to amlodipine in terms of efficacy, will less vasodilata
 
 **Renin:Aldo Ratio**
 
--   Plasma Renin threshold (ng/mL/h): \<1.0 ( i.e. supressed)
--   Serum Aldosterone (ng/dL): \>= 15 ( other thresholds exist e.g. 20 is conversative, 6 is too permissive. 15 is fairly widely accepted)
--   ARR (ng/dL per ng/mL/h) \>= 30
+
+-   Plasma Renin threshold (ng/mL/h): \<1.0  or < 8 pmol/L ( i.e. suppressed) 
+-   Serum Aldosterone (ng/dL): \>= 15 (405 pmol/L) (other thresholds exist e.g. 20(540) is conservative, 6(162) is too permissive. 15(405) is fairly widely accepted)
+-   ARR (ng/dL per ng/mL/h) \>= 30 or >91 pmol/mU
+
+Conversion factor: Aldo 1 ng/ML = 27.7 pmol/L
+
+Conversion factor: PRA (ng/mL/h) to DRC (mU/L) is 8.2
+
+- If ARR >91, but aldo < 280 pmol/L probably a false positive ratio
+
 
 False negatives:
 

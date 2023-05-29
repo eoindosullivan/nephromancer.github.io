@@ -2,7 +2,7 @@
 title: " "
 output: html_document
 ---
-![](images/RBWH_clinical_trial_ongoing.png)
+![](images/RBWH_clinical_may23.png)
 
 #### Contact research nurses for screening & enrolment
 
@@ -24,25 +24,15 @@ Metformin vs Placebo for patients with ADPKD
 
 <br>
 
-## FALCON
-
-Bardoxylone vs Placebo for patients with ADPKD
-
-**Inclusion Criteria**
-
-- eGFR 30-90 ( 18-55yo)
-- eGFR 30-45 ( 56-70yo)
-- May not be on tolvaptan
-
-
-<br>
 
 # HD
 
 <br>
 
 ## PHOSPHATE
+
 <br>
+
 Phosphate targets of <= 1.5 vs 2-2.5 in patients on HD
 
 **Inclusion Criteria**
@@ -72,24 +62,6 @@ Spiro vs Placebo in patients on HD
 
 # CKD
 
-
-<br>
-
-## AFFINITY
-
-A Phase 2, Open-Label, Basket Study of Atrasentan in Patients with Proteinuric Glomerular Diseases
-
-The Phase 2 AFFINITY study will assess the efficacy and safety of atrasentan in patients with proteinuric glomerular diseases at risk of progressive kidney function loss.
-
-
-Cohort 3 – Alports Syndrome
-
-**Inclusion Criteria**
-
--   Diagnosis by genetic testing
--   UPCR \> 0.5 g/g
--   eGFR ≥ 30mL/min/1.73m2
--   Receiving RAS inhibitor stable for 12 weeks pre screening
 
 <br>
 
@@ -225,4 +197,21 @@ Existing and new patients with confirmed ANCA + ve vasculitis attending follow-u
 -   QRBR – Inclusion criteria: patients undergoing renal biopsy
 -   aHUS Registry- Inclusion criteria- Patients diagnosed to have aHUS (received/receiving Eculizumab)
 -   AUSLUPUS Registry- Inclusion criteria – Patients diagnosed to have SLE/Lupus Nephritis
+
+
+# Previous Trials recruited in KHS 
+
+Data collected from 2023 onwards
+
+## FALCON
+
+Bardoxylone vs Placebo for patients with ADPKD
+
+**Recruitment stopped Q1 2023**
+
+## AFFINITY
+
+A Phase 2, Open-Label, Basket Study of Atrasentan in Patients with Proteinuric Glomerular Diseases
+
+**Recruitment stopped Q1 2023**
 
