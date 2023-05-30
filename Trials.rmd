@@ -29,21 +29,7 @@ Metformin vs Placebo for patients with ADPKD
 
 <br>
 
-## PHOSPHATE
 
-<br>
-
-Phosphate targets of <= 1.5 vs 2-2.5 in patients on HD
-
-**Inclusion Criteria**
-
--   on HD \>= 3/12
--   \>45 yo
--   \>18 if DM
--   on a phosphate binder
-
-
-<br>
 
 ## ACHEIVE
 
@@ -133,28 +119,6 @@ BI 764198 is a potent inhibitor of human TRPC6
 
 <br>
 
-# GN - IGAN
-
-<br>
-
-## ALIGN
-
-A Phase 3, Randomized, Double-blind, Placebo-controlled Study of Atrasentan in Patients with IgA Nephropathy at Risk of Progressive Loss of Renal Function
-
--   Atrasentan is a potent endothelin receptor antagonist
--   Demonstrated to reduce composite renal outcome (doubling of creatinine or ESRF) in diabetic nephropathy (SONAR study 2019)
--   Major side effects are fluid retention/heart failure
-
-**Inclusion Criteria**
-
--   18 and able sign Informed Consent
--   Biopsy Proven Primary IgAN
--   3\. Receiving stable dose of RAS Inhibitor for 12 weeks
--   Total Urine Protein ≥1 g/day
--   eGFR ≥ 30
-
-<br>
-
 # GN - NEPHROTIC SYN
 
 <br>
@@ -203,15 +167,29 @@ Existing and new patients with confirmed ANCA + ve vasculitis attending follow-u
 
 Data collected from 2023 onwards
 
-## FALCON
+### FALCON
 
 Bardoxylone vs Placebo for patients with ADPKD
 
 **Recruitment stopped Q1 2023**
 
-## AFFINITY
+### AFFINITY
 
 A Phase 2, Open-Label, Basket Study of Atrasentan in Patients with Proteinuric Glomerular Diseases
 
-**Alports population Recruitment stopped Q1 2023**
+**Alports population recruitment stopped Q1 2023**
+
+### PHOSPHATE
+
+Phosphate targets of <= 1.5 vs 2-2.5 in patients on HD
+
+**Recruitment target met Q2 2023**
+
+
+### ALIGN
+
+A Phase 3, Randomized, Double-blind, Placebo-controlled Study of Atrasentan in Patients with IgA Nephropathy at Risk of Progressive Loss of Renal Function
+
+**Recruitment finished Q2 2023**
+
 
