@@ -3,51 +3,36 @@ title: "Haemodialysis"
 output: html_document
 ---
 
-# Vaccinations
+![](images/Dialysis targets - guidance.png)
 
-**HEP B – 1/3 don’t respond. At 1 year, only about \~64% have adequate Ab protection**
+#  Core principles
 
--   **HBVAXPRO** 40 micrograms at 0, 1 and 6 months by IM injection. Not in buttocks – go deltoid – better response.
--   **Fendrix** -20micrograms at 0,1,2 and 6 months
--   **Engerix** B -40 micrograms at 0,1,2 and 6 months
+-   Consider suitability for home haemo/PD and review tx listing status
+-   **Customise** dialysis regime to patient.
+-   Ensure adequate volume control as a key primary priority
+-   Bloods: Reflect on trends, rather than individual results.
+-   Dialysate: avoid positive sodium balance, positive calcium, high K gradients. Avoid dialysate Mg \<1, K \<2, Ca2+ \<1.5.
+-   Aim for your targets, but within the context of that patient, and not at the expense of personalised care.
+    
+#  Volume First
 
-Check anti-Hbs antibodies 1-2 months after course.
+    
+A [Volume first approach](https://pubmed.ncbi.nlm.nih.gov/25156305/), major CV contributor. Light on evidence, but compelling. Extending treatment time or frequency is an effective way to address volume control and tolerance of dialysis sessions, with less dialysis-related morbidity and mortality
 
--   **Responder**: \>100mIU/ml .
--   **Partial response**: 10-100mIU/ml. Give booster (once) and recheck in 1-2 months.
--   **Non response**: \<10mIU/ml. Repeat entire course once only. If still \<10mIU/ml, then patient is a ‘non responder’ and move on. If level 10-100mIU/ml then treat as partial response.
-    -   If non response, check for ABsag and either proceed as acute infection if + or “vulnerable”
-    -   HBIG postexposure prophylaxis for any known or likely parenteral exposure to HBsAg positive blood is available.
--   Once established, annual check with a booster if \<100mIu/ml.
-
-**Notes:**
-
--   Better immune response and high rates of conversion if given before ESKD
--   If started on normal dose pre HD but transitioning to HD during vaccine course, increase to the double dose (40mg) once on HD
--   Ab tires \>10 are still protective
-
-
-**Other Vaccines**
-
--   Annual inactivated influenza
--   Pneumococcal: Regime varies depending on history and PCV13/PPSV23: See table 2 and table 3 of the appendix of CDC document [here](https://www.cdc.gov/dialysis/pdfs/vaccinating_dialysis_patients_and_patients_dec2012.pdf) 
--   [Green book](https://www.gov.uk/government/collections/immunisation-against-infectious-disease-the-green-book#the-green-book)
--   COVID probably
-
-# Dry weight
+### notes
 
 -   BP should be normal throughout, high post HD BP ?wet
 -   Can take \~3 months to get to a first dry weight – persistence is key
--   Early tapering of BP meds can help hit dry weight (evidence?)
+-   Early tapering of BP meds may help hit dry weight by avoiding hypotension (?evidence?)
 -   Hypotension/cramps = refill capacity. Does not necessarily mean at dry weight
--   BP normalisation can lag weeks after ECF volume normalisation (?evidence)
+-   BP normalisation can lag weeks after ECF volume normalisation (allegedly ?evidence)
 
 # Adequacy
 
 **URR:** ((Pre urea-post urea)\*100)/Pre-urea
 
 -   Underestimates due to ignoring urea clearance during UF and intra HD urea generation
--   Target 70%. Mostly a Fn of Qb and Time
+-   Target 70%. Mostly a Fn of Time and Qb in that order.
 
 **Single Pool Kt/V**
 
@@ -83,16 +68,35 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 
 # Anaemia & Iron
 
-On its own page [here](https://www.renalmedicine.net/anaemia.html)
+Has its own page [here](https://www.renalmedicine.net/anaemia.html)
 
 # HD Prescription tips
 
--   Lower temps = greater tolerability and possibly CV/Neuro outcomes
+-   Lower temps = may have greater tolerability and possibly CV/Neuro outcomes in selected patients,
 -   Qb 300-500, Qd 500-800
 -   Initiation: 2hr Qb200 Qd500 ,3hr Qb250 Qd500 ,4hrs Qb300 Qd800.
--   Never use a 0 K+ bath (if its even an option) – too much K flux
+-   Never use a 0/1 K+ bath (if its even an option) – too much K flux unless you really really need to lower it
 -   Post Tx: avoid hypotension (assoc. with increase risk of acute rejection)
 -   Acidaemic: Check ionised Calcium – the incoming bicarb load will drop the iCa - \>seizures etc
+
+## MyTEMP
+<br>
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class = "blue">
+[MyTEMP](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(22)01805-0/fulltext)
+
+-   cluster randomised Canadian trial, 36'5c Vs 0.5c less than body temp.
+-   Pragmatic and excellently done, healthy budget and embedded in care
+-   The primary composite outcome was CV-related death or hospital admission with MI, stroke, CCF during the 4-year trial period
+-   15413 patients, 4.3 million HD sessions
+-   mean dialysate temperature was 35·8°C in the cooler dialysate group and 36·4°C 
+-   mean drop in intradialytic sys BP  26·6 mm Hg in the cool HD vs 27·1 mm Hg in the standard temperature group (mean difference –0·5 mm Hg, 99% CI –1·4 to 0·4; p=0·14)
+
+</div>
+<br>
+
 
 # Severe Uraemia
 
@@ -110,6 +114,53 @@ On its own page [here](https://www.renalmedicine.net/anaemia.html)
 
 
 <br>
+
+# Bicarb
+
+**Bicarb target : \> 22 – 28**
+
+**Notes**
+
+-   Total carbon dioxide [CO2], generally 1–1.5 mEq/L higher than the serum bicarbonate concentration, is actually what is measured in all epidemiologic studies
+-   High and low bicarb [associated with poorer outcomes](https://www.kidney-international.org/article/S0085-2538(16)00278-7/pdf) (\<20), sicker patients eat less protein, resulting in less acid generation.
+-   European Best Practice Guidelines suggest maintaining midweek predialysis serum bicarbonate at 20–22 mEq/L
+-   Low or high values tend to return to baseline, only 3 month mean values tend to stick around, so a single abnormal reading is unlikely to be significant. Regression to the mean.
+-   Rapid increase in blood BIC/PH: hypercapnia, arrythmia, haemodynamic instability, possibly immune dysfunction/infection, electrolyte ( drop in Calcium, K+ driven by PH)
+
+Sources: KDOQI , [excellent review in JASN](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5328170/) and [summary in KI](https://www.kidney-international.org/article/S0085-2538(16)00278-7/pdf).
+
+
+# Vaccinations
+
+**HEP B – 1/3 don’t respond. At 1 year, only about \~64% have adequate Ab protection**
+
+-   **HBVAXPRO** 40 micrograms at 0, 1 and 6 months by IM injection. Not in buttocks – go deltoid – better response.
+-   **Fendrix** -20micrograms at 0,1,2 and 6 months
+-   **Engerix** B -40 micrograms at 0,1,2 and 6 months
+
+Check anti-Hbs antibodies 1-2 months after course.
+
+-   **Responder**: \>100mIU/ml .
+-   **Partial response**: 10-100mIU/ml. Give booster (once) and recheck in 1-2 months.
+-   **Non response**: \<10mIU/ml. Repeat entire course once only. If still \<10mIU/ml, then patient is a ‘non responder’ and move on. If level 10-100mIU/ml then treat as partial response.
+    -   If non response, check for ABsag and either proceed as acute infection if + or “vulnerable”
+    -   HBIG postexposure prophylaxis for any known or likely parenteral exposure to HBsAg positive blood is available.
+-   Once established, annual check with a booster if \<100mIu/ml.
+
+**Notes:**
+
+-   Better immune response and high rates of conversion if given before ESKD
+-   If started on normal dose pre HD but transitioning to HD during vaccine course, increase to the double dose (40mg) once on HD
+-   Ab tires \>10 are still protective
+
+
+**Other Vaccines**
+
+-   Annual inactivated influenza
+-   Pneumococcal: Regime varies depending on history and PCV13/PPSV23: See table 2 and table 3 of the appendix of CDC document [here](https://www.cdc.gov/dialysis/pdfs/vaccinating_dialysis_patients_and_patients_dec2012.pdf) 
+-   [Green book](https://www.gov.uk/government/collections/immunisation-against-infectious-disease-the-green-book#the-green-book)
+-   COVID probably
+
 
 # Guidelines & Protocols & Papers
 

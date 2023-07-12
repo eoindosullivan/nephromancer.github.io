@@ -106,6 +106,8 @@ left:
          href: ./covid19.html
        - text: "Tumour Lysis Syndrome"
          href: ./Tumour_Lysis.html
+       - text: "Single Kidney"
+         href: ./Single Kidney.html
   - text: "Resources"
     menu:
        - text: "Educational Resources"

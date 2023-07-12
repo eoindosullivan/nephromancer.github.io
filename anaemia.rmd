@@ -36,7 +36,7 @@ output: html_document
 
 #### Iron Therapy 
 
-* In HD proactive high-dose IV iron sucrose (venofer) 400 mg every month (or equivalent) should be given unless ferritin > 700 μg/L or TSAT>40% ( PIVITOL)
+* In HD proactive high-dose IV iron sucrose (venofer) 400 mg every month (or 100mg every week) should be given unless ferritin > 700 μg/L or TSAT>40% ( PIVOTAL)
 * Avoid in infection, probably
 * Monitor quarterly
 * Hb Targets: 100-120
@@ -45,7 +45,8 @@ output: html_document
 
 * **Limits** Feritin =< 800. Review iron therapy when hits 500. 
 
-In Edinburgh use iron as ferric derisomaltose (Diafer) ~100mg weekly/monthly etc during HD. This is low dose :(
+**Iron**
+
 
 ## PIVOTAL
 
@@ -61,6 +62,7 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 -   Less CV composite events in high dose hazard ratio, 0.80; 95% CI, 0.64 to 1.00
 -   Less Blood transfusions
 -   Same infections
+-   Starting dose: 600mg Iron sucrose IV each session for a week on month 1. Then 200mg IV fortnightly from month 2 onwards, adhering to safety limits. Stop if ferritin 700 or TSATS >40%. Hb target was 100-120.
 </div>
 <br>
 
@@ -92,8 +94,10 @@ Tips
 | [KDOQI](https://www.ajkd.org/article/S0272-6386(13)00978-5/fulltext#secd6439371e118)                           | 2012 | 90 - 115 g/L            | Tsats \<30, Ferr \<500 ug/L |
 | [KDIGO](https://kdigo.org/wp-content/uploads/2016/10/KDIGO-2012-Anemia-Guideline-English.pdf)                  | 2012 | 10 - 11.5 g/L           | Tsats \<30, Ferr \<500 ug/L |
 | [CARI](https://www.cariguidelines.org/guidelines/dialysis/biochemical-and-haematological-targets/haemoglobin/) | 2010 | 100 - 120 g/L           |                             |
-| [Renal Assoc.](https://bmcnephrol.biomedcentral.com/articles/10.1186/s12882-017-0688-1#Sec41)                  | 2017 | 100 - 120 g/L (aim 110) | Tsats \<20. Ferrin 200-500  |
+| [Renal Assoc.](https://bmcnephrol.biomedcentral.com/articles/10.1186/s12882-017-0688-1#Sec41)                  | 2017 | 100 - 120 g/L (aim 110) | Tsats \<20. Ferr 200-500  |
 | [European BP](https://pubmed.ncbi.nlm.nih.gov/20591813/)                                                       | 2010 | 110 - 120 g/L           |                             |
+
+Note the [RA audit measures](measures%20https:/bmcnephrol.biomedcentral.com/articles/10.1186/s12882-019-1527-3) for future QI work
 
 ## NORMAL HEAMATOCRIT TRIAL
 
