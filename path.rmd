@@ -144,3 +144,45 @@ Obsolescent nephrons get chewed up and consumed when heavily sclerosed, so total
 **Urinary space**
 
 It’s a *potential* space – should be empty – see crescents above
+
+Glomcon: Digging Deeper – what are the techniques we can use
+
+## Paraffin IF
+
+-   Initially a salvage technique, allows use of formalin fixed tissue for IF
+-   [Good review, and summary of technique](https://www.kireports.org/article/S2468-0249(18)30154-2/fulltext)
+-   Variable Ability to find diagnostic findings (KI 2006 – show table 2), overall 88% ( 20% in anti GBM, 100% in many)
+-   Can be used to unmasked previously “hidden” deposits (e.g. IG in the case of a cryo/MGRS/crystalopathy) – useful if high clinical suspicion where convention frozen IF is negative. In looking for masked deposits, about 1/3 of cases will change dx. (messias modern pathology 2015)
+-   Why masking? Protein Cross-linking during formalin fixation for LMt– the requirement to use protease to digest this to allow IG binding may break crystalline structure and as a byproduct expose previously shielded epitopes. Heating based techniques may not be as effective – perhaps best avoided here.
+
+![source: Nasr et al, doi.org/10.1016/j.ekir.2018.07.008](images/Paraffin IF sensitivities.png)
+
+
+
+Tips:
+
+-   C3 stain isn’t great on paraffin IF, usually less intense than Ig.
+-   C3GN should have low threshold to do PIF
+-   Nothing described currently on formalin fixed tissue
+-   Limitations: more experience to interpret, lots of background activity. Frozen IF is more sensitive and easier.
+-   Very rarely, you can get + IF (e.g. K,L+) that after pronase demonstrates only single + ( potentially due to over calling of the initial positivity due to density of staining, but RRodby had a case , discussed on Glomcon, of a dual + being single + leading to a dx of MM)
+
+When to ask for Paraffin IF
+
+1.  Frozen lacks gloms and crescents present ( ANCA vs Anti GBM – despite lower sens)
+2.  In nephrectomy samples to exclude immune complex GN
+3.  Suspected Crystalline LCPT/crystalglobulin-induced nephropathy
+    1.  Can demonstrate intracytoplasmic tubular crystals for a light chain(kappa usually)
+4.  MGMID: Membranous GN with weak IF/C3 dominant
+5.  MPGN with neg IF
+6.  Monoclonal gammopathy with C3GN (i.e. missing the Ig) – not required in DDD
+7.  LM,EM: cryoglobulinaemic GN but neg IF
+8.  Fibrillary GN without + K,L on IF – to exclude monoclonal (i.e. MGRS)
+
+## Membranous like glomerulopathy with masked IGG kappa despots (MGMID) AKA serum amyloid P associated glomerulopathy
+
+-   Requires Paraffin IF to make diagnosis
+-   Rare, 41 cases, IF neg, paraffin IF – Strong IgG -Kappa staining
+-   Young (mean age 26), white, vague autoimmune. Tends not have NS. no underlying neoplasia. 25/26 neg electrophoresis. ([Larsen, KI reports 2016](https://www.kireports.org/article/S2468-0249(16)30064-X/fulltext))
+-   Laser captures microdissection identified serum amyloid P (using mass spec). Can confirm diagnosis by staining with [serum amyloid P.](https://www.kidney-international.org/article/S0085-2538(19)31119-6/fulltext)
+

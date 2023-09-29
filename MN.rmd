@@ -34,6 +34,12 @@ Idiopathic membranous can antigen switch (e.g. IgG1 early and IgG4 later in dise
 ## PLA2r
 ![Beck & Salant KI 2010](images/MN_Beck and Salant KI 2010.png)
 
+## Membranous like glomerulopathy with masked IGG kappa despots (MGMID) AKA serum amyloid P associated glomerulopathy
+
+-   Requires Paraffin IF to make diagnosis
+-   Rare, 41 cases, IF neg, paraffin IF – Strong IgG -Kappa staining
+-   Young (mean age 26), white, vague autoimmune. Tends not have NS. no underlying neoplasia. 25/26 neg electrophoresis. ([Larsen, KI reports 2016](https://www.kireports.org/article/S2468-0249(16)30064-X/fulltext))
+-   Laser captures microdissection identified serum amyloid P (using mass spec). Can confirm diagnosis by staining with [serum amyloid P.](https://www.kidney-international.org/article/S0085-2538(19)31119-6/fulltext)
 
 
 

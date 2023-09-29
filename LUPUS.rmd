@@ -267,9 +267,16 @@ Unclear value in even distinguishing between class III and IV. Tricky business.
 
 ### TMA
 
-Approach as standard TMA emergency and requires rapid Dx: urgent ADAMTS13, APL abx, complement studies, decide if TTP - PLASMIC score ( PEX/ITU right now). KDIGO 21 has a flow chart
+Approach as standard TMA emergency and requires rapid Dx: urgent ADAMTS13, APL abx, complement studies, decide if TTP - PLASMIC score ( if 5 or more, PEX/ITU right now). KDIGO 21 has a flow chart
+
+- if low ADAMts13 this is SLE associated, and needs PEX, steroids + ritux
+- if normal & APL ab +, this is AP: nephropathy and needs anticoagulation and PEX
+- if net APL ab, it may be complement driven, so if no alternative then consider eculizumab
+
 
 # Treatment
+
+The new [KDIGO 2023](https://kdigo.org/wp-content/uploads/2023/03/KDIGO-2023-Lupus-Nephritis-Guideline_Public-Review_9-Mar-2023.pdf) is a good read
 
 #### Notes
 
@@ -281,15 +288,15 @@ Approach as standard TMA emergency and requires rapid Dx: urgent ADAMTS13, APL a
 -   Intermittent therapy bursts are needed to attenuate inflammation
 -   Currently best acute therapy is IV pulse corticosteroids be we need to eliminate these due to toxicities
 
-### Based on ISN classification
+### Rx Based on ISN classification
 
 -   Class 2 generally do not need specific therapy for their kidney disease but may need immunosuppressive treatment for extrarenal SLE manifestations. 
 
-  -   If nephrotic, class 1 & 2 over 90% of patients given glucocorticoid monotherapy achieved remission within a median time of 4 week, high risk of flares so CNI/MPAA/AZA (KDIGO 21)
+-   If nephrotic, treat class 1 & 2 as MCD ( check EM for podocytes) over 90% of patients given glucocorticoid monotherapy achieved remission within a median time of 4 week, high risk of flares so CNI/MPAA/AZA as a second agent (KDIGO 21)
 
 -   Patients with mainly chronic injury (any class) or end stage damage (class 6) also do not need immunosuppression for LN, but may benefit from antiproteinuric, renoprotective measures. 
 
--   The proliferative classes (3 and 4) are often treated with potent immunosuppression, whereas nonproliferative
+-   The proliferative classes (3 and 4) are often treated with potent immunosuppression - see below.
 
 -   membranous LN (class 5) may be managed conservatively (antiproteinuric therapy) if patients have subnephrotic proteinuria, or with immunosuppression if patients have nephrotic range proteinuria.
 
@@ -307,6 +314,7 @@ Approach as standard TMA emergency and requires rapid Dx: urgent ADAMTS13, APL a
 A good idea for most lupus patients ( 1c KDIGO 21)
 
 -   6mg/kg hydroxychloroquine ( ~400mg/day)
+-   In an acute flare go for 200mg po bd, 200mg po od is ok for maintanence.
 -   during the maintenance phase, this should be lowered to 4 to 5 mg/kg/d.
 -   Reduce dose by 25% if eGFR <30
 
@@ -323,11 +331,18 @@ A good idea for most lupus patients ( 1c KDIGO 21)
 ## Additional care
 
 ![](images/lupus_supportive_care.png)
+
 ## Induction
 
 Severe proliferative
+(typically III and IV with or without a V componentent)
 
-**Methylpred:** 0.5-1g/kg for 1-3 days, then oral pred 1mg/kg/day (ideal body weight) max 80mg taper over weeks to a maintanence dose
+- Steroids and either  1)  MMF  2) CYC 3) Belimumab & MMF/low dose CYC or 4) MMF and Tac (if eGFR >45)
+ 
+
+**Methylpred:** 500-1000mg for 1-3 days, then oral pred 1mg/kg/day (ideal body weight) max 80mg taper over weeks to a maintenance dose. 
+
+Wean to 30mg by week 5, 5mg by week 24 in standard dose. See KDIGO for alternative regime, reduced dose is about half this regime, starting at max of 40mg.
 
 Plus **CYC or MMF**
 
@@ -335,7 +350,13 @@ Plus **CYC or MMF**
 -   **IV CYC 500mg fortnightly for 3 months - 3 g total (Eurolupus)**
 -   IV CYC 0.5-1g/m2 q monthly \* 6 (NIH protocol)
 -   PO CYC 1-1.5mg/kg/d, max 150mg/d for 2-4 months
+-   Tac & MMF - if preserved function and intolerance of MMF +- diffuse podocytopathy
+-   limited data on ritux but may have role if non responsive/adherence
 
+Considerations
+
+- oral adherence required, CYC may be better in some cases
+- CYC faster
 
 Eurolupus
 
@@ -360,7 +381,7 @@ at least 45 ml/min per 1.73 m2
 , voclosporin can be added to
 MPAA and glucocorticoids as initial therapy for 1 year
 
-- There is an emerging role for Blymphocyte targeting biologics in the treatment of LN.
+- There is an emerging role for B lymphocyte targeting biologics in the treatment of LN.
 Belimumab can be added to standard therapy in the
 treatment of active LN. Rituximab may be considered
 for patients with persistent disease activity or repeated
@@ -380,8 +401,7 @@ clinical renal response for ‡12 months
 
 -    total duration of initial
 immunosuppression plus combination maintenance
-immunosuppression for proliferative LN should not
-be <36 months.
+immunosuppression for proliferative LN should be over 36 months.
 
 
 ALMS maintenance trial NEJM 2011
@@ -391,6 +411,57 @@ Time to treatment failure \| n=227 \| MMF vs AZA \| European mild-mod disease
 Maintain nephritis ANN Rheum disease 2010
 
 Time to renal flare \| n= \| MMF vs AZA \|
+
+
+# Resistant LN
+
+-   Several Clinical trials failed to show a benefit with additional ritux, including [LUNAR](https://pubmed.ncbi.nlm.nih.gov/22231479/) and [EXPLORER](https://pubmed.ncbi.nlm.nih.gov/20039413/). Both had high dose steroids - masked ritux effect? Neither trial selected for treatment resistance.
+-   Despite this, the totality of evidence via [meta-analysis](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6072690/#:~:text=Objective,however%2C%20data%20are%20still%20controversial.) suggest role for ritux
+-   PEX indicated in any suggestion of CAPS
+-   Role for Belimumab pre/post Ritux – both have been advocated in case reports
+-   IVIG can theoretically bind to targets on B cells to render ritux less potent, so may be best to minimise overlap
+-   Ensure maxed all other therapies, re-pulse with steroids, unknown role for Tacrolimus
+
+
+# Follow up closely
+
+## Repeat Renal Biopsy
+
+-   After completing 6–8 months of immunosuppressive therapy, 20%–50% of complete clinical renal responders still had histologic evidence of ongoing active inflammation, and 40%–60% of patients with no histologic evidence of disease activity still had persistent, high-grade proteinuria
+-   Even after several years of immunosuppressive treatment, histologic activity was found in about 20% of patients who had been in sustained clinical remission. 
+-   Conversely, 40% of patients in complete histologic remission after long-term treatment had persistent clinical findings
+- probably most useful for patients with class 2 or 5 with a Flare as this could suggest proliferative disease thus intensification of immunosuppresion
+
+### NIH disease activty scores as prognosis:
+10 years of follow-up, the probability of doubling serum creatinine was about 56% for patients whose second biopsy had persistent activity (an activity index >2), compared with 20% for patients who had an activity index ≤2 (P<0.001). Similarly, 10-year renal survival was >90% if the chronicity index of the repeat biopsy was <3, but 55% if the chronicity index was >6 (P=0.10).
+
+# Pregnancy
+
+
+-   SLE often develops or Flares during pregnanacy or first 8 weeks post partum. 
+Can mimic preeclampsia/HELLP
+
+-   Hydroxychloroquine use in pregnancy has been associated with a decrease in lupus activity and a satisfactory safety profile in both the mother and the fetus ( KDIGO 21)
+
+-   Patients with active LN should be counseled to avoid pregnancy while the disease is active or
+when treatment with potentially teratogenic drugs is ongoing, and for ~6 months after LN becomes inactive
+
+-   hydroxychloroquine should be continued during pregnancy, and low-dose aspirin should be started before 16 weeks of gestation
+
+-   Only glucocorticoids, hydroxychloroquine, azathioprine, and CNIs are considered safe
+immunosuppressive treatments during pregnancy 
+
+-   Wean the MMF, ACEi and onto above agents
+-   2 years post flare is highest risk of recurrnce so if can get two years out this is optimal
+-   May be role for pre preg biopsy
+-   check autoantibodies ( Ro, La, APLS)
+
+
+[Nice summary here](https://pubs.glomcon.org/approach-to-pregnancy-in-lupus-nephritis/)
+
+![key image 1](images/LNpreg1.jpg)
+
+![key iamge 2](images/LNpreg2.jpg)
 
 ## Emerging therapies
 
@@ -437,13 +508,13 @@ Belimumab is approved in USA for non renal lupus
 
 Antibody vs BLys ( survival factor for b cells)
 
-ITN calibrate – phase 2, open label proliferative LN – steroids + cyc (750) + ritux week 0,2 and placebo or belimumam at week 4 – Didn’t suggest any additional benefit
+ITN calibrate – phase 2, open label proliferative LN – steroids + cyc (750) + ritux week 0,2 and placebo or belimumab at week 4 – Didn’t suggest any additional benefit
 
 Why? Killing b cells increased serum BLys
 
-Reconsistuion of b cells in high BLyS environment fosters auto reactive B cells
+Reconstitution of b cells in high BLyS environment fosters auto reactive B cells
 
-Thus anti BLyS treatment may help sustain a response and prevent reconsistution
+Thus anti BLyS treatment may help sustain a response and prevent reconstitution
 
 TBC – BLISS LN will be out shortly
 
@@ -453,42 +524,13 @@ Lower dose of steroids & MMF & CNI
 
 Usually Chinese studies
 
-Voclosporin phase 2 multi target trial ( novel calineurin inhibitor) – added to 2g/day MMF and rapid taper of steroids - down to 2.5mg by week 16 – pretty aggressive taper
+Voclosporin phase 2 multi target trial ( novel calcineurin inhibitor) – added to 2g/day MMF and rapid taper of steroids - down to 2.5mg by week 16 – pretty aggressive taper
 
 Outcomes: low dose was more effective – but disproportionate death in the low dose group
 
 ### Misc comments on treatment 
 
-Anti CD20 therapy also affect T cells, Drops T regs,
-
-# Pregnancy
-
--   SLE often develops or Flares during pregnanacy or first 8 weeks post partum. 
-Can mimic preeclampsia/HELLP
-
--   Hydroxychloroquine use in pregnancy has been associated with a decrease in lupus activity and a satisfactory safety profile in both the mother and the fetus ( KDIGO 21)
-
--   Patients with active LN should be counseled to avoid pregnancy while the disease is active or
-when treatment with potentially teratogenic drugs is ongoing, and for ~6 months after LN becomes inactive
-
--   hydroxychloroquine should be continued during pregnancy, and low-dose aspirin should be started before 16 weeks of gestation
-
--   Only glucocorticoids, hydroxychloroquine, azathioprine, and CNIs are considered safe
-immunosuppressive treatments during pregnancy 
-
--   Wean the MMF, ACEi and onto above agents
--   2 years post flare is highest risk of recurrnce so if can get two years out this is optimal
--   May be role for pre preg biopsy
--   check autoantibodies ( Ro, La, APLS)
-
-
-[Nice summary here](https://pubs.glomcon.org/approach-to-pregnancy-in-lupus-nephritis/)
-
-![key image 1](images/LNpreg1.jpg)
-
-![key iamge 2](images/LNpreg2.jpg)
-
-
+Anti CD20 therapy also affect T cells, Drops T regs
 
 # Idiopathic full house GN
 
@@ -527,17 +569,4 @@ Check for cryoglobs (especially if MPGN) - of course you can get cryoglobs with 
 
 ?Might be sensible to treat severe looking histology as a severe LN in the absence of reversible causes/infections - careful with diagnostic anchoring to avoid accidently immunosuppression if infection is a cause
 
-Follow up closely
 
-# Repeat Renal Biopsy
-
--   After completing 6–8 months of immunosuppressive therapy, 20%–50% of complete clinical renal responders still had histologic evidence of ongoing active inflammation, and 40%–60% of patients with no histologic evidence of disease activity still had persistent, high-grade proteinuria
--   Even after several years of immunosuppressive treatment, histologic activity was found in about 20% of patients who had been in sustained clinical remission. 
--   Conversely, 40% of patients in complete histologic remission after long-term treatment had persistent clinical findings
-- probably most useful for patients with class 2 or 5 with a Flare as this could suggest proliferative disease thus intensification of immunosuppresion
-
-### NIH disease activty scores as prognosis:
-10 years of follow-up, the probability of doubling serum creatinine was about 56% for patients whose second biopsy had persistent activity (an activity index >2), compared with 20% for patients who had an activity index ≤2 (P<0.001). Similarly, 10-year renal survival was >90% if the chronicity index of the repeat biopsy was <3, but 55% if the chronicity index was >6 (P=0.10).
-
-
-# Pregnancy
