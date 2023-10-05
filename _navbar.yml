@@ -80,6 +80,10 @@ left:
         href: ./project1.html
   - text: "DRUGS"
     menu:
+      - text: "Anticoagulation"
+        href: ./anticoagulation.html
+      - text: "PJP"
+        href: ./PJP.html
       - text: "Abx"
         href: ./abx.html
       - text: "HDU"

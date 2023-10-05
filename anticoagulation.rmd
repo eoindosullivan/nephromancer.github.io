@@ -1,0 +1,33 @@
+---
+title: " "
+output: html_document
+---
+
+## VTE prophylaxis in Nephrotic syndrome
+
+-   Variable incidence, depending on population being studied 3-36%(!)
+-   Can be any vascular bed, venous or arterial and include cerebral vein/arteries, coronaries.
+
+**Pathophysiology**
+
+-   Loss of fibrinolytic factors such as antithrombin III, plasminogen, protein S, plasmin.
+-   Simultaneously, the liver upregulates thromboxane A1, VwF and Cholesterol, fibrinogen, Factor V, VIII
+-   Hypovolaemia may be a factor
+-   Heparin resistance due to urinary antithrombin loss?
+
+**VTE timeline**
+
+-   Membranous Nephropathy (MN) has highest risk: HR of 10 vs non nephrotic control, about 8% overall incidence.
+-   MN has VTE sooner: Typically, about 150 days to first VTE vs 300 in other GN.
+-   MN: Median time to VTE 3.8 month (IQR 0-1 – 12.1)
+-   4/56 clots discovered at time of first presentation with proteinuria
+-   Albumin: each 10g/L drop in alb increases HR by \~2
+-   Albumin of 28 is a reasonable cut off with a HR of 2.53 for VTE above and below
+-   [Lionaki, CJASN,Toronto Data](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3265338/).
+-   Risk/benefit calculator: <https://www.med.unc.edu/gntools/>
+
+**Drug choice**
+
+-   Warfarin first line
+-   LMWH second line, dosing slightly unclear, a level may be most appropriate.
+-   Multiple cautionary case reports of DOACs failing individual patients in NS, although they *probably* work for most people, [highly variable kinetics](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9546608/). Avoid if possible.

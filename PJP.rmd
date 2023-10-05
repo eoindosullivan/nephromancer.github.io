@@ -1,0 +1,34 @@
+---
+title: " "
+output: html_document
+---
+# PJP prophylaxis
+
+Mortality 30-50% non HIV infected, 50-80% mortality if admitted to ICU
+
+**Co-Trimoxazole**
+
+SE: leukopaenia, myelosuppression, rash, SJS, hepatitis, nephropathy: AIN, crystallopathy, Artefactual increase in Cr due to secretary impairment.
+
+Reduced dose regimes have less side effects and similar prophylactic cover e.g [1](https://pubmed.ncbi.nlm.nih.gov/32820678/) [2](https://pubmed.ncbi.nlm.nih.gov/32820678/) [3](https://pubmed.ncbi.nlm.nih.gov/30642768/)
+
+Benefits of cotrim beyond PJP- broad spectrum antibacterial cover
+
+TMP/SMX prophylaxis lower associated on severe infection (HR 0.3, 95% CI 0.13-0.69 over 24 months [in ritux treated AAV](https://pubmed.ncbi.nlm.nih.gov/29950327/), in particular Resp infections.
+
+| TRIAL     | Prophylaxis | PJP rate |
+|-----------|-------------|----------|
+| MENTOR    | Yes         | 0        |
+| TESTING   | No          | 2.2%     |
+| MAINTISAN | Yes         | 1.75%    |
+| EXPLORER  | No          | 0        |
+
+Alternative: dapsone – G-6-PD and methhaemoglobinaemia/hemolysis.
+
+**Who gets prophylaxis (GN)**
+
+-   Dual treatment (e.g. b cell/cyclophos + pred) – always.
+-   Ritux alone – I think so. Rituximab In Non hodkins lymphoma in Taiwan, ritux [alone increases PJP](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5974272/) (2.95% vs 1.32)
+-   SLE – in MMF only, probably not, but if increased risk, then use. Err on the side of caution.
+-   Duration unclear, certainly while on active treatment, and if higher risk, run for 6 months post de-escalation. Some may need life long.
+

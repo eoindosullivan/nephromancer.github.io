@@ -58,13 +58,13 @@ Focal vs diffuse
 
 Segmental vs global (globe = the whole glom, it’s a globe)
 
-### Step 1 – inflammation & Fibrosis
+### Step 1 – Inflammation & Fibrosis
 
 Start with inflammation and tubular fibrosis – chronic vs acute
 
 Cells are identified by their location rather than any obvious features (e.g., nuclear changes are not super useful like they might be in general path). This can be confusing!
 
-### Step 2: Glomerulus
+### Step 2 - Glomerulus
 
 **Hypercellular?**
 
@@ -145,8 +145,6 @@ Obsolescent nephrons get chewed up and consumed when heavily sclerosed, so total
 
 It’s a *potential* space – should be empty – see crescents above
 
-Glomcon: Digging Deeper – what are the techniques we can use
-
 ## Paraffin IF
 
 -   Initially a salvage technique, allows use of formalin fixed tissue for IF
@@ -179,7 +177,9 @@ When to ask for Paraffin IF
 7.  LM,EM: cryoglobulinaemic GN but neg IF
 8.  Fibrillary GN without + K,L on IF – to exclude monoclonal (i.e. MGRS)
 
-## Membranous like glomerulopathy with masked IGG kappa despots (MGMID) AKA serum amyloid P associated glomerulopathy
+## MGMID
+
+Membranous like glomerulopathy with masked IGG kappa despots (MGMID) AKA serum amyloid P associated glomerulopathy
 
 -   Requires Paraffin IF to make diagnosis
 -   Rare, 41 cases, IF neg, paraffin IF – Strong IgG -Kappa staining
