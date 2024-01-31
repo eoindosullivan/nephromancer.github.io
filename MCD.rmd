@@ -20,7 +20,8 @@ output: html_document
 * Remission in ~50% adults by 8 weeks, 75-95% by 16.
 * 1mg/kg, max 80mg po od - 4 weeks minimum, up to 16 weeks if waiting on remission
 * Run 2-4 weeks post remission
-* Reduce to acheive total treatment of  4-6 months
+* Reduce to achieve total treatment of 4-6 months
+* Remission is classically quite abrupt
 
 ## Relapse
 * Common, 65-80%

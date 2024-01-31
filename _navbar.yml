@@ -112,6 +112,8 @@ left:
          href: ./Tumour_Lysis.html
        - text: "Single Kidney"
          href: ./Single Kidney.html
+       - text: "IGG4"
+         href: ./IGG4.html
   - text: "Resources"
     menu:
        - text: "Educational Resources"
