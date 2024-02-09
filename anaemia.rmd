@@ -73,6 +73,8 @@ Eprex (erythropoietin alpha) 50 U/kg three times /week
 
 Neorecoromon ( EPO beta) is same dose.
 
+EPREX weekly total / 240 = darbepoetin alfa IV weekly dose in mcg.
+
 ## HB Targets
 
 Tips

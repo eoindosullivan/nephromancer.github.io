@@ -2,10 +2,36 @@
 title: " "
 output: html_document
 ---
+Draft notes
 
-ANCA & GBM tends to be necrotising crescents on a background of a normal glom - if there is underyling abnormal/path in the glom, consider non-ANCA disease
+**C-ANCA & P-ANCA**
+
+Indirect immunofluorescence (IIF): microscopic technique, result is positive or negative with some descriptive qualifiers
+
+-   C-ANCA is typically a diffuse fine granular labelling of the cytoplasm that is accentuated between the nuclear lobes
+-   P-ANCA yields a finely rimmed, homogeneous fluorescence staining of the perinuclear cytoplasm. Labelling of the perinuclear cytoplasm by p-ANCA is actually an artefact of ethanol fixation, which causes a redistribution of the positively charged cytoplasmic granula proteins to collapse onto the surface of the negatively charged nucleus.
+
+**Anti-MPO or Anti-PR3**
+
+-   Enzyme-linked immunosorbent assay (ELISA): will confirm an antigenic target of the ANCA
+-   Unclear the best diagnostic path – [some groups](https://pubmed.ncbi.nlm.nih.gov/27481830/) advocate using ELISA exclusively , others feels [ELISAS](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8478512/) are not yet suitable for screening due to the higher false neg rate (\~40% in this study case)
+
+Phenotypes
+
+-   C-ANCA are primarily present in sera from patients with Wegener's granulomatosis and mainly recognize proteinase 3.
+-   P-ANCA are frequently detected in patients with microscopic polyangiitis and most often react with myeloperoxidase.
+
+**False Positives are common**
+
+-   ANCA in ulcerative colitis (UC; 60–87%), primary sclerosing cholangitis (PSC; 60–92%), autoimmune hepatitis (AIH; 50–96%) and, to a lesser extent, Crohn's disease (CD; 5–25%)
+-   No cytoplasmic target yet identified in these GI cases - various proposed names atypical p-ANCA’, ‘a-ANCA’ or ‘x-ANCA’. There is likely a perinuclear target here, so perhaps atypical p-ANCA’, ‘a-ANCA’ or ‘perinuclear antineutrophil nuclear antibodies ([p-ANNA](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1906166/#:~:text=The%20staining%20patterns%20produced%20by,only%20label%20the%20perinuclear%20cytoplasm.))
+
+
 
 # TIPS
+ANCA & GBM tends to be necrotising crescents on a background of a normal glom - if there is underyling abnormal/path in the glom, consider non-ANCA disease
+
+
 
 ### Post remission rising in ANCA
 

@@ -239,6 +239,22 @@ Has less side effects due to first pass metabolism
 
 Evidence that proteinuria reduction in phase 2, but ongoing phase 3 trials to correlate with longer term eGFR changes.
 
+## PROTECT
+
+[PROTECT](<https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(23)00569-X/fulltext>)
+
+*Sparsentan in IgA - prespecified interim analysis*
+
+Biopsy proven IGAN with >1g proteinuria /day. 
+
+Sparsentan 400mg vs Irbesartan 300mg
+
+Primary Endpoint: Change from baseline to week 36 uPCR
+
+At week 36, the geometric least squares mean percent change from baseline in urine protein–creatinine ratio was statistically significantly greater in the sparsentan group (–49·8%) than the irbesartan group (–15·1%), resulting in a between-group relative reduction of 41% (least squares mean ratio=0·59; 95% CI 0·51–0·69; p<0·0001)
+
+
+
 ## SGLT2i in IgA
 
 -   TESTING are patients in their 30s, heavy proteinuria (2.5g), eGFR in 60s.
@@ -294,4 +310,6 @@ Evidence that proteinuria reduction in phase 2, but ongoing phase 3 trials to co
 - 19% recurrance in Tx at 10 years
 - 23% at 15 years
 
+## Tips
+-   The main discriminator between IGAN and IGAV are the  cutaneous petechiae or palpable  purpura seen only in IgAV.Biopsy is not reliable way to distinguish.
 
