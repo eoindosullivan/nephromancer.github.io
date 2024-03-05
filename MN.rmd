@@ -29,7 +29,9 @@ Idiopathic membranous can antigen switch (e.g. IgG1 early and IgG4 later in dise
 
 -   33% had a history of malignancy
 
--   Folic acid association? 
+-   Folic acid association?
+
+-   [Mercury containing compounds association?!](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6074594/#:~:text=The%20long%2Dterm%20use%20of,disease%20as%20a%20possible%20etiology.) (e.g. whitening cream)
 
 ## PLA2r
 ![Beck & Salant KI 2010](images/MN_Beck and Salant KI 2010.png)
