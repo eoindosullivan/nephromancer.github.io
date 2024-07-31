@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>anaemia.knit</title>
+
+<script src="site_libs/header-attrs-2.27/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+
+
+
+
+
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+.tocify-subheader {
+  display: inline;
+}
+.tocify-subheader .tocify-item {
+  font-size: 0.95em;
+}
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Renal Medicine</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Research
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./trials.html">Trials</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    GEN
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./HTN.html">HTN</a>
+    </li>
+    <li>
+      <a href="./CCF.html">CCF</a>
+    </li>
+    <li>
+      <a href="./DKD.html">DKD</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    U&amp;E
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./acidbase.html">H+ &amp; HCO3</a>
+    </li>
+    <li>
+      <a href="./na.html">Na</a>
+    </li>
+    <li>
+      <a href="./k.html">K</a>
+    </li>
+    <li>
+      <a href="./mg.html">MG</a>
+    </li>
+    <li>
+      <a href="./renalbone.html">Ca2+ &amp; PO4</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    GN
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./MCD.html">MCD</a>
+    </li>
+    <li>
+      <a href="./ANCA.html">ANCA</a>
+    </li>
+    <li>
+      <a href="./IGAN.html">IGAN</a>
+    </li>
+    <li>
+      <a href="./MPGN_C3G.html">MPGN &amp; C3G</a>
+    </li>
+    <li>
+      <a href="./LUPUS.html">LUPUS</a>
+    </li>
+    <li>
+      <a href="./FSGS.html">FSGS</a>
+    </li>
+    <li>
+      <a href="./TMA.html">TMA</a>
+    </li>
+    <li>
+      <a href="./GBM.html">GBM</a>
+    </li>
+    <li>
+      <a href="./MN.html">MN</a>
+    </li>
+    <li>
+      <a href="./Amyloid.html">Amyloid</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    CKD
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./project1.html">Checklist</a>
+    </li>
+    <li>
+      <a href="./project1.html">Conservative care</a>
+    </li>
+    <li>
+      <a href="./anaemia.html">Anaemia</a>
+    </li>
+    <li>
+      <a href="./project1.html">Pruritis</a>
+    </li>
+    <li>
+      <a href="./renalbone.html">CKD-MBD</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    TX
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./project1.html">Cheat sheet</a>
+    </li>
+    <li>
+      <a href="./txnotes.html">Misc Notes</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    RRT
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./HD.html">HD</a>
+    </li>
+    <li>
+      <a href="./project1.html">Home HD</a>
+    </li>
+    <li>
+      <a href="./project1.html">HD Access</a>
+    </li>
+    <li>
+      <a href="./project1.html">PD</a>
+    </li>
+    <li>
+      <a href="./project1.html">CVVH</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    DRUGS
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./anticoagulation.html">Anticoagulation</a>
+    </li>
+    <li>
+      <a href="./PJP.html">PJP</a>
+    </li>
+    <li>
+      <a href="./abx.html">Abx</a>
+    </li>
+    <li>
+      <a href="./aboutme.html">HDU</a>
+    </li>
+    <li>
+      <a href="./project1.html">Flozins</a>
+    </li>
+    <li>
+      <a href="./rituxcyc.html">RITUX &amp; CYC</a>
+    </li>
+    <li>
+      <a href="./Chemotherapy.html">Chemo</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    MISC
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./biopsy.html">Biopsy</a>
+    </li>
+    <li>
+      <a href="./path.html">PATH</a>
+    </li>
+    <li>
+      <a href="./preg.html">Pregnancy</a>
+    </li>
+    <li>
+      <a href="./project1.html">PEX</a>
+    </li>
+    <li>
+      <a href="./Lymphoproliferative.html">Lymphoproliferative</a>
+    </li>
+    <li>
+      <a href="./covid19.html">SARS-Cov-2</a>
+    </li>
+    <li>
+      <a href="./Tumour_Lysis.html">Tumour Lysis Syndrome</a>
+    </li>
+    <li>
+      <a href="./Single Kidney.html">Single Kidney</a>
+    </li>
+    <li>
+      <a href="./IGG4.html">IGG4</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Resources
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./edu.html">Educational Resources</a>
+    </li>
+    <li>
+      <a href="./patient_resources.html">Patient Resources</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https:eoindosullivan.com">
+    <span class="fas fa-home"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+
+</div>
+
+
+<div id="anaemia" class="section level1">
+<h1>Anaemia</h1>
+</div>
+<div id="iron" class="section level1">
+<h1>Iron</h1>
+<ul>
+<li>Screen annually in CKD G3, biannually in CKD G4</li>
+<li>Investigate - EPO def is dx of exclusion. “possible”” in eGFR
+&lt;60, “probable” in &lt;30</li>
+</ul>
+<div id="iron-studies" class="section level4">
+<h4>Iron studies</h4>
+<ul>
+<li>% HRC if able to process within 6 hours</li>
+<li>Reticulocyte Hb count (CHr)</li>
+<li>TSATS and ferritin ( if above not available or thalassaemia)</li>
+<li>Ferritin &amp; CRP</li>
+<li>PTH &amp; TFT ( can contribute to iron def)</li>
+<li>Consider - b12/folate/haemolysis/plasma&amp;urine electrophroesis,
+hb electrophoresis, LTC &amp; Marrow</li>
+<li>Scopes etc</li>
+</ul>
+</div>
+<div id="iron-repletion" class="section level4">
+<h4>Iron repletion</h4>
+<ul>
+<li>%HRC &lt;6% / CHr &gt;29 pg / ferritin and TSAT (&gt;100 microgram/L
+and &gt;20%).</li>
+<li>Oral iron usually ok for CKD, ~PD. IV for HD.</li>
+<li>If not in centre, high dose low frequency is good</li>
+</ul>
+</div>
+<div id="oral-iron-is-viable-in-mild-ckd" class="section level4">
+<h4>Oral iron is viable in mild CKD</h4>
+<ul>
+<li>Interestingly alternate day dosing is higher in absorbtion to daily
+dosing per <a
+href="https://www.thelancet.com/journals/lanhae/article/PIIS2352-3026(17)30182-5/fulltext">Lancet
+haematology</a></li>
+<li>measuring the isotopic label abundance in erythrocytes 14 days after
+administration, and serum hepcidin.</li>
+<li>iron deficient women who were not anaemia</li>
+<li>shock, horror, no CKD included</li>
+<li>hard to generalise this observation to our patients but it is
+intriguing imo</li>
+</ul>
+</div>
+<div id="iron-therapy" class="section level4">
+<h4>Iron Therapy</h4>
+<ul>
+<li><p>In HD proactive high-dose IV iron sucrose (venofer) 400 mg every
+month (or 100mg every week) should be given unless ferritin &gt; 700
+μg/L or TSAT&gt;40% ( PIVOTAL)</p></li>
+<li><p>Avoid in infection, probably</p></li>
+<li><p>Monitor quarterly</p></li>
+<li><p>Hb Targets: 100-120</p></li>
+<li><p>Caution in malignancy</p></li>
+<li><p>ferrinject (Ferrous carboxymaltose) has reports of hypophos
+fairly consistantly in trials</p></li>
+<li><p><strong>Limits</strong> Feritin =&lt; 800. Review iron therapy
+when hits 500.</p></li>
+</ul>
+<p><strong>Iron</strong></p>
+</div>
+<div id="pivotal" class="section level2">
+<h2>PIVOTAL</h2>
+<br>
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class="blue">
+<p><a
+href="https://www.nejm.org/doi/full/10.1056/nejmoa1810742">PIVOTAL</a></p>
+<ul>
+<li>High dose IV iron vs low dose</li>
+<li>High dose non inferior for compositive CV | death endpoint</li>
+<li>Less CV composite events in high dose hazard ratio, 0.80; 95% CI,
+0.64 to 1.00</li>
+<li>Less Blood transfusions</li>
+<li>Same infections</li>
+<li>Starting dose: 600mg Iron sucrose IV each session for a week on
+month 1. Then 200mg IV fortnightly from month 2 onwards, adhering to
+safety limits. Stop if ferritin 700 or TSATS &gt;40%. Hb target was
+100-120.</li>
+</ul>
+</div>
+<p><br></p>
+</div>
+</div>
+<div id="esa" class="section level1">
+<h1>ESA</h1>
+<p>Eprex (erythropoietin alpha) 50 U/kg three times /week - 70kg person:
+3500units each HD session IV.</p>
+<p>Neorecoromon ( EPO beta) is same dose.</p>
+<p>EPREX weekly total / 240 = darbepoetin alfa IV weekly dose in
+mcg.</p>
+<div id="hb-targets" class="section level2">
+<h2>HB Targets</h2>
+<p>Tips</p>
+<ul>
+<li>90-115 probably reasonable, aim 110 mean.</li>
+<li>Safe speed limit: 10 to 20 g/L per month.</li>
+<li>Decrease in preference to withholding.</li>
+<li>Adjust in 25-50% increments</li>
+<li>Wait 2-4 weeks for dose change to have effect.</li>
+<li>Consider trend, rather than absolute values to avoid constant
+changes</li>
+<li>Red Flag: 300 IU/kg/week - treatment failure, assess for
+bleeding/deficiency
+<ul>
+<li>This is 7000 u/HD in a 70kg person. Review early at 5000
+units/session.</li>
+</ul></li>
+<li>Caution HTN - 175/95 as arbitrary cut off. review.</li>
+</ul>
+<table>
+<colgroup>
+<col width="65%" />
+<col width="3%" />
+<col width="14%" />
+<col width="16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Guideline</th>
+<th>Year</th>
+<th>Target</th>
+<th>Iron</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a
+href="https://www.ajkd.org/article/S0272-6386(13)00978-5/fulltext#secd6439371e118">KDOQI</a></td>
+<td>2012</td>
+<td>90 - 115 g/L</td>
+<td>Tsats &lt;30, Ferr &lt;500 ug/L</td>
+</tr>
+<tr class="even">
+<td><a
+href="https://kdigo.org/wp-content/uploads/2016/10/KDIGO-2012-Anemia-Guideline-English.pdf">KDIGO</a></td>
+<td>2012</td>
+<td>10 - 11.5 g/L</td>
+<td>Tsats &lt;30, Ferr &lt;500 ug/L</td>
+</tr>
+<tr class="odd">
+<td><a
+href="https://www.cariguidelines.org/guidelines/dialysis/biochemical-and-haematological-targets/haemoglobin/">CARI</a></td>
+<td>2010</td>
+<td>100 - 120 g/L</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><a
+href="https://bmcnephrol.biomedcentral.com/articles/10.1186/s12882-017-0688-1#Sec41">Renal
+Assoc.</a></td>
+<td>2017</td>
+<td>100 - 120 g/L (aim 110)</td>
+<td>Tsats &lt;20. Ferr 200-500</td>
+</tr>
+<tr class="odd">
+<td><a href="https://pubmed.ncbi.nlm.nih.gov/20591813/">European
+BP</a></td>
+<td>2010</td>
+<td>110 - 120 g/L</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Note the <a
+href="measures%20https:/bmcnephrol.biomedcentral.com/articles/10.1186/s12882-019-1527-3">RA
+audit measures</a> for future QI work</p>
+</div>
+<div id="normal-heamatocrit-trial" class="section level2">
+<h2>NORMAL HEAMATOCRIT TRIAL</h2>
+<br>
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class="blue">
+<p><a href="https://pubmed.ncbi.nlm.nih.gov/9718377/">NHT</a></p>
+<ul>
+<li>Intervention: EPO-a :: target Hb 13-15, vs rescue Hb 9-11 on HD with
+CVD</li>
+<li>Endpoint: Death &amp; non-fatal MI</li>
+<li>Results: N=1265 | risk ratio for the normal-hematocrit group as
+compared with the low-hematocrit group, 1.3; 95 percent confidence
+interval, 0.9 to 1.9</li>
+<li>Stopped early due to safety concerns</li>
+<li>mortality rates decreased with increasing hematocrit values in both
+groups.</li>
+<li>The patients in the normal-hematocrit group had a decline in the
+adequacy of dialysis and received intravenous iron dextran more often
+than those in the low-hematocrit group.</li>
+</ul>
+</div>
+<p><br></p>
+</div>
+<div id="choir" class="section level2">
+<h2>CHOIR</h2>
+<br>
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class="blue">
+<p><a href="https://pubmed.ncbi.nlm.nih.gov/17108343/">CHOIR</a></p>
+<ul>
+<li><p>Intervention: EPO-a :: target Hb 13.5 vs 11.3 in CKD eGFR
+&gt;15</p></li>
+<li><p>Endpoint: CV events including death, MI, hospitalizations for
+CHF, and stroke</p></li>
+<li><p>Results: N=1432 | Composite of death, MI, hospitalization for
+CHF, or stroke 17.5% vs. 13.5% (HR 1.34; 95% CI 1.03-1.74; P=0.03) |
+More SAE 54.8% vs. 48.5% (P=0.02), CHF 11.2% vs. 7.4% (P=0.02) although
+less MI 1.5 vs. 2.8% (P=0.09)</p></li>
+<li><p>Even though the study population was randomized, the high Hgb
+group had more comorbid conditions, including a greater percentage of
+HTN, history of CABG, and severe CHF.</p></li>
+<li><p>The high-Hgb group was not able to reach the target Hgb level
+despite higher doses of erythropoietin.</p></li>
+<li><p>The trial was open-label, not double-blinded.</p></li>
+</ul>
+</div>
+<p><br></p>
+</div>
+<div id="treat" class="section level2">
+<h2>TREAT</h2>
+<br>
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class="blue">
+<p><a href="https://pubmed.ncbi.nlm.nih.gov/19880844/">TREAT</a></p>
+<ul>
+<li><p>Intervention: Darbo :: target Hb &gt;10 vs rescue ESA if &lt;9 in
+CKD eGFR &gt;20, DM2,Hb&lt;11, TSATS &gt;15%</p></li>
+<li><p>Endpoint: death or CV events and death or ESRD, stroke</p></li>
+<li><p>Results: N=4038 | Death or CV: 31.4% vs. 29.7% (HR 1.05; 95% CI,
+0.94 to 1.17; P=0.41), Death or ESRD 32.4% vs. 30.5% (HR 1.06; 95% CI,
+0.95 to 1.19; P=0.29)</p></li>
+<li><p>5% vs. 2.5% (HR 1.92; 95% CI 1.38-2.68; P&lt;0.001; NNH
+40)</p></li>
+<li><p>Less fatigue though!!</p></li>
+<li><p>Did not target different hemoglobin levels for different
+sexes</p></li>
+<li><p>Incomplete details pertaining to stroke</p></li>
+<li><p>Unclear effect of iron administration in placebo group</p></li>
+</ul>
+</div>
+<p><br></p>
+</div>
+<div id="create" class="section level2">
+<h2>CREATE</h2>
+<br>
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class="blue">
+<p><a href="https://pubmed.ncbi.nlm.nih.gov/17108342/">CREATE</a></p>
+<ul>
+<li>Intervention: EPO-beta :: target Hb &gt;13-15, vs rescue Hb
+10.5-11.5 in CKD eGFR 15-30</li>
+<li>Endpoint: composite of eight cardiovascular events; secondary end
+points included left ventricular mass index, quality-of-life scores, and
+the progression of chronic kidney disease.</li>
+<li>Results: N=603 | OVer 3 years (58 events in group 1 vs. 47 events in
+group 2; hazard ratio, 0.78; 95% confidence interval, 0.53 to 1.14;
+P=0.20).</li>
+<li>Dialysis was required in more patients in group 1 than in group 2
+(127 vs. 111, P=0.03)</li>
+<li>But slightly confusingly mean eGFR was the same ~24</li>
+<li>General health and physical function improved significantly (P=0.003
+and P&lt;0.001, respectively, in group 1, as compared with group
+2).</li>
+<li>SAE similar but more HTN in higher hb</li>
+</ul>
+</div>
+<p><br></p>
+<div id="resistance-to-esa-therapy" class="section level4">
+<h4>Resistance to ESA therapy</h4>
+<p>Failure to reach the target Hb level despite SC epoetin dose &gt;300
+IU/kg/week (450 IU/kg/week IV epoetin), or darbepoetin dose &gt;1.5
+microgram/kg/week. ( 70kg man = 7000 units/session)</p>
+<p>Hyporesponsive patients who are iron replete should be screened
+clinically and by investigations for other common causes of anaemia.</p>
+</div>
+<div id="pure-red-cell-aplasia" class="section level4">
+<h4>Pure Red Cell Aplasia</h4>
+<p>Considered whenever a patient receiving long term ESA therapy (more
+than 8 weeks) develops all the following (2A):</p>
+<ul>
+<li>sudden decrease in Hb concentration at the rate of 5 to 10g/L per
+week OR requirement of transfusions at the rate of approximately 1 to 2
+per week</li>
+<li>normal platelet and white cell counts,</li>
+<li>absolute reticulocyte count less than 10,000/µl</li>
+</ul>
+<p>ESA therapy should be stopped in patients who develop ESA induced
+PRCA.</p>
+<p>Patients who remain transfusion dependent after withdrawing ESA
+therapy should be treated with immunosuppressant medications guided by
+the level of anti EPO antibodies</p>
+<p>It was probably the rubber bungs on the old school <a
+href="https://pubmed.ncbi.nlm.nih.gov/15824129/">EPREX syringes</a>
+which were generating the antibodies, their removal from the market has
+essentially fixed the issue</p>
+</div>
+</div>
+</div>
+<div id="hif-inhibitors" class="section level1">
+<h1>HIF inhibitors</h1>
+<p>Roxadustat is suss</p>
+<p>A Roxadustat paper is being <a
+href="https://retractionwatch.com/2021/05/11/clinical-trial-paper-that-made-anemia-drug-look-safer-than-it-is-will-be-retracted/">retracted</a></p>
+<ul>
+<li>compared roxadustat CV outcomes to EPO-alpha in non HD CKD - which
+its not really indicated for due to increased CV endpoints</li>
+<li>post-hoc changes to the stratification factors</li>
+<li>Failed to sort out the issues on review so <a
+href="https://www.kireports.org/article/S2468-0249(20)31851-9/fulltext">all
+gone</a></li>
+</ul>
+<p>HIMALAYAS</p>
+<p>Risks - Tumour progression - PAH - Increased cysts in ADPKD</p>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = false;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

@@ -340,9 +340,11 @@ Severe proliferative
 - Steroids and either  1)  MMF  2) CYC 3) Belimumab & MMF/low dose CYC or 4) MMF and Tac (if eGFR >45)
  
 
-**Methylpred:** 500-1000mg for 1-3 days, then oral pred 1mg/kg/day (ideal body weight) max 80mg taper over weeks to a maintenance dose. 
+**Methylpred:** 500-1000mg for 1-3 days, then oral pred 0.5-1mg/kg/day (ideal body weight) max 60mg taper over weeks to a maintenance dose. 
 
-Wean to 30mg by week 5, 5mg by week 24 in standard dose. See KDIGO for alternative regime, reduced dose is about half this regime, starting at max of 40mg.
+(Aurora-1): 25mg/day by day 3, wean to 2.5mg by week 16 
+
+(BLiss-LN): 25mg by week 7, 10mg by week 12
 
 Plus **CYC or MMF**
 
@@ -350,7 +352,10 @@ Plus **CYC or MMF**
 -   **IV CYC 500mg fortnightly for 3 months - 3 g total (Eurolupus)**
 -   IV CYC 0.5-1g/m2 q monthly \* 6 (NIH protocol)
 -   PO CYC 1-1.5mg/kg/d, max 150mg/d for 2-4 months
--   Tac & MMF - if preserved function and intolerance of MMF +- diffuse podocytopathy
+
+Add on:
+
+-   Tac ( low dose -2mg bd - [Chinese Data](https://doi.org/10.1136/lupus-2016-000169)) & MMF 500mg bd- if preserved function and intolerance of MMF +- diffuse podocytopathy
 -   limited data on ritux but may have role if non responsive/adherence
 
 Considerations
@@ -389,7 +394,9 @@ flares
 
 ## Maintenance
 
-Pred taper down to 5-10mg /day
+Pred taper as above - withdraw pred once sustained remission. Keep maintainece dose <5 if required.
+
+EULAR 2023 - 3 years IS total. 
 
 -   **MMF 1-2g/day (first choice)**
 -   AZA 1-2.5mg/kg/d (pregnancy / intolerant of MMF)

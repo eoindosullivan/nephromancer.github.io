@@ -132,16 +132,6 @@ Source: <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5628710/>( adapted)
     -   PR3 OR higher in Men, tend to be younger, higher eGFR
     -   OR of being PR3 increases from South to North i.e with decreasing [UV radiation](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6365766/)
     
-### Post remission rising in ANCA
-
-Per Stegeman on the ASN forums:
-
--   In general a significant rise in ANCA titer, either PR3 or MPO, over a period of 3-6 months is associated with a risk of relapse of around 60% in the 6-12 months following the ANCA rise. 
--   The other 40% will not have a relapse of disease over a period of 1-2  years. 
--   What a significant rise in ANCA is, is totally dependent on the test used (indirect immune fluorescent tests usually at least a fourfold rise (2 titer steps); ELISA based methods 75-100% increase and 2-3 times the upper limit of normal (so changes in the very low positive range usually mean not much) and should be analyzed for the test you are using to quantify ANCA levels. 
--   In our experience a continuous slow rise in ANCA (so less than a significant rise in 3-6 months or over a longer period) does not have much prognostic value above the baseline risk of ~10-20% annual risk of relapse associated with persistent positive PR3-ANCA in the first 5 years after diagnosis and initial treatment (for MPO-ANCA the risk seems lower probably more around 5-10%)
-
-So I would advise not to treat an isoloated (significant!) rise in ANCA titer unless you want to minimize the risk of relapse to the absolute minimum (because you fear the consequences of the relapse for the patient, which seems not be the case for this particular patient (given the bothersome but not lifethreatening manifestations of her disease and the fact that most relapses copy the initial presentation and it is unusual (unfortunately not impossible) to have more extensive/severe disease manifestations during relapse as compared to the previous presentations).
 
 ## ANCA & anti GBM dual positive
 
@@ -188,9 +178,97 @@ Infectious
 -   Fungal
 
 
+## Treatment
+
+Don’t wait for a biopsy to start treatment if unwell and convincing clinical picture
+
+-   ANCA present in 90% of Pauci immune GN, and Bx has a diagnostic yield of about 90%
+-   10% persistently ANCA negative,
+-   Hunt for organ involvement – CT CAP, echo, full exam + further directed tests
+-   Ensure no reason for false positive (NB: infection, Endocarditis etc)
+-   Sclerosis is a poor prognostic sign
+-   **Do not withhold** induction on the basis of unfavourable histology as recovery despite seemingly advanced disease is possible
+
+## Initial induction
+
+Image for regimes
+
+**Glucocorticoids & Ritux/cylophos**
+
+-   Cylcophos: RPGN, aggressive disease (pulmonary, neuro), Cr \>354
+    -   [CYCLOPS](https://pubmed.ncbi.nlm.nih.gov/26621483/): IV=PO for remission, 50% less exposure, less leukopaenia, more relapse
+-   Ritux: PR3 ([RAVE](https://pubmed.ncbi.nlm.nih.gov/26621483/), OR 2.11 for remission), children, frail older, sparing steroids, fertility concerns, bladder cancer. [RAVE](https://pubmed.ncbi.nlm.nih.gov/26621483/) excluded severe AKI \>350.
+-   Combo: [RITUXIVAS](https://pubmed.ncbi.nlm.nih.gov/20647198/) – 375mg/m2 weekly \*4, CTX pulse 15mg/kg with ritux\#1 nd \#3 == 6/12 CTX & AZA
+-   PEX: [MEPEX](https://pubmed.ncbi.nlm.nih.gov/17582159/) ( Cr\>500 ARR 6%), Consider for Cr \>300 (ARR 4.6%), requiring HD, pulmonary haemorrhage, GBM overlap. [PEXIVAS](https://pubmed.ncbi.nlm.nih.gov/30612116/) didn’t show benefit in eGFR \<50 or pul haem (and increased infections), [meta-analysis](https://www.bmj.com/content/376/bmj-2021-064604.abstract) suggests might still be worth it.
+
+    Nonsevere disease only:
+
+-   MMF: [MYCYC](https://pubmed.ncbi.nlm.nih.gov/30612116/) non life threatening, no RPGN, induction=CTX, much higher PR3 relapse.
+-   MTX: non Renal disease, but high relapse
+-   AVACOPAN: [ADVOCATE](https://pubmed.ncbi.nlm.nih.gov/33596356/) – non serious disease as pred alternative. Less SE, maybe a little better for albuminuria. Maybe.
+
+**Never forget**
+
+-   Pre induction check: TB (quantiferon gold), HIV, HBV, HCV, Strongloides
+-   TMP-SMX for PJP
+-   IgG levels baseline and 6monthly with ritux.
+
+**Dose**
+![Source: KDIGO24 ](images/AAV IS regimes.jpg)
+
+## Maintanence
+
+**Remission:** (BVAS=0, stable or improved eGFR, may have persistent urine changes)
+
+**Duration:** 18 months – 4 years. Options: Ritux vs Aza (MMF) & pred wean
+
+Ritux
+
+-   [MAINRITSAN](https://pubmed.ncbi.nlm.nih.gov/29695500/) (vs aza – less major relapses, not minor) – 500mg\*2 at remission, and 500mg at month 6, 12, 18.
+-   [RITZAZREM](https://pubmed.ncbi.nlm.nih.gov/36958796/) (relapse, vs aza less major and minor) – 1g post induction, and month 4,8,12,16.
+-   Can dose as fixed or by CD19 cells ( same relapse rates, lower overall doses)
+
+Aza
+
+-   1.5-2mg/kg/day at remission for 1 year, then drop by 25mg every 3 months.
+-   1.5-2mg/kg/day for 18-24 months, then drop 1mg/kg/day for 4 years, then taper 25mg every 3 months. Pred 5-7.5 for 2 years then drop 1mg/2 months.
+-   [AZA-ANCA](https://pubmed.ncbi.nlm.nih.gov/36958796/): 2 vs 4 years – relapse of 48 vs 24%
+-   MMF if intolerant. ( 1g bd for 2 years)
+
+If still on HD at 3 months – consider discontinuation if no manifestations
+
+[PEXIVAS](https://pubmed.ncbi.nlm.nih.gov/30612116/) taper ( as effective as high dose, less SE):
+
+![Source: KDIGO24 ](images/pexivas_steroid_taper.jpg)
+
+## Relapse & Refractory
+
+-   Relapse risk: GPA, PR3, ENT, multiple organs, history of relapse, residual ANCA positive, rise in ANCA, IS withdrawal.
+-   Unclear risk – persistent haematuria? May lead to relapse
+-   Return of haematuria when previously absent may indicate relapse
+-   Ritux best for relapse ([RAVE](https://pubmed.ncbi.nlm.nih.gov/26621483/))
+-   Refractory: try the ritux/cylo option not initially used. PEX if tricky.
+
+## Tips
+
+-   Tx: Remission for 6 months. ANCA persistence no barrier.
+-   Relapse rate post tx 0.02-0.03 per patient year
+-   50% have persistent haemato/proteinuria
+-   Histological activity is unlikely in the absence of haematuria
+-   5% GBM +
+-   32% of GBM are ANCA +
 
 
+### Post remission rising in ANCA
 
+Per Stegeman on the ASN forums:
+
+-   In general a significant rise in ANCA titer, either PR3 or MPO, over a period of 3-6 months is associated with a risk of relapse of around 60% in the 6-12 months following the ANCA rise. 
+-   The other 40% will not have a relapse of disease over a period of 1-2  years. 
+-   What a significant rise in ANCA is, is totally dependent on the test used (indirect immune fluorescent tests usually at least a fourfold rise (2 titer steps); ELISA based methods 75-100% increase and 2-3 times the upper limit of normal (so changes in the very low positive range usually mean not much) and should be analyzed for the test you are using to quantify ANCA levels. 
+-   In our experience a continuous slow rise in ANCA (so less than a significant rise in 3-6 months or over a longer period) does not have much prognostic value above the baseline risk of ~10-20% annual risk of relapse associated with persistent positive PR3-ANCA in the first 5 years after diagnosis and initial treatment (for MPO-ANCA the risk seems lower probably more around 5-10%)
+
+So I would advise not to treat an isoloated (significant!) rise in ANCA titer unless you want to minimize the risk of relapse to the absolute minimum (because you fear the consequences of the relapse for the patient, which seems not be the case for this particular patient (given the bothersome but not lifethreatening manifestations of her disease and the fact that most relapses copy the initial presentation and it is unusual (unfortunately not impossible) to have more extensive/severe disease manifestations during relapse as compared to the previous presentations).
 
 
 

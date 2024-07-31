@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>renalbone.knit</title>
+
+<script src="site_libs/header-attrs-2.27/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+
+
+
+
+
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+.tocify-subheader {
+  display: inline;
+}
+.tocify-subheader .tocify-item {
+  font-size: 0.95em;
+}
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Renal Medicine</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Research
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./trials.html">Trials</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    GEN
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./HTN.html">HTN</a>
+    </li>
+    <li>
+      <a href="./CCF.html">CCF</a>
+    </li>
+    <li>
+      <a href="./DKD.html">DKD</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    U&amp;E
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./acidbase.html">H+ &amp; HCO3</a>
+    </li>
+    <li>
+      <a href="./na.html">Na</a>
+    </li>
+    <li>
+      <a href="./k.html">K</a>
+    </li>
+    <li>
+      <a href="./mg.html">MG</a>
+    </li>
+    <li>
+      <a href="./renalbone.html">Ca2+ &amp; PO4</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    GN
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./MCD.html">MCD</a>
+    </li>
+    <li>
+      <a href="./ANCA.html">ANCA</a>
+    </li>
+    <li>
+      <a href="./IGAN.html">IGAN</a>
+    </li>
+    <li>
+      <a href="./MPGN_C3G.html">MPGN &amp; C3G</a>
+    </li>
+    <li>
+      <a href="./LUPUS.html">LUPUS</a>
+    </li>
+    <li>
+      <a href="./FSGS.html">FSGS</a>
+    </li>
+    <li>
+      <a href="./TMA.html">TMA</a>
+    </li>
+    <li>
+      <a href="./GBM.html">GBM</a>
+    </li>
+    <li>
+      <a href="./MN.html">MN</a>
+    </li>
+    <li>
+      <a href="./Amyloid.html">Amyloid</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    CKD
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./project1.html">Checklist</a>
+    </li>
+    <li>
+      <a href="./project1.html">Conservative care</a>
+    </li>
+    <li>
+      <a href="./anaemia.html">Anaemia</a>
+    </li>
+    <li>
+      <a href="./project1.html">Pruritis</a>
+    </li>
+    <li>
+      <a href="./renalbone.html">CKD-MBD</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    TX
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./project1.html">Cheat sheet</a>
+    </li>
+    <li>
+      <a href="./txnotes.html">Misc Notes</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    RRT
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./HD.html">HD</a>
+    </li>
+    <li>
+      <a href="./project1.html">Home HD</a>
+    </li>
+    <li>
+      <a href="./project1.html">HD Access</a>
+    </li>
+    <li>
+      <a href="./project1.html">PD</a>
+    </li>
+    <li>
+      <a href="./project1.html">CVVH</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    DRUGS
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./anticoagulation.html">Anticoagulation</a>
+    </li>
+    <li>
+      <a href="./PJP.html">PJP</a>
+    </li>
+    <li>
+      <a href="./abx.html">Abx</a>
+    </li>
+    <li>
+      <a href="./aboutme.html">HDU</a>
+    </li>
+    <li>
+      <a href="./project1.html">Flozins</a>
+    </li>
+    <li>
+      <a href="./rituxcyc.html">RITUX &amp; CYC</a>
+    </li>
+    <li>
+      <a href="./Chemotherapy.html">Chemo</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    MISC
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./biopsy.html">Biopsy</a>
+    </li>
+    <li>
+      <a href="./path.html">PATH</a>
+    </li>
+    <li>
+      <a href="./preg.html">Pregnancy</a>
+    </li>
+    <li>
+      <a href="./project1.html">PEX</a>
+    </li>
+    <li>
+      <a href="./Lymphoproliferative.html">Lymphoproliferative</a>
+    </li>
+    <li>
+      <a href="./covid19.html">SARS-Cov-2</a>
+    </li>
+    <li>
+      <a href="./Tumour_Lysis.html">Tumour Lysis Syndrome</a>
+    </li>
+    <li>
+      <a href="./Single Kidney.html">Single Kidney</a>
+    </li>
+    <li>
+      <a href="./IGG4.html">IGG4</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Resources
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./edu.html">Educational Resources</a>
+    </li>
+    <li>
+      <a href="./patient_resources.html">Patient Resources</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https:eoindosullivan.com">
+    <span class="fas fa-home"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+
+</div>
+
+
+<div id="ckd-mbd-calcium-phosphate." class="section level1">
+<h1>CKD-MBD &amp; Calcium &amp; Phosphate.</h1>
+</div>
+<div id="calcium" class="section level1">
+<h1>Calcium</h1>
+<div id="physiology---calcium" class="section level2">
+<h2>Physiology - Calcium</h2>
+<ul>
+<li>Freely filtered then about 98% is reabsorbed by the kidney tubules
+<ul>
+<li><strong>Paracellular</strong>: PT 65%, TAL 25%</li>
+<li>In TAL, tight junctions express claudin 16/19, which facilitates
+paracellular calcium reabsorption, and claudin 14, which suppresses
+it.</li>
+<li><strong>PTH</strong> inhibits the expression of claudin 14 ( i.e. it
+inhibits the brakes - thus increases calcium reaborbtion)</li>
+<li><strong>Transcellular</strong>: DCT/CNT 8%</li>
+<li>Active transport</li>
+<li><strong>PTH</strong> binds basolaterally, stimulates protein kinase
+A,C -&gt; increased TRVP5 channels on apical surface -&gt; more calcium
+leaves the urine and reenteres blood</li>
+</ul></li>
+<li>Mostly reabsorbed in proximal tubule alongside sodium and water
+<ul>
+<li><p>This is part of the “bonus sodium” you get from NKCC due to K+
+recycling. The K+ that gets pumped back into the tubule via ROMK (see
+below) leads to a relative +charge in the tubule, thus providing a
+charge to help drive the paracellular reabsorbtion ofNa/Ca/Mg via the
+rather leaky paracellular junctions in the PT.</p></li>
+<li><p>In a high salt diet, there is too much tubular Na so less PT
+reabsorbtion of the calcium as there is less drive to reabsorb the
+Na</p></li>
+<li><p>Which is why you tell calcium stone patients to cut out
+Salt</p></li>
+<li><p>Thus urinary calcium rises -&gt; calcium stones!</p></li>
+</ul></li>
+<li>~1-2% (~100-200mg of calcium) is excreted in the urine per day.</li>
+</ul>
+</div>
+<div id="physiological-pearls" class="section level2">
+<h2>Physiological pearls</h2>
+<ul>
+<li>Hypercalcaemia induces volume contraction in two ways:
+<ul>
+<li>nephrogenic DI: Decreased aquaporin expression in Collecting duct,
+possibly via <a
+href="https://pubmed.ncbi.nlm.nih.gov/28139295/">increased
+autophagy</a></li>
+<li>increased basolateral calcium switches off the ROMK channel in PT,
+thus shutting down K+ recycling. K+ is the rate limiting step here in
+NKCC activity (because N and 2Cl get pumped out basolaterally there is
+alot less K to begin with in the tubule). This means that NKCC grinds to
+a halt without the recycled K, and the tubule Na/Cl/H20 increases and is
+removed, just like a loop diuretic leading to volume depletion.</li>
+</ul></li>
+</ul>
+</div>
+<div id="pth" class="section level2">
+<h2>PTH</h2>
+<ul>
+<li><p>If investigating high PTH, sestamibi to check glands for
+activity.</p></li>
+<li><p>primary hyperPTH commonest cause , 50 per 100,000 patient
+years</p></li>
+<li><p>Urine calcium is high due to hyperPTH the filtered load will be
+too high to reabsorb so will overpower PTH’s reaborbative action and
+result in hypercaliuria</p></li>
+</ul>
+</div>
+<div id="hypercalcaemia" class="section level2">
+<h2>HyperCalcaemia</h2>
+<ol style="list-style-type: decimal">
+<li>Check iPTH</li>
+</ol>
+<p><strong>HIGH or inappropriately normal PTH</strong></p>
+<ul>
+<li>24 hour urinary calcium or urine calcium creatinine ratio high =
+<strong>Primary hyperPTH</strong></li>
+<li>If less than these values, possibly <strong>familial hypocaliuric
+hypercalcaemia</strong>
+<ul>
+<li>family history, asymptomatic</li>
+<li>benign condition / inactivating mutation in the calcium-sensing
+receptor /increased tubular reabsorption of calcium and consequent low
+urinary calcium excretion.</li>
+<li>PTH can be normal or <em>slightly</em> elevated</li>
+<li>Diagnosis of hypocalciuric Hypercalcaemia - 24 h urine
+calcium/creatinine clearance ratio &lt; 0.01.</li>
+</ul></li>
+</ul>
+<p><strong>LOW PTH</strong></p>
+<p>Myeloma screen, cancer hunt, Vit D, PTHrp</p>
+<ul>
+<li>High PTHrp - humoural hypercalcaemia of malignancy</li>
+<li>High 25(OH)D - Too much vit D</li>
+<li>High 1,25(OH)D - lymphoma, granulomatous (sarcoid, TB)</li>
+<li>Normal PTHrp,VITD - Myeloma, Mets, thyrotropin, Vit A</li>
+</ul>
+<div id="urinary-calcium-tests" class="section level4">
+<h4>Urinary calcium tests</h4>
+<p><strong>24 hour urinary collection</strong></p>
+<ul>
+<li>HCL bottle</li>
+<li>Spectrophotometry or atomic absorption spectrophotometry</li>
+<li>2.5-7.5 mmol/24 h</li>
+</ul>
+<p><strong>Fasting spot urinary calcium:Creatinine ratio</strong></p>
+<ul>
+<li>Males: 0.04-0.45 mol/mol creatinine</li>
+<li>Females: 0.10-0.58 mol/mol creatinine</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="drugs" class="section level1">
+<h1>Drugs</h1>
+<div id="bisphosphonates" class="section level2">
+<h2>Bisphosphonates</h2>
+<p><a href="https://cjasn.asnjournals.org/content/4/1/221#sec-2">Nice
+overview from Touissant et al CJASN</a></p>
+<p>Bisphosphonates</p>
+<ul>
+<li>Non–nitrogen-containing bisphosphonates are clodronate and
+etidronate</li>
+<li>Nitrogen-containing bisphosphonates are alendronate, ibandronate,
+pamidronate, risedronate, and zoledronate are more potent</li>
+<li>low % intestinal absorption, &lt;1-5% - lower if not taken as
+directed</li>
+<li>When incorporated into bone can hang around in the skeleton for up
+to 10 years</li>
+<li><strong>Renally metabolised</strong></li>
+<li>As released from bone can be recycled and taken up again, or renally
+cleared</li>
+</ul>
+<p><strong>Mechanism</strong></p>
+<ul>
+<li>Inhibits FFP synthase - &gt; less FPP and GGGPP -&gt; no protein
+prenylation-&gt;Kills osteoclasts</li>
+</ul>
+<p><strong>SE</strong></p>
+<ul>
+<li>High doses can lead to crystal coating and an associated with
+osteomalacia</li>
+<li>Off target effects (via FFP) -osteoblastic cells, monocytes ( where
+IPP accumulated – bacterial antigen also -&gt; TNF-a and IGN-y release!
+– hence flu like symptoms with first bisphosphonate doses). Anergy
+prevents subsequent symptoms on next exposures.</li>
+<li>Can bind to gastric cells - &gt; cell death -&gt; is this the
+mechanism of esophagitis/ulceration</li>
+</ul>
+<p><strong>Renal toxicity</strong></p>
+<ul>
+<li>High dose pamidronate can cause collapsing FSGS</li>
+<li>Focal glomerular sclerosis (case series of patients with MM)</li>
+<li>Pamidronate-induced nephrotic syndrome with renal impairment has
+also been reported</li>
+<li>ATN</li>
+</ul>
+<p><strong>Bisphosphonates in CKD</strong></p>
+<p><strong>TLDR</strong></p>
+<ul>
+<li>avoid in low bone turnover, adynamic bone disease, or osteomalacia
+are present or suspected, as they have potential to do harm.</li>
+<li>Maybe some use in early CKD as osteoporotic prevention</li>
+</ul>
+<p>A <a href="https://pubmed.ncbi.nlm.nih.gov/16294264/">pooled
+metanalysis of 9 trials, n=8996</a> suggests that in CKD 1-3 ( severe
+disease excluded from all trials) that when secondary causes of low BMD
+are excluded and blood levels of calcium, phosphate, PTH, ALP, and
+vitamin D are normal (laboratory features of CKD-MBD), bisphosphonate
+use in CKD 1 to 3 is safe and results in fracture reduction</p>
+<p>CKD 4-5 not been shown to prevent fractures in people with normal BMD
+or with low baseline markers of bone formation, the subset of patients
+with severe CKD who might receive therapy would be those with low BMD
+but high bone resorption.</p>
+<p>By reducing calcium, bisphosphonates may stimulate glandular release
+of PTH and induce parathyroid hyperplasia.</p>
+<ul>
+<li>Pamidronate probably has best (thin) evidence - in multiple myeloma
+patients - 10 patients on dialysis</li>
+<li>Several case series have described pamidronate use in CKD to be safe
+at doses of 60 to 90 mg administered every 1 to 2 mo</li>
+<li>Ibandronate 6 HD patients with MM</li>
+<li>35-50% removed by HD – varies by drug</li>
+</ul>
+<p>In chronic use -<strong>1/2 the dose</strong> or reduce the frequency
+of administration of bisphosphonates in CKD. Limit treatment to 2
+years.</p>
+<p>Unclear role in patients with steroids – stick to calcium, vitD</p>
+<p>Cochrane review post renal transplantation: no individual
+intervention was associated with a reduction in fracture risk compared
+with placebo</p>
+<p>May result in less atherogensis and vascular calcification but human
+data is very limited</p>
+<p>Case report level effect in calciphylaxis and other calcific
+diseases</p>
+</div>
+<div id="cinacalcet" class="section level2">
+<h2>Cinacalcet</h2>
+<div id="evolve-trial" class="section level3">
+<h3>EVOLVE Trial</h3>
+<p><em>The one that was a bit of a disaster</em></p>
+<p><a href="https://www.nejm.org/doi/full/10.1056/nejmoa1205624">Effect
+of Cincalcet on CV outcomes in HD</a></p>
+<ul>
+<li><p>Patients: HD &amp; secondary hyperparathyroidism (sHPT; intact
+parathyroid hormone [iPTH] ≥300 pg/ml)</p></li>
+<li><p>Outcome: time until death, myocardial infarction, hospitalization
+for unstable angina, heart failure, or a peripheral vascular
+event.</p></li>
+<li><p>Results: n= 3883 | HR in Cincalcet vs placebo 0.93; 95%
+confidence interval, 0.85 to 1.02; P=0.11</p></li>
+<li><p>Treatment effects of cinacalcet on fracture rates were similar to
+effects on CV events in unadjusted ITT analysis</p></li>
+<li><p>Not a total wash: Its effective in preventing severe unremitting
+HPT but thats a bit soft</p></li>
+</ul>
+<p><a
+href="https://cjasn.asnjournals.org/content/11/3/539">Lessons</a></p>
+<ul>
+<li>very broad outcomes chosen which mechanistically might not make as
+much sense ( all cause death, major CV disease)</li>
+<li>Post hoc evaluation of the treatment effects on CV events using
+multivariable-adjusted ITT analysis showed relative hazards of 0.88 (95%
+confidence interval [95% CI], 0.76 to 1.01) for time to first
+atherosclerotic event, 0.79 (95% CI, 0.66 to 0.96) for heart failure,
+and 0.79 (95% CI, 0.64 to 0.98) for sudden death; the latter two events
+are considered outcomes of nonatherosclerotic disease</li>
+<li>Heart failure is a sloppy outcome to record - the event adjudication
+committee only confirmed HF in about 50% of the HF dx made by local
+investigators</li>
+<li>parathyroidectomy as an endpoint was used but the referral pathways
+were not concrete and varied geographically so surrogate of calcium
+severeity and iPTH levels was used - became a bit murky</li>
+<li>age difference in groups despite randomisation</li>
+<li>lower event rate than expected</li>
+<li>Placebo discontinued for adverse events in 11.8% of patients
+compared with 15.8% of patients in the cinacalcet group.</li>
+<li>statistical challenges due to the non adherence and
+cointerventions</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="parathyroidectomy-in-ckd" class="section level1">
+<h1>Parathyroidectomy in CKD</h1>
+<p>RIE Protocol</p>
+<div id="pre-operative-care" class="section level2">
+<h2>Pre Operative Care</h2>
+<ul>
+<li>Alfacalcidol 2mcg bd should be given for 3 days prior to
+surgery.</li>
+<li>Cinacalcet should be stopped one week before parathyroidectomy.</li>
+<li>Patients at risk of hungry bone syndrome should be identified.</li>
+</ul>
+</div>
+<div id="hungry-bone-syndrome" class="section level2">
+<h2>Hungry Bone Syndrome</h2>
+<p>Diagnosis hinges on a profound and persistently low calcium level of
+less than 2.1 mmol/L for more than four days postoperatively along with
+hypophosphatemia and normal PTH levels. Such patients require prolonged,
+high dose calcium to maintain serum calcium levels. Often there is also
+associated hypomagnesemia and hypocalciuria. Risk factors include</p>
+<ul>
+<li>Alkaline phosphatase &gt; 2 times upper limit of normal</li>
+<li>PTH levels&gt; 100 pmol/L</li>
+<li>Radiologic evidence of bone disease</li>
+<li>Higher BMI</li>
+<li>Higher BUN</li>
+</ul>
+</div>
+<div id="post-operative-care" class="section level2">
+<h2>Post Operative Care</h2>
+<ul>
+<li>Patients should be admitted to ward 215 post operatively and
+prescribed Alfacalcidol 2mcg bd &amp; Calvive (formally Sandocal1000) 2
+tablets tds - Do not take at mealtimes.</li>
+<li>Hold phosphate binders.</li>
+<li>Serum corrected calcium should be measured every 6 hours for the
+first 24 hours post surgery, and then less frequently if stable.</li>
+<li>Aim for normal serum calcium values (2.2-2.6 mmol/L). Increase
+calcium supplementation by 50% if calcium falling and half the dose if
+calcium starts to rise.</li>
+<li>Pay attention to the trend. If the corrected calcium is falling
+rapidly i.e. &gt;10% over 6 hrs the development of significant
+hypocalcaemia is likely and requires more frequent monitoring.</li>
+<li>If calcium &lt;1.8 or if symptomatic, give IV calcium</li>
+<li>Monitor serum phosphate and magnesium 12 hourly for first 24hrs,
+then daily.</li>
+<li>Do not treat hypophosphataemia unless serum phosphate falls below
+0.35 mmol/l.</li>
+<li>Consider higher calcium dialysate (A232, A231 containing calcium 1.5
+mmol) or PD fluid.</li>
+</ul>
+</div>
+<div id="post-discharge" class="section level2">
+<h2>Post Discharge</h2>
+<p>RRT patients: Monitor serum calcium on each HD session or 3 times a
+week (for PD patients) for the first two weeks and weekly checks as
+required thereafter until stability is reached.</p>
+<p>The dosing of alfacalcidol and calcium supplements post operatively
+is challenging and both hypo- and hypercalcaemia are common. Trends in
+concentration are more important than absolute values. Consider the
+following:</p>
+<ul>
+<li>Check adherence and adjust calcium supplement by +- 50%.</li>
+<li>Alfacalcidol dose to increase up to a maximum of 5 micrograms bd but
+note it takes 3 days to observe effect of increase in dose. Alfacalcidol
+product specification recommends increasing dose in increments of 0.25 –
+0.5 micrograms but if taking 2 micrograms or more change dose by 1
+microgram.</li>
+<li>Check magnesium levels and replace if recurrent /resistant
+hypocalcaemia</li>
+</ul>
+</div>
+</div>
+<div id="iv-calcium-infusion" class="section level1">
+<h1>IV Calcium Infusion</h1>
+<p>Use calcium gluconate over calcium chloride. Care must be taken to
+ensure intravenous calcium is not extravasated. If central line is
+available this is likely to be most suitable access. If venous access is
+not secure, then a central line may be considered.</p>
+<p><strong>Infusion</strong></p>
+<ul>
+<li>100ml of 10% calcium gluconate (900mg of elemental calcium) +150 ml
+of 5% Dextrose (total volume 250 ml). Final concentration is
+3.6mg/ml.</li>
+<li>Start infusion at 0.3ml/kg/hour (1mg/kg/hour. 70kg patient =
+21ml/hr)</li>
+<li>Check corrected serum calcium 6 hourly.</li>
+<li>Titrate calcium infusion dose between 0-0.6ml/kg/hour to prevent
+serum calcium falling below 1.9mmol/L or rising above 2.4 mmol/L.</li>
+<li>Severe symptoms include paraesthesia, muscle cramps, carpo-pedal
+spasm, laryngeal stridor, convulsions, prolonged QT interval,
+arrhythmias, and hypotension. This will require bolus IV calcium and
+subsequent infusion.</li>
+</ul>
+<div id="emergency-calcium-bolus" class="section level3">
+<h3>Emergency Calcium Bolus</h3>
+<p>Emergency situations - Give 10ml of 10% calcium gluconate (2.2mmol
+calcium) no faster than 2ml/min (i.e., Over at least 5mins, ECG
+monitoring recommended); this can be given peripherally.</p>
+</div>
+<div id="common-supplements" class="section level2">
+<h2>Common Supplements</h2>
+<p>Calcium supplements Calcium Content</p>
+<ul>
+<li>Adcal (chewable ) 15 mmol / tablet</li>
+<li>Calcichew(chewable) 12.6 mmol / tablet</li>
+<li>Calvive/ Sandocal 1000 (soluble) 25 mmol / tablet</li>
+<li>Calcichew forte(chewable ) 25 mmol / tablet (1 mmol = To 40mg Of
+Elemental Calcium)</li>
+</ul>
+</div>
+</div>
+<div id="phosphate" class="section level1">
+<h1>Phosphate</h1>
+</div>
+<div id="ckd-mbd" class="section level1">
+<h1>CKD-MBD</h1>
+<ul>
+<li>High-turnover hyperparathyroid bone disease (osteitis fibrosa),
+often with abnormal mineralization (mixed uraemic osteodystrophy)</li>
+<li>Adynamic bone disease – usually inappropriately low PTH
+(historically aluminium deposition)</li>
+<li>Association of both conditions with vascular calcification and
+calciphylaxis</li>
+<li>Many CKD patients have lower bone mass and osteoporotic BMD ( 2.5 SD
+below young Caucasian female)</li>
+<li>Osteoporosis &amp; metabolic acidosis, low vit D, low activation of
+vit D, renal osteodystrophy.</li>
+<li>BMD – harder to read in CKD – calcified soft tissues,</li>
+<li>Higher rates of #</li>
+<li>Quantitative double tetracycline-labelled bone histomorphometry is
+gold standard alongside a bone biopsy.</li>
+<li>Biopsy is pretty pointless imo unless incredible need to give a
+bisphosphonate</li>
+</ul>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = false;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

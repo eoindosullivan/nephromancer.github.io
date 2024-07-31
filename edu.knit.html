@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>edu.knit</title>
+
+<script src="site_libs/header-attrs-2.27/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+
+
+
+
+
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+.tocify-subheader {
+  display: inline;
+}
+.tocify-subheader .tocify-item {
+  font-size: 0.95em;
+}
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Renal Medicine</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Research
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./trials.html">Trials</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    GEN
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./HTN.html">HTN</a>
+    </li>
+    <li>
+      <a href="./CCF.html">CCF</a>
+    </li>
+    <li>
+      <a href="./DKD.html">DKD</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    U&amp;E
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./acidbase.html">H+ &amp; HCO3</a>
+    </li>
+    <li>
+      <a href="./na.html">Na</a>
+    </li>
+    <li>
+      <a href="./k.html">K</a>
+    </li>
+    <li>
+      <a href="./mg.html">MG</a>
+    </li>
+    <li>
+      <a href="./renalbone.html">Ca2+ &amp; PO4</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    GN
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./MCD.html">MCD</a>
+    </li>
+    <li>
+      <a href="./ANCA.html">ANCA</a>
+    </li>
+    <li>
+      <a href="./IGAN.html">IGAN</a>
+    </li>
+    <li>
+      <a href="./MPGN_C3G.html">MPGN &amp; C3G</a>
+    </li>
+    <li>
+      <a href="./LUPUS.html">LUPUS</a>
+    </li>
+    <li>
+      <a href="./FSGS.html">FSGS</a>
+    </li>
+    <li>
+      <a href="./TMA.html">TMA</a>
+    </li>
+    <li>
+      <a href="./GBM.html">GBM</a>
+    </li>
+    <li>
+      <a href="./MN.html">MN</a>
+    </li>
+    <li>
+      <a href="./Amyloid.html">Amyloid</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    CKD
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./project1.html">Checklist</a>
+    </li>
+    <li>
+      <a href="./project1.html">Conservative care</a>
+    </li>
+    <li>
+      <a href="./anaemia.html">Anaemia</a>
+    </li>
+    <li>
+      <a href="./project1.html">Pruritis</a>
+    </li>
+    <li>
+      <a href="./renalbone.html">CKD-MBD</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    TX
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./project1.html">Cheat sheet</a>
+    </li>
+    <li>
+      <a href="./txnotes.html">Misc Notes</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    RRT
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./HD.html">HD</a>
+    </li>
+    <li>
+      <a href="./project1.html">Home HD</a>
+    </li>
+    <li>
+      <a href="./project1.html">HD Access</a>
+    </li>
+    <li>
+      <a href="./project1.html">PD</a>
+    </li>
+    <li>
+      <a href="./project1.html">CVVH</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    DRUGS
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./anticoagulation.html">Anticoagulation</a>
+    </li>
+    <li>
+      <a href="./PJP.html">PJP</a>
+    </li>
+    <li>
+      <a href="./abx.html">Abx</a>
+    </li>
+    <li>
+      <a href="./aboutme.html">HDU</a>
+    </li>
+    <li>
+      <a href="./project1.html">Flozins</a>
+    </li>
+    <li>
+      <a href="./rituxcyc.html">RITUX &amp; CYC</a>
+    </li>
+    <li>
+      <a href="./Chemotherapy.html">Chemo</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    MISC
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./biopsy.html">Biopsy</a>
+    </li>
+    <li>
+      <a href="./path.html">PATH</a>
+    </li>
+    <li>
+      <a href="./preg.html">Pregnancy</a>
+    </li>
+    <li>
+      <a href="./project1.html">PEX</a>
+    </li>
+    <li>
+      <a href="./Lymphoproliferative.html">Lymphoproliferative</a>
+    </li>
+    <li>
+      <a href="./covid19.html">SARS-Cov-2</a>
+    </li>
+    <li>
+      <a href="./Tumour_Lysis.html">Tumour Lysis Syndrome</a>
+    </li>
+    <li>
+      <a href="./Single Kidney.html">Single Kidney</a>
+    </li>
+    <li>
+      <a href="./IGG4.html">IGG4</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Resources
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./edu.html">Educational Resources</a>
+    </li>
+    <li>
+      <a href="./patient_resources.html">Patient Resources</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https:eoindosullivan.com">
+    <span class="fas fa-home"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+
+</div>
+
+
+<div id="advanced-trainee-resource-guide-2023" class="section level1">
+<h1><strong>Advanced Trainee Resource Guide 2023</strong></h1>
+<p>The following is an overview of some of the educational resources
+available to support your training. Self-Directed learning is an
+essential part of your training needed to supplement training and
+clinical practice (in addition to usual Journal clubs, CME, M&amp;M
+etc). Lifelong learning is a key pillar of high quality modern medical
+practice, so finding the resources, forming the habits and following a
+workflow that suits your learning style and life best is important as it
+will support your practice throughout your career. This page will be
+updated during the year as a webpage which can be found <a
+href="http://www.renalmedicine.net/educational">here</a>.</p>
+</div>
+<div id="textbooks" class="section level1">
+<h1>Textbooks</h1>
+<p>It is always nice to go back to basics and read an actual, good old
+fashioned book. Below are some suggestions:</p>
+<ul>
+<li><strong>Clinical Physiology of Acid-Base and Electrolyte Disorders
+and Pathophysiology of Renal Disease</strong> – Burton Rose | Also
+created uptodate, a huge figure in Nephrology &amp; education</li>
+<li><strong>Fluid, electrolyte, and acid base physiology – a
+problem-based approach</strong> – Halperin | Amazing insight, convinced
+me of the primacy of PH in homeostasis. Tragically, you need to convert
+units from US units to SI sometimes, but its worth it.</li>
+<li><strong>Comprehensive Clinical Nephrology</strong> – Johnson,
+Feehally, Floege | The classic</li>
+<li><strong>Handbook of Dialysis</strong> – Daugirdas</li>
+<li><strong>Kidney Transplant eBook</strong> – Riella (ebook – via
+itunes or similar)</li>
+<li><strong>Handbook of Kidney transplantation</strong> – Danovitch |
+The whole “handbook” series is great</li>
+<li><strong>Nephrology and hypertension Board Review</strong> – Pham |
+American centric but good</li>
+<li><strong>Nephrology Secrets</strong> – Lerma, Tolf | High yield
+pearls, good for exam revision</li>
+</ul>
+</div>
+<div id="memberships" class="section level1">
+<h1>Memberships</h1>
+<p>Stay connected with your community of practice and spot emerging
+learning opportunities</p>
+<ul>
+<li>ANZSN – must get supervisor (who is a current ANZSN member) to sign
+<ul>
+<li>Perks: Access to nephrology journal, weekly emails which include
+committee opportunities, reminders about conferences and courses, online
+links to resources</li>
+<li>Option to join the “Hub: with access to online lectures from old
+courses</li>
+</ul></li>
+<li>ASN – its free for “fellows in training” ie advanced trainees
+<ul>
+<li>Perks: Access to JASN, CJASN, ASN in the loop emails, the ASN
+forums</li>
+<li><strong>NephSAP, KSAP</strong> are excellent resources for exam
+revision</li>
+</ul></li>
+<li>ISN – can access free membership for one year through ANZSN
+<ul>
+<li>Perks: Access to Kidney International, <strong>ISN academy</strong>
+– including podcasts and resources. Opportunities for involvement in
+committees etc (speak to Dr Marina Wainstein, who is the deputy
+chair)</li>
+<li>Young nephrologists committee: for those &lt;45years of age –
+fellowship programs, sister renal programs, mentorship, clinical
+research programs etc</li>
+</ul></li>
+<li>TSANZ – I don’t believe you need to join as an AT
+<ul>
+<li>Perks: old presentations from TSANZ meetings</li>
+</ul></li>
+</ul>
+</div>
+<div id="conferences" class="section level1">
+<h1>Conferences</h1>
+<p>Learn things, network, drink bad coffee and have awkward
+conversations.</p>
+<p>If you still need your category 2 project – go to both Australian
+conferences for the update courses.</p>
+<ul>
+<li>TSANZ – Usually first half of year (~June) and ANZSN – second half
+(2022)</li>
+<li>International conferences - usual dates
+<ul>
+<li>ASN (October/November)</li>
+<li>EDTA (May)</li>
+<li>WCN (February)</li>
+<li>UKKW (June)</li>
+</ul></li>
+<li>Unravelling the kidneys basic and advanced courses – join ANZSN</li>
+<li>PD academy –get in early to register interest (limited numbers, and
+only get to go to once)</li>
+<li>HD academy</li>
+<li>Kidney supportive care symposium – St George, RBWH</li>
+<li>Harvard or ASN board review courses – likely able to access these
+online</li>
+<li>Oxford advanced nephrology - beautiful city, nice excuse to visit.
+Bit Intense, usually Feb.</li>
+</ul>
+</div>
+<div id="journals" class="section level1">
+<h1>Journals</h1>
+<p>There are only so many minutes in the day, so you need to choose the
+papers you wish to read according to importance and your own interest.
+Other papers you might skim, yet others you wont even finish reading the
+title. Don’t even attempt to read everything, rather skim the table of
+contents (set up an email alert via the journal, or PubMed search alert
+if specific topics are of interest) and pick your targets wisely,
+especially early in training.<br />
+The following rough hierarchy is my subjective opinion but may be a
+useful guide to the journals to keep an eye on if you’re a bit
+overwhelmed. Focus on the top journals first.</p>
+<p><strong>General Medical Journals | Often practice changing, review
+each issue.</strong></p>
+<ul>
+<li>NEJM</li>
+<li>Lancet</li>
+<li>BMJ</li>
+<li>JAMA</li>
+</ul>
+<p><strong>Renal: Core journals | Sometimes practice changing, paradigm
+shifting or high quality &amp; highly impactful</strong></p>
+<ul>
+<li>JASN</li>
+<li>KI</li>
+<li>NDT</li>
+<li>Transplantation &amp; American Journal of Transplantation</li>
+</ul>
+<p><strong>Renal: Additional journals</strong></p>
+<ul>
+<li>Nature Reviews Nephrology</li>
+<li>CJASN</li>
+<li>KI reports</li>
+<li>Clinical Kidney Journal</li>
+<li>AJKD</li>
+<li>Kidney 360</li>
+<li>Seminars in Nephrology &amp; Dialysis</li>
+<li>Nephrology (carlton)</li>
+<li>Frontiers in Nephrology</li>
+</ul>
+</div>
+<div id="websites" class="section level1">
+<h1>Websites</h1>
+<p><a href="http://renalfellow.blogspot.com/">Renal Fellow Network</a> |
+The OG Renal educational website, still great.</p>
+<p><a href="https://pbfluids.com/">Precious bodily Fluids</a> | Joel
+Topf’s blog. Good reads.</p>
+<p><a href="http://www.nephronpower.com/">Nephron power</a> | Renal
+blogging, high quality</p>
+<p><a href="https://community.asn-online.org/home">ASN forums</a> |
+Great discussions, often tricky cases</p>
+<p><a href="http://historyofnephrology.blogspot.co.uk/">History of
+Nephrology</a> | Neil turner in Edinburgh, great blog</p>
+<p><a href="https://www.thebottomline.org.uk/">The Bottom Line</a> |
+Critical care papers summarised in about 1 minute reads.</p>
+<p><a href="https://litfl.com/">Life in the Fast lane</a> | Its EM
+focused, but often useful.</p>
+</div>
+<div id="podcasts" class="section level1">
+<h1>Podcasts</h1>
+<p>Im a huge fan of podcasts for being an amazing mix of efficiency and
+quality, improve your nephrology while you commute!</p>
+<div id="intra-renal" class="section level2">
+<h2>Intra-Renal</h2>
+<p><a href="http://www.nephjc.com/freelyfiltered/">Freely filtered</a> |
+NephJC podcast, essential listening</p>
+<p><a href="http://www.rosebook.club/episodes/">Channel your
+enthusiasm</a> | A chapter by chapter reading of Burton Rose’s Renal
+physiology textbook</p>
+<p><a href="https://journals.lww.com/jasn/pages/default.aspx">JASN</a> |
+Alongside KI, the top Kidney Journal, worth keeps an eye on podcast if
+you cant get through an issue</p>
+</div>
+<div id="extra-renal" class="section level2">
+<h2>Extra-Renal</h2>
+<p><a
+href="https://audioboom.com/channel/thecurbsidersinternalmedicinepodcast">Curbsiders</a>
+| Probably best Gen Med podcast – renal episodes often excellent</p>
+<p><a href="http://bedside-rounds.org/">Bedside Rounds</a> | Medical
+History and culture</p>
+<p><a href="https://curiousclinicians.com/">Curious Clinicians</a> |
+Short episodes, curiosities and discussions about medical practice</p>
+<p><a href="http://imreasoning.com/">IMReasoning</a> | Case
+discussions</p>
+<p><a
+href="https://www.nejm.org/multimedia/audio-summary?date=past5Years">NEJM</a>
+| Great Journal, reasonable podcast</p>
+<p><a href="https://www.podomatic.com/podcasts/themja">Medical Journal
+of Australia</a> | Australian issues mate</p>
+<p><a href="https://febrilepodcast.com/">Febrile</a> | Infectious
+diseases</p>
+<p><a href="https://podcasts.rcpe.ac.uk/">Clinical Conversations</a> |
+General medical conversations with a Scottish accent</p>
+<p><a
+href="https://soundcloud.com/bmjpodcasts/sets/bmj-best-practice-clinical">BMJ
+Best Practice</a> | Gen Med, range of topics</p>
+<p><a
+href="https://jamanetwork.com/journals/jama/pages/jama-editors-summary">JAMA
+Editors summaries</a> | Usually reasonably good, once got an editor
+fired for being uncomfortably <em>oblivious</em> to the nature of
+systemic racism during an interview.</p>
+<p>Lots of scientific podcasts are worth checking out depending on your
+interests- Nature, NEJM AI rounds etc</p>
+</div>
+</div>
+<div id="twitter" class="section level1">
+<h1>Twitter</h1>
+<p>If Elon doesn’t run this company into the ground, often an effective
+way to access small digestible chunks of renal wisdom. It can become a
+bit of a time sink and suffers from the classic trap of social media –
+it looks like everyone is always a breathtakingly successful 30 year old
+Professor, publishing in Nature every week and dreadfully clever after
+they post a tweet they have spent an hour researching and polishing. It
+can also become a bit of an echo chamber of academic nephrologists
+humble bragging and publishing their/institutional/journal/personal
+brand without adding any value. With that caveat out of the way, there
+are far too many good accounts to list, and your interests and mileage
+may vary, as will accounts activity as people’s lives change. If you are
+going to engage, remember that its a real person on the other side of a
+tweet so be kind. Your also representing yourself, and sending a message
+about your institution and department even if you dont mean to, so dont
+let the side down please.</p>
+<p>To get started, maybe check out (in no particular order and recalled
+at random).</p>
+<pre><code>-   @askrenal
+-   @renalfellownetwork
+-   @nephjc
+-   @glomcon
+-   @rheault_m
+-   @renalgal
+-   @kidneyboy
+-   @VeleznephHepato
+-   @nephrologista
+-   @womeninnephro
+-   @nephro_sparks
+-   @hswapnil
+-   @nephrodby
+-   @sophia_kidney
+-   \#askrenal
+-   \#NephTwitter
+-   Stalk your favourite researchers and expand from there according to taste.</code></pre>
+<p><strong>Other Online resources</strong></p>
+<ul>
+<li>Check our <a
+href="https://ajkdblog.org/2022/03/01/welcome-to-nephmadness-2022/">NephMadness</a>
+each year, a great overview of what’s hot in Nephrology</li>
+<li><a href="https://kidneyschool.com.au/">Kidney school</a> |
+Approximately once a month, 1hr evening talk (Tuesdays)</li>
+<li>Kidney Hub – Should get a free trial membership to start. Has old
+lectures from ANZSN/TSANZ, unravelling the kidneys etc</li>
+<li><a
+href="Sthttps://stgrenal.org.au/for-health-professionals/our-services/renal-supportive-care/">St
+George Renal Website</a> | Excellent kidney supportive care
+resources</li>
+<li>ISPD peritonitis guidelines</li>
+<li>KDIGO guidelines</li>
+<li>KHA-CARI guidelines</li>
+<li>Additional resources: available on the S drive (see advanced
+training teaching)</li>
+<li>Ill update clinical tips and notes, active trials, guidelines and
+protocols over time on <a
+href="http://www.renalmedicine.net">www.renalmedicine.net</a> (if
+blocked by browser, usually works as nephromancer.com)</li>
+</ul>
+<p><strong>Financial stuff</strong></p>
+<ul>
+<li>ANZSN offers grants for advanced trainees and junior consultants to
+attend a local conference, an international conference and a “special
+meeting”. You must give 3 months’ notice. Apply via ANZSN website.</li>
+<li>ISN provides cash awards, travel grants, scholarships and mentorship
+for young nephrologists.</li>
+</ul>
+<p><strong>Other tips</strong></p>
+<ul>
+<li><a href="https://www.renalmedicine.net/trials">Active clinical
+trials at Metro North</a> | Help recruit and change Nephrology!</li>
+<li>Make sure you register with the college and don’t miss deadlines for
+submission of supervisor reports. Check early if your supervisor will be
+away.</li>
+<li>Be aware of the CV scoring system and work towards maximising your
+points.</li>
+<li>Prepare for the interview:
+<ul>
+<li>Prepare for the different styles of questions – ask your favourite
+SMO for interview prep/mock interviews.</li>
+<li>Medical interviews – A comprehensive guide to CT, ST and Registrar
+interview skills – Picard, Wood and yuen.</li>
+</ul></li>
+</ul>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = false;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
