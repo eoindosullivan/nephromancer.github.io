@@ -1,0 +1,29 @@
+---
+title: ""
+output: html_document
+---
+
+```{r setup, include=FALSE} 
+library(rentrez)  # For fetching PubMed articles
+library(DT)       # For interactive tables
+library(dplyr)    # For data manipulation
+library(httr) 
+library(jsonlite)
+library(rentrez)
+library(reshape)
+library(ggplot2)
+```
+
+# KHS Publications 
+
+This list is work in progress, Im refining the search terms to reduce false postivies.
+
+Please email me your ORCID ID if you want to be included
+
+```{r, echo=F, eval=T}
+search <- entrez_search(db = "pubmed",
+                        term = "(kidney health service metro north) OR (Eoin O'Sullivan) OR (Eoin Daniel O'Sullivan) OR (0000-0002-7709-6595) OR (Monica Ng) OR (0000-0002-0431-9110)", retmax=5000)
+multi_summs <- entrez_summary(db="pubmed", id=search$ids)
+date_and_cite <- extract_from_esummary(multi_summs, c("title","fulljournalname","pubdate","lastauthor", "pmcrefcount"))
+knitr::kable((t(date_and_cite)), row.names=FALSE, col.names = c("Title", "Journal Name", "Publication Date", "Last Author", "PMC Ref Count"))  
+```

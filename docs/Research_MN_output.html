@@ -215,11 +215,11 @@ $(document).ready(function () {
 
 <style type="text/css">
 
-#section-TOC {
+#TOC {
   margin: 25px 0px 20px 0px;
 }
 @media (max-width: 768px) {
-#section-TOC {
+#TOC {
   position: relative;
   width: 100%;
 }
@@ -294,7 +294,7 @@ div.tocify {
 <!-- setup 3col/9col grid for toc_float and main content  -->
 <div class="row">
 <div class="col-xs-12 col-sm-4 col-md-3">
-<div id="section-TOC" class="tocify">
+<div id="TOC" class="tocify">
 </div>
 </div>
 
@@ -323,10 +323,13 @@ div.tocify {
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="./trials.html">Metro North KHS Trials</a>
+      <a href="./trials.html">Active Metro North KHS Trials</a>
     </li>
     <li>
-      <a href="./Research_MN_output.html">Metro North KHS Research output</a>
+      <a href="./Research_MN_output.html">Metro North KHS Research</a>
+    </li>
+    <li>
+      <a href="./fullpubslist.R.html">Full KHS publication list</a>
     </li>
   </ul>
 </li>
@@ -574,7 +577,7 @@ div.tocify {
   </div><!--/.container -->
 </div><!--/.navbar -->
 
-<div id="section-header">
+<div id="header">
 
 
 
@@ -582,25 +585,37 @@ div.tocify {
 </div>
 
 
-<div id="section-research-posters" class="section level2">
-<h2>Research Posters</h2>
-<p><a href="path_to_poster1.pdf" target="_blank">Poster 1</a><br/>
-<a href="path_to_poster2.pdf" target="_blank">Poster 2</a><br/></p>
-<p>library(httr) library(jsonlite)</p>
-<p>orcid &lt;- “0000-0002-7709-6595”</p>
-<p>response &lt;- GET(paste0(“<a href="https://pub.orcid.org/v3.0/"
-class="uri">https://pub.orcid.org/v3.0/</a>”, orcid, “/works”),
-add_headers(Accept = “application/json”))</p>
-<p>publications &lt;- fromJSON(content(response, “text”))$group</p>
+<div id="khs-research-output" class="section level3">
+<h3>KHS Research Output</h3>
+<p>A note here on methodology</p>
+<p><img src="Research_MN_output_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
 </div>
-<div id="section-display-publications" class="section level2">
-<h2>Display Publications</h2>
-<p>for (pub in publications) { pub_title &lt;- pub<span
-class="math inline">\(&#39;work-summary&#39;[[1]]\)</span>title<span
-class="math inline">\(title\)</span>value pub_url &lt;- pub<span
-class="math inline">\(&#39;work-summary&#39;[[1]]\)</span>url$value
-cat(paste0(“<a href='", pub_url, "' target='_blank'>”, pub_title,
-“</a><br/>”)) }</p>
+<div id="journals" class="section level3">
+<h3>Journals</h3>
+<p>A note here on methodology</p>
+<p><img src="Research_MN_output_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+</div>
+<div id="khs-researcher" class="section level3">
+<h3>KHS Researcher</h3>
+<p>table here, with ORCID, google scholar etc. Alphabetical.</p>
+</div>
+<div id="contraversial" class="section level3">
+<h3>Contraversial</h3>
+<p>Experimental only, will remove before live</p>
+<pre><code>## Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+## ℹ Please use `linewidth` instead.
+## This warning is displayed once every 8 hours.
+## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was generated.</code></pre>
+<pre><code>## Warning: Removed 6 rows containing missing values or values outside the scale
+## range (`geom_line()`).</code></pre>
+<p><img src="Research_MN_output_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+</div>
+<div id="khs-abstractsposters-2024" class="section level3">
+<h3>KHS Abstracts/Posters 2024</h3>
+<p>placeholders, working on it. pdf an issue. links only?</p>
+<p><img src="images/amanokidney.png" alt="Hepburn K, “Some KSC”" />
+<embed src="images/Monogenic-HTN-Handout-11_19_18.pdf" /> <embed
+src="images/parathyroidectomy_ESRD_RIE_Protocol_final.pdf" /></p>
 </div>
 
 
@@ -627,7 +642,7 @@ $(document).ready(function () {
 
 <script>
 $(document).ready(function () {
-  window.buildTabsets("section-TOC");
+  window.buildTabsets("TOC");
 });
 
 $(document).ready(function () {
@@ -665,7 +680,7 @@ $(document).ready(function ()  {
     options.smoothScroll = true;
 
     // tocify
-    var toc = $("#section-TOC").tocify(options).data("toc-tocify");
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
 });
 </script>
 

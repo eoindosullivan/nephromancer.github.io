@@ -4,10 +4,12 @@ title: "Renal Medicine"
 left:
   - text: "Research"
     menu:
-      - text: "Metro North KHS Trials"
+      - text: "Active Metro North KHS Trials"
         href: ./trials.html
-      - text: "Metro North KHS Research output"
+      - text: "Metro North KHS Research"
         href: ./Research_MN_output.html
+      - text: "Full KHS publication list"
+        href: ./fullpubslist.R.html
   - text: "GEN"
     menu:
       - text: "HTN"
