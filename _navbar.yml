@@ -4,8 +4,10 @@ title: "Renal Medicine"
 left:
   - text: "Research"
     menu:
-      - text: "Trials"
+      - text: "Metro North KHS Trials"
         href: ./trials.html
+      - text: "Metro North KHS Research output"
+        href: ./Research_MN_output.html
   - text: "GEN"
     menu:
       - text: "HTN"
@@ -66,6 +68,8 @@ left:
          href: ./project1.html
        - text: "Misc Notes"
          href: ./txnotes.html
+       - text: "Non Kidney Tx"
+         href: ./nonkidneytx.html
   - text: "RRT"
     menu:
       - text: "HD"
@@ -114,12 +118,15 @@ left:
          href: ./Single Kidney.html
        - text: "IGG4"
          href: ./IGG4.html
+       - text: "Stones"
+         href: ./Stones.html
   - text: "Resources"
     menu:
        - text: "Educational Resources"
          href: ./edu.html
        - text: "Patient Resources"
          href: ./patient_resources.html
+         
 right:
   - icon: fas fa-home
     href: https:eoindosullivan.com

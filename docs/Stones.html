@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Stones.knit</title>
+
+<script src="site_libs/header-attrs-2.28/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+
+
+
+
+
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+.tocify-subheader {
+  display: inline;
+}
+.tocify-subheader .tocify-item {
+  font-size: 0.95em;
+}
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Renal Medicine</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Research
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./trials.html">Metro North KHS Trials</a>
+    </li>
+    <li>
+      <a href="./Research_MN_output.html">Metro North KHS Research output</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    GEN
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./HTN.html">HTN</a>
+    </li>
+    <li>
+      <a href="./CCF.html">CCF</a>
+    </li>
+    <li>
+      <a href="./DKD.html">DKD</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    U&amp;E
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./acidbase.html">H+ &amp; HCO3</a>
+    </li>
+    <li>
+      <a href="./na.html">Na</a>
+    </li>
+    <li>
+      <a href="./k.html">K</a>
+    </li>
+    <li>
+      <a href="./mg.html">MG</a>
+    </li>
+    <li>
+      <a href="./renalbone.html">Ca2+ &amp; PO4</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    GN
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./MCD.html">MCD</a>
+    </li>
+    <li>
+      <a href="./ANCA.html">ANCA</a>
+    </li>
+    <li>
+      <a href="./IGAN.html">IGAN</a>
+    </li>
+    <li>
+      <a href="./MPGN_C3G.html">MPGN &amp; C3G</a>
+    </li>
+    <li>
+      <a href="./LUPUS.html">LUPUS</a>
+    </li>
+    <li>
+      <a href="./FSGS.html">FSGS</a>
+    </li>
+    <li>
+      <a href="./TMA.html">TMA</a>
+    </li>
+    <li>
+      <a href="./GBM.html">GBM</a>
+    </li>
+    <li>
+      <a href="./MN.html">MN</a>
+    </li>
+    <li>
+      <a href="./Amyloid.html">Amyloid</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    CKD
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./project1.html">Checklist</a>
+    </li>
+    <li>
+      <a href="./project1.html">Conservative care</a>
+    </li>
+    <li>
+      <a href="./anaemia.html">Anaemia</a>
+    </li>
+    <li>
+      <a href="./project1.html">Pruritis</a>
+    </li>
+    <li>
+      <a href="./renalbone.html">CKD-MBD</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    TX
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./project1.html">Cheat sheet</a>
+    </li>
+    <li>
+      <a href="./txnotes.html">Misc Notes</a>
+    </li>
+    <li>
+      <a href="./nonkidneytx.html">Non Kidney Tx</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    RRT
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./HD.html">HD</a>
+    </li>
+    <li>
+      <a href="./project1.html">Home HD</a>
+    </li>
+    <li>
+      <a href="./project1.html">HD Access</a>
+    </li>
+    <li>
+      <a href="./project1.html">PD</a>
+    </li>
+    <li>
+      <a href="./project1.html">CVVH</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    DRUGS
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./anticoagulation.html">Anticoagulation</a>
+    </li>
+    <li>
+      <a href="./PJP.html">PJP</a>
+    </li>
+    <li>
+      <a href="./abx.html">Abx</a>
+    </li>
+    <li>
+      <a href="./aboutme.html">HDU</a>
+    </li>
+    <li>
+      <a href="./project1.html">Flozins</a>
+    </li>
+    <li>
+      <a href="./rituxcyc.html">RITUX &amp; CYC</a>
+    </li>
+    <li>
+      <a href="./Chemotherapy.html">Chemo</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    MISC
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./biopsy.html">Biopsy</a>
+    </li>
+    <li>
+      <a href="./path.html">PATH</a>
+    </li>
+    <li>
+      <a href="./preg.html">Pregnancy</a>
+    </li>
+    <li>
+      <a href="./project1.html">PEX</a>
+    </li>
+    <li>
+      <a href="./Lymphoproliferative.html">Lymphoproliferative</a>
+    </li>
+    <li>
+      <a href="./covid19.html">SARS-Cov-2</a>
+    </li>
+    <li>
+      <a href="./Tumour_Lysis.html">Tumour Lysis Syndrome</a>
+    </li>
+    <li>
+      <a href="./Single Kidney.html">Single Kidney</a>
+    </li>
+    <li>
+      <a href="./IGG4.html">IGG4</a>
+    </li>
+    <li>
+      <a href="./Stones.html">Stones</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Resources
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./edu.html">Educational Resources</a>
+    </li>
+    <li>
+      <a href="./patient_resources.html">Patient Resources</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https:eoindosullivan.com">
+    <span class="fas fa-home"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+
+</div>
+
+
+<div id="clinical-workup-for-kidney-stones-nephrocalcinosis"
+class="section level3">
+<h3>Clinical Workup for Kidney Stones &amp; Nephrocalcinosis</h3>
+<p><strong>Nephrocalcinosis: calcium phosphate in kidney, forms in
+alkaline urine</strong></p>
+<ul>
+<li>Nephrocalcinosis refers to increased calcium deposition in the
+kidney, often in the form of calcium oxalate or calcium phosphate.</li>
+<li>Some Pedants suggest reserving “nephrocalcinosis” for calcium
+phosphate deposits only, with calcium oxalate deposits termed
+oxalosis.</li>
+<li>Can be found incidentally or associated with acute/chronic kidney
+injury.</li>
+</ul>
+<p><strong>Etiology</strong></p>
+<p>Nephrocalcinosis results from conditions causing hypercalcemia,
+hyperphosphatemia, hypercalciuria, hyperphosphaturia, and
+hyperoxaluria</p>
+</div>
+<div id="common-causes-associations" class="section level3">
+<h3>Common Causes &amp; Associations</h3>
+<ul>
+<li>Primary Hyperparathyroidism: Seen in up to 22% of cases, with
+hypercalciuria overshadowing calcium reabsorption.</li>
+<li>Sarcoidosis: Up to 50% of patients with renal involvement develop
+nephrocalcinosis.</li>
+<li>Vitamin D Excess: Can lead to hypercalcemia and hypercalciuria,
+especially when combined with phosphate supplements.*</li>
+<li>Distal Renal Tubular Acidosis: Most common cause of nephrocalcinosis
+from hypercalciuria without hypercalcemia.</li>
+<li>Medullary Sponge Kidney: Up to 50% of cases show
+nephrocalcinosis.</li>
+<li>Loop Diuretic Use: Prolonged high doses can lead to
+nephrocalcinosis.</li>
+</ul>
+</div>
+<div id="hereditary-disorders" class="section level3">
+<h3>Hereditary Disorders</h3>
+<ul>
+<li><strong>Dent Disease:</strong> X-linked condition associated with
+hypercalciuria, nephrocalcinosis, nephrolithiasis, and rickets.</li>
+<li><strong>Hypophosphatemic Rickets:</strong> Leads to nephrocalcinosis
+due to disturbances in phosphate handling.</li>
+<li><strong>Hypercalciuria with Hypercalcemia:</strong>
+<ul>
+<li>Primary hyperparathyroidism</li>
+<li>Vitamin D therapy</li>
+<li>Sarcoidosis</li>
+<li>Milk-alkali syndrome</li>
+<li>Congenital hypothyroidism</li>
+</ul></li>
+<li><strong>Hypercalciuria without Hypercalcemia:</strong>
+<ul>
+<li>Distal renal tubular acidosis (RTA)</li>
+<li>Medullary sponge kidney</li>
+<li>Loop diuretic use</li>
+<li>Inherited tubulopathies</li>
+<li>Chronic hypokalemia</li>
+<li>Beta-thalassemia</li>
+</ul></li>
+<li><strong>Hyperphosphaturia with Hyperphosphatemia:</strong>
+<ul>
+<li>Tumor lysis syndrome</li>
+<li>Oal sodium phosphate bowel preparations</li>
+</ul></li>
+<li><strong>Hyperphosphaturia without Hyperphosphatemia:</strong>
+<ul>
+<li>Inherited tubulopathies (e.g., Dent disease, Lowe syndrome)</li>
+<li>Hypophosphatemic rickets</li>
+</ul></li>
+</ul>
+</div>
+<div id="medical-history-to-review" class="section level3">
+<h3>Medical History to Review</h3>
+<ul>
+<li><strong>Gastrointestinal Disorders</strong>: Chronic diarrhoea
+(e.g., bowel disease), malabsorption, intestinal surgery, bariatric
+surgery</li>
+<li><strong>Systemic Diseases</strong>: Sarcoidosis, gout, renal tubular
+acidosis (RTA)</li>
+<li><strong>Bone Diseases</strong>: PTH-related disorders, idiopathic
+hypercalciuria, multiple myeloma</li>
+<li><strong>Other Factors</strong>: Immobilization (e.g., due to
+prolonged illness), hyperthyroidism, renal anomalies</li>
+</ul>
+</div>
+<div id="metabolic-disorders-to-consider" class="section level3">
+<h3>Metabolic Disorders to Consider</h3>
+<ul>
+<li>Primary hyperparathyroidism</li>
+<li>Primary hyperoxaluria</li>
+<li>Enteric hyperoxaluria</li>
+<li>Cystinuria</li>
+<li>Distal renal tubular acidosis (RTA)</li>
+</ul>
+</div>
+<div id="medication-review" class="section level3">
+<h3>Medication Review</h3>
+<ul>
+<li>Topiramate</li>
+<li>Calcium supplements</li>
+<li>Carbonic anhydrase inhibitors</li>
+<li>Alkali therapy</li>
+<li>Vitamin D supplements</li>
+</ul>
+</div>
+<div id="dietary-review" class="section level3">
+<h3>Dietary Review</h3>
+<ul>
+<li><strong>Oxalate-rich foods</strong>: Nuts, spinach, ascorbic
+acid</li>
+<li><strong>Salt intake</strong>: High salt can influence stone
+formation</li>
+<li><strong>Eating disorders or unusual diets</strong>: Assess dietary
+habits</li>
+</ul>
+</div>
+<div id="family-history" class="section level3">
+<h3>Family History</h3>
+<ul>
+<li>History of kidney stones or related metabolic conditions in the
+family.</li>
+</ul>
+</div>
+<div id="imaging-studies" class="section level3">
+<h3>Imaging Studies</h3>
+<ul>
+<li><strong>Initial Evaluation</strong>: Non-contrast CT scan is
+preferred.</li>
+<li><strong>Follow-up</strong>: Ultrasound is acceptable.</li>
+</ul>
+</div>
+<div id="workup" class="section level2">
+<h2>Workup</h2>
+<div id="blood-tests" class="section level3">
+<h3>Blood Tests</h3>
+<ul>
+<li><strong>include</strong>:
+<ul>
+<li>Parathyroid hormone (PTH)</li>
+<li>Comprehensive Metabolic Panel (Chem20)</li>
+<li>ACE</li>
+<li>TFT</li>
+<li>Chem 20</li>
+<li>FBC</li>
+</ul></li>
+</ul>
+</div>
+<div id="hour-urine-collection" class="section level3">
+<h3>24-Hour Urine Collection</h3>
+<ul>
+<li><strong>When to collect</strong>:
+<ul>
+<li>At diagnosis and periodically during follow-up (e.g., every 6
+months)</li>
+<li>Start with TWO samples : Aim for one collection on a workday and one
+on a non-working day.</li>
+<li>Ensure patients follow their usual daily diets during
+collection.</li>
+</ul></li>
+<li><strong>Analytes to measure</strong>:
+<ul>
+<li>pH (using a pH meter, not dipsticks)</li>
+<li>calcium</li>
+<li>oxalate</li>
+<li>citrate</li>
+<li>uric acid</li>
+<li>Sodium</li>
+<li>potassium</li>
+<li>magnesium</li>
+<li>phosphate</li>
+<li>chloride</li>
+<li>sulfate</li>
+<li>ammonium</li>
+<li>creatinine</li>
+<li>urea</li>
+<li>cystine (test for cystine at least once)</li>
+</ul></li>
+<li><strong>Stone Analysis</strong>:
+<ul>
+<li>Bring stone or fragments for analysis.</li>
+</ul></li>
+<li><strong>Calculate Supersaturation</strong>: For various
+stone-forming substances to guide treatment.</li>
+</ul>
+</div>
+</div>
+<div id="snp-qml-correspondance-here-re-testing" class="section level2">
+<h2>SNP &amp; QML Correspondance here re testing</h2>
+</div>
+<div id="management-strategies" class="section level2">
+<h2>Management Strategies</h2>
+<p><strong>Dietary Recommendations</strong></p>
+<ul>
+<li><strong>Urine output target</strong>: 2-2.5 litres per day.</li>
+<li><strong>Sodium</strong>: Encourage a low-salt diet.</li>
+<li><strong>Calcium</strong>: Do not recommend avoidance of calcium;
+maintain normal intake.</li>
+<li><strong>Oxalate</strong>: Avoid high-oxalate foods such as spinach,
+rhubarb, wheat bran, chocolate, beets, miso, tahini, and most nuts.</li>
+</ul>
+<p>A detailed list of oxalate content in foods is available <a
+href="http://www.ohf.org">here</a> under “Resources.”</p>
+<p>Refer to Dietician</p>
+</div>
+<div id="pharmacological-treatment" class="section level2">
+<h2>Pharmacological Treatment</h2>
+<ul>
+<li><strong>Potassium Citrate (K Citrate)</strong>: Urokit 2 tablets BD.
+For patients with low citrate levels (hypocitraturia) - careful with
+Calphos stones, can worsen</li>
+<li><strong>Thiazides</strong>:
+<ul>
+<li>Chlorthalidone: 25mg po od ( 2 packs/100units/1 repeat)</li>
+<li>Hydrochlorothiazide (HCTZ): 25mg bd od ( 2/200/1)</li>
+<li></li>
+</ul></li>
+<li><strong>Allopurinol</strong> 300mg po od when urate stones</li>
+</ul>
+</div>
+<div id="nostone-trial" class="section level2">
+<h2>NOSTONE Trial</h2>
+<br>
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class="blue">
+<p><a
+href="https://www.nejm.org/doi/full/10.1056/NEJMoa2209275">NOSTONE</a></p>
+<ul>
+<li><p>416 patients randomised for 2.9 years</p></li>
+<li><p>inclusion: calcium-containing kidney stones</p></li>
+<li><p>Intervention:e hydrochlorothiazide at a dose of 12.5 mg, 25 mg,
+or 50 mg once daily or placebo once daily.</p></li>
+<li><p>Primary outcome: a composite of symptomatic or radiologic
+recurrence of kidney stones</p></li>
+<li><p>Secondary outcome: radiological recurrance</p></li>
+<li><p>Results:</p></li>
+<li><p>A primary end-point event occurred in 60 of 102 patients (59%) in
+the placebo group, in 62 of 105 patients (59%) in the 12.5-mg
+hydrochlorothiazide group (rate ratio vs. placebo, 1.33; 95% confidence
+interval [CI], 0.92 to 1.93), in 61 of 108 patients (56%) in the 25-mg
+group (rate ratio, 1.24; 95% CI, 0.86 to 1.79), and in 49 of 101
+patients (49%) in the 50-mg group (rate ratio, 0.92; 95% CI, 0.63 to
+1.36).</p></li>
+<li><p>lower radiologic recurrence at higher doses</p></li>
+<li><p>There was no relation between the hydrochlorothiazide dose and
+the occurrence of a primary end-point event (P=0.66</p></li>
+<li><p>thoughts: critics suggest too low a dose, and note high urinary
+[Na] pre and post, suggesting poor diet. White, High salt, normal
+citrate and no RTA - can this be generalised?</p></li>
+</ul>
+</div>
+<p><br></p>
+<div id="specific-stone-considerations" class="section level3">
+<h3>Specific Stone Considerations</h3>
+<ul>
+<li><strong>Calcium Phosphate Stones</strong>: Be cautious with
+potassium citrate, as it may raise urine pH and worsen calcium phosphate
+stone formation.</li>
+</ul>
+<p><strong>Follow-Up</strong></p>
+<ul>
+<li><strong>Routine Monitoring</strong>: Follow-up urine collections
+every 6 months to monitor stone recurrence risk and adjust treatment as
+needed.</li>
+</ul>
+<p><strong>urine changes</strong></p>
+<p><a
+href="https://www.nejm.org/doi/full/10.1056/NEJMcp1001011">Source</a></p>
+<p><img src="images/stones1.png" /></p>
+</div>
+</div>
+<div id="lithorisk-or-similar-calc-here" class="section level2">
+<h2>lithorisk or similar calc here</h2>
+</div>
+<div id="patient-info-here" class="section level2">
+<h2>Patient info here</h2>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = false;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

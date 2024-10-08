@@ -1,0 +1,28 @@
+---
+title: " "
+output: html_document
+runtime: shiny
+---
+
+
+## Research Posters
+<a href="path_to_poster1.pdf" target="_blank">Poster 1</a><br/>
+<a href="path_to_poster2.pdf" target="_blank">Poster 2</a><br/>
+
+library(httr)
+library(jsonlite)
+
+orcid <- "0000-0002-7709-6595"
+
+response <- GET(paste0("https://pub.orcid.org/v3.0/", orcid, "/works"),
+                add_headers(Accept = "application/json"))
+                
+publications <- fromJSON(content(response, "text"))$group
+
+## Display Publications
+for (pub in publications) {
+  pub_title <- pub$'work-summary'[[1]]$title$title$value
+  pub_url <- pub$'work-summary'[[1]]$url$value
+  cat(paste0("<a href='", pub_url, "' target='_blank'>", pub_title, "</a><br/>"))
+}
+

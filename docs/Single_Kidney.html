@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Single_Kidney.knit</title>
+
+<script src="site_libs/header-attrs-2.28/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+
+
+
+
+
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+.tocify-subheader {
+  display: inline;
+}
+.tocify-subheader .tocify-item {
+  font-size: 0.95em;
+}
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Renal Medicine</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Research
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./trials.html">Metro North KHS Trials</a>
+    </li>
+    <li>
+      <a href="./Research_MN_output.html">Metro North KHS Research output</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    GEN
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./HTN.html">HTN</a>
+    </li>
+    <li>
+      <a href="./CCF.html">CCF</a>
+    </li>
+    <li>
+      <a href="./DKD.html">DKD</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    U&amp;E
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./acidbase.html">H+ &amp; HCO3</a>
+    </li>
+    <li>
+      <a href="./na.html">Na</a>
+    </li>
+    <li>
+      <a href="./k.html">K</a>
+    </li>
+    <li>
+      <a href="./mg.html">MG</a>
+    </li>
+    <li>
+      <a href="./renalbone.html">Ca2+ &amp; PO4</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    GN
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./MCD.html">MCD</a>
+    </li>
+    <li>
+      <a href="./ANCA.html">ANCA</a>
+    </li>
+    <li>
+      <a href="./IGAN.html">IGAN</a>
+    </li>
+    <li>
+      <a href="./MPGN_C3G.html">MPGN &amp; C3G</a>
+    </li>
+    <li>
+      <a href="./LUPUS.html">LUPUS</a>
+    </li>
+    <li>
+      <a href="./FSGS.html">FSGS</a>
+    </li>
+    <li>
+      <a href="./TMA.html">TMA</a>
+    </li>
+    <li>
+      <a href="./GBM.html">GBM</a>
+    </li>
+    <li>
+      <a href="./MN.html">MN</a>
+    </li>
+    <li>
+      <a href="./Amyloid.html">Amyloid</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    CKD
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./project1.html">Checklist</a>
+    </li>
+    <li>
+      <a href="./project1.html">Conservative care</a>
+    </li>
+    <li>
+      <a href="./anaemia.html">Anaemia</a>
+    </li>
+    <li>
+      <a href="./project1.html">Pruritis</a>
+    </li>
+    <li>
+      <a href="./renalbone.html">CKD-MBD</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    TX
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./project1.html">Cheat sheet</a>
+    </li>
+    <li>
+      <a href="./txnotes.html">Misc Notes</a>
+    </li>
+    <li>
+      <a href="./nonkidneytx.html">Non Kidney Tx</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    RRT
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./HD.html">HD</a>
+    </li>
+    <li>
+      <a href="./project1.html">Home HD</a>
+    </li>
+    <li>
+      <a href="./project1.html">HD Access</a>
+    </li>
+    <li>
+      <a href="./project1.html">PD</a>
+    </li>
+    <li>
+      <a href="./project1.html">CVVH</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    DRUGS
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./anticoagulation.html">Anticoagulation</a>
+    </li>
+    <li>
+      <a href="./PJP.html">PJP</a>
+    </li>
+    <li>
+      <a href="./abx.html">Abx</a>
+    </li>
+    <li>
+      <a href="./aboutme.html">HDU</a>
+    </li>
+    <li>
+      <a href="./project1.html">Flozins</a>
+    </li>
+    <li>
+      <a href="./rituxcyc.html">RITUX &amp; CYC</a>
+    </li>
+    <li>
+      <a href="./Chemotherapy.html">Chemo</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    MISC
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./biopsy.html">Biopsy</a>
+    </li>
+    <li>
+      <a href="./path.html">PATH</a>
+    </li>
+    <li>
+      <a href="./preg.html">Pregnancy</a>
+    </li>
+    <li>
+      <a href="./project1.html">PEX</a>
+    </li>
+    <li>
+      <a href="./Lymphoproliferative.html">Lymphoproliferative</a>
+    </li>
+    <li>
+      <a href="./covid19.html">SARS-Cov-2</a>
+    </li>
+    <li>
+      <a href="./Tumour_Lysis.html">Tumour Lysis Syndrome</a>
+    </li>
+    <li>
+      <a href="./Single Kidney.html">Single Kidney</a>
+    </li>
+    <li>
+      <a href="./IGG4.html">IGG4</a>
+    </li>
+    <li>
+      <a href="./Stones.html">Stones</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Resources
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./edu.html">Educational Resources</a>
+    </li>
+    <li>
+      <a href="./patient_resources.html">Patient Resources</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https:eoindosullivan.com">
+    <span class="fas fa-home"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+
+</div>
+
+
+<div id="single-kidney" class="section level2">
+<h2>Single Kidney</h2>
+<p>Aim is to avoid hyperfiltration, secondary FSGS.</p>
+<p>Heamodynamic and structural changes occur in a single kidney: Glom
+hypertrophy and hyperfiltration lead to podocyte injury and proteinuria.
+Each cause is approached differently.</p>
+<p><strong>Acquired: Surgical</strong></p>
+<p>(Donor, trauma, nephrectomy etc)</p>
+<ul>
+<li>Aggressive CKD risk factor management</li>
+<li>avoidance of excessively high <a
+href="https://www.sciencedirect.com/topics/medicine-and-dentistry/protein-intake">dietary
+protein</a> intake (&gt;1 g/kg per day)</li>
+<li>avoid high <a
+href="https://www.sciencedirect.com/topics/medicine-and-dentistry/sodium-intake">dietary
+sodium</a> intake (&gt;4 grams/d)</li>
+<li>Keep BMI &lt;30</li>
+<li>Cystatin C &amp; Cr formula likely best</li>
+<li>Follow up unclear, needs to be bespoke: 6-12 months, discharge if
+stable.</li>
+</ul>
+<p><a
+href="https://www.sciencedirect.com/science/article/abs/pii/S0302283812004034">Outcomes
+post nephrectomy</a> for RCC: n= 4633, Partial nephrectomy = 11% CKD, 2%
+ESKD, radical = 20% CKD 4% ESKD.</p>
+<p>Nice review of surgical outcomes <a
+href="https://www.sciencedirect.com/science/article/pii/S2468024919314019">here</a></p>
+<p>The current best review I have found is in <a
+href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4011451/">CJASN</a></p>
+<p><strong>Acquired: Non Surgical</strong></p>
+<p>RAS, obstructive (stones/valve/infection) – consider appropriate
+imaging if suspicious. No guidelines, best to have low index of
+suspicion in an adult for RAS as while you may not intervene it places
+them at an extremely high vascular risk needing aggressive risk factor
+control.</p>
+<p><strong>Congenital</strong></p>
+<p>Check for over ipsilateral CAKUT on imaging</p>
+<ul>
+<li>Kidney: horse-shoe, hypoplastic, duplex, single, multicystic
+dysplastic</li>
+<li>Collecting system anomalies: PUJ, VUJ</li>
+<li>Bladder: prune belly, VU reflux</li>
+<li>Ureteral: posterior valves</li>
+</ul>
+<p>Features of overt CAKUT require surgical correction (in paeds) and
+closer follow up as higher risk – <a
+href="https://academic.oup.com/ndt/article/26/5/1458/1894859">ideally
+annually</a></p>
+<p>Renal agenesis (URA) isnt the same as multicystic dysplastic kidney
+(MCDK), <a
+href="https://link.springer.com/article/10.1007/s00467-021-05064-1">outcomes
+are worse</a> with URA.</p>
+<p>“URA had a higher prevalence of comorbid genetic syndromes (15
+vs. 6%, <em>p</em>=0.04), non-renal anomalies (39 vs. 11%,
+<em>p</em>&lt;0.001), and congenital anomalies of the kidney and urinary
+tract (CAKUT) (51 vs. 26%, <em>p</em>&lt;0.001) than MCDK. Over
+follow-up, URA experienced more hypertension (19 vs. 3%,
+<em>p</em>=0.002), proteinuria (12 vs. 3%, <em>p</em>=0.03), and the
+composite outcome (19 vs. 6%, <em>p</em>=0.003) than MCDK. Independent
+risk factors for chronic kidney injury included CAKUT (OR 5.01,
+<em>p</em>=0.002) and URA (OR 2.71, <em>p</em>=0.04).”</p>
+<p>Hypoplastic kidney <a
+href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8790306/">presentations</a></p>
+<ul>
+<li>age of 39.5 ± 11.2 (19-73) years.</li>
+<li>Loin pain(51.5%)</li>
+<li>Stone passed (9.1%)</li>
+<li>Anuria (12.1%)</li>
+<li>Incidental discovery (15.2%)</li>
+<li>UTI (12.1%).</li>
+</ul>
+<p>Urolithiasis occurred in 23 (69.7%) cases and pyuria was detected in
+22 (66.7%) cases where the infection was documented by culture and
+sensitivity test in 19 cases. While the non-complicated cases were
+managed by assurance only (12.1%), nephrectomy (15.2%) was performed for
+persistent complications. However, symptomatic (27.3%) and endoscopic
+(45.6%) approaches were used for the management of correctable
+complications.</p>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = false;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

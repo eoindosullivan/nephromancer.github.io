@@ -2,7 +2,7 @@
 title: " "
 output: html_document
 ---
-![](images/RBWH_clinical_may23.png)
+
 
 #### Contact research nurses for screening & enrolment
 
