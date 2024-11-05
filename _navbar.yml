@@ -9,11 +9,11 @@ left:
       - text: "KHS Research Activity Overview"
         href: ./KHS Research output.html
       - text: "KHS Publication list"
-        href: ./full_pubslist.R.html
+        href: ./full_pubslist.html
       - text: "Posters and Abstracts"
-        href: ./posters.R.html
+        href: ./posters.html
       - text: "Nephronexus: Publically available Data"
-        href: ./nephronexus.R.html
+        href: ./nephronexus.html
   - text: "GEN"
     menu:
       - text: "HTN"
