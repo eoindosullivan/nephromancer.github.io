@@ -1,0 +1,6 @@
+install.packages("rentrez")
+install.packages("usethis")
+install.packages("kable")
+devtools::install_github("allenbaron/rentrez")
+install.packages("readxl")
+install.packages("DT")

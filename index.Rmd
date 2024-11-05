@@ -8,6 +8,7 @@ output:
     toc: FALSE
     fig_caption: yes
     fontawesome: yes
+    in_header: GA_Script.html
 ---
 
 
@@ -20,6 +21,10 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 </style>
 <div class = "blue">
 <center> **Notes for the busy Nephrologist** </center>
+<br>
+Here you will find a growing collection of nephrology related notes for educational purposes. Topics are developed on a semi-random basis, or on request. Some pages are placeholders.
+
+Please note that KHS resources such as procedures, policies and forms are located on the [**intranet**](rbwhrenal.com)
 
 </div>
 <br>

@@ -1,6 +1,9 @@
 ---
 title: "project1"
-output: html_document
+output:
+  html_document:
+    includes:
+      in_header: GA_Script.html
 ---
 
 ```{r setup, include=FALSE}

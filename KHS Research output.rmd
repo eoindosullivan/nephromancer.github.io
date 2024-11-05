@@ -1,0 +1,114 @@
+---
+title: ""
+output:
+  html_document:
+    includes:
+      in_header: GA_Script.html
+---
+```{r setup, include=FALSE} 
+library(rentrez)  # For fetching PubMed articles
+library(DT)       # For interactive tables
+library(dplyr)    # For data manipulation
+library(httr) 
+library(jsonlite)
+library(rentrez)
+library(reshape)
+library(ggplot2)
+library(knitr)
+library(lubridate)
+
+```
+
+# KHS Research Output
+
+Kidney Health Services at Metro North conducts research aimed at improving patient care and outcomes in kidney health. Our researchers includes professionals from nursing, dietetics, pharmacy, and medical fields, collaborating to address the complex needs of patients with chronic kidney disease and other renal conditions.
+
+We engage in clinical trials as well as undertake basic science based research, ranging from cutting-edge omics technologies to investigate novel therapies and interventions. Our approach emphasizes networked and collaborative strategies, integrating expertise from various disciplines to enhance our understanding of kidney health and disease. This collaborative effort aims to translate research findings into practical applications for patient care.
+
+Reach out if you would like to collaborate or join a research project. 
+
+# KHS Researchers
+
+Contact Eoin with your ORCID/website if you could like to be added to this table.(its still a draft!)
+
+
+```{r, echo=F,eval=T,message=FALSE, warning=FALSE}
+
+
+# Create a dataframe with researcher information
+researchers <- data.frame(
+  Name = c("Eoin O'Sullivan", "Monica Ng", "Saw Yu Mon", "Dharmenaan Palamuthusingam"),
+  ORCID = c("0000-0002-7709-6595", "0000-0002-0431-9110", "", "0000-0003-1505-3482"),
+  Website = c("https://scholar.google.com.au/citations?hl=en&pli=1&user=mKQFjGsAAAAJ", "https://scholar.google.co.uk/citations?hl=en&user=kznyXfMAAAAJ", "https://www.healthhubdoctorsmorayfield.com.au/dr-sarah-mon/", "https://www.researchgate.net/profile/Dharmenaan-Palamuthusingam")
+)
+
+# Arrange the dataframe alphabetically by Name
+researchers <- researchers %>%
+  arrange(Name)
+
+# Modify the ORCID column to include valid ORCID URLs with anchor tags
+researchers$ORCID <- paste0("<a href='https://orcid.org/", researchers$ORCID, "'>", researchers$ORCID, "</a>")
+
+# Modify the Website column to display "link" with a clickable URL
+researchers$Website <- paste0("<a href='", researchers$Website, "'>link</a>")
+
+# Generate the table in HTML format
+kable(researchers, format = "html", escape = FALSE, table.attr = "style='width:100%;'", align = "l")
+  
+```
+
+
+
+
+```{r, echo=FALSE}
+searchstring<-"(Kidney Health Service[Affiliation]) OR (Eoin O'Sullivan) OR (Eoin Daniel O'Sullivan) OR (0000-0002-7709-6595) OR (Monica Ng) OR (0000-0002-0431-9110) OR (Palamuthusingam D) OR (0000-0003-1505-3482) OR (Mon SY) OR (Dwarakanathan Ranganathan)"
+
+search <- entrez_search(db = "pubmed",
+                              term = searchstring, retmax=5000,use_post=TRUE,web_history =T)
+multi_summs <- entrez_summary(db="pubmed", id=search$ids)
+library(ggplot2)
+search_year <- function(year, term){
+    query <- paste(term, "AND (", year, "[PDAT])")
+    entrez_search(db="pubmed", term=query, retmax=0)$count
+}
+
+year <- 2008:2025
+papers <- sapply(year, search_year, term= searchstring, USE.NAMES=FALSE)
+
+data <- data.frame(year, papers)
+
+# Create the ggplot
+ggplot(data, aes(x = year, y = papers)) +
+    geom_line() +                      
+    geom_point() +
+    ggtitle("KHS Research Output - by KHS affiliation & affiliated Researcher output") +   
+    xlab("Year") +                     
+    ylab("Number of Papers") +         
+    theme_bw()                        
+
+```
+
+# Journals
+
+The data above is tabulated and the top 20 journals by frequency of publication are presented below.
+
+
+```{r, echo=FALSE,eval=T}
+
+
+journals <- extract_from_esummary(multi_summs, "source")
+journal_freq <- as.data.frame(table(journals, dnn="journal"), responseName="n.papers")
+
+top_journals <- head(journal_freq[order(-journal_freq$n.papers), ], 20)
+ggplot(top_journals, aes(reorder(journal, n.papers), n.papers)) + 
+    geom_point(size=4) + 
+    coord_flip() + 
+   ylab("Number of papers") +
+ scale_y_continuous(breaks = 1:20,minor_breaks = NULL)+
+    scale_x_discrete("Journal") +
+    theme_minimal() +
+    ggtitle("Top 20 Most Frequent Journals, 2008-2025") 
+
+```
+Methodology: These data are generated in R using a call to the Entrez-pubmed database through the R package "rentrez" (well the excellent fork by [Allen Baron](https://github.com/allenbaron)) that overcomes a search string length limitation. The search term used is a manually updated list of staff names and ORCID IDs, as well as variations on the string "Kidney Health Service[Affiliation]". This isn't an exact (or high yield) process and as such it is likely to be a tad incomplete as well as having a non-zero false positive rate, but for the purposes of graphing trends in output its fairly effective.  
+

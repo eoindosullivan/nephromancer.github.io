@@ -1,0 +1,120 @@
+---
+title: ""
+output: 
+  html_document:
+    includes:
+       in_header: GA_Script.html
+---
+
+##  Public Data in Nephrology: A Researcher’s Roadmap
+
+This page is designed to support nephrology researchers by guiding you to a variety of publicly available data sources, from patient-level registries to multi-omic datasets. Here, you’ll find a curated list of key datasets.
+
+The [accompanying manuscript](Link to paper) provides practical advice on accessing and using these resources to enhance your research. Whether you’re validating a hypothesis, exploring new analytical methods, or developing collaborative projects, we hope these data can advance your work without the high costs associated with data generation. Embrace the opportunity to innovate, discover, and contribute to kidney research in a way that’s efficient, equitable, and accessible to all.
+
+This resource will be continually updated but please [contact us](mailto:eoin.osullivan@health.qld.gov.au) if you have suggestions for new or missing resources.
+
+## Registries
+```{r, echo=FALSE}
+library(readxl)
+library(DT)
+
+# Read data from the Excel file
+registry_data <- read_excel("nephronexus/registries.xlsx", sheet = "Sheet1")
+
+# Render the data frame as a searchable table
+datatable(registry_data, options = list(pageLength = 10, 
+                                         searchHighlight = TRUE, 
+                                         dom = 'Bfrtip',
+                                         buttons = I('["copy", "csv", "excel", "pdf", "print"]')))
+```
+
+## Disease Cohorts
+```{r, echo=FALSE}
+library(readxl)
+library(DT)
+
+# Read data from the Excel file
+registry_data <- read_excel("nephronexus/Cohorts.xlsx", sheet = "Sheet1")
+
+# Render the data frame as a searchable table
+datatable(registry_data, options = list(pageLength = 10, 
+                                         searchHighlight = TRUE, 
+                                         dom = 'Bfrtip',
+                                         buttons = I('["copy", "csv", "excel", "pdf", "print"]')))
+```
+
+## Biobanks
+```{r, echo=FALSE}
+library(readxl)
+library(DT)
+
+# Read data from the Excel file
+registry_data <- read_excel("nephronexus/Biobanks.xlsx", sheet = "Sheet1")
+
+# Render the data frame as a searchable table
+datatable(registry_data, options = list(pageLength = 10, 
+                                         searchHighlight = TRUE, 
+                                         dom = 'Bfrtip',
+                                         buttons = I('["copy", "csv", "excel", "pdf", "print"]')))
+```
+
+## Atlas
+```{r, echo=FALSE}
+library(readxl)
+library(DT)
+
+# Read data from the Excel file
+registry_data <- read_excel("nephronexus/Atlas.xlsx", sheet = "Sheet1")
+
+# Render the data frame as a searchable table
+datatable(registry_data, options = list(pageLength = 10, 
+                                         searchHighlight = TRUE, 
+                                         dom = 'Bfrtip',
+                                         buttons = I('["copy", "csv", "excel", "pdf", "print"]')))
+```
+
+## Single Cell
+```{r, echo=FALSE}
+library(readxl)
+library(DT)
+
+# Read data from the Excel file
+registry_data <- read_excel("nephronexus/Single Cell.xlsx", sheet = "Sheet1")
+
+# Render the data frame as a searchable table
+datatable(registry_data, options = list(pageLength = 10, 
+                                         searchHighlight = TRUE, 
+                                         dom = 'Bfrtip',
+                                         buttons = I('["copy", "csv", "excel", "pdf", "print"]')))
+```
+
+## Genetics
+```{r, echo=FALSE}
+library(readxl)
+library(DT)
+
+# Read data from the Excel file
+registry_data <- read_excel("nephronexus/Genomics.xlsx", sheet = "Sheet1")
+
+# Render the data frame as a searchable table
+datatable(registry_data, options = list(pageLength = 10, 
+                                         searchHighlight = TRUE, 
+                                         dom = 'Bfrtip',
+                                         buttons = I('["copy", "csv", "excel", "pdf", "print"]')))
+```
+
+## AI training
+```{r, echo=FALSE}
+library(readxl)
+library(DT)
+
+# Read data from the Excel file
+registry_data <- read_excel("nephronexus/AI.xlsx", sheet = "Sheet1")
+
+# Render the data frame as a searchable table
+datatable(registry_data, options = list(pageLength = 10, 
+                                         searchHighlight = TRUE, 
+                                         dom = 'Bfrtip',
+                                         buttons = I('["copy", "csv", "excel", "pdf", "print"]')))
+```

@@ -1,0 +1,36 @@
+---
+title: ""
+output:
+  html_document:
+    toc: false
+    includes:
+      in_header: GA_Script.html
+---
+
+```{r setup, include=FALSE} 
+library(httr) 
+library(jsonlite)
+library(ggplot2)
+library(knitr)
+library(htmltools)
+```
+
+Email Eoin if you want your post to be included!
+
+# KHS Posters 2024
+
+```{r, echo=FALSE, eval=TRUE}
+# Load htmltools for HTML generation
+library(htmltools)
+
+# List of image files
+poster_files <- list.files(path = "posters", pattern = "\\.(png|jpg|jpeg)$", full.names = TRUE)
+
+# Create HTML tags for images
+image_tags <- lapply(poster_files, function(file) {
+  tags$img(src = file, style = "width: 100%;", alt = basename(file))
+})
+
+# Print images
+do.call(tagList, image_tags)
+# dont forget the script in the G drive to mass convert the pdfs in python! nice one Mate!

@@ -1,4 +1,12 @@
-# **Advanced Trainee Resource Guide 2023**
+---
+title: " "
+output:
+  html_document:
+    includes:
+      in_header: GA_Script.html
+---
+
+# **Advanced Trainee Resource Guide**
 
 The following is an overview of some of the educational resources available to support your training. Self-Directed learning is an essential part of your training needed to supplement training and clinical practice (in addition to usual Journal clubs, CME, M&M etc). Lifelong learning is a key pillar of high quality modern medical practice, so finding the resources, forming the habits and following a workflow that suits your learning style and life best is important as it will support your practice throughout your career. This page will be updated during the year as a webpage which can be found [here](http://www.renalmedicine.net/educational).
 

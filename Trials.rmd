@@ -1,10 +1,13 @@
 ---
 title: " "
-output: html_document
+output: 
+  html_document:
+    includes:
+       in_header: GA_Script.html
 ---
 
 
-#### Contact research nurses for screening & enrolment
+#### Under revision, more useful, newer page due Q4 2024!
 
 
 <br>

@@ -1,6 +1,9 @@
 ---
-title: ""
-output: html_document
+title: " "
+output:
+  html_document:
+    toc: false
+    in_header: GA_Script.html
 ---
 
 ```{r setup, include=FALSE} 
@@ -9,21 +12,50 @@ library(DT)       # For interactive tables
 library(dplyr)    # For data manipulation
 library(httr) 
 library(jsonlite)
-library(rentrez)
 library(reshape)
 library(ggplot2)
 ```
 
+
 # KHS Publications 
 
-This list is work in progress, Im refining the search terms to reduce false postivies.
+<br>
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class = "blue">
+        
+This is a non exhaustive list of recent publications pulled at each website update from Pubmed. 
+This serves to give a flavour of the breath of medical research undertaken in association with the KHS at Metro North, rather than a complete repository. 
+Research work will be captured if the "Kidney Health Service" Metro North is a listed affiliation. 
+Listing middle authors would render the table unreadable - their contribution is no less valuable. 
+Outputs such as chapters, those in press, and not listed on pubmed wont be pulled via this method, nor will the multiple variations of "Kidney Health Service" that one may enter during submission process. 
+Finally, note the change in the name to KHS is recent, so prior to that , affiliation based enteries will not be found.
+If you want to be included here and have non KHS work noted, send Eoin your ORCID to improve completeness.
 
-Please email me your ORCID ID if you want to be included
+</div>
+<br>
+      
+ 
 
+  
 ```{r, echo=F, eval=T}
+searchstring<-"(Kidney Health Service[Affiliation]) OR (0000-0002-7709-6595) OR (0000-0002-0431-9110) OR (0000-0003-1505-3482) OR (0000-0003-4342-5300) OR (0000-0003-1215-1773) or (0000-0002-6294-0060)"
+
 search <- entrez_search(db = "pubmed",
-                        term = "(kidney health service metro north) OR (Eoin O'Sullivan) OR (Eoin Daniel O'Sullivan) OR (0000-0002-7709-6595) OR (Monica Ng) OR (0000-0002-0431-9110)", retmax=5000)
+                        term = searchstring, retmax=5000)
 multi_summs <- entrez_summary(db="pubmed", id=search$ids)
-date_and_cite <- extract_from_esummary(multi_summs, c("title","fulljournalname","pubdate","lastauthor", "pmcrefcount"))
-knitr::kable((t(date_and_cite)), row.names=FALSE, col.names = c("Title", "Journal Name", "Publication Date", "Last Author", "PMC Ref Count"))  
+
+date_and_cite <- extract_from_esummary(multi_summs, c("title","fulljournalname","pubdate","sortfirstauthor","lastauthor","uid" ))
+knitr::kable((t(date_and_cite)), row.names=F, col.names = c("Title", "Journal", "Publication Date", "First Author", "Last Author","PMID"))  
 ```
+```{r, echo=F, eval=F}
+#ORCIDS
+#0000-0002-7709-6595 EOS
+#0000-0002-0431-9110 MN
+#0000-0003-1505-3482 DP
+#0000-0003-4342-5300 HH
+#0000-0003-1215-1773 Dwaraka
+#0000-0002-6294-0060 SC
+```
+
