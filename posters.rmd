@@ -1,6 +1,8 @@
 ---
-title: ""
+title: ''
 output:
+  pdf_document:
+    toc: false
   html_document:
     toc: false
     includes:
@@ -15,7 +17,7 @@ library(knitr)
 library(htmltools)
 ```
 
-Email Eoin if you want your post to be included!
+Email Eoin if you want your poster or abstract to be showcased here.
 
 # KHS Posters 2024
 
