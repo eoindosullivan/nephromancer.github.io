@@ -11,7 +11,7 @@
 
 
 
-<title>Curios.knit</title>
+<title>TX cheat Sheet</title>
 
 <script src="site_libs/header-attrs-2.28/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -29,19 +29,7 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
-<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
-<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
-<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S761Y2PE6H"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    
-    gtag('config', 'G-S761Y2PE6H');
-    </script>
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -220,75 +208,6 @@ $(document).ready(function () {
 
 
 
-<style type="text/css">
-
-#TOC {
-  margin: 25px 0px 20px 0px;
-}
-@media (max-width: 768px) {
-#TOC {
-  position: relative;
-  width: 100%;
-}
-}
-
-@media print {
-.toc-content {
-  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
-  float: right;
-}
-}
-
-.toc-content {
-  padding-left: 30px;
-  padding-right: 40px;
-}
-
-div.main-container {
-  max-width: 1200px;
-}
-
-div.tocify {
-  width: 20%;
-  max-width: 260px;
-  max-height: 85%;
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  div.tocify {
-    width: 25%;
-  }
-}
-
-@media (max-width: 767px) {
-  div.tocify {
-    width: 100%;
-    max-width: none;
-  }
-}
-
-.tocify ul, .tocify li {
-  line-height: 20px;
-}
-
-.tocify-subheader .tocify-item {
-  font-size: 0.90em;
-}
-
-.tocify .list-group-item {
-  border-radius: 0px;
-}
-
-.tocify-subheader {
-  display: inline;
-}
-.tocify-subheader .tocify-item {
-  font-size: 0.95em;
-}
-
-</style>
-
-
 
 </head>
 
@@ -296,16 +215,6 @@ div.tocify {
 
 
 <div class="container-fluid main-container">
-
-
-<!-- setup 3col/9col grid for toc_float and main content  -->
-<div class="row">
-<div class="col-xs-12 col-sm-4 col-md-3">
-<div id="TOC" class="tocify">
-</div>
-</div>
-
-<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -601,48 +510,24 @@ div.tocify {
 
 
 
+<h1 class="title toc-ignore">TX cheat Sheet</h1>
 
 </div>
 
 
-<p>A collection of oddities I stumbled across in my wanderings</p>
-<div id="aki" class="section level1">
-<h1>AKI</h1>
-<p><a
-href="http://www.ectrx.org/detail/supplement/2023/21/6/2/87/0">Acute
-Kidney Injury as a Leading Cause of Papal Deaths in the Years 1277 to
-2005: A Review of 21 Cases</a></p>
-<ul>
-<li>26.9% of Popes died of AKI, 95% of which were sepsis. Mean age 69.4
-+- 2.26. 28.6% stroked out.</li>
-<li>John XXI in 1277 died of crush syndrome</li>
-<li>Lots of gout, stones and urosepsis.</li>
-</ul>
-<p><a href="10.1016/j.wem.2020.11.003">Acute Kidney Injury Following
-Star Fruit Ingestion: A Case Series</a></p>
-<ul>
-<li>Full of oxalate, crystals in urine.</li>
-<li>Calcium oxalate birefringent under polarised light on the
-biopsies</li>
-<li>50% RRT for 1 week</li>
-</ul>
-</div>
-<div id="electrolytes" class="section level1">
-<h1>Electrolytes</h1>
-<p><a href="https://pubmed.ncbi.nlm.nih.gov/24550410/">Death by
-coconut</a></p>
-<ul>
-<li>Did not actually die. K hit 7.8, (AKI helped).</li>
-<li>Coconut water: Delicious but hypotonic, acidic, 230ml/1 cup = 600mg
-potassium= 2 slow K tablet ( a slow K has 600mg KCL so ~ 315mg K+
-ion).</li>
-</ul>
+<p>This is a cheat sheet I used from a previous role at Royal Infirmary
+of Edinburgh. Please be aware that transplant practice varies between
+and within countries, and is highly individualised to the patient. That
+said, it may be a useful starting point to a newcomer, to give a sense
+of a fairly typical regime and some generic thoughts about
+medications.</p>
+<div class="float">
+<img src="images/tx_cheat_sheet_2.jpg" alt="RIE Tx cheat sheet" />
+<div class="figcaption">RIE Tx cheat sheet</div>
 </div>
 
 
 
-</div>
-</div>
 
 </div>
 
@@ -675,35 +560,6 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
-<script>
-$(document).ready(function ()  {
-
-    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
-    $('.unlisted.unnumbered').addClass('toc-ignore')
-
-    // move toc-ignore selectors from section div to header
-    $('div.section.toc-ignore')
-        .removeClass('toc-ignore')
-        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
-
-    // establish options
-    var options = {
-      selectors: "h1,h2",
-      theme: "bootstrap3",
-      context: '.toc-content',
-      hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
-      },
-      ignoreSelector: ".toc-ignore",
-      scrollTo: 0
-    };
-    options.showAndHide = false;
-    options.smoothScroll = true;
-
-    // tocify
-    var toc = $("#TOC").tocify(options).data("toc-tocify");
-});
-</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

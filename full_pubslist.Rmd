@@ -30,7 +30,7 @@ This serves to give a flavour of the breath of medical research undertaken in as
 Research work will be captured if the "Kidney Health Service" Metro North is a listed affiliation. 
 Listing middle authors would render the table unreadable - their contribution is no less valuable. 
 Outputs such as chapters, those in press, and not listed on pubmed wont be pulled via this method, nor will the multiple variations of "Kidney Health Service" that one may enter during submission process. 
-Finally, note the change in the name to KHS is recent, so prior to that , affiliation based enteries will not be found.
+Finally, note the change in the name to KHS is recent, so prior to that , affiliation based entries will not be found.
 If you want to be included here and have non KHS work noted, send Eoin your ORCID to improve completeness.
 
 </div>
@@ -40,7 +40,7 @@ If you want to be included here and have non KHS work noted, send Eoin your ORCI
 
   
 ```{r, echo=F, eval=T}
-searchstring<-"(Kidney Health Service[Affiliation]) OR (0000-0002-7709-6595) OR (0000-0002-0431-9110) OR (0000-0003-1505-3482) OR (0000-0003-4342-5300) OR (0000-0003-1215-1773) or (0000-0002-6294-0060) or (0000-0003-4342-5300)"
+searchstring<-"(Kidney Health Service[Affiliation]) OR (0000-0002-7709-6595) OR (0000-0002-0431-9110) OR (0000-0003-1505-3482) OR (0000-0003-4342-5300) OR (0000-0003-1215-1773) or (0000-0002-6294-0060) or (0000-0003-4342-5300)or (0000-0002-6294-0060) or (0000-0001-6145-1591) or (0000-0002-7870-5073) or (0000-0002-6024-7684) or (0000-0003-1215-1773) or (0000-0003-3142-9195) or (0000-0003-1656-2385) or (0000-0003-0752-4651)"
 
 search <- entrez_search(db = "pubmed",
                         term = searchstring, retmax=5000)

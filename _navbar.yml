@@ -61,19 +61,19 @@ left:
   - text: "CKD"
     menu:
       - text: "Checklist"
-        href: ./project1.html
+        href: ./project2.html
       - text: "Conservative care"
-        href: ./project1.html
+        href: ./project2.html
       - text: "Anaemia"
         href: ./anaemia.html
       - text: "Pruritis"
-        href: ./project1.html
+        href: ./project2.html
       - text: "CKD-MBD"
         href: ./renalbone.html
   - text: "TX"
     menu:
        - text: "Cheat sheet"
-         href: ./project1.html
+         href: ./tx_cheat.html
        - text: "Misc Notes"
          href: ./txnotes.html
        - text: "Non Kidney Tx"
@@ -83,15 +83,15 @@ left:
       - text: "HD"
         href: ./HD.html
       - text: "Home HD"
-        href: ./project1.html
+        href: ./project2.html
       - text: "HD Access"
-        href: ./project1.html
+        href: ./project2.html
       - text: "PD"
-        href: ./project1.html
+        href: ./project2.html
       - text: "CVVH"
-        href: ./project1.html
+        href: ./project2.html
       - text: "PEX"
-        href: ./project1.html
+        href: ./project2.html
   - text: "DRUGS"
     menu:
       - text: "Anticoagulation"
@@ -137,6 +137,3 @@ left:
        - text: "Patient Resources"
          href: ./patient_resources.html
          
-right:
-  - icon: fas fa-home
-    href: https:eoindosullivan.com

@@ -27,19 +27,18 @@ We engage in clinical trials as well as undertake basic science based research, 
 
 Reach out if you would like to collaborate or join a research project. 
 
-# KHS Researchers
 
-Contact Eoin with your ORCID/website if you could like to be added to this table.(its still a draft!)
-
-
-```{r, echo=F,eval=T,message=FALSE, warning=FALSE}
+```{r, echo=F,eval=F,message=FALSE, warning=FALSE}
 
 
 # Create a dataframe with researcher information
 researchers <- data.frame(
-  Name = c("Eoin O'Sullivan", "Monica Ng", "Saw Yu Mon", "Dharmenaan Palamuthusingam","Helen Healy"),
-  ORCID = c("0000-0002-7709-6595", "0000-0002-0431-9110", "tbc", "0000-0003-1505-3482","0000-0003-4342-5300"),
-  Website = c("https://scholar.google.com.au/citations?hl=en&pli=1&user=mKQFjGsAAAAJ", "https://scholar.google.co.uk/citations?hl=en&user=kznyXfMAAAAJ", "https://www.healthhubdoctorsmorayfield.com.au/dr-sarah-mon/", "https://www.researchgate.net/profile/Dharmenaan-Palamuthusingam","https://cre-ckd.centre.uq.edu.au/profile/47/helen-healy")
+  Name = c("Eoin O'Sullivan", "Monica Ng", "Saw Yu Mon", "Dharmenaan Palamuthusingam","Helen Healy","Shaun Chandler","George John","Martin Wooley","Sharad Ratanjee","Dwarakanathan Ranganathan","Kirsten Hepburn","Brian Doucet","Prianka Puri","Madhivanan Sundaram"),
+  
+  ORCID = c("0000-0002-7709-6595", "0000-0002-0431-9110", "tbc", "0000-0003-1505-3482","0000-0003-4342-5300","0000-0002-6294-0060","0000-0001-6145-1591","0000-0002-7870-5073","0000-0002-6024-7684","0000-0003-1215-1773","0000-0003-3142-9195","0000-0003-1656-2385","0000-0003-0752-4651","0000-0002-7331-441X"),
+  
+  Website = c("https://scholar.google.com.au/citations?hl=en&pli=1&user=mKQFjGsAAAAJ", "https://scholar.google.co.uk/citations?hl=en&user=kznyXfMAAAAJ", "https://www.healthhubdoctorsmorayfield.com.au/dr-sarah-mon/", "https://www.researchgate.net/profile/Dharmenaan-Palamuthusingam","https://cre-ckd.centre.uq.edu.au/profile/47/helen-healy","https://orcid.org/0000-0002-6294-0060","https://www.researchgate.net/profile/George-John-11","https://www.webofscience.com/wos/author/record/P-1554-2015","https://www.researchgate.net/profile/Sharad-Ratanjee","https://www.researchgate.net/profile/Dwarakanathan-Ranganathan","https://orcid.org/0000-0003-3142-9195","https://www.researchgate.net/profile/Brian-Doucet-3","https://www.researchgate.net/profile/Prianka-Puri","https://www.researchgate.net/profile/Madhivanan-Sundaram")
+  
 )
 
 # Arrange the dataframe alphabetically by Name
@@ -61,7 +60,7 @@ kable(researchers, format = "html", escape = FALSE, table.attr = "style='width:1
 
 
 ```{r, echo=FALSE}
-searchstring<-"(Kidney Health Service[Affiliation]) OR (Eoin O'Sullivan) OR (Eoin Daniel O'Sullivan) OR (0000-0002-7709-6595) OR (Monica Ng) OR (0000-0002-0431-9110) OR (Palamuthusingam D) OR (0000-0003-1505-3482) OR (Mon SY) OR (Dwarakanathan Ranganathan)"
+searchstring<-"(Kidney Health Service[Affiliation]) OR (Eoin O'Sullivan) OR (Eoin Daniel O'Sullivan) OR (0000-0002-7709-6595) OR (Monica Ng) OR (0000-0002-0431-9110) OR (Palamuthusingam D) OR (0000-0003-1505-3482) OR (Mon SY) OR (Dwarakanathan Ranganathan) OR (0000-0002-7709-6595) OR (0000-0002-0431-9110) OR (0000-0003-1505-3482) OR (0000-0003-4342-5300) OR (0000-0003-1215-1773) or (0000-0002-6294-0060) or (0000-0003-4342-5300)or (0000-0002-6294-0060) or (0000-0001-6145-1591) or (0000-0002-7870-5073) or (0000-0002-6024-7684) or (0000-0003-1215-1773) or (0000-0003-3142-9195) or (0000-0003-1656-2385) or (0000-0003-0752-4651)"
 
 search <- entrez_search(db = "pubmed",
                               term = searchstring, retmax=5000,use_post=TRUE,web_history =T)
@@ -112,5 +111,5 @@ ggplot(top_journals, aes(reorder(journal, n.papers), n.papers)) +
 ```
 
 
-Methodology: These data are generated in R using a call to the Entrez-pubmed database through the R package "rentrez" (well the excellent fork by [Allen Baron](https://github.com/allenbaron)) that overcomes a search string length limitation. The search term used is a manually updated list of staff names and ORCID IDs, as well as variations on the string "Kidney Health Service[Affiliation]". This isn't an exact (or high yield) process and as such it is likely to be a tad incomplete as well as having a non-zero false positive rate, but for the purposes of graphing trends in output its fairly effective.  
+Methodology: These data are generated in R using a call to the Entrez-pubmed database through the R package "rentrez" - well the excellent fork by [Allen Baron](https://github.com/allenbaron) that overcomes a search string length limitation. The search term used is a manually updated list of staff names and ORCID IDs, as well as variations on the string "Kidney Health Service[Affiliation]". This isn't an exact (or high yield) process and as such it is likely to be a tad incomplete as well as having a non-zero false positive rate, but for the purposes of graphing trends in output its fairly effective.  
 

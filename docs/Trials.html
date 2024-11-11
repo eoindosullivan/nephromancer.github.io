@@ -11,7 +11,7 @@
 
 
 
-<title>Trials.knit</title>
+<title>Active Trials</title>
 
 <script src="site_libs/header-attrs-2.28/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -29,12 +29,19 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
-<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
-<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
-<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
+<link href="site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet" />
+<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="site_libs/datatables-binding-0.33/datatables.js"></script>
+<link href="site_libs/dt-core-1.13.6/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="site_libs/dt-core-1.13.6/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="site_libs/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
+<link href="site_libs/dt-plugin-searchhighlight-1.13.6/source.css" rel="stylesheet" />
+<script src="site_libs/dt-plugin-searchhighlight-1.13.6/jquery.highlight.js"></script>
+<script src="site_libs/dt-plugin-searchhighlight-1.13.6/source.min.js"></script>
+<link href="site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet" />
+<script src="site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
 <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-S761Y2PE6H"></script>
     <script>
@@ -222,75 +229,6 @@ $(document).ready(function () {
 
 
 
-<style type="text/css">
-
-#TOC {
-  margin: 25px 0px 20px 0px;
-}
-@media (max-width: 768px) {
-#TOC {
-  position: relative;
-  width: 100%;
-}
-}
-
-@media print {
-.toc-content {
-  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
-  float: right;
-}
-}
-
-.toc-content {
-  padding-left: 30px;
-  padding-right: 40px;
-}
-
-div.main-container {
-  max-width: 1200px;
-}
-
-div.tocify {
-  width: 20%;
-  max-width: 260px;
-  max-height: 85%;
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  div.tocify {
-    width: 25%;
-  }
-}
-
-@media (max-width: 767px) {
-  div.tocify {
-    width: 100%;
-    max-width: none;
-  }
-}
-
-.tocify ul, .tocify li {
-  line-height: 20px;
-}
-
-.tocify-subheader .tocify-item {
-  font-size: 0.90em;
-}
-
-.tocify .list-group-item {
-  border-radius: 0px;
-}
-
-.tocify-subheader {
-  display: inline;
-}
-.tocify-subheader .tocify-item {
-  font-size: 0.95em;
-}
-
-</style>
-
-
 
 </head>
 
@@ -298,16 +236,6 @@ div.tocify {
 
 
 <div class="container-fluid main-container">
-
-
-<!-- setup 3col/9col grid for toc_float and main content  -->
-<div class="row">
-<div class="col-xs-12 col-sm-4 col-md-3">
-<div id="TOC" class="tocify">
-</div>
-</div>
-
-<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -440,16 +368,16 @@ div.tocify {
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="./project1.html">Checklist</a>
+      <a href="./project2.html">Checklist</a>
     </li>
     <li>
-      <a href="./project1.html">Conservative care</a>
+      <a href="./project2.html">Conservative care</a>
     </li>
     <li>
       <a href="./anaemia.html">Anaemia</a>
     </li>
     <li>
-      <a href="./project1.html">Pruritis</a>
+      <a href="./project2.html">Pruritis</a>
     </li>
     <li>
       <a href="./renalbone.html">CKD-MBD</a>
@@ -464,7 +392,7 @@ div.tocify {
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="./project1.html">Cheat sheet</a>
+      <a href="./tx_cheat.html">Cheat sheet</a>
     </li>
     <li>
       <a href="./txnotes.html">Misc Notes</a>
@@ -485,19 +413,19 @@ div.tocify {
       <a href="./HD.html">HD</a>
     </li>
     <li>
-      <a href="./project1.html">Home HD</a>
+      <a href="./project2.html">Home HD</a>
     </li>
     <li>
-      <a href="./project1.html">HD Access</a>
+      <a href="./project2.html">HD Access</a>
     </li>
     <li>
-      <a href="./project1.html">PD</a>
+      <a href="./project2.html">PD</a>
     </li>
     <li>
-      <a href="./project1.html">CVVH</a>
+      <a href="./project2.html">CVVH</a>
     </li>
     <li>
-      <a href="./project1.html">PEX</a>
+      <a href="./project2.html">PEX</a>
     </li>
   </ul>
 </li>
@@ -593,12 +521,7 @@ div.tocify {
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li>
-  <a href="https:eoindosullivan.com">
-    <span class="fas fa-home"></span>
-     
-  </a>
-</li>
+        
       </ul>
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
@@ -608,216 +531,37 @@ div.tocify {
 
 
 
+<h1 class="title toc-ignore">Active Trials</h1>
 
 </div>
 
 
-<div id="under-revision-more-useful-newer-page-due-q4-2024"
-class="section level4">
-<h4>Under revision, more useful, newer page due Q4 2024!</h4>
+<style>
+/* Hide navbar completely */
+.navbar {
+  display: none !important;
+}
+</style>
+<br>
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class="blue">
+<p>The follow trials are actively recruiting participants across the
+Kidney Health Service of Metro North.</p>
+<p>If you would like to know more about any trial, refer a potential
+participant, or if you are a person living with a condition being
+studied and would like to enquire about participation please speak to
+any of your medical team for details, or email <a
+href="mailto:mnkhs_research@health.qld.gov.au"
+class="email">mnkhs_research@health.qld.gov.au</a></p>
+</div>
 <p><br></p>
-</div>
-<div id="adpkd" class="section level1">
-<h1>ADPKD</h1>
-<p><br></p>
-<div id="impede" class="section level2">
-<h2>IMPEDE</h2>
-<p>Metformin vs Placebo for patients with ADPKD</p>
-<p><strong>Inclusion Criteria</strong></p>
-<ul>
-<li>eGFR &gt;45</li>
-<li>Can be on tolvaptan</li>
-</ul>
-<p><br></p>
-</div>
-</div>
-<div id="hd" class="section level1">
-<h1>HD</h1>
-<p><br></p>
-<div id="acheive" class="section level2">
-<h2>ACHEIVE</h2>
-<p>Spiro vs Placebo in patients on HD</p>
-<p><strong>Inclusion Criteria</strong></p>
-<ul>
-<li>on HD or PD &gt;= 3/12</li>
-<li>&gt;45 yo</li>
-<li>&gt;18 if DM</li>
-<li>Exluded if K+ &gt;5.8</li>
-</ul>
-<p><br></p>
-</div>
-</div>
-<div id="ckd" class="section level1">
-<h1>CKD</h1>
-<p><br></p>
-</div>
-<div id="gn---lupus" class="section level1">
-<h1>GN - LUPUS</h1>
-<p><br></p>
-<div id="alxn-1210" class="section level2">
-<h2>ALXN 1210</h2>
-<p><strong>A Phase 2, Double-Blind, Randomized, Placebo-Controlled Study
-to Evaluate the Efficacy and Safety of Ravulizumab in Adult Participants
-With Proliferative Lupus Nephritis (LN) or Immunoglobulin A Nephropathy
-completed (IgAN)</strong></p>
-<ul>
-<li><strong>Ravulizumab</strong> is a humanized monoclonal antibody
-which inhibits complement component 5</li>
-<li>Similar to eculizumab but much longer acting</li>
-<li>PBS approved for PNH</li>
-<li>There is substantial interest in the role of complement pathway in
-lupus nephritis</li>
-</ul>
-<p><strong>Inclusion Criteria</strong></p>
-<ul>
-<li>Age between 18 and 75</li>
-<li>Body weight &gt;40kg</li>
-<li>Must be vaccinated or agree to be vaccinated against Meningococcal
-infection, Haemophilus influenza type b and Streptococcus pneumoniae
-prior to randomization.</li>
-<li>Participants on SGLT-2 inhibitors must be on a stable dose 12 weeks
-prior to screening</li>
-<li>Kidney biopsy diagnosed class III or class IV LN within 6mths of
-screening or during screening</li>
-<li>Clinical diagnosis of SLE</li>
-<li>Proteinuria with UPCR ≥ 1g/g</li>
-</ul>
-<p><br></p>
-</div>
-</div>
-<div id="gn---fsgs" class="section level1">
-<h1>GN - FSGS</h1>
-<p><br></p>
-<div id="affinity" class="section level2">
-<h2>AFFINITY</h2>
-<p>A Phase 2, Open-Label, Basket Study of Atrasentan in Patients with
-Proteinuric Glomerular Diseases</p>
-<p>The Phase 2 AFFINITY study will assess the efficacy and safety of
-atrasentan in patients with proteinuric glomerular diseases at risk of
-progressive kidney function loss.</p>
-<p>Cohort 2 – FSGS</p>
-<p><strong>Inclusion Criteria</strong></p>
-<ul>
-<li>Biopsy confirmed FSGS</li>
-<li>UPCR&gt;1.5g/g</li>
-<li>eGFR ≥ 30mL/min/1.73m2</li>
-<li>Receiving RAS inhibitor stable for 12 weeks pre screening</li>
-<li>If receiving systemic corticosteriods or calcineurin inhibitors,
-dose must be stable for 12 weeks pre screening</li>
-<li>BMI &lt; 40 Kg/m2</li>
-</ul>
-<p><br></p>
-</div>
-<div id="bi-1434" class="section level2">
-<h2>BI 1434</h2>
-<p>A multicentre, randomized, double-blind, parallel group, placebo
-controlled study to assess safety, tolerability, pharmacokinetics and
-pharmacodynamics of BI 764198 administered orally once daily for 12
-weeks in patients with focal segmental glomerulosclerosis.</p>
-<p>BI 764198 is a potent inhibitor of human TRPC6</p>
-<p><strong>Inclusion Criteria</strong></p>
-<ul>
-<li>18 – 75 and able to sign Informed Consent</li>
-<li>Biopsy Proven FSGS or documented TRPC6 mutation</li>
-<li>UPCR ≥ 1000mg/g</li>
-<li>Completion of initial corticosteroid therapy (if applicable).</li>
-<li>Patients treated with corticosteroids must be on a stable dose for
-at least 4 weeks prior to</li>
-<li>screening visit with no plan to change the dose until end of trial
-treatment.</li>
-<li>Pt’s treated with ACE inhibitors, ARBs, finerenone, aldosterone
-inhibitors, or SGLT2 inhibitors should be on a stable dose for &gt;4
-weeks before screening visit with no plan to change the dose until the
-end of trial treatment.</li>
-</ul>
-<p><br></p>
-</div>
-</div>
-<div id="gn---nephrotic-syn" class="section level1">
-<h1>GN - NEPHROTIC SYN</h1>
-<p><br></p>
-<div id="apaxans" class="section level2">
-<h2>APAXANS</h2>
-<p>This study will evaluate primarily the pharmacokinetics and safety
-and efficacy of apixaban as a preventative for venous thromboembolism in
-patients with nephrotic syndrome as compared to warfarin</p>
-<p><strong>Inclusion Criteria</strong></p>
-<ul>
-<li>All adult patients with nephrotic syndrome with serum albumin
-&lt;25g/L (<em>for prevention of nephrotic syndrome related thrombotic
-disease</em>)</li>
-<li>Minimum age: 18 years /Maximum age: No Limit/Gender: both male and
-female</li>
-</ul>
-<p><strong>Exclusion Criteria</strong></p>
-<ul>
-<li>eGFR of less than 25mL/min /Patients requiring any form of
-dialysis</li>
-<li>Abnormal liver dysfunction {defined as chronic Liver Disease
-(Child-Pugh score of B or C cirrhosis) or biochemical evidence of
-significant hepatic derangement (bilirubin 2-3 times the upper limit of
-normal, in association with aspartate transaminase (AST) or alkaline
-phosphatase (ALP) levels 3 times the upper limit normal).}</li>
-<li>Known hereditary or acquired bleeding disorders</li>
-<li>Antiphospholipid syndrome</li>
-<li>Haemoglobin (Hb) &lt;90g/L/ Platelets &lt;100,000/ul</li>
-</ul>
-<p><br></p>
-</div>
-</div>
-<div id="gn---anca" class="section level1">
-<h1>GN - ANCA</h1>
-<p><br></p>
-<div id="anca-relapse" class="section level2">
-<h2>ANCA Relapse</h2>
-<p><strong>Inclusion Criteria</strong></p>
-<p>Existing and new patients with confirmed ANCA + ve vasculitis
-attending follow-up for ongoing monitoring <br></p>
-</div>
-</div>
-<div id="registries" class="section level1">
-<h1>Registries</h1>
-<p><strong>Three registries are ongoing.</strong></p>
-<ul>
-<li>QRBR – Inclusion criteria: patients undergoing renal biopsy</li>
-<li>aHUS Registry- Inclusion criteria- Patients diagnosed to have aHUS
-(received/receiving Eculizumab)</li>
-<li>AUSLUPUS Registry- Inclusion criteria – Patients diagnosed to have
-SLE/Lupus Nephritis</li>
-</ul>
-</div>
-<div id="previous-trials-recruited-in-khs" class="section level1">
-<h1>Previous Trials recruited in KHS</h1>
-<p>Data collected from 2023 onwards</p>
-<div id="falcon" class="section level3">
-<h3>FALCON</h3>
-<p>Bardoxylone vs Placebo for patients with ADPKD</p>
-<p><strong>Recruitment stopped Q1 2023</strong></p>
-</div>
-<div id="affinity-1" class="section level3">
-<h3>AFFINITY</h3>
-<p>A Phase 2, Open-Label, Basket Study of Atrasentan in Patients with
-Proteinuric Glomerular Diseases</p>
-<p><strong>Alports population recruitment stopped Q1 2023</strong></p>
-</div>
-<div id="phosphate" class="section level3">
-<h3>PHOSPHATE</h3>
-<p>Phosphate targets of &lt;= 1.5 vs 2-2.5 in patients on HD</p>
-<p><strong>Recruitment target met Q2 2023</strong></p>
-</div>
-<div id="align" class="section level3">
-<h3>ALIGN</h3>
-<p>A Phase 3, Randomized, Double-blind, Placebo-controlled Study of
-Atrasentan in Patients with IgA Nephropathy at Risk of Progressive Loss
-of Renal Function</p>
-<p><strong>Recruitment finished Q2 2023</strong></p>
-</div>
-</div>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-842f9b8099cd4bb0fa8d" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-842f9b8099cd4bb0fa8d">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16"],[null,null,null,null,null,null,"IgA Nephropathy","ANCA",null,"Glomerulonephritis","ADPKD","Haemodilaysis","Haemodilaysis","Lupus Nephritis","Haemodilaysis",null],["AbbVie ADPKD Study_M25-147","ACHIEVE","AFFINITY","AHUS","ALIGN","ALXN1210-202","ALXN1210-IGAN","ANCA VASCULITIS Relapse","BI 1434-0004","DOAC-APAXANS","IMPEDE","INCH HD","PHOSPHATE","Machines LN","RENAL LIFECYCLE TRIAL","PHYOX"],[null,null,null,null,null,null,null,"Observational: ANCA titres predict relaplse",null,"Apixiban vs warfarin","Metformin vs Placebo",null,"normal vs tight phosphate control","biomarkers in lupus","SGTL2i in HD",null],[null,null,null,null,null,null,null,"ANCA associated vasculitis",null,"Nephrotic syndrome","ADPKD",null,"Haemodilaysis","Lupus Nephritis","Haemodilaysis",null],["MW","MW","DP","SC","DP","MN","MN","DR","MN","SC","MW","SC","SR","PP","DP","MW"],[null,null,"MW",null,"MW",null,null,null,"MW",null,"EOS",null,null,"EOS, SC",null,"MP"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Condition<\/th>\n      <th>Name<\/th>\n      <th>Study Design<\/th>\n      <th>Inclusion Criteria<\/th>\n      <th>PI<\/th>\n      <th>SUB PI<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":20,"searchHighlight":true,"dom":"Bfrtip","buttons":["[\"copy\", \"csv\", \"excel\", \"pdf\", \"print\"]"],"columnDefs":[{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"Condition","targets":1},{"name":"Name","targets":2},{"name":"Study Design","targets":3},{"name":"Inclusion Criteria","targets":4},{"name":"PI","targets":5},{"name":"SUB PI","targets":6}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[10,20,25,50,100]}},"evals":[],"jsHooks":[]}</script>
 
 
 
-</div>
-</div>
 
 </div>
 
@@ -850,35 +594,6 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
-<script>
-$(document).ready(function ()  {
-
-    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
-    $('.unlisted.unnumbered').addClass('toc-ignore')
-
-    // move toc-ignore selectors from section div to header
-    $('div.section.toc-ignore')
-        .removeClass('toc-ignore')
-        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
-
-    // establish options
-    var options = {
-      selectors: "h1,h2",
-      theme: "bootstrap3",
-      context: '.toc-content',
-      hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
-      },
-      ignoreSelector: ".toc-ignore",
-      scrollTo: 0
-    };
-    options.showAndHide = false;
-    options.smoothScroll = true;
-
-    // tocify
-    var toc = $("#TOC").tocify(options).data("toc-tocify");
-});
-</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

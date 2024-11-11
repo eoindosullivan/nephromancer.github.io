@@ -1,41 +1,88 @@
 ---
-title: " "
+title: "Assorted K+ things"
 output: 
   html_document:
     includes:
        in_header: GA_Script.html
 ---
 
-# HypoKalaemia
+## HypoK periodic paralysis
+
+This is just a summary of a post I wrote back on [Renal fellow network](https://www.renalfellow.org/2014/08/28/hypokalemic-periodic-paralysis) as a Reg. 
+
+- High-risk Asian and Hispanic population groups, particularly males under 20 years old.
+  
+- High-carbohydrate meals triggering insulin release or beta-adrenergic surge due to:
+  - Exercise
+  - Volume depletion
+  
+- Thyrotoxicosis:
+  - A major subgroup of patients, usually men.
+  - Mechanism involves a combination of:
+    - Upregulation of Na⁺/K⁺ ATPase
+    - Loss of function in the inward potassium rectifying channel Kir2.6
+    - Feed-forward effect in certain variants of the sulphonylurea receptor 1
+  - Result: Dramatic intracellular potassium shifts.
+  - Important note: Rarely, paralytic episodes can precede the thyroid disease by many years.
+
+- **Acute management**:
+  - Straightforward: administer potassium (K), either IV or orally.
+  - **Rebound hyperkalemia**:
+    - Up to 70% of patients experience rebound hyperkalemia (>5 mmol/L) when KCl doses exceed 90 mmol.
+    - Lower doses may be suitable with concomitant beta-blockade.
+  - **Oral KCl**:
+    - Suitable for home use.
+    - Rule of thumb: 
+      - 40-60 mmol/L of oral K+ raises plasma potassium concentration by 1.0-1.5 mmol/L.
+      - 135-160 mmol/L of oral K+ raises plasma potassium by 2.5-3.5 mmol/L.
+
+- **Avoidance of environmental triggers** is essential, though therapeutic interventions and prophylaxis are less clear:
+  - **Potassium (K) dynamics**:
+    - Patients have normal total body potassium without chronic gastrointestinal (GI) or renal losses.
+    - The serum potassium drop is mediated by a transcellular shift rather than actual depletion.
+  - **Prophylactic potassium supplementation**:
+    - Remains a traditional therapy, though rapid K excretion might occur with a normally functioning cortical collecting duct, especially with chronic dosing.
+
+- **Evidence on therapy**:
+  - A Cochrane review of three small studies (largest with 34 patients) examined dichlorphenamide, a carbonic anhydrase inhibitor:
+    - Self-reported quality of life improved in 15 patients.
+    - Attack frequency dropped, supported by a 2011 study quoting a 50% symptom improvement with dichlorphenamide.
+    - Despite potential potassium loss via volume depletion and increased renin-angiotensin-aldosterone system (RAAS) activity, the metabolic acidosis from the carbonic anhydrase inhibitor might buffer transcellular potassium shifts.
+
+- **Aldosterone antagonists**:
+  - Although aldosterone levels are normal during attacks, these antagonists may benefit patients by retaining potassium.
+  - Interestingly, both aldosterone antagonists and dichlorphenamide, which theoretically have opposite effects on renal potassium handling, improve potassium balance in hypokalemic periodic paralysis (HPP).
+
+- **Beta-blockade**:
+  - Effective in numerous cases, particularly for HPP associated with thyrotoxicosis.
+
 
 ## HypoK & Alkalosis 
 
-### Hyperaldo and pseudohyperaldosteronism.
+#### Hyperaldo and pseudohyperaldosteronism.
 
-Aldosterone controls K & H secretion and NA reabsorbtion via the ENAC channel on the cortical collecting duct epithelial cells
+-   Aldosterone controls K & H secretion and NA reabsorbtion via the ENAC channel on the cortical collecting duct epithelial cells. Therefore , hyperaldo/pseudo hyper looks like *the opposite of taking Spironolactone*
 
-Therefore , hyper/pseudo hyper looks like *the opposite of taking Spironolactone*
+-   i.e. HypoK & Alkalosis **& HTN**
 
-i.e. HypoK & Alkalosis **& HTN**
+-   Obvious overlap here with the monogenic causes of [HTN](www.nephromancer.com/htn) - info on both pages
 
-Obvious overlap here with the monogenic causes of [HTN](www.nephromancer.com/htn) - info on both pages
-
-### Adrenal hyperfunction / primary hyperaldosteronism
+#### Adrenal hyperfunction / primary hyperaldosteronism
 
 -   including adrenal adenoma, adrenal hyperplasia, and adrenal carcinoma.
 
 
-### Syndrome of apparent mineralocorticoid excess
+#### Syndrome of apparent mineralocorticoid excess
 
+TBC
 
-
-### Liddles
+#### Liddles
 
 Autosomal dominant Gain of function of ENAC
 
 
 
-### Licorice ingestion = Syndrome of Apparent Mineralocorticoid Excess
+#### Licorice ingestion = Syndrome of Apparent Mineralocorticoid Excess
 
 [six tea bags of ‘Twinings Comforting’ liquorice tea dail](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5298563/)
 
@@ -50,17 +97,45 @@ European licorice is worse than american stuff, more GZA
 -   11β-HSD2 can remain suppressed for 2 weeks or so after withdrawal of licorice, but the RAS axis can remain suppressed for months , perhaps 4
 -  inhibition of 11β-HSD2 decreases the urinary ratio of cortisone metabolites to cortisol metabolites which is a diagnostic clue for this mechanism of secondary hypertension
 
-## Renal artery stenosis and renin secreting tumors. 
+### Renal artery stenosis and renin secreting tumors. 
 
 -   elevated production and secretion of renin leading to hyperaldosteronism.
 
+### Cushings and ectopic ACTH
+
+TBC
 
 ## Renin:Aldosterone ratio
 
-Liddle’s — low renin, low aldo (appropriate suppression in face of gained function)
-Licorice and SAME — low renin, low aldo ( body is responding appropriatly and shutting down in face of feedback)
-Renal artery stenosis and renin-secreting tumors — high renin, high aldo ( kidneys think blood flow is low)
-Adrenal hyperfunction — low renin, high aldo (appropriately suppressed renin)
+-   Liddle’s — low renin, low aldo (appropriate suppression in face of gained function)
+-   Licorice and SAME — low renin, low aldo ( body is responding appropriatly and shutting down in face of feedback)
+-   Renal artery stenosis and renin-secreting tumors — high renin, high aldo ( kidneys think blood flow is low)
+-   Adrenal hyperfunction — low renin, high aldo (appropriately suppressed renin)
 
 
-## Cushings and ectopic ACTH
+
+
+## HyperK: ECGs, ICDs
+
+Another summary of a [RFN post](https://www.renalfellow.org/2015/04/24/hyperkalaemia-icds-and-ecg-changes) I wrote. TLDR: ECG unreliable.
+
+#### 1. Limited Sensitivity of ECG for Hyperkalemia Detection
+
+- ECG changes (e.g., T wave peaking, QRS widening) are traditionally suggested indicate hyperkalemia severity (albeit insensitively). However, studies show poor correlation between these changes and serum potassium, particularly in patients with [chronic kidney disease](https://pubmed.ncbi.nlm.nih.gov/15630907/). 
+- Several of case reports showing no ECG changes at all with life threatening level [eg1](https://pubmed.ncbi.nlm.nih.gov/23973093/), [eg2](https://pubmed.ncbi.nlm.nih.gov/10037088/)
+
+- Blinded ECG reading gives a sensitivity of 0.65 for severe hyperkalaemia, which is [not very good at all](https://pubmed.ncbi.nlm.nih.gov/12198216/). Still better than [no correlation at all](https://pmc.ncbi.nlm.nih.gov/articles/PMC2390954/?tool=pmcentrez) I suppose.
+
+- **Clinical Implication**: ECG abnormalities may appear less often in dialysis or CKD patients or not at all, suggesting that relying on ECG alone may not be sufficient for hyperkalemia assessment. Instead, assess hyperkalemia severity based on context, speed of change, absolute levels, controllability of the siutation, cardiac status etc.
+
+#### 2. Risks with Pacemakers and ICDs in Hyperkalemia
+- **Increased Pacing Thresholds**: Hyperkalemia can elevate pacing thresholds, risking capture failure in pacemakers or inappropriate shocks in ICDs. Recent findings suggest that **QRS widening**, **increased ventricular pacing thresholds**, and **T wave oversensing** can occur, especially in patients with thyrotoxicosis or those receiving beta-adrenergic stimulation (e.g., post-exercise) [Europace](https://pubmed.ncbi.nlm.nih.gov/24465006/).
+
+- **Example Case**: I saw a patient experience ventricular tachycardia and lost consciousness, with overdrive pacing unable to capture due to elevated potassium. This was ultimately corrected by defibrillation but highlights the risks of delayed treatment.
+
+#### Clinical Takeaway
+Context is king. As always. The severity of hyperkalemia should be gauged using a comprehensive clinical assessment rather than relying solely on ECG. For patients with pacemakers or ICDs, act promptly to manage elevated potassium levels and consider early calcium supplementation, especially if calcium channel blockers are in use. **Avoid the trap of being falsely reassuring by a normal ECG.**
+
+
+
+

@@ -5,7 +5,7 @@ output:
     includes:
        in_header: GA_Script.html
 ---
-A collection of oddities I stumble across in my wanderings
+A collection of oddities I stumbled across in my wanderings
 
 # AKI
 
@@ -20,3 +20,10 @@ A collection of oddities I stumble across in my wanderings
 -   Full of oxalate, crystals in urine. 
 -   Calcium oxalate birefringent under polarised light on the biopsies
 -   50% RRT for 1 week
+
+# Electrolytes
+
+[Death by coconut ](https://pubmed.ncbi.nlm.nih.gov/24550410/)
+
+-   Did not actually die. K hit 7.8, (AKI helped).
+-   Coconut water: Delicious but hypotonic, acidic, 230ml/1 cup = 600mg potassium= 2 slow K tablet ( a slow K has 600mg KCL so ~ 315mg K+ ion).
