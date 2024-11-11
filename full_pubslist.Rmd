@@ -40,7 +40,7 @@ If you want to be included here and have non KHS work noted, send Eoin your ORCI
 
   
 ```{r, echo=F, eval=T}
-searchstring<-"(Kidney Health Service[Affiliation]) OR (0000-0002-7709-6595) OR (0000-0002-0431-9110) OR (0000-0003-1505-3482) OR (0000-0003-4342-5300) OR (0000-0003-1215-1773) or (0000-0002-6294-0060)"
+searchstring<-"(Kidney Health Service[Affiliation]) OR (0000-0002-7709-6595) OR (0000-0002-0431-9110) OR (0000-0003-1505-3482) OR (0000-0003-4342-5300) OR (0000-0003-1215-1773) or (0000-0002-6294-0060) or (0000-0003-4342-5300)"
 
 search <- entrez_search(db = "pubmed",
                         term = searchstring, retmax=5000)

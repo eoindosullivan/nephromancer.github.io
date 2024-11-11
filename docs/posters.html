@@ -32,15 +32,18 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
-<!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S761Y2PE6H"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+<script>
+  function showFullImage(imagePath) {
+    var fullImageDiv = document.getElementById('full-image-' + imagePath);
+    var allFullImages = document.querySelectorAll('[id^="full-image-"]');
+    allFullImages.forEach(function (img) { img.style.display = 'none'; }); // Hide all full images
     
-    gtag('config', 'G-S761Y2PE6H');
-    </script>
+    if (fullImageDiv) {
+      fullImageDiv.style.display = 'block'; // Show the full image of the clicked one
+    }
+  }
+</script>
+  
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -530,19 +533,51 @@ $(document).ready(function () {
 </div>
 
 
+<br>
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class="blue">
 <p>Email Eoin if you want your poster or abstract to be showcased
 here.</p>
-<div id="khs-posters-2024" class="section level1">
-<h1>KHS Posters 2024</h1>
-<img src="posters/A%20PAIN%20IN%20THE%20GUT_page_1.jpg" style="width: 100%;" alt="A PAIN IN THE GUT_page_1.jpg"/>
-<img src="posters/ANZSN_ANCA_2024_page_1.jpg" style="width: 100%;" alt="ANZSN_ANCA_2024_page_1.jpg"/>
-<img src="posters/ANZSN_HyperTg_2024_page_1.jpg" style="width: 100%;" alt="ANZSN_HyperTg_2024_page_1.jpg"/>
-<img src="posters/Chen-Communication%20Workshops%20in%20Nephrology_page_1.jpg" style="width: 100%;" alt="Chen-Communication Workshops in Nephrology_page_1.jpg"/>
-<img src="posters/FSARTAIN%20ANZSN%20FINAL%20POSTER%20PAIN%20IN%20THE%20GUT_page_1.jpg" style="width: 100%;" alt="FSARTAIN ANZSN FINAL POSTER PAIN IN THE GUT_page_1.jpg"/>
-<img src="posters/Poster_KSCAdmission%20Final_page_1.jpg" style="width: 100%;" alt="Poster_KSCAdmission Final_page_1.jpg"/>
-<img src="posters/Poster_KSCSymptoms%20Final_page_1.jpg" style="width: 100%;" alt="Poster_KSCSymptoms Final_page_1.jpg"/>
-<img src="posters/Poster_rehabV5_final3_page_1.jpg" style="width: 100%;" alt="Poster_rehabV5_final3_page_1.jpg"/>
-<img src="posters/TLTR_page_1.jpg" style="width: 100%;" alt="TLTR_page_1.jpg"/>
+</div>
+<p><br></p>
+<div id="posters-abstracts-2024" class="section level3">
+<h3>Posters &amp; Abstracts 2024</h3>
+<a href="posters24/A PAIN IN THE GUT_page_1.jpg" target="_blank">
+<img src="posters24/thumbnails/A%20PAIN%20IN%20THE%20GUT_page_1.jpg" style="width: 100px;" alt="A PAIN IN THE GUT_page_1.jpg"/>
+</a>
+<a href="posters24/ANZSN_ANCA_2024_page_1.jpg" target="_blank">
+<img src="posters24/thumbnails/ANZSN_ANCA_2024_page_1.jpg" style="width: 100px;" alt="ANZSN_ANCA_2024_page_1.jpg"/>
+</a>
+<a href="posters24/ANZSN_HyperTg_2024_page_1.jpg" target="_blank">
+<img src="posters24/thumbnails/ANZSN_HyperTg_2024_page_1.jpg" style="width: 100px;" alt="ANZSN_HyperTg_2024_page_1.jpg"/>
+</a>
+<a href="posters24/Chen-Communication Workshops in Nephrology_page_1.jpg" target="_blank">
+<img src="posters24/thumbnails/Chen-Communication%20Workshops%20in%20Nephrology_page_1.jpg" style="width: 100px;" alt="Chen-Communication Workshops in Nephrology_page_1.jpg"/>
+</a>
+<a href="posters24/FSARTAIN ANZSN FINAL POSTER PAIN IN THE GUT_page_1.jpg" target="_blank">
+<img src="posters24/thumbnails/FSARTAIN%20ANZSN%20FINAL%20POSTER%20PAIN%20IN%20THE%20GUT_page_1.jpg" style="width: 100px;" alt="FSARTAIN ANZSN FINAL POSTER PAIN IN THE GUT_page_1.jpg"/>
+</a>
+<a href="posters24/Poster_KSCAdmission Final_page_1.jpg" target="_blank">
+<img src="posters24/thumbnails/Poster_KSCAdmission%20Final_page_1.jpg" style="width: 100px;" alt="Poster_KSCAdmission Final_page_1.jpg"/>
+</a>
+<a href="posters24/Poster_KSCSymptoms Final_page_1.jpg" target="_blank">
+<img src="posters24/thumbnails/Poster_KSCSymptoms%20Final_page_1.jpg" style="width: 100px;" alt="Poster_KSCSymptoms Final_page_1.jpg"/>
+</a>
+<a href="posters24/Poster_rehabV5_final3_page_1.jpg" target="_blank">
+<img src="posters24/thumbnails/Poster_rehabV5_final3_page_1.jpg" style="width: 100px;" alt="Poster_rehabV5_final3_page_1.jpg"/>
+</a>
+<a href="posters24/TLTR_page_1.jpg" target="_blank">
+<img src="posters24/thumbnails/TLTR_page_1.jpg" style="width: 100px;" alt="TLTR_page_1.jpg"/>
+</a>
+<p><br></p>
+</div>
+<div id="posters-abstracts-2023" class="section level3">
+<h3>Posters &amp; Abstracts 2023</h3>
+<a href="posters23/FR-PO725.png" target="_blank">
+<img src="posters23/thumbnails/FR-PO725.png" style="width: 100px;" alt="FR-PO725.png"/>
+</a>
 </div>
 
 

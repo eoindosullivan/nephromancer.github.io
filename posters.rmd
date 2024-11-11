@@ -1,12 +1,10 @@
 ---
 title: ''
 output:
-  pdf_document:
-    toc: false
   html_document:
     toc: false
     includes:
-      in_header: GA_Script.html
+      in_header: poster_script.html
 ---
 
 ```{r setup, include=FALSE} 
@@ -15,24 +13,113 @@ library(jsonlite)
 library(ggplot2)
 library(knitr)
 library(htmltools)
+library(magick)
 ```
+<br>
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class = "blue">
 
 Email Eoin if you want your poster or abstract to be showcased here.
 
-# KHS Posters 2024
+</div>
+<br>
 
-```{r, echo=FALSE, eval=TRUE}
-# Load htmltools for HTML generation
+### Posters & Abstracts 2024
+
+```{r, echo=F,eval=T,message=FALSE, warning=FALSE}
+# Load the htmltools package for using tags
 library(htmltools)
 
-# List of image files
-poster_files <- list.files(path = "posters", pattern = "\\.(png|jpg|jpeg)$", full.names = TRUE)
+# Ensure the thumbnails directory exists within posters24
+if (!dir.exists("posters24/thumbnails")) {
+  dir.create("posters24/thumbnails")
+}
 
-# Create HTML tags for images
-image_tags <- lapply(poster_files, function(file) {
-  tags$img(src = file, style = "width: 100%;", alt = basename(file))
+# Function to create thumbnails in posters24 directory
+create_thumbnail <- function(image_path, size = 100, folder = "posters24") {
+  if (file.exists(image_path)) {
+    img <- image_read(image_path)
+    thumbnail <- image_resize(img, paste(size, "x", size, "!"))
+    thumbnail_path <- file.path(folder, "thumbnails", basename(image_path))  # Path to save thumbnail within the folder
+    image_write(thumbnail, thumbnail_path)  # Write the thumbnail to disk
+    return(thumbnail_path)
+  } else {
+    message("File does not exist: ", image_path)
+    return(NULL)
+  }
+}
+
+# List of image files in posters24
+poster_files_24 <- list.files(path = "posters24", pattern = "\\.(png|jpg|jpeg)$", full.names = TRUE)
+
+# Create HTML tags for images with clickable thumbnails
+image_tags_24 <- lapply(poster_files_24, function(file) {
+  thumbnail_path <- create_thumbnail(file, folder = "posters24")
+  if (!is.null(thumbnail_path)) {
+    # Create a link around the thumbnail to the full image
+    tags$a(
+      href = file,  # Link to full-size image
+      target = "_blank",  # Open in a new tab
+      tags$img(src = file.path("posters24", "thumbnails", basename(thumbnail_path)), style = "width: 100px;", alt = basename(file))
+    )
+  } else {
+    NULL
+  }
 })
 
-# Print images
-do.call(tagList, image_tags)
-# dont forget the script in the G drive to mass convert the pdfs in python! nice one Mate!
+# Print the HTML tags for images for 2024
+do.call(tagList, image_tags_24)
+
+
+```
+<br>
+
+### Posters & Abstracts 2023
+
+```{r, echo=F,eval=T,message=FALSE, warning=FALSE}
+# Load the htmltools package for using tags
+library(htmltools)
+
+# Ensure the thumbnails directory exists within posters23
+if (!dir.exists("posters23/thumbnails")) {
+  dir.create("posters23/thumbnails")
+}
+
+# Function to create thumbnails in posters23 directory
+create_thumbnail <- function(image_path, size = 100, folder = "posters23") {
+  if (file.exists(image_path)) {
+    img <- image_read(image_path)
+    thumbnail <- image_resize(img, paste(size, "x", size, "!"))
+    thumbnail_path <- file.path(folder, "thumbnails", basename(image_path))  # Path to save thumbnail within the folder
+    image_write(thumbnail, thumbnail_path)  # Write the thumbnail to disk
+    return(thumbnail_path)
+  } else {
+    message("File does not exist: ", image_path)
+    return(NULL)
+  }
+}
+
+# List of image files in posters23
+poster_files_23 <- list.files(path = "posters23", pattern = "\\.(png|jpg|jpeg)$", full.names = TRUE)
+
+# Create HTML tags for images with clickable thumbnails
+image_tags_23 <- lapply(poster_files_23, function(file) {
+  thumbnail_path <- create_thumbnail(file, folder = "posters23")
+  if (!is.null(thumbnail_path)) {
+    # Create a link around the thumbnail to the full image
+    tags$a(
+      href = file,  # Link to full-size image
+      target = "_blank",  # Open in a new tab
+      tags$img(src = file.path("posters23", "thumbnails", basename(thumbnail_path)), style = "width: 100px;", alt = basename(file))
+    )
+  } else {
+    NULL
+  }
+})
+
+# Print the HTML tags for images for 2023
+do.call(tagList, image_tags_23)
+
+```

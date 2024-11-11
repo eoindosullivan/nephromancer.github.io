@@ -1,0 +1,12 @@
+<script>
+  function showFullImage(imagePath) {
+    var fullImageDiv = document.getElementById('full-image-' + imagePath);
+    var allFullImages = document.querySelectorAll('[id^="full-image-"]');
+    allFullImages.forEach(function (img) { img.style.display = 'none'; }); // Hide all full images
+    
+    if (fullImageDiv) {
+      fullImageDiv.style.display = 'block'; // Show the full image of the clicked one
+    }
+  }
+</script>
+  
