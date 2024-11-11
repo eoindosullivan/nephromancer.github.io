@@ -4,8 +4,11 @@ output:
   html_document:
     toc: false
     includes:
-      in_header: GA_Script.html
+      in_header: 
+        - GA_Script.html
+        - language.html
 ---
+
 <style>
 /* Hide navbar completely */
 .navbar {
