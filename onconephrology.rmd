@@ -1,0 +1,37 @@
+---
+title: " "
+output: 
+  html_document:
+    includes:
+       in_header: GA_Script.html
+---
+
+# Onconephrology
+
+coming soon, maybe.
+
+
+# immune checkpoint inhibitors
+
+nice [review](https://doi.org/10.1093/ndt/gfae184) in NDT
+
+**Incidence:** ICI-AKI affects 2%–5% of patients receiving immune checkpoint inhibitors.  Median time 12-16 weeks post initiation. 20% of cases are late onset ( post 3 weeks since last dose), 11%  more than a year after initiation, can be early.
+
+**Diagnosis**: Kidney biopsy is the most accurate diagnostic method due to non-specific clinical or biochemical markers. sterile pyruia(45%?) and sub nephrotic range protein - 29% had none. Distal RTA can happen, persists. helpful: CRP, hx of prior/past irAE.
+
+**Histopathology**: Acute tubulointerstitial nephritis (ATIN) is the most common finding in ICI-AKI cases. GLom lesions or vasculitis possible, rare ?paraneoplastic and not irAE. ( treat same, can use ritux in vasculitis)
+
+**Risk Factors:** Concurrent use of ATIN-associated drugs (e.g., proton pump inhibitors) increases the risk; avoiding these drugs during ICI therapy is recommended.Prior extra renal IRAE in 50-100%. Dual ICI blokade (CTLA-4 & PD1/PDL1) = [OR1.3](https://pubmed.ncbi.nlm.nih.gov/34625513/)
+
+**Renal Recovery:** Most patients achieve full or partial renal recovery.
+
+**Rx** Early corticosteroid initiation (within 3 days) significantly improves recovery chances. 1mg/kg to nearest 60mg. can pulse 250 if severe AKI3. Taper - 10/week to 20. then 5/week to 0.(dont forget PJP prophylaxis.)
+Steroid-Sparing Options: MMF, infliximab.
+
+
+**ICI Re-challenge:** Re-challenge is generally well tolerated, with ~20% experiencing recurrent ICI-AKI. Severity of AKI doesnt predict relapse. prophylactic pred probably doesnt help. 6-10 weeks to recurrance, shorter latency time. do 2 weekly labs.
+
+
+# Platinum
+
+Tends to cause nuclear enlargement - atypical appearance on bx

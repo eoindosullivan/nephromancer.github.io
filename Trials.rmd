@@ -23,6 +23,7 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 <div class = "blue">
         
 The follow trials are actively recruiting participants across the Kidney Health Service of Metro North. 
+There are multiple other trials ongoing but Trials will be removed from this list once recruitment is complete for clarity.
 
 If you would like to know more about any trial, refer a potential participant, or if you are a person living with a condition being studied and would like to enquire about participation please speak to any of your medical team for details, or email mnkhs_research@health.qld.gov.au
 

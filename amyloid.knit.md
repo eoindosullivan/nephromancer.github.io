@@ -1,7 +1,0 @@
----
-title: " "
-output:
-  html_document:
-    includes:
-      in_header: GA_Script.html
----
