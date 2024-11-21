@@ -8,29 +8,56 @@ output:
 
 # Onconephrology
 
-coming soon, maybe.
+coming soon
 
 
-# immune checkpoint inhibitors
+# Immune checkpoint inhibitors
 
-nice [review](https://doi.org/10.1093/ndt/gfae184) in NDT
+nice [review](https://doi.org/10.1093/ndt/gfae184) in NDT, broader multiorgan [guidelines](https://pmc.ncbi.nlm.nih.gov/articles/PMC6481621/)
 
-**Incidence:** ICI-AKI affects 2%–5% of patients receiving immune checkpoint inhibitors.  Median time 12-16 weeks post initiation. 20% of cases are late onset ( post 3 weeks since last dose), 11%  more than a year after initiation, can be early.
+**Incidence:** 
 
-**Diagnosis**: Kidney biopsy is the most accurate diagnostic method due to non-specific clinical or biochemical markers. sterile pyruia(45%?) and sub nephrotic range protein - 29% had none. Distal RTA can happen, persists. helpful: CRP, hx of prior/past irAE.
+-   ICI-AKI affects 2%–5% of patients receiving immune checkpoint inhibitors.  
+-   Median time 12-16 weeks post initiation (regardless of AIN or GN). 
+-   20% of cases are late onset ( post 3 weeks since last dose), 11%  more than a year after initiation, can be early.
 
-**Histopathology**: Acute tubulointerstitial nephritis (ATIN) is the most common finding in ICI-AKI cases. GLom lesions or vasculitis possible, rare ?paraneoplastic and not irAE. ( treat same, can use ritux in vasculitis)
+**Diagnosis** 
 
-**Risk Factors:** Concurrent use of ATIN-associated drugs (e.g., proton pump inhibitors) increases the risk; avoiding these drugs during ICI therapy is recommended.Prior extra renal IRAE in 50-100%. Dual ICI blokade (CTLA-4 & PD1/PDL1) = [OR1.3](https://pubmed.ncbi.nlm.nih.gov/34625513/)
+-   Kidney biopsy is the most accurate diagnostic method due to non-specific clinical or biochemical markers. sterile pyruia(45%?) and sub nephrotic range protein - 29% had none. IRL you can usually just start steroids if clinical diagnosis can be made. Distal RTA can happen, persists post steroids. 
+-    Potentially helpful: CRP, hx of prior/past irAE.
 
-**Renal Recovery:** Most patients achieve full or partial renal recovery.
+**Histopathology**
 
-**Rx** Early corticosteroid initiation (within 3 days) significantly improves recovery chances. 1mg/kg to nearest 60mg. can pulse 250 if severe AKI3. Taper - 10/week to 20. then 5/week to 0.(dont forget PJP prophylaxis.)
-Steroid-Sparing Options: MMF, infliximab.
+-   Acute tubulointerstitial nephritis (ATIN) is the most common finding in ICI-AKI cases - 90%. 
+
+-   Of the Rare GN :Glom lesions or vasculitis possible  - typically ANCA neg(27%), podocytopathys (24%) and c3GN (11%), and 41% have concomitant AIN according to [KI Reports](https://www.sciencedirect.com/science/article/pii/S2468024920316405). 35% complete and 38% patrial remission of proteinuria., 25% needed RRT.
 
 
-**ICI Re-challenge:** Re-challenge is generally well tolerated, with ~20% experiencing recurrent ICI-AKI. Severity of AKI doesnt predict relapse. prophylactic pred probably doesnt help. 6-10 weeks to recurrance, shorter latency time. do 2 weekly labs.
+**Risk Factors** 
 
+-   Concurrent use of ATIN-associated drugs (e.g., proton pump inhibitors) increases the risk; avoiding these drugs during ICI therapy is recommended.Prior extra renal IRAE in 50-100%. Dual ICI blokade (CTLA-4 & PD1/PDL1) = [OR1.3](https://pubmed.ncbi.nlm.nih.gov/34625513/)
+
+**Renal Recovery** 
+
+- Most patients achieve full or partial renal recovery.
+
+**Rx** 
+
+-   Early corticosteroid initiation (within 3 days) significantly improves recovery chances. 1mg/kg to nearest 60mg. can pulse 250 if severe AKI3. Taper - 10/week to 20. then 5/week to 0.(don't forget PJP prophylaxis.)
+-   Steroid-Sparing Options: MMF, infliximab, rituximab.
+-   pembro has a half life of 27.3 days, so longer taper may help 
+-   Relapse rate of ~10% post Pred withdrawal. [No difference in relapse ( AKI or death composite) rates between longer vs shorter steroid regimes](https://pmc.ncbi.nlm.nih.gov/articles/PMC9511654/). Recurrence occurs earlie, within the month typically. Median 20 days in short steroid course and 5 in long.
+
+
+**ICI Re-challenge**
+
+-   Re-challenge is generally well tolerated, with ~20% experiencing recurrent ICI-AKI. Severity of AKI doesnt predict relapse. prophylactic pred probably doesn't help. 6-10 weeks to recurrence, shorter latency time. do 2 weekly labs. Vast majority of patients will respond to steroids during a recurrence. A rechallenge can lead to other, non renal events e.g. myocarditis, hepatitis etc.
+
+**Notes**
+
+-   [27- 50%](https://pubmed.ncbi.nlm.nih.gov/29684232/) of patient can have reactivation of autoimmune disease
+-   [Reactivation of MN](https://pubmed.ncbi.nlm.nih.gov/33020246/)
+-   Tx - almost universal rejection with the PD-1 inhibitor, anti CLTLA-4 may have [less risk](https://www.sciencedirect.com/science/article/pii/S2468024920316405)
 
 # Platinum
 
