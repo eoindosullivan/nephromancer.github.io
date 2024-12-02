@@ -131,7 +131,7 @@ Risk genes increase as you move West to East but ultimately only explain \~7% of
 
 Interesting implications for variable of “Race” in data and what it really is capturing – at times, these risk genes, but also captures range of diverse and ill-defined cultural/socioeconomic patterns.
 
-Not entirely clear what relationship “race” has to IGAN, possibly worse outcomes in “Chinese” populations but unclear if that applies to Chinese Nationals of those with Chinese heritage in other countries. No evidence of differential treatment effects.
+Not entirely clear what relationship “race” has to IGAN, possibly worse outcomes in “Chinese” populations but unclear if that applies to Chinese Nationals or those with Chinese heritage in other countries. No evidence of differential treatment effects.
 
 # Treatment
 
@@ -238,6 +238,8 @@ By the end of trial, initial drop in proteinuria has returned to baseline
 
 Oral option, USA has enteric coated on patent (100k/9 months in US!)
 
+
+
 Has less side effects due to first pass metabolism
 
 Evidence that proteinuria reduction in phase 2, but ongoing phase 3 trials to correlate with longer term eGFR changes.
@@ -309,7 +311,19 @@ At week 36, the geometric least squares mean percent change from baseline in uri
 -   A systematic review including mostly retrospective studies and three randomized, placebo-controlled trials showed that glucocorticoids increased the odds of resolution of abdominal pain within 24 hours and suggested renal benefits. 
 -   However, the largest randomized trial involving patients with IgA vasculitis showed no evidence that glucocorticoids prevented the development of nephropathy.
 
-# MISC
+
+# NS subtype: MPGN-IgAN
+
+Nephrotic Syndrome in IGAN is rare , [5-15%](https://link.springer.com/article/10.1007/s10238-019-00580-9). usually caused by MCD-IGA (steroids & good prognosis - treat as MCD) or MPGN-IGA. 
+
+- Of 171 [chinese patients with NS](https://link.springer.com/article/10.1007/s10238-019-00580-9), 5-year renal survival rates were 73.1% and 87.8% in NS and non-NS groups
+
+-   MPGN-IgAN causes:[Cancer](https://pubmed.ncbi.nlm.nih.gov/39365417/), [infection](https://bmcnephrol.biomedcentral.com/articles/10.1186/s12882-020-01735-7), [cirrhosis](https://pubmed.ncbi.nlm.nih.gov/30420049/) often paired with infection - very poor prognosis, [Vaccination](https://pubmed.ncbi.nlm.nih.gov/37095451/)
+
+-   Treatment: Find underlying cause, +- IS. GCS have a role. Nice retrospective [Shanghai](https://pmc.ncbi.nlm.nih.gov/articles/PMC10689133/) group - NS, MPGN. 1mg/kg/day steroids vs steroids & CTX 1f monthly for 8-12/12, dose 6-8g).n=84. remission 88% vs 52%. 
+
+
+# MISC IGAN tips
 - 19% recurrance in Tx at 10 years
 - 23% at 15 years
 

@@ -132,6 +132,8 @@ left:
          href: ./path.html
   - text: "Resources"
     menu:
+       - text: "Kidney Clinic 101"
+         href: ./clinic101.html
        - text: "Educational Resources"
          href: ./edu.html
        - text: "Patient Resources"

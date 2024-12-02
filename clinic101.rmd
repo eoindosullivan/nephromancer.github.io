@@ -1,0 +1,80 @@
+---
+title: "Clinic 101"
+output: 
+  html_document:
+    includes:
+      in_header: GA_Script.html
+---
+
+Basic workflow for newcomers to EOS Gen Neph clinic.
+
+###  **Timekeeping is essential – a 30 min slot means:**
+
+-   15-20 mins to see patient
+-   5-10 mins to discuss with SMO (knock on door, we can discuss in corridor before joining patient)
+-   If AT or experienced BPT level, and if a case is within competency, its not essential need to call SMO in for each case, can move to next patient. Always welcome to get me for any case.
+-   Quick letter if fast enough, otherwise next patient and letters later.
+-   Phone reviews are often reasonable to push back in the list if there are other patients are in the waiting room – review the list in the ieMR scheduling tab (don’t forget to hit refresh).
+
+### **In the clinic, a generic approach:**
+
+-   Explore any new concerns, symptoms or issues
+-   Assess trajectory of kidney function (eGFR, ACR, other relevant complications)
+-   BP, weight, volume assessment.
+-   Confirm medications (“Any side effects I can help you with?” etc), any recent medical developments and update the problem list and medication list accordingly.
+-   Formulate a plan with the patient that works for them, and if required come discuss with SMO or action and discuss after clinic.
+-   Empower the patient to be involved in their health and clinic visits – blood pressure diaries (home BP machine recommended), BGL and dietary diaries etc. Show them their results and images, print them, let them keep hardcopies. Show them the eGFR graphs, invite them to get stuck into those numbers if they wish.
+-   Follow up intervals are personalised, but low risk CKD is 3-6 months typically. Easy to adjust - we can discuss after clinic.
+-   Give the patient blood test form before they go. Consider giving a duplicate if they worry they might lose it.
+-   Hospital labs, scans most convenient as integrates with ieMR easily. Otherwise, if patient has no preference convenience to retrieve: SNP&QML \> Mater \> 4cyte \> others. Radiology all much the same, but stick to the big names, small sites often hard to access.
+    
+### **Notes:**
+
+-   Create note in documents of ieMR
+-   Can copy Problem list and medication from most recent, but please review and update with recent events (ask patient and review other non-neph notes entered since last neph visit)
+-   Read the problem list /medication list carefully as defunct information often persists long after it has become unhelpful or untrue.
+-   Format with the key details at the top, I try use something like:
+
+<br>
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class = "blue">
+
+-   CKD3 \| IGAN
+-   eGFR 25, ACR 25 (SNP 4/11/24)
+-   KFRE 5 = 24%
+-   Conservative pathway        
+
+</div>
+<br>
+      
+Or if HD patient
+
+<br>
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class = "blue">
+
+-   ESKD \| DKD
+-   HD (AVF) since June 2024
+-   TX workup started Feb 24, awaiting XYZ
+
+</div>
+<br>
+
+-   Feel free to include key pertinent information at the top alongside these details, will vary from patient to patient. 
+-   If copying down private bloods or images, please note the provider, it saves lots of time for the next person who knows where to look.
+    
+## **Letters:**
+
+-   Every visit should be followed up by a letter
+-   I strongly recommend writing to patient and cc’ing in GP – after all you are here to care for them, not the GP.
+-   Use the letter to summarise progress, reiterate the plan ( and in particular repeat any important or complicated discussions to ensure they don’t forget), highlight changes made to medications, any required referrals or follow up events, and roughly when follow up is due next.
+
+##  **Learning:**
+
+-   Clinics are a great opportunity to learn take the opportunity to learn from the patients experiences and journeys. Ask them questions, be curious and kind.
+-   Jot down questions or thoughts and discuss during quiet sections or at the end of clinic.
+-   If there’s something in particular you would like to gain from the clinic ( practice clinical examination, preparing for exams etc) just say so and I’ll keep my eyes open for opportunities.

@@ -82,6 +82,14 @@ MPGN “traditional classification” - based on EM, disregarded IF.Not very use
 
 [Best Review](https://www.nejm.org/doi/full/10.1056/nejmra1108178)
 
+# IGAN & MPGN
+
+[case series](https://pubmed.ncbi.nlm.nih.gov/30420049/)
+
+-   Association with chronic liver disease  - often with infection, occult ~(42%)
+-   At 7 weeks, 80% died - agressive variant
+-   Non liver disease patients, 73% men, age 40.  27% ESKD by 3 years.
+
 # C3G
 
 -   All ages, no sex predilection
