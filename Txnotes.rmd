@@ -17,4 +17,17 @@ Source: Sensitization in Transplantation: Assessment of Risk (STAR). 2017 Workin
 
 ![Risk assessment](images/tx_highly_sensitized_risk_assessment.png)
 
+
 ![Induction Regimes](images/tx_highly_sensitized_induction_regimes.png)
+
+
+#### Interesting misc notes
+
+-   Certain elements of cognitive function may [improve post Tx](https://www.ajkd.org/article/S0272-6386(24)00624-3/fulltext)
+
+-   BMI is always a contentious topic. Higher BMI can lead to increased DGF but in retrospective data [>35BMI = 30-35BMI in longer term outcomes.](https://www.ajkd.org/article/S0272-6386(21)00534-5/abstract). Clearly some selection bias baked in there, but worthy of reflection. 
+
+-   When converting from oral to IV tacrolimus the following conversion must be done:
+IV tacrolimus dose = total daily oral dose x 0.25
+To be given as a continuous infusion over 24 hours
+Therapeutic drug monitoring is essential when undertaking any conversion with tacrolimus. aiming 10-15. IV ciclosporin is an alternative option. Bump steroids to cover.

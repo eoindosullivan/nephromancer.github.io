@@ -27,3 +27,17 @@ A collection of oddities I stumbled across in my wanderings
 
 -   Did not actually die. K hit 7.8, (AKI helped).
 -   Coconut water: Delicious but hypotonic, acidic, 230ml/1 cup = 600mg potassium= 2 slow K tablet ( a slow K has 600mg KCL so ~ 315mg K+ ion).
+
+# Space
+
+[Cosmic Kidney Disease](https://www.nature.com/articles/s41467-024-49212-1)
+
+-   Spaceflight causes nephrolithiasis: hypercalciuria, decreased phosphorylation of NKCC2  (thus Mg, calcium wasting)
+-   increased urinary oxalate - ?gut microbiome, liver production?
+-   Astronauts have reduced diuresis and natriuresis.
+-   SLCO2A1 downreg -( prostgladin transporter)- less reabsorption by CD PC = build up of PgE2 = increase AQP2
+-   TMA and endothelial dysfunction on bx
+-   loss of arterial elasticity = increased pressure wave transmission = barotrauma. + drop in BP in astronauts = CKD. 
+-   Catch 22: Dilate afferent arteriole to increase flow and receive more barotrauma, on constrict to protect but generate hypoxia 
+
+   

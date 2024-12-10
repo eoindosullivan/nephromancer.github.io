@@ -32,7 +32,9 @@ The timing of meds probably [doesnt matter](https://www.thelancet.com/journals/l
 
 **Betablockers**
 
-Probably use carvidolol unless other indications, avoid [atenolol](https://www.escardio.org/Journals/E-Journal-of-Cardiology-Practice/Volume-8/Betablockers-in-hypertension-acquiring-a-balanced-view) in non dialysis patients, although it may reduce CV outcomes in HD patients
+-   In HD patients, observational data suggest mortality benefit to Metoprolol vs Carvedolol, and less hypotensive events ( carvedolol has vasodilating effects thus biggest BP drop) [AJKD 2018](https://www.ajkd.org/article/S0272-6386(18)30544-4/abstract).
+-   In non HD, probably ok to use carvidolol as first choice, avoid [atenolol](https://www.escardio.org/Journals/E-Journal-of-Cardiology-Practice/Volume-8/Betablockers-in-hypertension-acquiring-a-balanced-view) which has less mortality benefit in meta-analysis. 
+-   In this non HD context, ESC speculate that carvedilol may have less or no metabolic SE, thus the risks of bblockers may be less with them. 
 
 **Diuretics** 
 

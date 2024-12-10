@@ -16,3 +16,14 @@ Immediate (e.g., gastrointestinal, susceptibility to infection)
 The risk of future hematologic malignancy is related to total lifetime exposure (\>36 g), as is myelofibrosis (\>80 g).
 
 Total lifetime exposure plus age constitutes a significant risk factor for premature ovarian failure (\>7.5–15 g/m2 for young to older pediatric patients, respectively; 300 mg/kg for adults).
+
+# RITUX
+
+[hypogammaglobulinaemia]https://pubmed.ncbi.nlm.nih.gov/30646343/9)
+
+-    check a baseline IgG & before each[cycle](https://pubmed.ncbi.nlm.nih.gov/30646343/) 
+-   Sustained low IgG levels (≥4 months) were associated with increased risk for serious infections in open extension studies.
+-  About 20% of patients with normal IgG pre therapy develop HGG
+-   Those with existing HGG, 20% will worsen through mild-mod-severe stages
+-    severe infection in 33% of HGG
+-   IgG <6 g/L seems like 26% infection annually [here](https://pubmed.ncbi.nlm.nih.gov/32441645/). 15% had sever HGG

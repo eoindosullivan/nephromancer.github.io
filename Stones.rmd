@@ -133,7 +133,7 @@ Nephrocalcinosis results from conditions causing hypercalcemia, hyperphosphatemi
 
 **Dietary Recommendations**
 
--   **Urine output target**: 2-2.5 litres per day.
+-   **Urine output target**: 2-2.5 litres per day.Aim Urine vol [2L](https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2827021). Halfs incidence of stones over 5 yeras, long time to next stone (38 vs 25 m)
 -   **Sodium**: Encourage a low-salt diet.
 -   **Calcium**: Do not recommend avoidance of calcium; maintain normal intake.
 -   **Oxalate**: Avoid high-oxalate foods such as spinach, rhubarb, wheat bran, chocolate, beets, miso, tahini, and most nuts.
@@ -201,6 +201,10 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 
 ## lithorisk or similar calc here
 
-## Patient info here
+## Notes
+
+-   Drinking excess water [doesnt improve kidney function](https://jamanetwork.com/journals/jama/fullarticle/2680548), rather just avoid dehydration.Some patients punish themselves with large quantities of water after getting bad advice- release them from their watery torment. 
+
+## Patient Info
 
 

@@ -58,6 +58,7 @@ nice [review](https://doi.org/10.1093/ndt/gfae184) in NDT, broader multiorgan [g
 -   [27- 50%](https://pubmed.ncbi.nlm.nih.gov/29684232/) of patient can have reactivation of autoimmune disease
 -   [Reactivation of MN](https://pubmed.ncbi.nlm.nih.gov/33020246/)
 -   Tx - almost universal rejection with the PD-1 inhibitor, anti CLTLA-4 may have [less risk](https://www.sciencedirect.com/science/article/pii/S2468024920316405)
+-   Can cause adrenal and central ahypoadrenalism - watch out for hyponatraemia etc
 
 # Platinum
 
