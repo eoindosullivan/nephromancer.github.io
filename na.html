@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>na.knit</title>
+
+<script src="site_libs/header-attrs-2.22/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S761Y2PE6H"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    
+    gtag('config', 'G-S761Y2PE6H');
+    </script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+
+
+
+
+
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+.tocify-subheader {
+  display: inline;
+}
+.tocify-subheader .tocify-item {
+  font-size: 0.95em;
+}
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Renal Medicine</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Research
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./trials.html">Active Metro North KHS Trials</a>
+    </li>
+    <li>
+      <a href="./research_output.html">KHS Research Activity Overview</a>
+    </li>
+    <li>
+      <a href="./full_pubslist.html">KHS Publication list</a>
+    </li>
+    <li>
+      <a href="./posters.html">Posters and Abstracts</a>
+    </li>
+    <li>
+      <a href="./nephronexus.html">Nephronexus: Publically available Data</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    GEN
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./HTN.html">HTN</a>
+    </li>
+    <li>
+      <a href="./CCF.html">CCF</a>
+    </li>
+    <li>
+      <a href="./DKD.html">DKD</a>
+    </li>
+    <li>
+      <a href="./Stones.html">Stones</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    U&amp;E
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./acidbase.html">H+ &amp; HCO3</a>
+    </li>
+    <li>
+      <a href="./na.html">Na</a>
+    </li>
+    <li>
+      <a href="./k.html">K</a>
+    </li>
+    <li>
+      <a href="./mg.html">MG</a>
+    </li>
+    <li>
+      <a href="./renalbone.html">Ca2+ &amp; PO4</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    GN
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./MCD.html">MCD</a>
+    </li>
+    <li>
+      <a href="./ANCA.html">ANCA</a>
+    </li>
+    <li>
+      <a href="./IGAN.html">IGAN</a>
+    </li>
+    <li>
+      <a href="./MPGN_C3G.html">MPGN &amp; C3G</a>
+    </li>
+    <li>
+      <a href="./LUPUS.html">LUPUS</a>
+    </li>
+    <li>
+      <a href="./FSGS.html">FSGS</a>
+    </li>
+    <li>
+      <a href="./TMA.html">TMA</a>
+    </li>
+    <li>
+      <a href="./GBM.html">GBM</a>
+    </li>
+    <li>
+      <a href="./MN.html">MN</a>
+    </li>
+    <li>
+      <a href="./Amyloid.html">Amyloid</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    CKD
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./project2.html">Checklist</a>
+    </li>
+    <li>
+      <a href="./project2.html">Conservative care</a>
+    </li>
+    <li>
+      <a href="./anaemia.html">Anaemia</a>
+    </li>
+    <li>
+      <a href="./project2.html">Pruritis</a>
+    </li>
+    <li>
+      <a href="./renalbone.html">CKD-MBD</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    TX
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./tx_cheat.html">Cheat sheet</a>
+    </li>
+    <li>
+      <a href="./txnotes.html">Misc Notes</a>
+    </li>
+    <li>
+      <a href="./nonrenaltx.html">Non Kidney Tx</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    RRT
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./HD.html">HD</a>
+    </li>
+    <li>
+      <a href="./project2.html">Home HD</a>
+    </li>
+    <li>
+      <a href="./project2.html">HD Access</a>
+    </li>
+    <li>
+      <a href="./project2.html">PD</a>
+    </li>
+    <li>
+      <a href="./project2.html">CVVH</a>
+    </li>
+    <li>
+      <a href="./project2.html">PEX</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    DRUGS
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./anticoagulation.html">Anticoagulation</a>
+    </li>
+    <li>
+      <a href="./PJP.html">PJP</a>
+    </li>
+    <li>
+      <a href="./abx.html">Abx</a>
+    </li>
+    <li>
+      <a href="./project1.html">Flozins</a>
+    </li>
+    <li>
+      <a href="./rituxcyc.html">RITUX &amp; CYC</a>
+    </li>
+    <li>
+      <a href="./Onconephrology.html">Onconephrology</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    MISC
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./preg.html">Pregnancy</a>
+    </li>
+    <li>
+      <a href="./Lymphoproliferative.html">Lymphoproliferative</a>
+    </li>
+    <li>
+      <a href="./covid19.html">SARS-Cov-2</a>
+    </li>
+    <li>
+      <a href="./Tumour_Lysis.html">Tumour Lysis Syndrome</a>
+    </li>
+    <li>
+      <a href="./Single Kidney.html">Single Kidney</a>
+    </li>
+    <li>
+      <a href="./IGG4.html">IGG4</a>
+    </li>
+    <li>
+      <a href="./sjogrens.html">Sjogrens and Systemic Sclerosis</a>
+    </li>
+    <li>
+      <a href="./Curios.html">Wierd and excellent papers</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Path
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./biopsy.html">Biopsy</a>
+    </li>
+    <li>
+      <a href="./path.html">PATH</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Resources
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./clinic101.html">Kidney Clinic 101</a>
+    </li>
+    <li>
+      <a href="./edu.html">Educational Resources</a>
+    </li>
+    <li>
+      <a href="./patient_resources.html">Patient Resources</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+
+</div>
+
+
+<div id="hyponatreamia" class="section level3">
+<h3>Hyponatreamia</h3>
+<ul>
+<li><p>Hyponatraemia is all about ADH typically</p></li>
+<li><p>Isothenuria normal in aging and in AKI/CKD.</p>
+<ul>
+<li>Urine diulation is active and difficult</li>
+<li>Normal adult can generate dilute urine - 50mOSM/Kg</li>
+<li>“Normal” diet is 10mOSM/kg/day, so 70kg male = (10*70)=700/50(daily
+limit)=14litres</li>
+<li>Elderly limit ~150 mOSM/kg. Diet intake can be low (tea and toast)
+e.g. (3*50)/150=1Litre/day. free water over this limit dilutes
+urine.</li>
+</ul></li>
+<li><p><strong>Hypotonic</strong> hyponatraemia requires treatment
+(probably), so confirm a pOSM if possible.</p></li>
+<li><p>k+ is oncotic too ( and can buffer NA) - 20mmol/KCL = 40ml 3%
+NaCL - may overcorrect if not aware!</p></li>
+<li><p>Urine Na: &gt;30 mmol/l urinary Na = dry (NB low [Na] diet,
+diuretics, CKD - poor reabsorbtion (and impaired free water clearance
+too))</p></li>
+<li><p>Urine Osm: &lt;100 mmmol/L = appropriately dilute. 100 - serum
+osm = grey area.</p>
+<ul>
+<li>Remember that a <strong>measured osm</strong> also measures
+ineffective osmolues such as Urea or Ethanol - may be artefactually high
+and mask true hypoosmolar state</li>
+</ul></li>
+<li><p>Non-hypotonic (hyperglycaemia, mannitol, hypertonic
+radiocontrast,pseudohyponatreamia) - conservative Rx</p></li>
+</ul>
+</div>
+<div id="correction" class="section level3">
+<h3>Correction</h3>
+<ul>
+<li>Hypertonic Saline: 3% 150 mls/20 mins. recheck while giving second
+bag. target increase of 5mmol/L</li>
+<li>0.9% Saline = 154mmol/L, 3% Saline =513mmol/L</li>
+<li>1ml/kg/hr 3% NaCL corrects Na ~ 1mmol/l/hr. e.g. 70mls/hr =1. so
+150mls = ~2ish.</li>
+<li><strong>Speed limit:</strong> 10/first 24 hrs, 8/24 hrs
+thereafter</li>
+<li>Fix overcorrection with a DDAVP clamp as below: 5% glucose and DDAVP
+2/4mcg sc as below</li>
+<li>Once stable - give 3% saline as follows, remembering to substract
+bolus:</li>
+</ul>
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class="blue">
+<p>6*(<a
+href="https://qxmd.com/calculate/calculator_344/total-body-water-watson-formula">Totalbodywater</a>+1)/(513-initial
+NA) = total volume - boluses already given. Divide by hours (typically
+4). HDU and monitor every 4-6</p>
+</div>
+<p><br></p>
+</div>
+<div id="osmotic-demyelination" class="section level1">
+<h1>Osmotic demyelination</h1>
+<p>Risks: Female, hypokalaemia, chronicity, alcoholism, cirrhosis,
+malnourishment.</p>
+</div>
+<div id="pseudohyponatreamia" class="section level1">
+<h1>Pseudohyponatreamia</h1>
+<p>Triglycerides, cholesterol, or protein</p>
+</div>
+<div id="hyperglycaemia-correction-of-na" class="section level1">
+<h1>Hyperglycaemia correction of Na</h1>
+<p>This translates into adding 2.4 mmol/l to the measured serum sodium
+concentration for every 5.5 mmol/l (100 mg/dl) incremental rise in serum
+glucose concentration above a standard serum glucose concentration of
+5.5 mmol/l (100 mg/dl). (Ive seen this as 1.6mmol/L also)</p>
+</div>
+<div id="free-water-clearance" class="section level1">
+<h1>Free water clearance</h1>
+<p>Useful conceptually (in chronic state), not very quantitativly, and
+inconvienient outside ITU</p>
+<p><strong>Calculation</strong></p>
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class="blue">
+<p>cH2O = uV - (uOsm x uV)/pOsm</p>
+</div>
+<p><br></p>
+<p>where cH2O = Free Water Clearance</p>
+<ul>
+<li>where uV = Urine Volume per unit time ( make it a day I guess if 24
+hours collection)</li>
+<li>where uOsm = Urine Osmolality</li>
+<li>where pOsm = plasma osmolality</li>
+</ul>
+<p><strong>Interpretation</strong></p>
+<p>Free Water Clearance positive</p>
+<ul>
+<li><p>Urine less concentrated than plasma</p></li>
+<li><p>Decreased Antidiuretic Hormone (ADH) Free Water Clearance
+negative</p></li>
+<li><p>Urine is more concentrated than plasma</p></li>
+<li><p>Increased Antidiuretic Hormone (ADH)</p></li>
+</ul>
+</div>
+<div id="siadh-criteria" class="section level1">
+<h1>SIADH criteria</h1>
+<p>SIADH is pretty rare. Be suss.</p>
+<ul>
+<li><p><strong>Essential criteria</strong></p></li>
+<li><p>Effective serum osmolality &gt;275 mOsm/kg</p></li>
+<li><p>Urine osmolality &gt;100 mOsm/kg at some level of decreased
+effective osmolality</p></li>
+<li><p>Clinical euvolaemia</p></li>
+<li><p>Urine sodium concentration &gt;30 mmol/l with normal dietary salt
+and water intake</p></li>
+<li><p>Absence of adrenal, thyroid, pituitary or renal
+insufficiency</p></li>
+<li><p>No recent use of diuretic agents</p></li>
+<li><p><strong>Supplemental criteria</strong></p>
+<ul>
+<li>Serum uric acid &gt;0.24 mmol/l (&gt;4 mg/dl)</li>
+<li>Serum urea &gt;3.6 mmol/l (&gt;21.6 mg/dl)</li>
+<li>Failure to correct hyponatraemia after 0.9% saline infusion</li>
+<li>Fractional sodium excretion &gt;0.5%</li>
+<li>Fractional urea excretion &gt;55%</li>
+<li>Fractional uric acid excretion &gt;12%</li>
+<li>Correction of hyponatraemia through fluid restriction</li>
+</ul></li>
+</ul>
+</div>
+<div id="desmopressin-aka-ddavp" class="section level1">
+<h1>Desmopressin aka DDAVP</h1>
+<p><strong>In DI:</strong> If intravenous saline solution is
+administered and desmopressin is withheld at the same time, rapid
+changes in serum sodium levels may result, which puts the patient at
+risk for demyelinating lesions.</p>
+<ul>
+<li>Opinion: In the management of desmopressin-associated hyponatremia
+with neurologic symptoms, the drug should not be withheld despite the
+presence of hyponatremia. Instead The medication should be continued
+while administering intravenous hypertonic saline solution.</li>
+</ul>
+<p><strong>DDAVP Clamp:</strong> Desmopressin is also used to minimize
+water excretion during the correction of hyponatremia during water
+diuresis. When treating hyponatremia, clinicians should monitor closely
+to avoid free-water diuresis. To prevent ongoing water losses in urine
+and overly rapid “autocorrection” of serum sodium level, desmopressin
+can be given to reduce free-water losses.</p>
+<p><strong>Overcorrection Panic</strong> HDU/ITU-&gt; DDAVP, 2
+micrograms IV q8hr &amp; H20</p>
+<p><strong>Clamp protocol:</strong></p>
+<p><a
+href="https://emcrit.org/pulmcrit/taking-control-of-severe-hyponatremia-with-ddavp/">Source:
+EMcrit</a></p>
+<ul>
+<li>DDAVP (2 micrograms IV q8hr) is started immediately and continued
+until the sodium is close to normal.</li>
+<li>Sodium is corrected by infusing hypertonic solutions, primarily 3%
+saline. Of course, hypertonic bicarbonate. For a patient requiring
+volume resuscitation, a large volume of normal saline could be used as
+well.</li>
+<li>The key point is that the sodium is increased by a direct effect of
+the infused solutions. This differs from approaches based on treatment
+of the underlying problem and waiting for the kidneys to excrete free
+water.</li>
+<li>Oral fluid intake <strong>must</strong> be restricted while on
+DDAVP.</li>
+<li>Potassium supplementation should be taken into account as this is
+osmotically equivalent to sodium (e.g. 40 mEq KCl tablet is roughly
+equivalent to ~80ml of 3% NaCl).</li>
+<li>Medications formulated in D5W should be avoided if possible, or
+otherwise taken into account (e.g. 100 ml of D5W will negate the effect
+of ~30ml of 3% NaCl)</li>
+<li>If volume overload occurs, this may be managed with furosemide.</li>
+</ul>
+<p><strong>Contraindications to clamp</strong></p>
+<ul>
+<li>Psychogenic polydipsia/excessive water intake</li>
+<li>Hypervolemic hyponatremia (e.g. heart failure, cirrhosis)</li>
+</ul>
+<p><strong>DDAVP dose:</strong></p>
+<p>SC desmopressin at 2-4 mcg every 8-12 hours or intranasal
+desmopressin, 20 μg, every 12 hours</p>
+<ul>
+<li><p>The hourly urine output should decrease substantially in the
+first 1 to 2 hours after administration.</p></li>
+<li><p>Urine osmolality should be checked to ensure that urine
+osmolality has increased; 500- to 600-mOsm/kg range = significant
+antiaquaretic effect.</p></li>
+</ul>
+<div id="vaptans" class="section level3">
+<h3>Vaptans</h3>
+<p>Not on European guidelines, no real well established role here. no
+RCT and hypernatreamia/osmotic demyelination risk. Avoid.</p>
+</div>
+<div id="urea" class="section level3">
+<h3>Urea</h3>
+<p>Only in SIADH, ensure not volume deplete. A bit niche, most evidence
+from ITU.</p>
+<ul>
+<li>oral intake of two to three doses of 30 g of urea over 24 hours or
+infusion of 80 g of urea as a 30% solution over six hours, water
+restriction (500 mL/24 hr), and sodium supplements (120 to 360 mmole/24
+hr).</li>
+<li>generally safe and well tolerated</li>
+<li>osmotic diuretic &amp; Salt load, so main risks are overcorrection /
+volume depletion</li>
+</ul>
+<p><a href="https://cjasn.asnjournals.org/content/13/11/1627">58
+patients at University of Pittsburgh Medical Center</a></p>
+<p><a href="https://pubmed.ncbi.nlm.nih.gov/22647340/">42 patients in a
+Belgian ITU</a></p>
+<p><br></p>
+</div>
+</div>
+<div id="hypernatreamia" class="section level1">
+<h1>Hypernatreamia</h1>
+<div id="replace-h20" class="section level3">
+<h3>Replace H20</h3>
+<p><a
+href="https://www.mdcalc.com/free-water-deficit-hypernatremia">Free
+water deficit calculator</a>. Thats basically it. No such things as
+pseudohypernatreamia.</p>
+<p>To excrete concentrated water ( i.e. not loose free water and push up
+your Na) a medullary concentration gradiant,ADH &amp; responsive kidney
+(lithium/DI etc)</p>
+<p>Intake: drinking the ocean, hypertonic saline, primary hyperaldo</p>
+<p>If not thirsty - hypothalamic lesion?</p>
+</div>
+<div id="di-polyuria" class="section level3">
+<h3>DI &amp; Polyuria</h3>
+<p>In patients with polyuria, diabetes insipidus is very unlikely if
+urine osmolality is &gt;700 mOsmol/kg</p>
+<p>nephrogenic - lithium, hypercalcamia hypoK, medullary cystic disease,
+sickle cell, ceongentical, post obstructive</p>
+<p>Central - trauma, surgery, invasive, booze</p>
+<p>Give 2-4 mcg ddavp SC and monitor uOSM &amp; vol every 30 mins for 2
+hours. if Uosm increases = concentrating urine = responding = central.
+can be blunted due to chronic washout if longstanding ( and thus harder
+to coentrated due to loss of gradiant). should increment by 50% to
+outrule nephrogenic.</p>
+<ul>
+<li>Urine osm &gt; 600 - concentrating ok, ?GI/other loss ? intake</li>
+<li>Urine osm 300-600 - partal DI. ol, CKD, post obstructive</li>
+<li>Urine osm = pOSM (~300) - osmotic diuresis? NB Urea is actually an
+effective osm in urine ( cant make it past tubular epithelium) in
+contrast to in the body!</li>
+<li>Urine osm &lt;pOSM - DI</li>
+</ul>
+</div>
+</div>
+<div id="cerebral-salt-wasting" class="section level1">
+<h1>Cerebral Salt wasting</h1>
+<p><img src="images/siadhvscerebralsaltwasting.png" /></p>
+<p>May have high urinary Cl-</p>
+<p><br></p>
+<div id="nephrogenic-di" class="section level3">
+<h3>Nephrogenic DI</h3>
+<p>Paradoxical role for HCTZ</p>
+<ul>
+<li>blockade of the Na-Cl cotransporter in the distal tubule leads to a
+decrease in GFR via Na/water secretion- &gt; increased Na and water
+reabsorbotion in PT -&gt; less delivery to CD where the concentratign
+issue is due to AQP issues</li>
+<li><a href="https://pubmed.ncbi.nlm.nih.gov/15504936/">May increase AQP
+channels and ENAC</a></li>
+<li>In Lithium induced DI , same paper showed reversal of downregulated
+AQP2 and increased DI</li>
+</ul>
+<p>NSAIDs may help by reducing reducing the diuretic effect of renal
+prostaglandins</p>
+</div>
+</div>
+<div id="guidelines-protocols" class="section level1">
+<h1>Guidelines &amp; Protocols</h1>
+<p><a
+href="https://eje.bioscientifica.com/view/journals/eje/170/3/G1.xml">European
+Renal-Endocrine hyponatreamia guideline</a></p>
+</div>
+<div id="key-papers" class="section level1">
+<h1>Key Papers</h1>
+<br>
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class="blue">
+<p><a href="https://www.nature.com/articles/s41572-019-0103-2">Nature
+Reviews Nephrology: DI</a>. <br></p>
+</div>
+<p><br></p>
+<a href="https://pubmed.ncbi.nlm.nih.gov/8992919/">Desalination</a> <br>
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class="blue">
+<ul>
+<li>22 women post uncomplicated gyne surgery - given saline / Hartmans.
+s[Na] dropped in 21/22.</li>
+<li>Hyponatremia was generally caused by generation of electrolyte-free
+water during excretion of hypertonic urine-a desalination process. ADH
+at it again.</li>
+</ul>
+</div>
+<p><br></p>
+</div>
+<div id="sodium-restriction" class="section level1">
+<h1>Sodium Restriction</h1>
+<p>Evidence for restriction, especially in people with a reasonable
+intake is pretty weak - K+ is likely more important</p>
+<div id="sodium-hf" class="section level3">
+<h3>Sodium-HF</h3>
+<p><em>low salt dietary intervention in self reportedly low intake
+population with limited baseline info</em></p>
+<p>TLDR: poorly executed study, stopped due to futility. Probably no
+role for intensive dietary intervention in pateints with reasonable
+sodium intake.</p>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = false;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
