@@ -4,6 +4,8 @@ title: "Renal Medicine"
 left:
   - text: "Research"
     menu:
+      - text: "Nephronexus: Publically available Data"
+        href: ./nephronexus.html
       - text: "Active Metro North KHS Trials"
         href: ./trials.html
       - text: "KHS Research Activity Overview"
@@ -12,8 +14,8 @@ left:
         href: ./full_pubslist.html
       - text: "Posters and Abstracts"
         href: ./posters.html
-      - text: "Nephronexus: Publically available Data"
-        href: ./nephronexus.html
+      - text: "I want to get involved as a Researcher"
+        href: ./resarch_EOS.html
   - text: "GEN"
     menu:
       - text: "HTN"

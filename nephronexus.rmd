@@ -2,17 +2,42 @@
 title: ""
 output: 
   html_document:
+    toc: true
     includes:
-       in_header: GA_Script.html
+      in_header: 
+        - GA_Script.html
+        - language.html
 ---
 
-##  Public Data in Nephrology: A Researcher’s Roadmap
+<style>
+/* Hide navbar completely */
+.navbar {
+  display: none !important;
+}
+</style>
 
-This page is designed to support nephrology researchers by guiding you to a variety of publicly available data sources, from patient-level registries to multi-omic datasets. Here, you’ll find a curated list of key datasets.
+<br>
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
 
-The [accompanying manuscript](Link to paper) provides practical advice on accessing and using these resources to enhance your research. Whether you’re validating a hypothesis, exploring new analytical methods, or developing collaborative projects, we hope these data can advance your work without the high costs associated with data generation. Embrace the opportunity to innovate, discover, and contribute to kidney research in a way that’s efficient, equitable, and accessible to all.
+<div class = "blue">
 
-This resource will be continually updated but please [contact us](mailto:eoin.osullivan@health.qld.gov.au) if you have suggestions for new or missing resources.
+##  Public Data in Nephrology
+
+This resource is designed to support researchers by guiding them to a variety of publicly available data sources, from patient-level registries to multi-omic datasets. We currently have identified and highlighted 36 registries, 43 disease cohorts, 9 biobanks, 6 tissue atlases, 15 single cell RNA-Seq repositories, 15 genetic databases, and 5 datasets for AI model training/validation.
+
+Whether you’re validating a hypothesis, exploring new analytical methods, or developing collaborative projects, we hope these data can advance your work without the high costs associated with data generation. Embrace the opportunity to innovate, discover, and contribute to kidney research in a way that’s efficient, equitable, and accessible to all.
+
+This resource will be continually updated but please [contact us](mailto:eoin.osullivan@health.qld.gov.au) if you have suggestions for resources.
+
+
+
+Read our manuscript [Public Data in Nephrology: A Researcher’s Roadmap](Link to paper) for further information.
+
+</div>
+<br>
+<div class = "blue">
 
 ## Registries
 ```{r, echo=FALSE}
@@ -28,6 +53,9 @@ datatable(registry_data, options = list(pageLength = 10,
                                          dom = 'Bfrtip',
                                          buttons = I('["copy", "csv", "excel", "pdf", "print"]')))
 ```
+</div>
+<br>
+<div class = "blue">
 
 ## Disease Cohorts
 ```{r, echo=FALSE}
@@ -43,7 +71,9 @@ datatable(registry_data, options = list(pageLength = 10,
                                          dom = 'Bfrtip',
                                          buttons = I('["copy", "csv", "excel", "pdf", "print"]')))
 ```
-
+</div>
+<br>
+<div class = "blue">
 ## Biobanks
 ```{r, echo=FALSE}
 library(readxl)
@@ -58,7 +88,9 @@ datatable(registry_data, options = list(pageLength = 10,
                                          dom = 'Bfrtip',
                                          buttons = I('["copy", "csv", "excel", "pdf", "print"]')))
 ```
-
+</div>
+<br>
+<div class = "blue">
 ## Atlas
 ```{r, echo=FALSE}
 library(readxl)
@@ -73,7 +105,9 @@ datatable(registry_data, options = list(pageLength = 10,
                                          dom = 'Bfrtip',
                                          buttons = I('["copy", "csv", "excel", "pdf", "print"]')))
 ```
-
+</div>
+<br>
+<div class = "blue">
 ## Single Cell
 ```{r, echo=FALSE}
 library(readxl)
@@ -88,7 +122,9 @@ datatable(registry_data, options = list(pageLength = 10,
                                          dom = 'Bfrtip',
                                          buttons = I('["copy", "csv", "excel", "pdf", "print"]')))
 ```
-
+</div>
+<br>
+<div class = "blue">
 ## Genetics
 ```{r, echo=FALSE}
 library(readxl)
@@ -103,7 +139,9 @@ datatable(registry_data, options = list(pageLength = 10,
                                          dom = 'Bfrtip',
                                          buttons = I('["copy", "csv", "excel", "pdf", "print"]')))
 ```
-
+</div>
+<br>
+<div class = "blue">
 ## AI training
 ```{r, echo=FALSE}
 library(readxl)
@@ -118,3 +156,20 @@ datatable(registry_data, options = list(pageLength = 10,
                                          dom = 'Bfrtip',
                                          buttons = I('["copy", "csv", "excel", "pdf", "print"]')))
 ```
+</div>
+<br>
+
+## Why use publicly available data in research?
+
+Leveraging existing public data resources can significantly enhance the quality and efficiency of research, saving significant time and expense. For many researchers, financial constraints limit the ability to conduct costly experiments or validate initial findings. Public datasets provide an invaluable opportunity to test new analytical tools, validate hypotheses in diverse populations, or gain preliminary data necessary for grant applications. Public data allows quicker exploration of new ideas without the burden of resource investment, and this can strengthen a hypothesis before researchers commit to in vitro or in-vivo analysis locally, reducing waste.
+
+## How do I access this data for my research?
+
+Many publicly available datasets, such as those in repositories like Gene Expression Omnibus (GEO), ArrayExpress, or Expression Atlas, are freely accessible and can be downloaded directly after creating an account. However, certain specialized datasets—such as those involving patient registries, clinical trials, or disease-specific cohorts—may require formal requests or permissions. Other international databases, such as dbGaP or the European Genome-Phenome Archive (EGA), also require data use agreements (DUAs), which protect patient confidentiality while allowing qualified researchers to access valuable research data. Accessing such data often involves submitting a research proposal and obtaining approval from the data custodians or ethics committees, especially for patient-level data, such as those from CKD cohorts or transplant registries. 
+
+Consideration should be given to transfer of patient data across jurisdictions where different requirements exist e.g. internationally - analysing US patient data while in Europe, and between states in federal systems. Unfortunately, there is often an absence of uniform legislation, thus a discussion with ethical committees at both sending and receiving sites is advised to ensure regulatory compliance. The need for international consensus to support data access across jurisdictions is clear and will become increasingly important in the globalised research community. While ensuring patient data is protected appropriately remains of critical importance, researchers should recognise that these logistical considerations pale in comparison to the challenges of acquiring such data prospectively and still represent a substantial opportunity and efficiency gain. 
+
+Some data types, particularly advanced datasets like single-cell RNA sequencing (scRNA-Seq), require the use of specialized informatics tools, workflows and sometimes computational resources. For example, repositories like CellxGene and Human Cell Atlas offer intuitive visualization and analysis tools, but researchers need various bioinformatics skills and familiarity with appropriate workflows to harness all data effectively. In these cases, reaching out to the authors of the original studies can be helpful to gain insights into their methodologies or to clarify specific details about the dataset. High performance resources such as compute clusters may not be available in certain institutions, but commercial options such as Amazon AWS, Microsoft Azure and Google Cloud amongst other cloud compute providers may be useful. This ensures that advanced computational hardware is available to all researchers, although there is an associated financial cost. Researchers should be aware many journals require source code to be provided or available on reasonable request. Regardless of publication requirements, the original researchers may also have processed data or code they are willing to share with fellow researchers, so the authors encourage the community approach relevant corresponding authors, review provided  code and GitHub repos where relevant and converse - such cross pollination can improve the overall yield of the research community, helping junior researcher accelerate their work and develop networks and collaborations.
+Readers are encouraged to submit feedback and suggestions to support maintaining the directory
+
+

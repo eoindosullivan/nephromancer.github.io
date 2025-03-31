@@ -79,15 +79,29 @@ Microscopic vessels e.g. glomerular capillaries
 
 **C-ANCA & P-ANCA**
 
-Indirect immunofluorescence (IIF): microscopic technique, result is positive or negative with some descriptive qualifiers
+The P/C-ANCA are performed by indirect immunofluorescence on ethanol fixed slides – as they represent the pattern of neutrophil staining. They are reported semi-quantitatively as reciprocal of titres 1:40 = 40 , 1:160 = 160, etc
+
+Re SNP/QML: All private labs perform P/C-ANCA using this same protocol but use different brands of ethanol fixed slides, and likely have different levels of experience of distinguishing typical P/C-ANCA patterns form the atypical P/C-ANCA patterns (distinguishing atypical from typical is very important for disease correlation)
+
 
 -   C-ANCA is typically a diffuse fine granular labeling of the cytoplasm that is accentuated between the nuclear lobes
 -   P-ANCA yields a finely rimmed, homogeneous fluorescence staining of the perinuclear cytoplasm. Labeling of the perinuclear cytoplasm by p-ANCA is actually an artefact of ethanol fixation, which causes a redistribution of the positively charged cytoplasmic granular proteins to collapse onto the surface of the negatively charged nucleus.
 
 **Anti-MPO or Anti-PR3**
 
+-    MPO/PR3-ANCA are measured quantitatively by automated immunoassay OR Luminex/Bead assay OR ELISA – hence the results are reported as arbitrary manufacturer-specific units.
 -   Enzyme-linked immunosorbent assay (ELISA): will confirm an antigenic target of the ANCA
 -   Unclear the best diagnostic path – [some groups](https://pubmed.ncbi.nlm.nih.gov/27481830/) advocate using ELISA exclusively , others feels [ELISAS](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8478512/) are not yet suitable for screening due to the higher false neg rate (\~40% in this study case)
+
+-   None of the major lab in QLD use ELISA anymore (I can’t comment for 4cyte pathology or medlabs).
+
+-   QML previously used a Luminex/bead assay but now use the same automated immunoassay (PHADIA/FEIA) as SNP
+
+-   MN use the BIOflash automated immunoassay, which appears to be more sensitive than the PHADIA/FEIA, and also has a wider dynamic range (up to >700 vs >~300 for phadia), but is prone to more low positive results (hence the comments below regarding caution with its use for diagnosis in the absence of P/C-ANCA positivity)
+
+-   The value of combining P/C and MPO/PR3-ANCA results is critical as MPO/PR3-ANCA do occur in many non-AAV conditions, in particular IBD (atypical P and/or atypical C-ANCA, and frequently also PR3-ANCA positive), drug-related ANCA (esp PTU, hydralazine, but also allopurinol – usually MPO-ANCA positive (but sometime BOTH MPO and PR3-ANCA positive ASSOCIATED with atypical P (but can be P-ANCA).
+
+- Many countries now just report MPO/PR3-ANCA and no longer perform P/C-ANCA, hence lose the value of correlation with P/C patterns (which significantly improves the PPV of a positive ANCA result for AAV)
 
 Phenotypes
 
@@ -194,7 +208,7 @@ Don’t wait for a biopsy to start treatment if unwell and convincing clinical p
 
 ## Initial induction
 
-Image for regimes
+
 
 **Glucocorticoids & Ritux/cylophos**
 
@@ -214,7 +228,8 @@ Image for regimes
 
 -   Pre induction check: TB (quantiferon gold), HIV, HBV, HCV, Strongloides
 -   TMP-SMX for PJP
--   IgG levels baseline and 6monthly with ritux.
+-   IgG levels baseline and 6monthly with ritux.[48% will get hypogammaglobulinaemia by 6 months](https://pubmed.ncbi.nlm.nih.gov/36562566/)
+-   Read the CTX protocol ( hold the MMF, fertility, bladder CA risk etc)
 
 **Dose**
 ![Source: KDIGO24 ](images/AAV IS regimes.jpg)
@@ -247,8 +262,7 @@ If still on HD at 3 months – consider discontinuation if no manifestations
 ## Relapse & Refractory
 
 -   Relapse risk: GPA, PR3, ENT, multiple organs, history of relapse, residual ANCA positive, rise in ANCA, IS withdrawal.
--   Unclear risk – persistent haematuria? May lead to relapse
--   Return of haematuria when previously absent may indicate relapse
+-   [Urinary changes](https://www.kidney-international.org/article/S0085-2538(23)00168-0/abstract) - large cohort of patients with AAV, persistent proteinuria after induction therapy was associated with death/kidney failure ([HR] 3.06, 95% CI 1.09-8.59) and kidney relapse (HR 2.22, 1.16-4.24, whereas persistent haematuria was an independent predictor of kidney relapse (HR 2.16, 1.13-4.11.)
 -   Ritux best for relapse ([RAVE](https://pubmed.ncbi.nlm.nih.gov/26621483/))
 -   Refractory: try the ritux/cylo option not initially used. PEX if tricky.
 
