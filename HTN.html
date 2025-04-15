@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>HTN.knit</title>
+
+<script src="site_libs/header-attrs-2.28/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S761Y2PE6H"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    
+    gtag('config', 'G-S761Y2PE6H');
+    </script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+
+
+
+
+
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+.tocify-subheader {
+  display: inline;
+}
+.tocify-subheader .tocify-item {
+  font-size: 0.95em;
+}
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Renal Medicine</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Research
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./nephronexus.html">Nephronexus: Publically available Data</a>
+    </li>
+    <li>
+      <a href="./trials.html">Active Metro North KHS Trials</a>
+    </li>
+    <li>
+      <a href="./research_output.html">KHS Research Activity Overview</a>
+    </li>
+    <li>
+      <a href="./full_pubslist.html">KHS Publication list</a>
+    </li>
+    <li>
+      <a href="./posters.html">Posters and Abstracts</a>
+    </li>
+    <li>
+      <a href="./resarch_EOS.html">I want to get involved as a Researcher</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    GEN
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./HTN.html">HTN</a>
+    </li>
+    <li>
+      <a href="./CCF.html">CCF</a>
+    </li>
+    <li>
+      <a href="./DKD.html">DKD</a>
+    </li>
+    <li>
+      <a href="./Stones.html">Stones</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    U&amp;E
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./acidbase.html">H+ &amp; HCO3</a>
+    </li>
+    <li>
+      <a href="./na.html">Na</a>
+    </li>
+    <li>
+      <a href="./k.html">K</a>
+    </li>
+    <li>
+      <a href="./mg.html">MG</a>
+    </li>
+    <li>
+      <a href="./renalbone.html">Ca2+ &amp; PO4</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    GN
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./MCD.html">MCD</a>
+    </li>
+    <li>
+      <a href="./ANCA.html">ANCA</a>
+    </li>
+    <li>
+      <a href="./IGAN.html">IGAN</a>
+    </li>
+    <li>
+      <a href="./MPGN_C3G.html">MPGN &amp; C3G</a>
+    </li>
+    <li>
+      <a href="./LUPUS.html">LUPUS</a>
+    </li>
+    <li>
+      <a href="./FSGS.html">FSGS</a>
+    </li>
+    <li>
+      <a href="./TMA.html">TMA</a>
+    </li>
+    <li>
+      <a href="./GBM.html">GBM</a>
+    </li>
+    <li>
+      <a href="./MN.html">MN</a>
+    </li>
+    <li>
+      <a href="./Amyloid.html">Amyloid</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    CKD
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./project2.html">Checklist</a>
+    </li>
+    <li>
+      <a href="./project2.html">Conservative care</a>
+    </li>
+    <li>
+      <a href="./anaemia.html">Anaemia</a>
+    </li>
+    <li>
+      <a href="./project2.html">Pruritis</a>
+    </li>
+    <li>
+      <a href="./renalbone.html">CKD-MBD</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    TX
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./tx_cheat.html">Cheat sheet</a>
+    </li>
+    <li>
+      <a href="./txnotes.html">Misc Notes</a>
+    </li>
+    <li>
+      <a href="./nonrenaltx.html">Non Kidney Tx</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    RRT
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./HD.html">HD</a>
+    </li>
+    <li>
+      <a href="./project2.html">Home HD</a>
+    </li>
+    <li>
+      <a href="./project2.html">HD Access</a>
+    </li>
+    <li>
+      <a href="./project2.html">PD</a>
+    </li>
+    <li>
+      <a href="./project2.html">CVVH</a>
+    </li>
+    <li>
+      <a href="./project2.html">PEX</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    DRUGS
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./anticoagulation.html">Anticoagulation</a>
+    </li>
+    <li>
+      <a href="./PJP.html">PJP</a>
+    </li>
+    <li>
+      <a href="./abx.html">Abx</a>
+    </li>
+    <li>
+      <a href="./project1.html">Flozins</a>
+    </li>
+    <li>
+      <a href="./rituxcyc.html">RITUX &amp; CYC</a>
+    </li>
+    <li>
+      <a href="./Onconephrology.html">Onconephrology</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    MISC
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./preg.html">Pregnancy</a>
+    </li>
+    <li>
+      <a href="./Lymphoproliferative.html">Lymphoproliferative</a>
+    </li>
+    <li>
+      <a href="./covid19.html">SARS-Cov-2</a>
+    </li>
+    <li>
+      <a href="./Tumour_Lysis.html">Tumour Lysis Syndrome</a>
+    </li>
+    <li>
+      <a href="./Single Kidney.html">Single Kidney</a>
+    </li>
+    <li>
+      <a href="./IGG4.html">IGG4</a>
+    </li>
+    <li>
+      <a href="./sjogrens.html">Sjogrens and Systemic Sclerosis</a>
+    </li>
+    <li>
+      <a href="./Curios.html">Wierd and excellent papers</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Path
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./biopsy.html">Biopsy</a>
+    </li>
+    <li>
+      <a href="./path.html">PATH</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Resources
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./clinic101.html">Kidney Clinic 101</a>
+    </li>
+    <li>
+      <a href="./edu.html">Educational Resources</a>
+    </li>
+    <li>
+      <a href="./patient_resources.html">Patient Resources</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+
+</div>
+
+
+<div id="htn" class="section level1">
+<h1>HTN</h1>
+<p>When considering the pragmatic sort of home /office readings typical
+in practice, 130/80 is the target. Lower is probably fine if not even <a
+href="https://www.nejm.org/doi/full/10.1056/nejmoa1511939">better</a> so
+long as it is asymptomatic.</p>
+<p>An generally appropriate regime would be starting a good ARB to allow
+polypill options</p>
+<ol style="list-style-type: decimal">
+<li>Olmesartan</li>
+<li>Olmesartan + amlodipine</li>
+<li>Olmesartan + amlodipine + Hctz</li>
+<li>Spironolactone ( if K+ allows, caution 4.5-4.8, probably avoid , or
+address K first if &gt;4.9.)</li>
+<li>If volume still an issue try Frusemide.</li>
+<li>If prostatism consider alphablocker such as prazocin (BD).</li>
+<li>Only If other indication ( heart failure/ fast AF etc ) consider a
+betablocker</li>
+<li>Scraping the barrel here, hydralazine, moxonidine , clozapine path (
+not available in Australia - avoid tablets due to major lability
+issues)</li>
+</ol>
+<div id="notes" class="section level3">
+<h3>Notes</h3>
+<p>Typically, adding in a second/third agent is more impactful than
+maxing the dose of the initial agents (although max RAS blockade when
+proteinuria as a priority). Adding agents rather than doses may lead to
+less side effects.</p>
+<p>Consider whether patient is primarily a sympathetic driven pictures,
+versus more volume sensitive</p>
+<p>The timing of meds probably <a
+href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(22)01786-X/fulltext#:~:text=The%20TIME%20study%20is%20a,at%20least%20one%20antihypertensive%20medication.">doesnt
+matter</a> I dont buy the <a
+href="https://www.ahajournals.org/doi/10.1161/HYPERTENSIONAHA.121.17356">HYGIA
+trial</a>, its a bit suss.</p>
+<p><strong>Betablockers</strong></p>
+<ul>
+<li>In HD patients, observational data suggest mortality benefit to
+Metoprolol vs Carvedolol, and less hypotensive events ( carvedolol has
+vasodilating effects thus biggest BP drop) <a
+href="https://www.ajkd.org/article/S0272-6386(18)30544-4/abstract">AJKD
+2018</a>.</li>
+<li>In non HD, probably ok to use carvidolol as first choice, avoid <a
+href="https://www.escardio.org/Journals/E-Journal-of-Cardiology-Practice/Volume-8/Betablockers-in-hypertension-acquiring-a-balanced-view">atenolol</a>
+which has less mortality benefit in meta-analysis.</li>
+<li>In this non HD context, ESC speculate that carvedilol may have less
+or no metabolic SE, thus the risks of bblockers may be less with
+them.</li>
+</ul>
+<p><strong>Diuretics</strong></p>
+<p>Chlorthalidone 12.5mg a day and uptitrated can be used in <a
+href="https://www.nejm.org/doi/full/10.1056/NEJMoa2110730">eGFR
+15-30</a> and still have an effect - 10mmHg. Respect the electrolyte
+disturbances which are common (10% hypoK).</p>
+<p>Hctz is <a
+href="https://www.nejm.org/doi/full/10.1056/NEJMoa2212270#:~:text=Previous%20studies%20have%20suggested%20that,19%20and%20other%20pleotropic%20effects">probably
+similar</a> to chlorthalidone in the average patient with potentially
+less hypokalaemia. Reassuring if you dont believe in the mystical
+potency of chlorthalidone and cant find it compounded in a polypill
+(Azilsartan in US, but none available on PBS)</p>
+<p>Probably no massive value in swapping out hctz for chlorthalidone,
+although may well be better in those who struggle with medication
+concordance or very resistant due to high half life. Will need to break
+the polypill up however.</p>
+<p><strong>ARB</strong></p>
+<p>Olmesartan is potent and has long half life. Valsartan also good
+choice. Less side effects with ARB vs ACEi so potentially better
+compliance.</p>
+<p><strong>CCB</strong></p>
+<p>Lercandipine is similar to amlodipine in terms of efficacy, will less
+vasodilatation/ peripheral oedema.</p>
+</div>
+</div>
+<div id="primary-hyperaldosteronism" class="section level1">
+<h1>Primary hyperaldosteronism</h1>
+<ul>
+<li>Unclear prevalence, possibly underdiagnosed, likely &gt;10% in
+resistant HTN</li>
+<li>normalising BP may not be sufficient reduce CV risk; probably still
+need some degree of receptor blockade</li>
+</ul>
+<div id="screening-questions" class="section level2">
+<h2>Screening questions</h2>
+<ul>
+<li>Resistant hypertension (defined by the <a
+href="https://www.ncbi.nlm.nih.gov/pubmed/29133356">US Guideline</a> as
+BP &gt; 130/80 mm Hg with 3 or more drugs at optimal dosages, including
+a diuretic)</li>
+<li>Spontaneous or diuretic induced hypokalemia</li>
+<li>Hypertension with an incidentally noted adrenal tumor</li>
+<li>Family history of primary aldosteronism</li>
+<li>Family history of premature stroke (age &lt; 40 years)</li>
+<li>Hypertension and sleep apnea</li>
+</ul>
+</div>
+<div id="screening-test" class="section level2">
+<h2>Screening test</h2>
+<p><strong>Renin:Aldo Ratio</strong></p>
+<ul>
+<li>Plasma Renin threshold (ng/mL/h): &lt;1.0 or &lt; 8 pmol/L (
+i.e. suppressed)</li>
+<li>Serum Aldosterone (ng/dL): &gt;= 15 (405 pmol/L) (other thresholds
+exist e.g. 20(540) is conservative, 6(162) is too permissive. 15(405) is
+fairly widely accepted)</li>
+<li>ARR (ng/dL per ng/mL/h) &gt;= 30 or &gt;91 pmol/mU</li>
+</ul>
+<p>Conversion factor: Aldo 1 ng/ML = 27.7 pmol/L</p>
+<p>Conversion factor: PRA (ng/mL/h) to DRC (mU/L) is 8.2</p>
+<ul>
+<li>If ARR &gt;91, but aldo &lt; 280 pmol/L probably a false positive
+ratio</li>
+</ul>
+<p>False negatives:</p>
+<ul>
+<li>hypokalaemia (supresses aldo production, so normalise pre test)</li>
+<li>MRA usage (less often with ACEi/ARBS)</li>
+<li>BB blockers, diuretics, salt restriction</li>
+</ul>
+</div>
+<div id="confirmation-tests" class="section level2">
+<h2>Confirmation tests</h2>
+<p>Oral Sodium suppression test ( sodium should supress aldo)</p>
+<ul>
+<li>Increased dietary sodium to &gt;200mmol/D for 3-4 days</li>
+<li>Measure 24 urine sodium, creatinine and aldo excretion at tend</li>
+</ul>
+<p>Result: 24 hour urinary aldo excretion rate &gt;12-14 ug
+(conservative) or even 10 (permissive)</p>
+<p><strong>Supine IV saline suppression</strong></p>
+<ul>
+<li>1 hour supine rest</li>
+<li>Infuse 2L of NS over 4 hours</li>
+<li>Measure PRA and serum aldo before and after infusion</li>
+</ul>
+<p>Results: post infusion aldo of &gt;10 (most permissive &gt;5)</p>
+<p><a
+href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6260247/">Fludrocortisone
+suppression and captopril challenge</a> can be used also</p>
+<div class="float">
+<img src="images/hyperaldo.jpg" alt="Image" />
+<div class="figcaption">Image</div>
+</div>
+<p><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6260247/">Great
+review</a></p>
+</div>
+<div id="notes-1" class="section level2">
+<h2>Notes</h2>
+<ul>
+<li><p>Secondary hyperaldosteronism in a young female one must be
+suspicious of an eating disorder.</p></li>
+<li><p>Trifecta of spontaneous hypokalemia, suppressed renin, and
+elevated plasma aldosterone do not need additional confirmatory
+testing</p></li>
+</ul>
+</div>
+<div id="monogenic-htn" class="section level2">
+<h2>Monogenic HTN</h2>
+<p><img src="images/HTN_inherited_docpro89.png" /></p>
+<p>Created by Dr James Luther (<span
+class="citation">@DrJMLuther</span>) published via <a
+href="https://www.renalfellow.org/2018/11/19/raas-is-your-friend-pocket-guide-to-heritable-blood-pressure/">Renal
+fellow network</a></p>
+</div>
+<div id="blood-pressure-in-dialysis" class="section level2">
+<h2>Blood pressure in Dialysis</h2>
+<p><strong>Blood pressure</strong></p>
+<p><em>NB: There are no robust data on optimal BP targets.</em></p>
+<p><strong>Target: 130-140 systolic</strong> is reasonable target,
+however, must be individualised, considering intra/inter dialytic BP
+patterns, volume management and comorbidities<em>.</em></p>
+<p><strong>Peri dialysis 130-149 systolic</strong>, and post 120-140.
+(Based on <a href="https://pubmed.ncbi.nlm.nih.gov/15486868/">DOPs</a> –
+group with best outcomes, albeit with non-standardised readings)</p>
+<p>Frailer patients and those prone to intradialytic hypotension with
+life expectancy of less than 2 years may benefit from systolic BP of
+over 140 systolic to allow safe HD and minimise intradialytic
+hypotension.</p>
+<p>While optimal peridialysis BP has not been demonstrated in any trial
+data, <a
+href="(https:/www.kidney-international.org/article/S0085-2538(17)30418-0/pdf)">Observation
+data</a> suggests worse outcomes with lower BP, typically &lt;= 120sys,
+and best outcomes in the 140-160 range</p>
+<p>Despite the ambiguity, is worthwhile treating hypertension in
+patients on dialysis, <a
+href="https://www.sciencedirect.com/science/article/pii/S0140673609602129">as
+meta analysis</a> suggests a reduction in all-cause mortality.</p>
+<p>This <a
+href="https://kdigo.org/wp-content/uploads/2017/05/KDIGO-BP-Volume-in-Dialysis-FINAL.pdf">KDIGO
+summary</a> is excellent summary of the state of the field</p>
+<p><strong>Measurement</strong></p>
+<ul>
+<li>Ambulatory – gold standard.</li>
+<li>Home BP: encourage home monitoring of BP, more accurate and
+reproducible than peri dialysis measurements, and more achievable than
+ambulatory readings. 1-2 weeks, twice a day capturing the non-dialytic
+days.</li>
+<li>Well performed, non-dialysis day measurements in clinic are next
+most useful.</li>
+<li>Peridialysis BP: useful for monitoring tolerance to HD, uncertain
+how well these readings represent average BP.</li>
+</ul>
+<p><strong>Note:</strong> Leg BP are about 17 mmhg higher systolic, and
+a threshold of 155/90 is reasonable for the diagnosis of HTN. Consider
+that PVD will lower leg pressures, and heavily calcified vessels may
+obscure things further. In such patients, BP trends may be more useful
+than absolute readings, but the interpretation is challenging.</p>
+<p><strong>Treatment</strong></p>
+<p>First ensure dry weight is achieved, and if any uncertainty, discuss
+with patient and nursing staff and trial a reduction in weight if safe
+to do so.</p>
+<p>Secondly, revisit dry weight again, and convince yourself again that
+you have indeed explored this and are satisfied the patient is at the
+optimal weight.</p>
+<p>Its reasonable to choose antihypertensive medications as you would in
+non-dialysis patients, with the following notes.</p>
+<p>The evidence surrounding the efficacy of dialysable
+anti-hypertensives versus non dialysable agents is <a
+href="https://kdigo.org/wp-content/uploads/2017/05/KDIGO-BP-Volume-in-Dialysis-FINAL.pdf">mixed</a>.
+Its reasonable to avoid non-dialysable agents in patients with
+intradialytic hypotension. In stable patients, non dialysable agents may
+provide more predictable and homogenous cover.</p>
+<ul>
+<li>ACEi/ARB: May reduce LB mass, may preserve PD patients residual
+function. Mixed CV outcome data.</li>
+<li>Bblocker: Less CV death with atenolol vs lisinopril, and less death
+with carvediolol vs placebo in dilated CM on RAS blockade already.</li>
+<li>CCB: Less CV death – Amlodipine vs placebo</li>
+<li>Diuretics: if residual urine output may help</li>
+<li>MRA: Probably better CV outcomes, ongoing trials.</li>
+</ul>
+<p><img src="images/anti_hypertensives_dialysable.jpg" /></p>
+<p>Despite being common practice, its currently unknown and under
+investigation whether adjusting timings of medications around dialysis
+or holding on dialysis days help avoid hypotensive episodes.</p>
+<p>It may not matter which any hypertensive agents are used but it is
+interesting to note that trial data suggested atenolol was <a
+href="https://academic.oup.com/ndt/article/29/3/672/1866831">superior to
+lisinopril</a>, and <a
+href="https://www.sciencedirect.com/science/article/pii/S0735109713057380">spironolactone</a>
+and <a
+href="https://www.sciencedirect.com/science/article/pii/S0735109710038118">telmisartan
+,in addition to ACEi</a> have demonstrated reduced mortality. While dual
+blockade may upset the faint of heart, note this is different population
+to <a
+href="https://www.nejm.org/doi/full/10.1056/nejmoa1303154#:~:text=Design%20and%20Oversight-,The%20Veterans%20Affairs%20Nephropathy%20in%20Diabetes%20(VA%20NEPHRON%2DD),in%20slowing%20the%20progression%20of">VA
+NEPHRON-D</a> who were proteinuric diabetic nephropathy patients with
+eGFR &gt;30, not on RRT. Id avoid dual blockade thanks.</p>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = false;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

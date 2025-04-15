@@ -1,0 +1,2853 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>full_pubslist.knit</title>
+
+<script src="site_libs/header-attrs-2.28/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+
+
+
+
+
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Renal Medicine</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Research
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./nephronexus.html">Nephronexus: Publically available Data</a>
+    </li>
+    <li>
+      <a href="./trials.html">Active Metro North KHS Trials</a>
+    </li>
+    <li>
+      <a href="./research_output.html">KHS Research Activity Overview</a>
+    </li>
+    <li>
+      <a href="./full_pubslist.html">KHS Publication list</a>
+    </li>
+    <li>
+      <a href="./posters.html">Posters and Abstracts</a>
+    </li>
+    <li>
+      <a href="./resarch_EOS.html">I want to get involved as a Researcher</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    GEN
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./HTN.html">HTN</a>
+    </li>
+    <li>
+      <a href="./CCF.html">CCF</a>
+    </li>
+    <li>
+      <a href="./DKD.html">DKD</a>
+    </li>
+    <li>
+      <a href="./Stones.html">Stones</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    U&amp;E
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./acidbase.html">H+ &amp; HCO3</a>
+    </li>
+    <li>
+      <a href="./na.html">Na</a>
+    </li>
+    <li>
+      <a href="./k.html">K</a>
+    </li>
+    <li>
+      <a href="./mg.html">MG</a>
+    </li>
+    <li>
+      <a href="./renalbone.html">Ca2+ &amp; PO4</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    GN
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./MCD.html">MCD</a>
+    </li>
+    <li>
+      <a href="./ANCA.html">ANCA</a>
+    </li>
+    <li>
+      <a href="./IGAN.html">IGAN</a>
+    </li>
+    <li>
+      <a href="./MPGN_C3G.html">MPGN &amp; C3G</a>
+    </li>
+    <li>
+      <a href="./LUPUS.html">LUPUS</a>
+    </li>
+    <li>
+      <a href="./FSGS.html">FSGS</a>
+    </li>
+    <li>
+      <a href="./TMA.html">TMA</a>
+    </li>
+    <li>
+      <a href="./GBM.html">GBM</a>
+    </li>
+    <li>
+      <a href="./MN.html">MN</a>
+    </li>
+    <li>
+      <a href="./Amyloid.html">Amyloid</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    CKD
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./project2.html">Checklist</a>
+    </li>
+    <li>
+      <a href="./project2.html">Conservative care</a>
+    </li>
+    <li>
+      <a href="./anaemia.html">Anaemia</a>
+    </li>
+    <li>
+      <a href="./project2.html">Pruritis</a>
+    </li>
+    <li>
+      <a href="./renalbone.html">CKD-MBD</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    TX
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./tx_cheat.html">Cheat sheet</a>
+    </li>
+    <li>
+      <a href="./txnotes.html">Misc Notes</a>
+    </li>
+    <li>
+      <a href="./nonrenaltx.html">Non Kidney Tx</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    RRT
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./HD.html">HD</a>
+    </li>
+    <li>
+      <a href="./project2.html">Home HD</a>
+    </li>
+    <li>
+      <a href="./project2.html">HD Access</a>
+    </li>
+    <li>
+      <a href="./project2.html">PD</a>
+    </li>
+    <li>
+      <a href="./project2.html">CVVH</a>
+    </li>
+    <li>
+      <a href="./project2.html">PEX</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    DRUGS
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./anticoagulation.html">Anticoagulation</a>
+    </li>
+    <li>
+      <a href="./PJP.html">PJP</a>
+    </li>
+    <li>
+      <a href="./abx.html">Abx</a>
+    </li>
+    <li>
+      <a href="./project1.html">Flozins</a>
+    </li>
+    <li>
+      <a href="./rituxcyc.html">RITUX &amp; CYC</a>
+    </li>
+    <li>
+      <a href="./Onconephrology.html">Onconephrology</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    MISC
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./preg.html">Pregnancy</a>
+    </li>
+    <li>
+      <a href="./Lymphoproliferative.html">Lymphoproliferative</a>
+    </li>
+    <li>
+      <a href="./covid19.html">SARS-Cov-2</a>
+    </li>
+    <li>
+      <a href="./Tumour_Lysis.html">Tumour Lysis Syndrome</a>
+    </li>
+    <li>
+      <a href="./Single Kidney.html">Single Kidney</a>
+    </li>
+    <li>
+      <a href="./IGG4.html">IGG4</a>
+    </li>
+    <li>
+      <a href="./sjogrens.html">Sjogrens and Systemic Sclerosis</a>
+    </li>
+    <li>
+      <a href="./Curios.html">Wierd and excellent papers</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Path
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./biopsy.html">Biopsy</a>
+    </li>
+    <li>
+      <a href="./path.html">PATH</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Resources
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="./clinic101.html">Kidney Clinic 101</a>
+    </li>
+    <li>
+      <a href="./edu.html">Educational Resources</a>
+    </li>
+    <li>
+      <a href="./patient_resources.html">Patient Resources</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+
+</div>
+
+
+<div id="khs-publications" class="section level1">
+<h1>KHS Publications</h1>
+<br>
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class="blue">
+<p>This is a non exhaustive list of recent publications pulled at each
+website update from Pubmed. This serves to give a flavour of the breath
+of medical research undertaken in association with the KHS at Metro
+North, rather than a complete repository. Research work will be captured
+if the “Kidney Health Service” Metro North is a listed affiliation.
+Listing middle authors would render the table unreadable - their
+contribution is no less valuable. Outputs such as chapters, those in
+press, and not listed on pubmed wont be pulled via this method, nor will
+the multiple variations of “Kidney Health Service” that one may enter
+during submission process. Finally, note the change in the name to KHS
+is recent, so prior to that , affiliation based entries will not be
+found. If you want to be included here and have non KHS work noted, send
+Eoin your ORCID to improve completeness.</p>
+</div>
+<p><br></p>
+<table>
+<colgroup>
+<col width="49%" />
+<col width="34%" />
+<col width="4%" />
+<col width="4%" />
+<col width="4%" />
+<col width="2%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Title</th>
+<th align="left">Journal</th>
+<th align="left">Publication Date</th>
+<th align="left">First Author</th>
+<th align="left">Last Author</th>
+<th align="left">PMID</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">A Randomized Controlled Trial of Video-Assisted
+Electronic Consent Versus Standard Consent for Percutaneous Kidney
+Biopsy.</td>
+<td align="left">Clinical journal of the American Society of Nephrology
+: CJASN</td>
+<td align="left">2025 Apr 9</td>
+<td align="left">Franca Gois PH</td>
+<td align="left">Healy HG</td>
+<td align="left">40202809</td>
+</tr>
+<tr class="even">
+<td align="left">Urinary EGF: Back to the Future.</td>
+<td align="left">Kidney360</td>
+<td align="left">2025 Mar 1</td>
+<td align="left">Ng MSY</td>
+<td align="left">Kassianos AJ</td>
+<td align="left">40146552</td>
+</tr>
+<tr class="odd">
+<td align="left">Operative and nonoperative management of acute
+cholecystitis in patients on chronic kidney replacement therapy.</td>
+<td align="left">Journal of hepato-biliary-pancreatic sciences</td>
+<td align="left">2025 Mar 25</td>
+<td align="left">Palamuthusingam D</td>
+<td align="left">Fahim M</td>
+<td align="left">40130280</td>
+</tr>
+<tr class="even">
+<td align="left">Energy conservation education intervention for people
+with end-stage kidney disease receiving haemodialysis (EVEREST): A
+two-arm parallel group study.</td>
+<td align="left">International journal of nursing studies</td>
+<td align="left">2025 Feb 24</td>
+<td align="left">Sharma S</td>
+<td align="left">Bonner A</td>
+<td align="left">40101671</td>
+</tr>
+<tr class="odd">
+<td align="left">Kidney Failure due to Diabetic Kidney Disease Among
+Australians Aged ≤ 45 Years, 2000-2022: A Population-Based Geospatial
+Analysis.</td>
+<td align="left">Nephrology (Carlton, Vic.)</td>
+<td align="left">2025 Mar</td>
+<td align="left">Ellis RJ</td>
+<td align="left">McDonald SP</td>
+<td align="left">40084465</td>
+</tr>
+<tr class="even">
+<td align="left">Head-to-head comparison of tyrosine kinase inhibitors
+in renal cell carcinoma using patient-derived cell culture.</td>
+<td align="left">Personalized medicine</td>
+<td align="left">2025 Apr</td>
+<td align="left">Urquhart AJ</td>
+<td align="left">Ellis RJ</td>
+<td align="left">40029183</td>
+</tr>
+<tr class="odd">
+<td align="left">Human proximal tubular epithelial cell interleukin-1
+receptor signalling triggers G2/M arrest and cellular senescence during
+hypoxic kidney injury.</td>
+<td align="left">Cell death &amp; disease</td>
+<td align="left">2025 Jan 31</td>
+<td align="left">Giuliani KTK</td>
+<td align="left">Kassianos AJ</td>
+<td align="left">39890773</td>
+</tr>
+<tr class="even">
+<td align="left">Educational or Behavioural Interventions to Improve
+Long-Term Haemodialysis Vascular Access Self-Management: A Systematic
+Review.</td>
+<td align="left">Journal of renal care</td>
+<td align="left">2025 Mar</td>
+<td align="left">Wembenyui C</td>
+<td align="left">Bonner A</td>
+<td align="left">39873372</td>
+</tr>
+<tr class="odd">
+<td align="left">Psychometric properties of the health literacy
+questionnaire tested in Vietnamese adults with chronic diseases.</td>
+<td align="left">BMC public health</td>
+<td align="left">2025 Jan 6</td>
+<td align="left">Ha Dinh TT</td>
+<td align="left">Bonner A</td>
+<td align="left">39762769</td>
+</tr>
+<tr class="even">
+<td align="left">A golden year of innovative kidney disease
+therapeutics.</td>
+<td align="left">Nature reviews. Nephrology</td>
+<td align="left">2025 Feb</td>
+<td align="left">Ng MSY</td>
+<td align="left">Hawley CM</td>
+<td align="left">39753690</td>
+</tr>
+<tr class="odd">
+<td align="left">Health system related kidney supportive care
+interventions for adults with chronic kidney disease: A systematic
+review.</td>
+<td align="left">Journal of renal care</td>
+<td align="left">2025 Mar</td>
+<td align="left">Dharmagunawardene D</td>
+<td align="left">Senanayake S</td>
+<td align="left">39639604</td>
+</tr>
+<tr class="even">
+<td align="left">Atypical anti-GBM disease in pregnancy.</td>
+<td align="left">BMJ case reports</td>
+<td align="left">2024 Nov 19</td>
+<td align="left">Chandler S</td>
+<td align="left">Palamuthusingam D</td>
+<td align="left">39566922</td>
+</tr>
+<tr class="odd">
+<td align="left">Autologous Epstein-Barr virus-specific adoptive T-cell
+therapy in a patient with lupus nephritis.</td>
+<td align="left">Clinical &amp; translational immunology</td>
+<td align="left">2024</td>
+<td align="left">Ranganathan D</td>
+<td align="left">Khanna R</td>
+<td align="left">39564002</td>
+</tr>
+<tr class="even">
+<td align="left">Regulated cell death in chronic kidney disease: current
+evidence and future clinical perspectives.</td>
+<td align="left">Frontiers in cell and developmental biology</td>
+<td align="left">2024</td>
+<td align="left">Giuliani KTK</td>
+<td align="left">Kassianos AJ</td>
+<td align="left">39544363</td>
+</tr>
+<tr class="odd">
+<td align="left">Hepatocellular senescence induces multi-organ
+senescence and dysfunction via TGFβ.</td>
+<td align="left">Nature cell biology</td>
+<td align="left">2024 Dec</td>
+<td align="left">Kiourtis C</td>
+<td align="left">Bird TG</td>
+<td align="left">39537753</td>
+</tr>
+<tr class="even">
+<td align="left">Unlocking the potential of extracellular vesicles in
+nephrology: what does MISEV2023 add?</td>
+<td align="left">Kidney international</td>
+<td align="left">2025 Jan</td>
+<td align="left">Ng MSY</td>
+<td align="left">Braun F</td>
+<td align="left">39515646</td>
+</tr>
+<tr class="odd">
+<td align="left">Factors That Influence Access to Medical Assistance in
+Dying Services: An Integrative Review.</td>
+<td align="left">Health expectations : an international journal of
+public participation in health care and health policy</td>
+<td align="left">2024 Oct</td>
+<td align="left">Hewitt J</td>
+<td align="left">Bloomer MJ</td>
+<td align="left">39415630</td>
+</tr>
+<tr class="even">
+<td align="left">Bariatric surgery outcomes in patients on chronic
+kidney replacement therapy in Australia and New Zealand.</td>
+<td align="left">The British journal of surgery</td>
+<td align="left">2024 Oct 1</td>
+<td align="left">Chandler S</td>
+<td align="left">Fahim M</td>
+<td align="left">39387471</td>
+</tr>
+<tr class="odd">
+<td align="left">Disseminated toxoplasmosis infection 20 years post
+kidney transplant.</td>
+<td align="left">BMJ case reports</td>
+<td align="left">2024 Sep 24</td>
+<td align="left">Chandler S</td>
+<td align="left">Hawley C</td>
+<td align="left">39317482</td>
+</tr>
+<tr class="even">
+<td align="left">A Glimpse into an Editorial Training Program: From the
+Kidney360 Editorial Program Trainees.</td>
+<td align="left">Kidney360</td>
+<td align="left">2024 Jan 1</td>
+<td align="left">Fisher M</td>
+<td align="left">Bigotte Vieira M</td>
+<td align="left">39254485</td>
+</tr>
+<tr class="odd">
+<td align="left">Hemodialysis without Systemic Anticoagulation: A
+Randomized Controlled Trial to Evaluate Five Strategies in Patients at a
+High Risk of Bleeding.</td>
+<td align="left">Medical sciences (Basel, Switzerland)</td>
+<td align="left">2024 Aug 4</td>
+<td align="left">Gois PHF</td>
+<td align="left">Healy HG</td>
+<td align="left">39189201</td>
+</tr>
+<tr class="even">
+<td align="left">A comparison of the diagnostic ability of large
+language models in challenging clinical cases.</td>
+<td align="left">Frontiers in artificial intelligence</td>
+<td align="left">2024</td>
+<td align="left">Khan MP</td>
+<td align="left">O’Sullivan ED</td>
+<td align="left">39161790</td>
+</tr>
+<tr class="odd">
+<td align="left">Implementation and Evaluation of a National
+Multidisciplinary Kidney Genetics Clinic Network Over 10 Years.</td>
+<td align="left">Kidney international reports</td>
+<td align="left">2024 Aug</td>
+<td align="left">Jayasinghe K</td>
+<td align="left">Mallett AJ</td>
+<td align="left">39156154</td>
+</tr>
+<tr class="even">
+<td align="left">Should Protocol Kidney Biopsies be a Part of Routine
+Post Transplant Care? PRO.</td>
+<td align="left">Kidney360</td>
+<td align="left">2024 Aug 13</td>
+<td align="left">John GT</td>
+<td align="left">Doucet BP</td>
+<td align="left">39137363</td>
+</tr>
+<tr class="odd">
+<td align="left">Maybe for unbearable suffering: Diverse racial, ethnic
+and cultural perspectives of assisted dying. A scoping review.</td>
+<td align="left">Palliative medicine</td>
+<td align="left">2024 Oct</td>
+<td align="left">Bloomer MJ</td>
+<td align="left">Bonner A</td>
+<td align="left">39126283</td>
+</tr>
+<tr class="even">
+<td align="left">Drug repurposing for glomerular diseases: an
+underutilized resource.</td>
+<td align="left">Nature reviews. Nephrology</td>
+<td align="left">2024 Nov</td>
+<td align="left">Ng MSY</td>
+<td align="left">Johnson DW</td>
+<td align="left">39085415</td>
+</tr>
+<tr class="odd">
+<td align="left">“How to navigate this new area”: Intensive care
+clinicians’ perceptions of voluntary assisted dying in the intensive
+care unit: A multisite exploratory study.</td>
+<td align="left">Australian critical care : official journal of the
+Confederation of Australian Critical Care Nurses</td>
+<td align="left">2025 Jan</td>
+<td align="left">Bloomer MJ</td>
+<td align="left">Bonner A</td>
+<td align="left">38880708</td>
+</tr>
+<tr class="even">
+<td align="left">Once-per-week haemodialysis in a financial crisis:
+Predictors of interdialytic weight gain.</td>
+<td align="left">Journal of renal care</td>
+<td align="left">2024 Dec</td>
+<td align="left">Jagodage HMH</td>
+<td align="left">Bonner A</td>
+<td align="left">38796744</td>
+</tr>
+<tr class="odd">
+<td align="left">Capacity for the management of kidney failure in the
+International Society of Nephrology Oceania and South East Asia (OSEA)
+region: report from the 2023 ISN Global Kidney Health Atlas
+(ISN-GKHA).</td>
+<td align="left">Kidney international supplements</td>
+<td align="left">2024 Apr</td>
+<td align="left">Francis A</td>
+<td align="left">Bavanandan S</td>
+<td align="left">38618497</td>
+</tr>
+<tr class="even">
+<td align="left">Better kidney allograft survival despite higher-risk
+donor and recipient characteristics between 1995 and 2014.</td>
+<td align="left">Nephrology, dialysis, transplantation : official
+publication of the European Dialysis and Transplant Association -
+European Renal Association</td>
+<td align="left">2024 Oct 30</td>
+<td align="left">Ng MSY</td>
+<td align="left">O’Shaughnessy MM</td>
+<td align="left">38573827</td>
+</tr>
+<tr class="odd">
+<td align="left">People with genetic kidney diseases on kidney
+replacement therapy have different clinical outcomes compared to people
+with other kidney diseases.</td>
+<td align="left">Scientific reports</td>
+<td align="left">2024 Mar 21</td>
+<td align="left">Han HY</td>
+<td align="left">Mallett AJ</td>
+<td align="left">38509220</td>
+</tr>
+<tr class="even">
+<td align="left">Characteristics and clinical outcomes of patients with
+kidney failure of unknown aetiology from ANZDATA registry.</td>
+<td align="left">PloS one</td>
+<td align="left">2024</td>
+<td align="left">Wang LS</td>
+<td align="left">Mallett AJ</td>
+<td align="left">38466666</td>
+</tr>
+<tr class="odd">
+<td align="left">Exploring the impact and utility of genomic sequencing
+in established CKD.</td>
+<td align="left">Clinical kidney journal</td>
+<td align="left">2024 Mar</td>
+<td align="left">Jefferis J</td>
+<td align="left">Mallett AJ</td>
+<td align="left">38464959</td>
+</tr>
+<tr class="even">
+<td align="left">Bone broth ingestion and acute kidney injury following
+kidney transplant: a role for cystatin C.</td>
+<td align="left">BMJ case reports</td>
+<td align="left">2024 Feb 22</td>
+<td align="left">Chandler S</td>
+<td align="left">John GT</td>
+<td align="left">38388200</td>
+</tr>
+<tr class="odd">
+<td align="left">An update on the global disparities in kidney disease
+burden and care across world countries and regions.</td>
+<td align="left">The Lancet. Global health</td>
+<td align="left">2024 Mar</td>
+<td align="left">Bello AK</td>
+<td align="left">Johnson DW</td>
+<td align="left">38365413</td>
+</tr>
+<tr class="even">
+<td align="left">PD peritonitis in patients undergoing capsule
+endoscopy: A descriptive study.</td>
+<td align="left">Peritoneal dialysis international : journal of the
+International Society for Peritoneal Dialysis</td>
+<td align="left">2024 Nov</td>
+<td align="left">Khair M</td>
+<td align="left">Fahim M</td>
+<td align="left">38288584</td>
+</tr>
+<tr class="odd">
+<td align="left">Human proximal tubular epithelial cell-derived small
+extracellular vesicles mediate synchronized tubular ferroptosis in
+hypoxic kidney injury.</td>
+<td align="left">Redox biology</td>
+<td align="left">2024 Apr</td>
+<td align="left">Wang X</td>
+<td align="left">Kassianos AJ</td>
+<td align="left">38244399</td>
+</tr>
+<tr class="even">
+<td align="left">Re-Thinking Hyperkalaemia Management in Chronic Kidney
+Disease-Beyond Food Tables and Nutrition Myths: An Evidence-Based
+Practice Review.</td>
+<td align="left">Nutrients</td>
+<td align="left">2023 Dec 19</td>
+<td align="left">MacLaughlin HL</td>
+<td align="left">Mason B</td>
+<td align="left">38201833</td>
+</tr>
+<tr class="odd">
+<td align="left">Monogenic and polygenic concepts in chronic kidney
+disease (CKD).</td>
+<td align="left">Journal of nephrology</td>
+<td align="left">2024 Jan</td>
+<td align="left">Jefferis J</td>
+<td align="left">Mallett A</td>
+<td align="left">37989975</td>
+</tr>
+<tr class="even">
+<td align="left">Avacopan as an additional therapeutic intervention to
+promote renal recovery in severe ANCA-associated vasculitis: A case
+report.</td>
+<td align="left">Nephrology (Carlton, Vic.)</td>
+<td align="left">2024 Feb</td>
+<td align="left">Atrens AD</td>
+<td align="left">Madhan K</td>
+<td align="left">37985226</td>
+</tr>
+<tr class="odd">
+<td align="left">Characteristics and clinical outcomes following
+transcatheter aortic valve replacement for severe aortic stenosis in
+Australian and New Zealand patients on chronic dialysis.</td>
+<td align="left">Internal medicine journal</td>
+<td align="left">2023 Oct</td>
+<td align="left">Qi L</td>
+<td align="left">Fahim M</td>
+<td align="left">37859541</td>
+</tr>
+<tr class="even">
+<td align="left">Multimodal approaches for inequality in kidney care:
+turning social determinants of health into opportunities.</td>
+<td align="left">Current opinion in nephrology and hypertension</td>
+<td align="left">2024 Jan 1</td>
+<td align="left">Purtell L</td>
+<td align="left">Bonner A</td>
+<td align="left">37847046</td>
+</tr>
+<tr class="odd">
+<td align="left">Acceptability, Adherence, Safety and Experiences of Low
+Energy Diets in People With Obesity and Chronic Kidney Disease: A Mixed
+Methods Study.</td>
+<td align="left">Journal of renal nutrition : the official journal of
+the Council on Renal Nutrition of the National Kidney Foundation</td>
+<td align="left">2024 Mar</td>
+<td align="left">Conley M</td>
+<td align="left">MacLaughlin H</td>
+<td align="left">37769751</td>
+</tr>
+<tr class="even">
+<td align="left">Perceptions of haemodialysis nurses regarding patients’
+and families’ loss and grief.</td>
+<td align="left">Journal of renal care</td>
+<td align="left">2024 Sep</td>
+<td align="left">Marcussen J</td>
+<td align="left">Agerskov H</td>
+<td align="left">37717218</td>
+</tr>
+<tr class="odd">
+<td align="left">High risk clear cell renal cell carcinoma
+microenvironments contain protumour immunophenotypes lacking specific
+immune checkpoints.</td>
+<td align="left">NPJ precision oncology</td>
+<td align="left">2023 Sep 11</td>
+<td align="left">Raghubar AM</td>
+<td align="left">Mallett AJ</td>
+<td align="left">37696903</td>
+</tr>
+<tr class="even">
+<td align="left">Systematic review of externally validated machine
+learning models for predicting acute kidney injury in general hospital
+patients.</td>
+<td align="left">Frontiers in nephrology</td>
+<td align="left">2023</td>
+<td align="left">Wainstein M</td>
+<td align="left">Shrapnel S</td>
+<td align="left">37675372</td>
+</tr>
+<tr class="odd">
+<td align="left">Hospitalizations Among Adults With CKD in Public Renal
+Specialty Practices: A Retrospective Study From Queensland,
+Australia.</td>
+<td align="left">Kidney medicine</td>
+<td align="left">2023 Sep</td>
+<td align="left">Diwan V</td>
+<td align="left">Govindarajulu S</td>
+<td align="left">37649728</td>
+</tr>
+<tr class="even">
+<td align="left">Exploring the relationships between health literacy,
+social support, self-efficacy and self-management in adults with
+multiple chronic diseases.</td>
+<td align="left">BMC health services research</td>
+<td align="left">2023 Aug 30</td>
+<td align="left">Dinh TTH</td>
+<td align="left">Bonner A</td>
+<td align="left">37649013</td>
+</tr>
+<tr class="odd">
+<td align="left">Impact of chronic kidney disease on everyday life: A
+descriptive qualitative study.</td>
+<td align="left">Journal of renal care</td>
+<td align="left">2024 Sep</td>
+<td align="left">Yapa HE</td>
+<td align="left">Bonner A</td>
+<td align="left">37573481</td>
+</tr>
+<tr class="even">
+<td align="left">Feasibility of the McIntyre audit tool for
+haemodialysis nurses.</td>
+<td align="left">Journal of renal care</td>
+<td align="left">2024 Sep</td>
+<td align="left">McIntyre D</td>
+<td align="left">Bonner A</td>
+<td align="left">37493346</td>
+</tr>
+<tr class="odd">
+<td align="left">Caution yes, but not at the expense of compassion in
+medically assisted dying.</td>
+<td align="left">Intensive &amp; critical care nursing</td>
+<td align="left">2023 Oct</td>
+<td align="left">Bloomer MJ</td>
+<td align="left">Bonner A</td>
+<td align="left">37473708</td>
+</tr>
+<tr class="even">
+<td align="left">The First ABO Incompatible Kidney Transplantation
+without Splenectomy in India - A Review at 12 Years.</td>
+<td align="left">Indian journal of nephrology</td>
+<td align="left">2023 May-Jun</td>
+<td align="left">John GT</td>
+<td align="left">Varughese S</td>
+<td align="left">37448893</td>
+</tr>
+<tr class="odd">
+<td align="left">Kidney Supportive Care for Working-Age Adults with
+Chronic Kidney Disease: A Profile of Characteristics and Symptom
+Burden.</td>
+<td align="left">Nephron</td>
+<td align="left">2024</td>
+<td align="left">Liu J</td>
+<td align="left">Bonner A</td>
+<td align="left">37429259</td>
+</tr>
+<tr class="even">
+<td align="left">Spatial Transcriptomics in Kidney Tissue.</td>
+<td align="left">Methods in molecular biology (Clifton, N.J.)</td>
+<td align="left">2023</td>
+<td align="left">Raghubar AM</td>
+<td align="left">Mallett AJ</td>
+<td align="left">37423994</td>
+</tr>
+<tr class="odd">
+<td align="left">Association of Primary Kidney Disease Type and Donor
+Relatedness With Live Donor Kidney Transplant Outcomes: An Analysis of
+ANZDATA.</td>
+<td align="left">American journal of kidney diseases : the official
+journal of the National Kidney Foundation</td>
+<td align="left">2023 Nov</td>
+<td align="left">Yu D</td>
+<td align="left">Mallett AJ</td>
+<td align="left">37385397</td>
+</tr>
+<tr class="even">
+<td align="left">Association of Country Income Level With the
+Characteristics and Outcomes of Critically Ill Patients Hospitalized
+With Acute Kidney Injury and COVID-19.</td>
+<td align="left">Kidney international reports</td>
+<td align="left">2023 May 27</td>
+<td align="left">Wainstein M</td>
+<td align="left">Shrapnel S</td>
+<td align="left">37360820</td>
+</tr>
+<tr class="odd">
+<td align="left">Differences in bone mineral density of lumbar spine and
+femur.</td>
+<td align="left">Peritoneal dialysis international : journal of the
+International Society for Peritoneal Dialysis</td>
+<td align="left">2023 Jul</td>
+<td align="left">Chong JW</td>
+<td align="left">Lee JC</td>
+<td align="left">37334696</td>
+</tr>
+<tr class="even">
+<td align="left">Real world evaluation of kidney failure risk equations
+in predicting progression from chronic kidney disease to kidney failure
+in an Australian cohort.</td>
+<td align="left">Journal of nephrology</td>
+<td align="left">2024 Jan</td>
+<td align="left">Jahan S</td>
+<td align="left">Mallett A</td>
+<td align="left">37285006</td>
+</tr>
+<tr class="odd">
+<td align="left">Indian Hedgehog release from TNF-activated renal
+epithelia drives local and remote organ fibrosis.</td>
+<td align="left">Science translational medicine</td>
+<td align="left">2023 May 31</td>
+<td align="left">O’Sullivan ED</td>
+<td align="left">Ferenbach DA</td>
+<td align="left">37256934</td>
+</tr>
+<tr class="even">
+<td align="left">The Impact of Anaemia on Outcomes, Admissions, and
+Costs in Patients with Chronic Kidney Disease in Two Public Nephrology
+Practices in Queensland: A CKD.QLD Registry Study.</td>
+<td align="left">International journal of nephrology</td>
+<td align="left">2023</td>
+<td align="left">Zhang J</td>
+<td align="left">Hoy WE</td>
+<td align="left">37180548</td>
+</tr>
+<tr class="odd">
+<td align="left">Medically assisted dying in critical care: An
+international groundswell that we shouldn’t ignore.</td>
+<td align="left">Intensive &amp; critical care nursing</td>
+<td align="left">2023 Aug</td>
+<td align="left">Bloomer MJ</td>
+<td align="left">Bonner A</td>
+<td align="left">37072281</td>
+</tr>
+<tr class="even">
+<td align="left">Serum Creatinine and Tacrolimus Assessment With VAMS
+Finger-Prick Microsampling: A Diagnostic Test Study.</td>
+<td align="left">Kidney medicine</td>
+<td align="left">2023 Apr</td>
+<td align="left">Scuderi CE</td>
+<td align="left">Staatz CE</td>
+<td align="left">36970223</td>
+</tr>
+<tr class="odd">
+<td align="left">Creatinine index: a retrospective cohort study in an
+urban Australian dialysis context.</td>
+<td align="left">Internal medicine journal</td>
+<td align="left">2023 Dec</td>
+<td align="left">Chandler S</td>
+<td align="left">Wolley M</td>
+<td align="left">36878887</td>
+</tr>
+<tr class="even">
+<td align="left">The Utility of Spatial Transcriptomics for Solid Organ
+Transplantation.</td>
+<td align="left">Transplantation</td>
+<td align="left">2023 Jul 1</td>
+<td align="left">Li JSY</td>
+<td align="left">Mallett AJ</td>
+<td align="left">36584371</td>
+</tr>
+<tr class="odd">
+<td align="left">Progressive multifocal leukoencephalopathy 10 years
+following transplant: 5HT receptor antagonism as an adjunct to immune
+reconstitution.</td>
+<td align="left">BMJ case reports</td>
+<td align="left">2022 Dec 13</td>
+<td align="left">Chandler S</td>
+<td align="left">Isbel N</td>
+<td align="left">36524258</td>
+</tr>
+<tr class="even">
+<td align="left">Single-cell analysis of senescent epithelia reveals
+targetable mechanisms promoting fibrosis.</td>
+<td align="left">JCI insight</td>
+<td align="left">2022 Nov 22</td>
+<td align="left">O’Sullivan ED</td>
+<td align="left">Ferenbach DA</td>
+<td align="left">36509292</td>
+</tr>
+<tr class="odd">
+<td align="left">Cellular milieu in clear cell renal cell
+carcinoma.</td>
+<td align="left">Frontiers in oncology</td>
+<td align="left">2022</td>
+<td align="left">Raghubar AM</td>
+<td align="left">Mallett AJ</td>
+<td align="left">36313721</td>
+</tr>
+<tr class="even">
+<td align="left">Cognitive bias is a crucial factor in nurses’ decision
+making.</td>
+<td align="left">Evidence-based nursing</td>
+<td align="left">2023 Jan</td>
+<td align="left">O’Sullivan ED</td>
+<td align="left">O’Sullivan ED</td>
+<td align="left">36270795</td>
+</tr>
+<tr class="odd">
+<td align="left">Understanding the practice patterns of nephrology nurse
+practitioners in Australia.</td>
+<td align="left">Journal of renal care</td>
+<td align="left">2023 Dec</td>
+<td align="left">Bonner A</td>
+<td align="left">Gillespie K</td>
+<td align="left">36210458</td>
+</tr>
+<tr class="even">
+<td align="left">Chronic kidney disease in public renal practices in
+Queensland, Australia, 2011-2018.</td>
+<td align="left">Nephrology (Carlton, Vic.)</td>
+<td align="left">2022 Dec</td>
+<td align="left">Hoy WE</td>
+<td align="left">Govindarajulu S</td>
+<td align="left">36161428</td>
+</tr>
+<tr class="odd">
+<td align="left">Minimal change disease with Jack jumper ant stings: A
+case report.</td>
+<td align="left">Nephrology (Carlton, Vic.)</td>
+<td align="left">2022 Nov</td>
+<td align="left">Tunbridge M</td>
+<td align="left">John GT</td>
+<td align="left">36113860</td>
+</tr>
+<tr class="even">
+<td align="left">Fingerprick Microsampling Methods Can Replace
+Venepuncture for Simultaneous Therapeutic Drug Monitoring of Tacrolimus,
+Mycophenolic Acid, and Prednisolone Concentrations in Adult Kidney
+Transplant Patients.</td>
+<td align="left">Therapeutic drug monitoring</td>
+<td align="left">2023 Feb 1</td>
+<td align="left">Scuderi C</td>
+<td align="left">Staatz C</td>
+<td align="left">36097333</td>
+</tr>
+<tr class="odd">
+<td align="left">Trends in Rates of Surgery and Postoperative Mortality
+Among Patients Receiving Chronic Kidney Replacement Therapy: A
+Population-based Cohort Study.</td>
+<td align="left">Annals of surgery</td>
+<td align="left">2022 Dec 1</td>
+<td align="left">Palamuthusingam D</td>
+<td align="left">Fahim M</td>
+<td align="left">36052682</td>
+</tr>
+<tr class="even">
+<td align="left">Targeted biomarkers of progression in chronic kidney
+disease.</td>
+<td align="left">Clinica chimica acta; international journal of clinical
+chemistry</td>
+<td align="left">2022 Nov 1</td>
+<td align="left">Owens EP</td>
+<td align="left">Gobe GC</td>
+<td align="left">36041551</td>
+</tr>
+<tr class="odd">
+<td align="left">Hypoxic human proximal tubular epithelial cells undergo
+ferroptosis and elicit an NLRP3 inflammasome response in CD1c(+)
+dendritic cells.</td>
+<td align="left">Cell death &amp; disease</td>
+<td align="left">2022 Aug 27</td>
+<td align="left">Giuliani KTK</td>
+<td align="left">Kassianos AJ</td>
+<td align="left">36030251</td>
+</tr>
+<tr class="even">
+<td align="left">PHYOX2: a pivotal randomized study of nedosiran in
+primary hyperoxaluria type 1 or 2.</td>
+<td align="left">Kidney international</td>
+<td align="left">2023 Jan</td>
+<td align="left">Baum MA</td>
+<td align="left">Hoppe B</td>
+<td align="left">36007597</td>
+</tr>
+<tr class="odd">
+<td align="left">Validation of the McIntyre Audit Tool to measure
+haemodialysis nurse sensitive indicators.</td>
+<td align="left">Journal of renal care</td>
+<td align="left">2023 Sep</td>
+<td align="left">McIntyre D</td>
+<td align="left">McGuire A</td>
+<td align="left">35975294</td>
+</tr>
+<tr class="even">
+<td align="left">Snake envenomation: not your average acute kidney
+injury.</td>
+<td align="left">Internal medicine journal</td>
+<td align="left">2022 Aug</td>
+<td align="left">Chandler S</td>
+<td align="left">Ng S</td>
+<td align="left">35973953</td>
+</tr>
+<tr class="odd">
+<td align="left">Sodium chlorite poisoning: a case of severe
+methaemoglobinaemia and dialysis-requiring kidney injury.</td>
+<td align="left">Internal medicine journal</td>
+<td align="left">2022 Aug</td>
+<td align="left">Tunbridge M</td>
+<td align="left">Viecelli AK</td>
+<td align="left">35973949</td>
+</tr>
+<tr class="even">
+<td align="left">Spatially Resolved Transcriptomes of Mammalian Kidneys
+Illustrate the Molecular Complexity and Interactions of Functional
+Nephron Segments.</td>
+<td align="left">Frontiers in medicine</td>
+<td align="left">2022</td>
+<td align="left">Raghubar AM</td>
+<td align="left">Mallett AJ</td>
+<td align="left">35872784</td>
+</tr>
+<tr class="odd">
+<td align="left">Challenges of conducting kidney health checks among
+patients at risk of chronic kidney disease and attending an urban
+Aboriginal and Torres Strait Islander primary healthcare service.</td>
+<td align="left">Australian journal of primary health</td>
+<td align="left">2022 Oct</td>
+<td align="left">Lakhan P</td>
+<td align="left">Johnson D</td>
+<td align="left">35863762</td>
+</tr>
+<tr class="even">
+<td align="left">Cost-Effectiveness and Budget Impact Analysis of
+Implementing a ‘Soft Opt-Out’ System for Kidney Donation in
+Australia.</td>
+<td align="left">Applied health economics and health policy</td>
+<td align="left">2022 Sep</td>
+<td align="left">Senanayake S</td>
+<td align="left">Kularatna S</td>
+<td align="left">35843996</td>
+</tr>
+<tr class="odd">
+<td align="left">The practicalities of COVID’s impact on nuclear
+cardiology.</td>
+<td align="left">Journal of nuclear cardiology : official publication of
+the American Society of Nuclear Cardiology</td>
+<td align="left">2022 Oct</td>
+<td align="left">Lee JC</td>
+<td align="left">Baer RA</td>
+<td align="left">35790688</td>
+</tr>
+<tr class="even">
+<td align="left">Factors influencing health-related quality of life in
+people with chronic kidney disease: A structural equation modelling
+approach.</td>
+<td align="left">Journal of clinical nursing</td>
+<td align="left">2023 Jul</td>
+<td align="left">Yapa HE</td>
+<td align="left">Bonner A</td>
+<td align="left">35739638</td>
+</tr>
+<tr class="odd">
+<td align="left">The HIDDEN Protocol: An Australian Prospective Cohort
+Study to Determine the Utility of Whole Genome Sequencing in Kidney
+Failure of Unknown Aetiology.</td>
+<td align="left">Frontiers in medicine</td>
+<td align="left">2022</td>
+<td align="left">Soraru J</td>
+<td align="left">Mallett AJ</td>
+<td align="left">35721054</td>
+</tr>
+<tr class="even">
+<td align="left">Evaluating data quality in the Australian and New
+Zealand dialysis and transplant registry using administrative hospital
+admission datasets and data-linkage.</td>
+<td align="left">Health information management : journal of the Health
+Information Management Association of Australia</td>
+<td align="left">2023 Sep</td>
+<td align="left">Palamuthusingam D</td>
+<td align="left">Fahim M</td>
+<td align="left">35695032</td>
+</tr>
+<tr class="odd">
+<td align="left">Human T-cell leukaemia virus type 1 and Adult T-cell
+leukaemia/lymphoma in Queensland, Australia: a retrospective
+cross-sectional study.</td>
+<td align="left">Sexually transmitted infections</td>
+<td align="left">2023 Feb</td>
+<td align="left">Martin F</td>
+<td align="left">Heney C</td>
+<td align="left">35523573</td>
+</tr>
+<tr class="even">
+<td align="left">The prevalence of Fabry disease in a statewide chronic
+kidney disease cohort - Outcomes of the aCQuiRE (Ckd.Qld fabRy
+Epidemiology) study.</td>
+<td align="left">BMC nephrology</td>
+<td align="left">2022 May 4</td>
+<td align="left">Mallett A</td>
+<td align="left">Hoy WE</td>
+<td align="left">35505287</td>
+</tr>
+<tr class="odd">
+<td align="left">Use of an extended KDIGO definition to diagnose acute
+kidney injury in patients with COVID-19: A multinational study using the
+ISARIC-WHO clinical characterisation protocol.</td>
+<td align="left">PLoS medicine</td>
+<td align="left">2022 Apr</td>
+<td align="left">Wainstein M</td>
+<td align="left">Shrapnel S</td>
+<td align="left">35442972</td>
+</tr>
+<tr class="even">
+<td align="left">Treatment resistant M-type phospholipase A2 receptor
+associated membranous nephropathy responds to obinutuzumab: a report of
+two cases.</td>
+<td align="left">BMC nephrology</td>
+<td align="left">2022 Apr 7</td>
+<td align="left">Hudson R</td>
+<td align="left">John GT</td>
+<td align="left">35392837</td>
+</tr>
+<tr class="odd">
+<td align="left">The complementary roles of MPS and CAC in renal
+patients.</td>
+<td align="left">Journal of nuclear cardiology : official publication of
+the American Society of Nuclear Cardiology</td>
+<td align="left">2022 Jun</td>
+<td align="left">Lee JC</td>
+<td align="left">Baer RA</td>
+<td align="left">35378693</td>
+</tr>
+<tr class="even">
+<td align="left">Bleeding Complications of Percutaneous Kidney Biopsy:
+Does Gender Matter?</td>
+<td align="left">Kidney360</td>
+<td align="left">2021 Aug 26</td>
+<td align="left">Anpalahan A</td>
+<td align="left">Gois PHF</td>
+<td align="left">35369661</td>
+</tr>
+<tr class="odd">
+<td align="left">Corrigendum to Ng MS, Malacova E, Hurst C, David MC,
+Johnson DW, Mallett AJ. “Clinical Outcomes of People With Fabry Disease
+- ANZDATA Registry Study.” Kidney Int Rep. 2021;6:2481-2485.</td>
+<td align="left">Kidney international reports</td>
+<td align="left">2022 Mar</td>
+<td align="left">Ng MS</td>
+<td align="left">Mallett AJ</td>
+<td align="left">35257086</td>
+</tr>
+<tr class="even">
+<td align="left">Promoting Plant-Based Therapies for Chronic Kidney
+Disease.</td>
+<td align="left">Journal of evidence-based integrative medicine</td>
+<td align="left">2022 Jan-Dec</td>
+<td align="left">Khan MA</td>
+<td align="left">Gobe GC</td>
+<td align="left">35243916</td>
+</tr>
+<tr class="odd">
+<td align="left">Energy conservation education intervention for people
+with end-stage kidney disease receiving haemodialysis (EVEREST):
+protocol for a cluster randomised control trial.</td>
+<td align="left">BMJ open</td>
+<td align="left">2022 Feb 21</td>
+<td align="left">Sharma S</td>
+<td align="left">Bonner A</td>
+<td align="left">35190440</td>
+</tr>
+<tr class="even">
+<td align="left">Adenine overload induces ferroptosis in human primary
+proximal tubular epithelial cells.</td>
+<td align="left">Cell death &amp; disease</td>
+<td align="left">2022 Feb 2</td>
+<td align="left">Khan MA</td>
+<td align="left">Kassianos AJ</td>
+<td align="left">35110539</td>
+</tr>
+<tr class="odd">
+<td align="left">Kidney failure, CKD progression and mortality after
+nephrectomy.</td>
+<td align="left">International urology and nephrology</td>
+<td align="left">2022 Sep</td>
+<td align="left">Ellis RJ</td>
+<td align="left">Hoy WE</td>
+<td align="left">35084650</td>
+</tr>
+<tr class="even">
+<td align="left">Concurrent membranous nephropathy and allergic
+interstitial nephritis causing acute kidney injury-A case report.</td>
+<td align="left">Nephrology (Carlton, Vic.)</td>
+<td align="left">2022 Jul</td>
+<td align="left">Russell JP</td>
+<td align="left">Jefferis J</td>
+<td align="left">35068010</td>
+</tr>
+<tr class="odd">
+<td align="left">Parkinsonism and prolonged cognitive decline as a
+manifestation of cryptococcal meningitis in a renal transplant
+patient.</td>
+<td align="left">BMJ case reports</td>
+<td align="left">2022 Jan 19</td>
+<td align="left">Nelles R</td>
+<td align="left">Denaro C</td>
+<td align="left">35046073</td>
+</tr>
+<tr class="even">
+<td align="left">SARS-CoV-2 vaccination-associated collapsing
+glomerulopathy in a kidney transplant recipient.</td>
+<td align="left">Kidney international</td>
+<td align="left">2022 Mar</td>
+<td align="left">Jefferis J</td>
+<td align="left">John GT</td>
+<td align="left">34995649</td>
+</tr>
+<tr class="odd">
+<td align="left">National and international kidney failure registries:
+characteristics, commonalities, and contrasts.</td>
+<td align="left">Kidney international</td>
+<td align="left">2022 Jan</td>
+<td align="left">Ng MSY</td>
+<td align="left">Mallett AJ</td>
+<td align="left">34736973</td>
+</tr>
+<tr class="even">
+<td align="left">Clinical Outcomes of People With Fabry Disease -
+ANZDATA Registry Study.</td>
+<td align="left">Kidney international reports</td>
+<td align="left">2021 Sep</td>
+<td align="left">Ng MS</td>
+<td align="left">Mallett AJ</td>
+<td align="left">34514210</td>
+</tr>
+<tr class="odd">
+<td align="left">Kidney biopsy practice amongst Australasian
+nephrologists.</td>
+<td align="left">BMC nephrology</td>
+<td align="left">2021 Aug 26</td>
+<td align="left">Burke JP</td>
+<td align="left">Ranganathan D</td>
+<td align="left">34445981</td>
+</tr>
+<tr class="even">
+<td align="left">Should we biopsy?</td>
+<td align="left">Internal medicine journal</td>
+<td align="left">2021 Aug</td>
+<td align="left">Chandler S</td>
+<td align="left">Palamuthusingam D</td>
+<td align="left">34423536</td>
+</tr>
+<tr class="odd">
+<td align="left">Healthcare systems and professionals are key to
+improving health literacy in chronic kidney disease.</td>
+<td align="left">Journal of renal care</td>
+<td align="left">2022 Mar</td>
+<td align="left">Dinh HTT</td>
+<td align="left">Bonner A</td>
+<td align="left">34291578</td>
+</tr>
+<tr class="even">
+<td align="left">T-Cell Expression and Release of Kidney Injury
+Molecule-1 in Response to Glucose Variations Initiates Kidney Injury in
+Early Diabetes.</td>
+<td align="left">Diabetes</td>
+<td align="left">2021 Aug</td>
+<td align="left">Forbes JM</td>
+<td align="left">O’Moore-Sullivan T</td>
+<td align="left">34285121</td>
+</tr>
+<tr class="odd">
+<td align="left">A cross-sectional study exploring cognitive impairment
+in kidney failure.</td>
+<td align="left">Journal of renal care</td>
+<td align="left">2022 Jun</td>
+<td align="left">Nicholas P</td>
+<td align="left">Bonner A</td>
+<td align="left">34227741</td>
+</tr>
+<tr class="even">
+<td align="left">Chronic disease health literacy in First Nations
+people: A mixed methods study.</td>
+<td align="left">Journal of clinical nursing</td>
+<td align="left">2021 Sep</td>
+<td align="left">Rheault H</td>
+<td align="left">Bonner A</td>
+<td align="left">34180097</td>
+</tr>
+<tr class="odd">
+<td align="left">Development and validation of a risk index to predict
+kidney graft survival: the kidney transplant risk index.</td>
+<td align="left">BMC medical research methodology</td>
+<td align="left">2021 Jun 21</td>
+<td align="left">Senanayake S</td>
+<td align="left">Barnett A</td>
+<td align="left">34154541</td>
+</tr>
+<tr class="even">
+<td align="left">Examining social support, psychological status and
+health-related quality of life in people receiving haemodialysis.</td>
+<td align="left">Journal of renal care</td>
+<td align="left">2022 Jun</td>
+<td align="left">Hoang VL</td>
+<td align="left">Bonner A</td>
+<td align="left">34041850</td>
+</tr>
+<tr class="odd">
+<td align="left">Cellular senescence inhibits renal regeneration after
+injury in mice, with senolytic treatment promoting repair.</td>
+<td align="left">Science translational medicine</td>
+<td align="left">2021 May 19</td>
+<td align="left">Mylonas KJ</td>
+<td align="left">Ferenbach DA</td>
+<td align="left">34011625</td>
+</tr>
+<tr class="even">
+<td align="left">International Society of Nephrology Global Kidney
+Health Atlas: structures, organization, and services for the management
+of kidney failure in Latin America.</td>
+<td align="left">Kidney international supplements</td>
+<td align="left">2021 May</td>
+<td align="left">Wainstein M</td>
+<td align="left">Johnson DW</td>
+<td align="left">33981469</td>
+</tr>
+<tr class="odd">
+<td align="left">Pharmacokinetic and Pharmacodynamic Considerations in
+Relation to Calcineurin Usage in Elderly Kidney Transplant
+Recipients.</td>
+<td align="left">Frontiers in pharmacology</td>
+<td align="left">2021</td>
+<td align="left">Cossart AR</td>
+<td align="left">Staatz CE</td>
+<td align="left">33912051</td>
+</tr>
+<tr class="even">
+<td align="left">Time-to-event analysis in economic evaluations: a
+comparison of modelling methods to assess the cost-effectiveness of
+transplanting a marginal quality kidney.</td>
+<td align="left">Health economics review</td>
+<td align="left">2021 Apr 15</td>
+<td align="left">Senanayake S</td>
+<td align="left">Kularatna S</td>
+<td align="left">33856573</td>
+</tr>
+<tr class="odd">
+<td align="left">Determining the association between the type of
+intervention for ischaemic heart disease and mortality and morbidity in
+patients with chronic kidney disease.</td>
+<td align="left">Internal medicine journal</td>
+<td align="left">2022 Jul</td>
+<td align="left">Jeyaruban A</td>
+<td align="left">Mallett A</td>
+<td align="left">33755278</td>
+</tr>
+<tr class="even">
+<td align="left">Alterations in symptoms and health-related quality of
+life as kidney function deteriorates: A cross-sectional study.</td>
+<td align="left">Journal of clinical nursing</td>
+<td align="left">2021 Jun</td>
+<td align="left">Yapa HE</td>
+<td align="left">Bonner A</td>
+<td align="left">33656217</td>
+</tr>
+<tr class="odd">
+<td align="left">Range and Consistency of Infection Outcomes Reported in
+Trials Conducted in Kidney Transplant Recipients: A Systematic
+Review.</td>
+<td align="left">Transplantation</td>
+<td align="left">2021 Dec 1</td>
+<td align="left">Chan S</td>
+<td align="left">Viecelli AK</td>
+<td align="left">33653998</td>
+</tr>
+<tr class="even">
+<td align="left">Molecular and functional profiling of apical versus
+basolateral small extracellular vesicles derived from primary human
+proximal tubular epithelial cells under inflammatory conditions.</td>
+<td align="left">Journal of extracellular vesicles</td>
+<td align="left">2021 Feb</td>
+<td align="left">Wang X</td>
+<td align="left">Kassianos AJ</td>
+<td align="left">33643548</td>
+</tr>
+<tr class="odd">
+<td align="left">Attitudes and Practices of Australian Nephrologists
+Toward Implementation of Clinical Genomics.</td>
+<td align="left">Kidney international reports</td>
+<td align="left">2021 Feb</td>
+<td align="left">Jayasinghe K</td>
+<td align="left">Stark Z</td>
+<td align="left">33615052</td>
+</tr>
+<tr class="even">
+<td align="left">A scoping review of the role of health literacy in
+chronic kidney disease self-management.</td>
+<td align="left">Journal of renal care</td>
+<td align="left">2021 Dec</td>
+<td align="left">Shah JM</td>
+<td align="left">Bonner A</td>
+<td align="left">33533199</td>
+</tr>
+<tr class="odd">
+<td align="left">Post-transplant complications, patient, and graft
+survival in pediatric and adolescent kidney transplant recipients at a
+tropical tertiary care center across two immunosuppression eras.</td>
+<td align="left">Pediatric transplantation</td>
+<td align="left">2021 Sep</td>
+<td align="left">Mohapatra A</td>
+<td align="left">Varughese S</td>
+<td align="left">33463876</td>
+</tr>
+<tr class="even">
+<td align="left">Hyperuricaemia, gout and allopurinol in the CKD
+Queensland registry.</td>
+<td align="left">Journal of nephrology</td>
+<td align="left">2021 Jun</td>
+<td align="left">Jeyaruban A</td>
+<td align="left">Mallett A</td>
+<td align="left">33439469</td>
+</tr>
+<tr class="odd">
+<td align="left">Genomic diagnostics in polycystic kidney disease: an
+assessment of real-world use of whole-genome sequencing.</td>
+<td align="left">European journal of human genetics : EJHG</td>
+<td align="left">2021 May</td>
+<td align="left">Mallawaarachchi AC</td>
+<td align="left">Furlong TJ</td>
+<td align="left">33437033</td>
+</tr>
+<tr class="even">
+<td align="left">Nurse’s practices and attitudes toward sexual health,
+wellbeing, and function in people receiving haemodialysis: A scoping
+review.</td>
+<td align="left">Journal of renal care</td>
+<td align="left">2021 Sep</td>
+<td align="left">Mckie AL</td>
+<td align="left">Bonner A</td>
+<td align="left">33423368</td>
+</tr>
+<tr class="odd">
+<td align="left">Prolonged SARS-CoV-2 viral shedding in patients with
+chronic kidney disease.</td>
+<td align="left">Nephrology (Carlton, Vic.)</td>
+<td align="left">2021 Apr</td>
+<td align="left">O’Sullivan ED</td>
+<td align="left">Mark PB</td>
+<td align="left">33368892</td>
+</tr>
+<tr class="even">
+<td align="left">Development of a Biomarker Panel to Distinguish Risk of
+Progressive Chronic Kidney Disease.</td>
+<td align="left">Biomedicines</td>
+<td align="left">2020 Dec 14</td>
+<td align="left">Owens E</td>
+<td align="left">Gobe G</td>
+<td align="left">33327377</td>
+</tr>
+<tr class="odd">
+<td align="left">A bundled phosphate control intervention (4Ds) for
+adults with end-stage kidney disease receiving haemodialysis: A cluster
+randomized controlled trial.</td>
+<td align="left">Journal of advanced nursing</td>
+<td align="left">2021 Mar</td>
+<td align="left">Milazi M</td>
+<td align="left">Bonner A</td>
+<td align="left">33277736</td>
+</tr>
+<tr class="even">
+<td align="left">A life-threatening case of pregnancy-related atypical
+Haemolytic uremic syndrome and successful treatment with
+Eculizumab.</td>
+<td align="left">BMC nephrology</td>
+<td align="left">2020 Nov 17</td>
+<td align="left">Puri P</td>
+<td align="left">Vucak-Dzumhur M</td>
+<td align="left">33203373</td>
+</tr>
+<tr class="odd">
+<td align="left">The Cl(-)/HCO(3)(-) exchanger pendrin is downregulated
+during oral co-administration of exogenous mineralocorticoid and KCl in
+patients with primary aldosteronism.</td>
+<td align="left">Journal of human hypertension</td>
+<td align="left">2021 Oct</td>
+<td align="left">Wu A</td>
+<td align="left">Stowasser M</td>
+<td align="left">33173144</td>
+</tr>
+<tr class="even">
+<td align="left">Cep55 overexpression promotes genomic instability and
+tumorigenesis in mice.</td>
+<td align="left">Communications biology</td>
+<td align="left">2020 Oct 21</td>
+<td align="left">Sinha D</td>
+<td align="left">Khanna KK</td>
+<td align="left">33087841</td>
+</tr>
+<tr class="odd">
+<td align="left">The Emerging Role of Renal Tubular Epithelial Cells in
+the Immunological Pathophysiology of Lupus Nephritis.</td>
+<td align="left">Frontiers in immunology</td>
+<td align="left">2020</td>
+<td align="left">Hong S</td>
+<td align="left">Kassianos AJ</td>
+<td align="left">33072122</td>
+</tr>
+<tr class="even">
+<td align="left">Ciliopathies and the Kidney: A Review.</td>
+<td align="left">American journal of kidney diseases : the official
+journal of the National Kidney Foundation</td>
+<td align="left">2021 Mar</td>
+<td align="left">McConnachie DJ</td>
+<td align="left">Mallett AJ</td>
+<td align="left">33039432</td>
+</tr>
+<tr class="odd">
+<td align="left">Deceased donor kidney allocation: an economic
+evaluation of contemporary longevity matching practices.</td>
+<td align="left">BMC health services research</td>
+<td align="left">2020 Oct 9</td>
+<td align="left">Senanayake S</td>
+<td align="left">Kularatna S</td>
+<td align="left">33036621</td>
+</tr>
+<tr class="even">
+<td align="left">Health literacy profiles of adults with multiple
+chronic diseases: A cross-sectional study using the Health Literacy
+Questionnaire.</td>
+<td align="left">Nursing &amp; health sciences</td>
+<td align="left">2020 Dec</td>
+<td align="left">Dinh HTT</td>
+<td align="left">Bonner A</td>
+<td align="left">33034404</td>
+</tr>
+<tr class="odd">
+<td align="left">Kidney Single-Cell Atlas Reveals Myeloid Heterogeneity
+in Progression and Regression of Kidney Disease.</td>
+<td align="left">Journal of the American Society of Nephrology :
+JASN</td>
+<td align="left">2020 Dec</td>
+<td align="left">Conway BR</td>
+<td align="left">Denby L</td>
+<td align="left">32978267</td>
+</tr>
+<tr class="even">
+<td align="left">Oxidative stress and inflammasome activation in human
+rhabdomyolysis-induced acute kidney injury.</td>
+<td align="left">Free radical biology &amp; medicine</td>
+<td align="left">2020 Nov 20</td>
+<td align="left">Grivei A</td>
+<td align="left">Healy H</td>
+<td align="left">32942024</td>
+</tr>
+<tr class="odd">
+<td align="left">Clinical impact of genomic testing in patients with
+suspected monogenic kidney disease.</td>
+<td align="left">Genetics in medicine : official journal of the American
+College of Medical Genetics</td>
+<td align="left">2021 Jan</td>
+<td align="left">Jayasinghe K</td>
+<td align="left">Quinlan C</td>
+<td align="left">32939031</td>
+</tr>
+<tr class="even">
+<td align="left">Assessment of cardiac structure and function in kidney
+failure: understanding echocardiography and magnetic resonance imaging
+for the nephrologist.</td>
+<td align="left">International urology and nephrology</td>
+<td align="left">2021 Apr</td>
+<td align="left">Palamuthusingam D</td>
+<td align="left">Fahim M</td>
+<td align="left">32865773</td>
+</tr>
+<tr class="odd">
+<td align="left">Protocol and establishment of a Queensland renal biopsy
+registry in Australia.</td>
+<td align="left">BMC nephrology</td>
+<td align="left">2020 Aug 1</td>
+<td align="left">Burke JP</td>
+<td align="left">Ranganathan D</td>
+<td align="left">32738876</td>
+</tr>
+<tr class="even">
+<td align="left">Monitoring for intradialytic hypotension: An audit of
+nursing practice.</td>
+<td align="left">Journal of renal care</td>
+<td align="left">2021 Mar</td>
+<td align="left">McIntyre D</td>
+<td align="left">Bonner A</td>
+<td align="left">32734685</td>
+</tr>
+<tr class="odd">
+<td align="left">ABO blood group relationships to kidney transplant
+recipient and graft outcomes.</td>
+<td align="left">PloS one</td>
+<td align="left">2020</td>
+<td align="left">Ng MSY</td>
+<td align="left">Mallett AJ</td>
+<td align="left">32702043</td>
+</tr>
+<tr class="even">
+<td align="left">Unusual cause of headache following renal
+transplantation.</td>
+<td align="left">Nephrology (Carlton, Vic.)</td>
+<td align="left">2020 Nov</td>
+<td align="left">Hepburn K</td>
+<td align="left">Pollock C</td>
+<td align="left">32666657</td>
+</tr>
+<tr class="odd">
+<td align="left">The impact of reclassification of C3 predominant
+glomerulopathies on diagnostic accuracy, outcome and prognosis in
+patients with C3 glomerulonephritis.</td>
+<td align="left">BMC nephrology</td>
+<td align="left">2020 Jul 11</td>
+<td align="left">Puri P</td>
+<td align="left">Jiang SH</td>
+<td align="left">32652953</td>
+</tr>
+<tr class="even">
+<td align="left">Clinical spectrum, prognosis and estimated prevalence
+of DNAJB11-kidney disease.</td>
+<td align="left">Kidney international</td>
+<td align="left">2020 Aug</td>
+<td align="left">Huynh VT</td>
+<td align="left">Cornec-Le Gall E</td>
+<td align="left">32631624</td>
+</tr>
+<tr class="odd">
+<td align="left">Kidney transplant recipient’s perceptions of blood
+testing through microsampling and venepuncture.</td>
+<td align="left">Bioanalysis</td>
+<td align="left">2020 Jul</td>
+<td align="left">Scuderi CE</td>
+<td align="left">Staatz CE</td>
+<td align="left">32628071</td>
+</tr>
+<tr class="even">
+<td align="left">Validation of the Australian version of the Chronic
+Kidney Disease Self-Management instrument.</td>
+<td align="left">International journal of nursing practice</td>
+<td align="left">2021 Apr</td>
+<td align="left">Wembenyui C</td>
+<td align="left">Bonner A</td>
+<td align="left">32614488</td>
+</tr>
+<tr class="odd">
+<td align="left">T-cell adoptive immunotherapy for BK nephropathy in
+renal transplantation.</td>
+<td align="left">Transplant infectious disease : an official journal of
+the Transplantation Society</td>
+<td align="left">2020 Dec</td>
+<td align="left">Jahan S</td>
+<td align="left">John GT</td>
+<td align="left">32608543</td>
+</tr>
+<tr class="even">
+<td align="left">Postoperative mortality in patients on chronic dialysis
+following elective surgery: A systematic review and meta-analysis.</td>
+<td align="left">PloS one</td>
+<td align="left">2020</td>
+<td align="left">Palamuthusingam D</td>
+<td align="left">Fahim M</td>
+<td align="left">32589638</td>
+</tr>
+<tr class="odd">
+<td align="left">Cost-utility analysis in chronic kidney disease
+patients undergoing kidney transplant; what pays? A systematic
+review.</td>
+<td align="left">Cost effectiveness and resource allocation : C/E</td>
+<td align="left">2020</td>
+<td align="left">Senanayake S</td>
+<td align="left">Kularatna S</td>
+<td align="left">32477010</td>
+</tr>
+<tr class="even">
+<td align="left">A mutation affecting laminin alpha 5 polymerisation
+gives rise to a syndromic developmental disorder.</td>
+<td align="left">Development (Cambridge, England)</td>
+<td align="left">2020 Jun 22</td>
+<td align="left">Jones LK</td>
+<td align="left">Smyth IM</td>
+<td align="left">32439764</td>
+</tr>
+<tr class="odd">
+<td align="left">Baseline characteristics of patients with atypical
+haemolytic uraemic syndrome (aHUS): The Australian cohort in a global
+aHUS registry.</td>
+<td align="left">Nephrology (Carlton, Vic.)</td>
+<td align="left">2020 Sep</td>
+<td align="left">Soraru J</td>
+<td align="left">Lim WH</td>
+<td align="left">32378251</td>
+</tr>
+<tr class="even">
+<td align="left">Educational or behavioural interventions for symptoms
+and health-related quality of life in adults receiving haemodialysis: A
+systematic review.</td>
+<td align="left">Journal of renal care</td>
+<td align="left">2020 Dec</td>
+<td align="left">Sharma S</td>
+<td align="left">Bonner A</td>
+<td align="left">32319190</td>
+</tr>
+<tr class="odd">
+<td align="left">Parental health spillover effects of paediatric rare
+genetic conditions.</td>
+<td align="left">Quality of life research : an international journal of
+quality of life aspects of treatment, care and rehabilitation</td>
+<td align="left">2020 Sep</td>
+<td align="left">Wu Y</td>
+<td align="left">Goranitis I</td>
+<td align="left">32266555</td>
+</tr>
+<tr class="even">
+<td align="left">Professional relationships between nephrology
+clinicians and patients: a systematic review.</td>
+<td align="left">Journal of renal care</td>
+<td align="left">2020 Dec</td>
+<td align="left">Cousins M</td>
+<td align="left">Bonner A</td>
+<td align="left">32141236</td>
+</tr>
+<tr class="odd">
+<td align="left">Chronic methyl bromide toxicity is ameliorated by
+haemodialysis.</td>
+<td align="left">Internal medicine journal</td>
+<td align="left">2020 Mar</td>
+<td align="left">Khor NWM</td>
+<td align="left">Endre ZH</td>
+<td align="left">32141207</td>
+</tr>
+<tr class="even">
+<td align="left">The Ckd. Qld fabRy Epidemiology (aCQuiRE) study
+protocol: identifying the prevalence of Fabry disease amongst patients
+with kidney disease in Queensland, Australia.</td>
+<td align="left">BMC nephrology</td>
+<td align="left">2020 Feb 22</td>
+<td align="left">Mallett A</td>
+<td align="left">Hoy WE</td>
+<td align="left">32087678</td>
+</tr>
+<tr class="odd">
+<td align="left">Desmopressin acetate to prevent bleeding in
+percutaneous kidney biopsy: a systematic review.</td>
+<td align="left">Internal medicine journal</td>
+<td align="left">2021 Apr</td>
+<td align="left">Lim CC</td>
+<td align="left">Franca Gois PH</td>
+<td align="left">32040251</td>
+</tr>
+<tr class="even">
+<td align="left">Heterogeneity in patterns of progression of chronic
+kidney disease.</td>
+<td align="left">Internal medicine journal</td>
+<td align="left">2021 Feb</td>
+<td align="left">Abeysekera RA</td>
+<td align="left">Hoy WE</td>
+<td align="left">32034854</td>
+</tr>
+<tr class="odd">
+<td align="left">Role of inflammation and inflammasome activation in
+human bile cast nephropathy.</td>
+<td align="left">Nephrology (Carlton, Vic.)</td>
+<td align="left">2020 Jun</td>
+<td align="left">Giuliani KTK</td>
+<td align="left">Gois PFH</td>
+<td align="left">31999010</td>
+</tr>
+<tr class="even">
+<td align="left">Underlying Histopathology Determines Response to
+Oxidative Stress in Cultured Human Primary Proximal Tubular Epithelial
+Cells.</td>
+<td align="left">International journal of molecular sciences</td>
+<td align="left">2020 Jan 15</td>
+<td align="left">Khan MA</td>
+<td align="left">Kassianos AJ</td>
+<td align="left">31952318</td>
+</tr>
+<tr class="odd">
+<td align="left">Prevalence of Fabry disease in dialysis patients:
+Western Australia Fabry disease screening study - the FoRWARD
+study.</td>
+<td align="left">Orphanet journal of rare diseases</td>
+<td align="left">2020 Jan 13</td>
+<td align="left">Jahan S</td>
+<td align="left">Thomas M</td>
+<td align="left">31931840</td>
+</tr>
+<tr class="even">
+<td align="left">The Relationship Between Chronic Kidney Disease,
+Symptoms and Health-Related Quality of Life: A Systematic Review.</td>
+<td align="left">Journal of renal care</td>
+<td align="left">2020 Jun</td>
+<td align="left">Yapa HE</td>
+<td align="left">Bonner A</td>
+<td align="left">31680483</td>
+</tr>
+<tr class="odd">
+<td align="left">Motivators and barriers to engagement with
+evidence-based practice among medical and dental trainees from the UK
+and Republic of Ireland: a national survey.</td>
+<td align="left">BMJ open</td>
+<td align="left">2019 Oct 17</td>
+<td align="left">Hong B</td>
+<td align="left">Jones CM</td>
+<td align="left">31628131</td>
+</tr>
+<tr class="even">
+<td align="left">Author reply.</td>
+<td align="left">Internal medicine journal</td>
+<td align="left">2019 Oct</td>
+<td align="left">Palamuthusingam D</td>
+<td align="left">Fahim M</td>
+<td align="left">31602771</td>
+</tr>
+<tr class="odd">
+<td align="left">Proton-pump inhibitor overuse: a cautionary tale in
+misguided benefit.</td>
+<td align="left">Internal medicine journal</td>
+<td align="left">2019 Oct</td>
+<td align="left">Nath K</td>
+<td align="left">Palamuthusingam D</td>
+<td align="left">31602763</td>
+</tr>
+<tr class="even">
+<td align="left">ADPedKD: A Global Online Platform on the Management of
+Children With ADPKD.</td>
+<td align="left">Kidney international reports</td>
+<td align="left">2019 Sep</td>
+<td align="left">De Rechter S</td>
+<td align="left">Mekahli D</td>
+<td align="left">31517146</td>
+</tr>
+<tr class="odd">
+<td align="left">Blood pressure management in hypertensive people with
+non-dialysis chronic kidney disease in Queensland, Australia.</td>
+<td align="left">BMC nephrology</td>
+<td align="left">2019 Sep 4</td>
+<td align="left">Zhang J</td>
+<td align="left">Hoy WE</td>
+<td align="left">31484506</td>
+</tr>
+<tr class="even">
+<td align="left">Utilization and Costs of Health Care in a Kidney
+Supportive Care Program.</td>
+<td align="left">Journal of palliative care</td>
+<td align="left">2020 Jul</td>
+<td align="left">Sowa PM</td>
+<td align="left">Connelly LB</td>
+<td align="left">31456473</td>
+</tr>
+<tr class="odd">
+<td align="left">Fresh frozen plasma and platelet concentrate storage
+duration not associated with in hospital mortality risk.</td>
+<td align="left">Vox sanguinis</td>
+<td align="left">2019 Nov</td>
+<td align="left">Ng MSY</td>
+<td align="left">Fraser JF</td>
+<td align="left">31452207</td>
+</tr>
+<tr class="even">
+<td align="left">Pilot clinical and validation study of the PROPKD score
+in clinical practice amongst patients with Autosomal Dominant Polycystic
+Kidney Disease.</td>
+<td align="left">Nephrology (Carlton, Vic.)</td>
+<td align="left">2020 Mar</td>
+<td align="left">Chan S</td>
+<td align="left">Mallett AJ</td>
+<td align="left">31441157</td>
+</tr>
+<tr class="odd">
+<td align="left">Specialized Roles of Human Natural Killer Cell Subsets
+in Kidney Transplant Rejection.</td>
+<td align="left">Frontiers in immunology</td>
+<td align="left">2019</td>
+<td align="left">Kildey K</td>
+<td align="left">Healy H</td>
+<td align="left">31440252</td>
+</tr>
+<tr class="even">
+<td align="left">Isolated proteinuria due to CUBN homozygous mutation -
+challenging the investigative paradigm.</td>
+<td align="left">BMC nephrology</td>
+<td align="left">2019 Aug 22</td>
+<td align="left">Jayasinghe K</td>
+<td align="left">Quinlan C</td>
+<td align="left">31438875</td>
+</tr>
+<tr class="odd">
+<td align="left">Correction to: Health literacy in indigenous people
+with chronic disease living in remote Australia.</td>
+<td align="left">BMC health services research</td>
+<td align="left">2019 Aug 14</td>
+<td align="left">Rheault H</td>
+<td align="left">Bonner A</td>
+<td align="left">31412867</td>
+</tr>
+<tr class="even">
+<td align="left">Haemodialysis withdrawal in Australia and New Zealand:
+a binational registry study.</td>
+<td align="left">Nephrology, dialysis, transplantation : official
+publication of the European Dialysis and Transplant Association -
+European Renal Association</td>
+<td align="left">2020 Apr 1</td>
+<td align="left">Chan S</td>
+<td align="left">Wolley MJ</td>
+<td align="left">31397483</td>
+</tr>
+<tr class="odd">
+<td align="left">Comprehensive evaluation of a prospective Australian
+patient cohort with suspected genetic kidney disease undergoing clinical
+genomic testing: a study protocol.</td>
+<td align="left">BMJ open</td>
+<td align="left">2019 Aug 5</td>
+<td align="left">Jayasinghe K</td>
+<td align="left">Mallett AJ</td>
+<td align="left">31383705</td>
+</tr>
+<tr class="even">
+<td align="left">Health literacy in Indigenous people with chronic
+disease living in remote Australia.</td>
+<td align="left">BMC health services research</td>
+<td align="left">2019 Jul 26</td>
+<td align="left">Rheault H</td>
+<td align="left">Bonner A</td>
+<td align="left">31349842</td>
+</tr>
+<tr class="odd">
+<td align="left">Informal caregivers of people undergoing haemodialysis:
+Associations between activities and burden.</td>
+<td align="left">Journal of renal care</td>
+<td align="left">2019 Sep</td>
+<td align="left">Hoang VL</td>
+<td align="left">Bonner A</td>
+<td align="left">31297973</td>
+</tr>
+<tr class="even">
+<td align="left">Biomarkers and the role of mast cells as facilitators
+of inflammation and fibrosis in chronic kidney disease.</td>
+<td align="left">Translational andrology and urology</td>
+<td align="left">2019 May</td>
+<td align="left">Owens EP</td>
+<td align="left">Gobe GC</td>
+<td align="left">31236335</td>
+</tr>
+<tr class="odd">
+<td align="left">A randomized controlled trial testing a decision
+support intervention for older patients with advanced kidney
+disease.</td>
+<td align="left">Journal of advanced nursing</td>
+<td align="left">2019 Nov</td>
+<td align="left">Brown L</td>
+<td align="left">Bonner A</td>
+<td align="left">31225666</td>
+</tr>
+<tr class="even">
+<td align="left">Human Tissue-Resident Mucosal-Associated Invariant T
+(MAIT) Cells in Renal Fibrosis and CKD.</td>
+<td align="left">Journal of the American Society of Nephrology :
+JASN</td>
+<td align="left">2019 Jul</td>
+<td align="left">Law BMP</td>
+<td align="left">Kassianos AJ</td>
+<td align="left">31186283</td>
+</tr>
+<tr class="odd">
+<td align="left">Pigment Nephropathy: Novel Insights into
+Inflammasome-Mediated Pathogenesis.</td>
+<td align="left">International journal of molecular sciences</td>
+<td align="left">2019 Apr 23</td>
+<td align="left">Giuliani KTK</td>
+<td align="left">Gois PHF</td>
+<td align="left">31018590</td>
+</tr>
+<tr class="even">
+<td align="left">Natural Killer Cells in Kidney Health and Disease.</td>
+<td align="left">Frontiers in immunology</td>
+<td align="left">2019</td>
+<td align="left">Turner JE</td>
+<td align="left">Kassianos AJ</td>
+<td align="left">30972076</td>
+</tr>
+<tr class="odd">
+<td align="left">Health data linkage research in Australia remains
+challenging.</td>
+<td align="left">Internal medicine journal</td>
+<td align="left">2019 Apr</td>
+<td align="left">Palamuthusingam D</td>
+<td align="left">Fahim M</td>
+<td align="left">30957375</td>
+</tr>
+<tr class="even">
+<td align="left">Bile Cast Nephropathy in a Patient With Obstructive
+Jaundice.</td>
+<td align="left">Kidney international reports</td>
+<td align="left">2019 Feb</td>
+<td align="left">Chan S</td>
+<td align="left">Wolley MJ</td>
+<td align="left">30775631</td>
+</tr>
+<tr class="odd">
+<td align="left">The interplay of renal potassium and sodium handling in
+blood pressure regulation: critical role of the WNK-SPAK-NCC
+pathway.</td>
+<td align="left">Journal of human hypertension</td>
+<td align="left">2019 Jul</td>
+<td align="left">Wu A</td>
+<td align="left">Stowasser M</td>
+<td align="left">30723251</td>
+</tr>
+<tr class="even">
+<td align="left">Psychometric evaluation of the culturally and
+linguistically translated Vietnamese chronic kidney disease
+self-management instrument.</td>
+<td align="left">International journal of nursing practice</td>
+<td align="left">2019 Jun</td>
+<td align="left">Nguyen NT</td>
+<td align="left">Bonner A</td>
+<td align="left">30714662</td>
+</tr>
+<tr class="odd">
+<td align="left">Chronic kidney disease, Queensland: Profile of patients
+with chronic kidney disease from regional Queensland, Australia: A
+registry report.</td>
+<td align="left">Nephrology (Carlton, Vic.)</td>
+<td align="left">2019 Dec</td>
+<td align="left">Venuthurupalli SK</td>
+<td align="left">Hoy WE</td>
+<td align="left">30663166</td>
+</tr>
+<tr class="even">
+<td align="left">Incremental and twice weekly haemodialysis in Australia
+and New Zealand.</td>
+<td align="left">Nephrology (Carlton, Vic.)</td>
+<td align="left">2019 Nov</td>
+<td align="left">Wolley MJ</td>
+<td align="left">Roberts MA</td>
+<td align="left">30632257</td>
+</tr>
+<tr class="odd">
+<td align="left">A cognitive forcing tool to mitigate cognitive bias - a
+randomised control trial.</td>
+<td align="left">BMC medical education</td>
+<td align="left">2019 Jan 8</td>
+<td align="left">O’Sullivan ED</td>
+<td align="left">Schofield SJ</td>
+<td align="left">30621679</td>
+</tr>
+<tr class="even">
+<td align="left">Effectiveness of self-management programme in people
+with chronic kidney disease: A pragmatic randomized controlled
+trial.</td>
+<td align="left">Journal of advanced nursing</td>
+<td align="left">2019 Mar</td>
+<td align="left">Nguyen NT</td>
+<td align="left">Bonner A</td>
+<td align="left">30537153</td>
+</tr>
+<tr class="odd">
+<td align="left">The Kidney Supportive Care programme: characteristics
+of patients referred to a new model of care.</td>
+<td align="left">BMJ supportive &amp; palliative care</td>
+<td align="left">2018 Dec 4</td>
+<td align="left">Purtell L</td>
+<td align="left">Bonner A</td>
+<td align="left">30514718</td>
+</tr>
+<tr class="even">
+<td align="left">Perioperative outcomes and risk assessment in dialysis
+patients: current knowledge and future directions.</td>
+<td align="left">Internal medicine journal</td>
+<td align="left">2019 Jun</td>
+<td align="left">Palamuthusingam D</td>
+<td align="left">Fahim M</td>
+<td align="left">30485661</td>
+</tr>
+<tr class="odd">
+<td align="left">Meeting patients where they are: improving outcomes in
+early chronic kidney disease with tailored self-management support (the
+CKD-SMS study).</td>
+<td align="left">BMC nephrology</td>
+<td align="left">2018 Oct 20</td>
+<td align="left">Havas K</td>
+<td align="left">Bonner A</td>
+<td align="left">30342487</td>
+</tr>
+<tr class="even">
+<td align="left">Renal genetics in Australia: Kidney medicine in the
+genomic age.</td>
+<td align="left">Nephrology (Carlton, Vic.)</td>
+<td align="left">2019 Mar</td>
+<td align="left">Jayasinghe K</td>
+<td align="left">Mallett AJ</td>
+<td align="left">30239064</td>
+</tr>
+<tr class="odd">
+<td align="left">Paraneoplastic immunoglobulin A nephropathy and
+associated focal segmental glomerulosclerosis in asymptomatic low volume
+B-cell lymphoma - a case report.</td>
+<td align="left">BMC nephrology</td>
+<td align="left">2018 Sep 10</td>
+<td align="left">Ng MSY</td>
+<td align="left">Mallett AJ</td>
+<td align="left">30200898</td>
+</tr>
+<tr class="even">
+<td align="left">CFHR5 Nephropathy in a Greek-Cypriot Australian Family:
+Ancestry-Informed Precision Medicine.</td>
+<td align="left">Kidney international reports</td>
+<td align="left">2018 Sep</td>
+<td align="left">Ng MSY</td>
+<td align="left">Mallett AJ</td>
+<td align="left">30197990</td>
+</tr>
+<tr class="odd">
+<td align="left">Antenatally Diagnosed ADPKD.</td>
+<td align="left">Kidney international reports</td>
+<td align="left">2018 Sep</td>
+<td align="left">Aldridge M</td>
+<td align="left">Trnka P</td>
+<td align="left">30197988</td>
+</tr>
+<tr class="even">
+<td align="left">Body mass index in an Australian population with
+chronic kidney disease.</td>
+<td align="left">BMC nephrology</td>
+<td align="left">2018 Aug 20</td>
+<td align="left">Chan S</td>
+<td align="left">Hoy WE</td>
+<td align="left">30126378</td>
+</tr>
+<tr class="odd">
+<td align="left">Vitamin D Deficiency in Chronic Kidney Disease: Recent
+Evidence and Controversies.</td>
+<td align="left">International journal of environmental research and
+public health</td>
+<td align="left">2018 Aug 17</td>
+<td align="left">Franca Gois PH</td>
+<td align="left">Seguro AC</td>
+<td align="left">30126163</td>
+</tr>
+<tr class="even">
+<td align="left">Identification and Quantitation of Leukocyte
+Populations in Human Kidney Tissue by Multi-parameter Flow
+Cytometry.</td>
+<td align="left">Bio-protocol</td>
+<td align="left">2018 Aug 20</td>
+<td align="left">Kildey K</td>
+<td align="left">Kassianos AJ</td>
+<td align="left">34395780</td>
+</tr>
+<tr class="odd">
+<td align="left">A bundled phosphate control intervention (4Ds) for
+adults with end-stage kidney disease receiving haemodialysis: A cluster
+randomized controlled trial protocol.</td>
+<td align="left">Journal of advanced nursing</td>
+<td align="left">2018 Oct</td>
+<td align="left">Milazi M</td>
+<td align="left">Bonner A</td>
+<td align="left">29943430</td>
+</tr>
+<tr class="even">
+<td align="left">Effector γδ T cells in human renal fibrosis and chronic
+kidney disease.</td>
+<td align="left">Nephrology, dialysis, transplantation : official
+publication of the European Dialysis and Transplant Association -
+European Renal Association</td>
+<td align="left">2019 Jan 1</td>
+<td align="left">Law BM</td>
+<td align="left">Kassianos AJ</td>
+<td align="left">29897565</td>
+</tr>
+<tr class="odd">
+<td align="left">Health service utilisation during the last year of
+life: a prospective, longitudinal study of the pathways of patients with
+chronic kidney disease stages 3-5.</td>
+<td align="left">BMC palliative care</td>
+<td align="left">2018 Apr 5</td>
+<td align="left">Chambers S</td>
+<td align="left">Bonner A</td>
+<td align="left">29622009</td>
+</tr>
+<tr class="even">
+<td align="left">Tracking patients with advanced kidney disease in the
+last 12 months of life.</td>
+<td align="left">Journal of renal care</td>
+<td align="left">2018 Jun</td>
+<td align="left">Bonner A</td>
+<td align="left">Yates P</td>
+<td align="left">29493102</td>
+</tr>
+<tr class="odd">
+<td align="left">Evaluating the prevalence and opportunity for
+technology use in chronic kidney disease patients: a cross-sectional
+study.</td>
+<td align="left">BMC nephrology</td>
+<td align="left">2018 Feb 2</td>
+<td align="left">Bonner A</td>
+<td align="left">Havas K</td>
+<td align="left">29394930</td>
+</tr>
+<tr class="even">
+<td align="left">Meeting report of the 2017 KidGen Renal Genetics
+Symposium.</td>
+<td align="left">Human genomics</td>
+<td align="left">2018 Jan 30</td>
+<td align="left">Jayasinghe K</td>
+<td align="left">Mallett AJ</td>
+<td align="left">29382385</td>
+</tr>
+<tr class="odd">
+<td align="left">Informal caregivers’ experiences of caring for people
+receiving dialysis: A mixed-methods systematic review.</td>
+<td align="left">Journal of renal care</td>
+<td align="left">2018 Jun</td>
+<td align="left">Hoang VL</td>
+<td align="left">Bonner A</td>
+<td align="left">29357407</td>
+</tr>
+<tr class="even">
+<td align="left">Conversion of renal abstracts to papers: Published or
+perished?</td>
+<td align="left">Nephrology (Carlton, Vic.)</td>
+<td align="left">2018 Feb</td>
+<td align="left">Theze SA</td>
+<td align="left">O’Sullivan ED</td>
+<td align="left">29346844</td>
+</tr>
+<tr class="odd">
+<td align="left">CKD Screening and Surveillance in Australia: Past,
+Present, and Future.</td>
+<td align="left">Kidney international reports</td>
+<td align="left">2018 Jan</td>
+<td align="left">Venuthurupalli SK</td>
+<td align="left">Fassett RG</td>
+<td align="left">29340312</td>
+</tr>
+<tr class="even">
+<td align="left">Closing the loop in person-centered care: patient
+experiences of a chronic kidney disease self-management
+intervention.</td>
+<td align="left">Patient preference and adherence</td>
+<td align="left">2017</td>
+<td align="left">Havas K</td>
+<td align="left">Bonner A</td>
+<td align="left">29238172</td>
+</tr>
+<tr class="odd">
+<td align="left">HMG CoA reductase inhibitor associated myositis and
+autoimmune hepatitis.</td>
+<td align="left">Internal medicine journal</td>
+<td align="left">2017 Oct</td>
+<td align="left">Palamuthusingam D</td>
+<td align="left">Dheda S</td>
+<td align="left">28994254</td>
+</tr>
+<tr class="even">
+<td align="left">Massively parallel sequencing and targeted exomes in
+familial kidney disease can diagnose underlying genetic disorders.</td>
+<td align="left">Kidney international</td>
+<td align="left">2017 Dec</td>
+<td align="left">Mallett AJ</td>
+<td align="left">Alexander SI</td>
+<td align="left">28844315</td>
+</tr>
+<tr class="odd">
+<td align="left">CKD.QLD: establishment of a chronic kidney disease
+[CKD] registry in Queensland, Australia.</td>
+<td align="left">BMC nephrology</td>
+<td align="left">2017 Jun 7</td>
+<td align="left">Venuthurupalli SK</td>
+<td align="left">Fassett RG</td>
+<td align="left">28592254</td>
+</tr>
+<tr class="even">
+<td align="left">Unique molecular profile of exosomes derived from
+primary human proximal tubular epithelial cells under diseased
+conditions.</td>
+<td align="left">Journal of extracellular vesicles</td>
+<td align="left">2017</td>
+<td align="left">Wang X</td>
+<td align="left">Healy H</td>
+<td align="left">28473886</td>
+</tr>
+<tr class="odd">
+<td align="left">Interferon-γ production by tubulointerstitial human
+CD56(bright) natural killer cells contributes to renal fibrosis and
+chronic kidney disease progression.</td>
+<td align="left">Kidney international</td>
+<td align="left">2017 Jul</td>
+<td align="left">Law BMP</td>
+<td align="left">Kassianos AJ</td>
+<td align="left">28396119</td>
+</tr>
+<tr class="even">
+<td align="left">Mutations in mitochondrial DNA causing
+tubulointerstitial kidney disease.</td>
+<td align="left">PLoS genetics</td>
+<td align="left">2017 Mar</td>
+<td align="left">Connor TM</td>
+<td align="left">Maxwell PH</td>
+<td align="left">28267784</td>
+</tr>
+<tr class="odd">
+<td align="left">Allosensitization Following Bone Graft.</td>
+<td align="left">American journal of transplantation : official journal
+of the American Society of Transplantation and the American Society of
+Transplant Surgeons</td>
+<td align="left">2017 Aug</td>
+<td align="left">O’Sullivan ED</td>
+<td align="left">Turner DM</td>
+<td align="left">28199784</td>
+</tr>
+<tr class="even">
+<td align="left">Recurrent atypical haemolytic uraemic syndrome post
+kidney transplant due to a CD46 mutation in the setting of
+SMARCAL1-mediated inherited kidney disease.</td>
+<td align="left">Nephrology (Carlton, Vic.)</td>
+<td align="left">2017 Feb</td>
+<td align="left">Chan S</td>
+<td align="left">Isbel NM</td>
+<td align="left">28176476</td>
+</tr>
+<tr class="odd">
+<td align="left">Patient satisfaction with nurse-led chronic kidney
+disease clinics: A multicentre evaluation.</td>
+<td align="left">Journal of renal care</td>
+<td align="left">2017 Mar</td>
+<td align="left">Coleman S</td>
+<td align="left">Bonner A</td>
+<td align="left">28156054</td>
+</tr>
+<tr class="even">
+<td align="left">Person-centred care in chronic kidney disease: a
+cross-sectional study of patients’ desires for self-management
+support.</td>
+<td align="left">BMC nephrology</td>
+<td align="left">2017 Jan 13</td>
+<td align="left">Havas K</td>
+<td align="left">Bonner A</td>
+<td align="left">28086812</td>
+</tr>
+<tr class="odd">
+<td align="left">Everolimus-induced tubular toxicity in non-renal
+cancer.</td>
+<td align="left">Internal medicine journal</td>
+<td align="left">2016 Dec</td>
+<td align="left">Chan S</td>
+<td align="left">Chern BW</td>
+<td align="left">27981761</td>
+</tr>
+<tr class="even">
+<td align="left">Psychosocial Factors in End-Stage Kidney Disease
+Patients at a Tertiary Hospital in Australia.</td>
+<td align="left">International journal of nephrology</td>
+<td align="left">2016</td>
+<td align="left">Bale C</td>
+<td align="left">Ranganathan D</td>
+<td align="left">27807482</td>
+</tr>
+<tr class="odd">
+<td align="left">A randomized controlled trial protocol testing a
+decision support intervention for older patients with advanced kidney
+disease.</td>
+<td align="left">Journal of advanced nursing</td>
+<td align="left">2016 May</td>
+<td align="left">Brown L</td>
+<td align="left">Bonner A</td>
+<td align="left">26880541</td>
+</tr>
+<tr class="even">
+<td align="left">The effectiveness of the teach-back method on adherence
+and self-management in health education for people with chronic disease:
+a systematic review.</td>
+<td align="left">JBI database of systematic reviews and implementation
+reports</td>
+<td align="left">2016 Jan</td>
+<td align="left">Ha Dinh TT</td>
+<td align="left">Hines S</td>
+<td align="left">26878928</td>
+</tr>
+<tr class="odd">
+<td align="left">Development and Evaluation of a Scored Sodium
+Questionnaire-Screening Form for Kidney Disease Patients.</td>
+<td align="left">Journal of renal nutrition : the official journal of
+the Council on Renal Nutrition of the National Kidney Foundation</td>
+<td align="left">2016 May</td>
+<td align="left">Ross L</td>
+<td align="left">Healy H</td>
+<td align="left">26776250</td>
+</tr>
+<tr class="even">
+<td align="left">KHA-CARI Autosomal Dominant Polycystic Kidney Disease
+Guideline: Management of Polycystic Liver Disease.</td>
+<td align="left">Seminars in nephrology</td>
+<td align="left">2015 Nov</td>
+<td align="left">Savige J</td>
+<td align="left">Rangan GK</td>
+<td align="left">26718168</td>
+</tr>
+<tr class="odd">
+<td align="left">KHA-CARI Autosomal Dominant Polycystic Kidney Disease
+Guideline: Management of Renal Stone Disease.</td>
+<td align="left">Seminars in nephrology</td>
+<td align="left">2015 Nov</td>
+<td align="left">Mallett A</td>
+<td align="left">Rangan GK</td>
+<td align="left">26718165</td>
+</tr>
+<tr class="even">
+<td align="left">KHA-CARI Autosomal Dominant Polycystic Kidney Disease
+Guideline: Psychosocial Care.</td>
+<td align="left">Seminars in nephrology</td>
+<td align="left">2015 Nov</td>
+<td align="left">Tong A</td>
+<td align="left">Rangan GK</td>
+<td align="left">26718163</td>
+</tr>
+<tr class="odd">
+<td align="left">KHA-CARI Autosomal Dominant Polycystic Kidney Disease
+Guideline: Pharmacological Management.</td>
+<td align="left">Seminars in nephrology</td>
+<td align="left">2015 Nov</td>
+<td align="left">Mallett A</td>
+<td align="left">Rangan GK</td>
+<td align="left">26718162</td>
+</tr>
+<tr class="even">
+<td align="left">KHA-CARI Autosomal Dominant Polycystic Kidney Disease
+Guideline: Genetics and Genetic Counseling.</td>
+<td align="left">Seminars in nephrology</td>
+<td align="left">2015 Nov</td>
+<td align="left">Patel C</td>
+<td align="left">Rangan GK</td>
+<td align="left">26718158</td>
+</tr>
+<tr class="odd">
+<td align="left">KHA-CARI Autosomal Dominant Polycystic Kidney Disease
+Guideline: Genetic Testing for Diagnosis.</td>
+<td align="left">Seminars in nephrology</td>
+<td align="left">2015 Nov</td>
+<td align="left">Tchan M</td>
+<td align="left">Rangan GK</td>
+<td align="left">26718157</td>
+</tr>
+<tr class="even">
+<td align="left">Haemodialysis work environment contributors to job
+satisfaction and stress: a sequential mixed methods study.</td>
+<td align="left">BMC nursing</td>
+<td align="left">2015</td>
+<td align="left">Hayes B</td>
+<td align="left">Douglas C</td>
+<td align="left">26557788</td>
+</tr>
+<tr class="odd">
+<td align="left">KHA-CARI guideline recommendations for the diagnosis
+and management of autosomal dominant polycystic kidney disease.</td>
+<td align="left">Nephrology (Carlton, Vic.)</td>
+<td align="left">2016 Aug</td>
+<td align="left">Rangan GK</td>
+<td align="left">Savige J</td>
+<td align="left">26511892</td>
+</tr>
+<tr class="even">
+<td align="left">Effects of packed red blood cell storage duration on
+post-transfusion clinical outcomes: a meta-analysis and systematic
+review.</td>
+<td align="left">Intensive care medicine</td>
+<td align="left">2015 Dec</td>
+<td align="left">Ng MS</td>
+<td align="left">Fraser JF</td>
+<td align="left">26438223</td>
+</tr>
+<tr class="odd">
+<td align="left">A protocol for the identification and validation of
+novel genetic causes of kidney disease.</td>
+<td align="left">BMC nephrology</td>
+<td align="left">2015 Sep 15</td>
+<td align="left">Mallett A</td>
+<td align="left">Little M</td>
+<td align="left">26374634</td>
+</tr>
+<tr class="even">
+<td align="left">Translation and psychometric properties of the Chinese
+version of the Leeds Attitudes to Concordance II scale.</td>
+<td align="left">BMC medical informatics and decision making</td>
+<td align="left">2015 Aug 1</td>
+<td align="left">He W</td>
+<td align="left">Anderson D</td>
+<td align="left">26232245</td>
+</tr>
+<tr class="odd">
+<td align="left">Genomics in the renal clinic - translating
+nephrogenetics for clinical practice.</td>
+<td align="left">Human genomics</td>
+<td align="left">2015 Jun 24</td>
+<td align="left">Mallett A</td>
+<td align="left">Healy H</td>
+<td align="left">26104748</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
